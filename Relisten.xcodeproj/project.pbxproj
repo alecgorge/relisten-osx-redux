@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411A37424D50DD681B23D334 /* libPods-Relisten.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99023D004ACB7302E2D053DB /* libPods-Relisten.a */; };
 		C116DFB01BB09EEE006A9F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C116DFAF1BB09EEE006A9F6C /* AppDelegate.m */; };
 		C116DFB31BB09EEE006A9F6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C116DFB21BB09EEE006A9F6C /* main.m */; };
 		C116DFB51BB09EEE006A9F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C116DFB41BB09EEE006A9F6C /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2770E3F2B9EA9D6FAC108AED /* Pods-Relisten.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relisten.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relisten/Pods-Relisten.release.xcconfig"; sourceTree = "<group>"; };
+		478CD6AE1D5F87783189B5F0 /* Pods-Relisten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relisten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Relisten/Pods-Relisten.debug.xcconfig"; sourceTree = "<group>"; };
+		99023D004ACB7302E2D053DB /* libPods-Relisten.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Relisten.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C116DFAB1BB09EEE006A9F6C /* Relisten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relisten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C116DFAE1BB09EEE006A9F6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C116DFAF1BB09EEE006A9F6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -28,17 +32,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411A37424D50DD681B23D334 /* libPods-Relisten.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F0CAB0FE1DC738A7BE54E8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				478CD6AE1D5F87783189B5F0 /* Pods-Relisten.debug.xcconfig */,
+				2770E3F2B9EA9D6FAC108AED /* Pods-Relisten.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C116DFA21BB09EEE006A9F6C = {
 			isa = PBXGroup;
 			children = (
 				C116DFAD1BB09EEE006A9F6C /* Relisten */,
 				C116DFAC1BB09EEE006A9F6C /* Products */,
+				0F0CAB0FE1DC738A7BE54E8C /* Pods */,
+				D35B084755A2E6F9141E9514 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +87,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D35B084755A2E6F9141E9514 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99023D004ACB7302E2D053DB /* libPods-Relisten.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C116DFBC1BB09EEE006A9F6C /* Build configuration list for PBXNativeTarget "Relisten" */;
 			buildPhases = (
+				96D148DC06667DF4376D3A9D /* Check Pods Manifest.lock */,
 				C116DFA71BB09EEE006A9F6C /* Sources */,
 				C116DFA81BB09EEE006A9F6C /* Frameworks */,
 				C116DFA91BB09EEE006A9F6C /* Resources */,
+				C1213D4298368E48EF731A90 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +160,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96D148DC06667DF4376D3A9D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C1213D4298368E48EF731A90 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Relisten/Pods-Relisten-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C116DFA71BB09EEE006A9F6C /* Sources */ = {
@@ -240,11 +299,13 @@
 		};
 		C116DFBD1BB09EEE006A9F6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 478CD6AE1D5F87783189B5F0 /* Pods-Relisten.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Relisten/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = net.relisten.osx.Relisten;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -252,11 +313,13 @@
 		};
 		C116DFBE1BB09EEE006A9F6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2770E3F2B9EA9D6FAC108AED /* Pods-Relisten.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Relisten/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = net.relisten.osx.Relisten;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -281,6 +344,7 @@
 				C116DFBE1BB09EEE006A9F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
