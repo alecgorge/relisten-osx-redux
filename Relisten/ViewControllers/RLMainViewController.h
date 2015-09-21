@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  RLMainViewController.h
 //  Relisten
 //
 //  Created by Manik Kalra on 9/21/15.
@@ -7,11 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Masonry/Masonry.h>
-#import "RLMainViewController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-
+@interface RLMainViewController : NSViewController
 
 @end
-

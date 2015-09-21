@@ -4,4 +4,5 @@ platform :osx, "10.10"
 target "Relisten" do
 	pod 'AFNetworking'
 	pod 'JSONModel'
+    pod 'Masonry'
 end
