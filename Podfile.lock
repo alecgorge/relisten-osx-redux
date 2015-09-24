@@ -19,15 +19,18 @@ PODS:
   - AFNetworking/Serialization (2.6.0)
   - JSONModel (1.1.0)
   - Masonry (0.6.2)
+  - ObjectiveSugar (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking
   - JSONModel
   - Masonry
+  - ObjectiveSugar
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   JSONModel: ec77e9865236a7a09d9cf7668df6b4b328d9ec1d
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
+  ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
 
 COCOAPODS: 0.38.2

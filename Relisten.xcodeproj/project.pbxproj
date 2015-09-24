@@ -14,6 +14,15 @@
 		C116DFB81BB09EEE006A9F6C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C116DFB61BB09EEE006A9F6C /* MainMenu.xib */; };
 		C18AEA951BB4945F00A6D182 /* RLMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEA931BB4945F00A6D182 /* RLMainWindowController.m */; settings = {ASSET_TAGS = (); }; };
 		C18AEA961BB4945F00A6D182 /* RLMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AEA941BB4945F00A6D182 /* RLMainWindowController.xib */; settings = {ASSET_TAGS = (); }; };
+		C18AEABF1BB4A7F600A6D182 /* IGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAAE1BB4A7F600A6D182 /* IGArtist.m */; settings = {ASSET_TAGS = (); }; };
+		C18AEAC01BB4A7F600A6D182 /* IGPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAB01BB4A7F600A6D182 /* IGPlaylist.m */; settings = {ASSET_TAGS = (); }; };
+		C18AEAC11BB4A7F600A6D182 /* IGShow.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAB21BB4A7F600A6D182 /* IGShow.m */; settings = {ASSET_TAGS = (); }; };
+		C18AEAC21BB4A7F600A6D182 /* IGShowReview.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAB41BB4A7F600A6D182 /* IGShowReview.m */; settings = {ASSET_TAGS = (); }; };
+		C18AEAC31BB4A7F600A6D182 /* IGTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAB61BB4A7F600A6D182 /* IGTrack.m */; settings = {ASSET_TAGS = (); }; };
+		C18AEAC61BB4A7F600A6D182 /* IGVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEABC1BB4A7F600A6D182 /* IGVenue.m */; settings = {ASSET_TAGS = (); }; };
+		C18AEAC71BB4A7F600A6D182 /* IGYear.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEABE1BB4A7F600A6D182 /* IGYear.m */; settings = {ASSET_TAGS = (); }; };
+		C18AEACA1BB4AFB800A6D182 /* IGAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAC91BB4AFB800A6D182 /* IGAPIClient.m */; settings = {ASSET_TAGS = (); }; };
+		C18AEACD1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEACC1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +39,24 @@
 		C18AEA921BB4945F00A6D182 /* RLMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLMainWindowController.h; sourceTree = "<group>"; };
 		C18AEA931BB4945F00A6D182 /* RLMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLMainWindowController.m; sourceTree = "<group>"; };
 		C18AEA941BB4945F00A6D182 /* RLMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLMainWindowController.xib; sourceTree = "<group>"; };
+		C18AEAAD1BB4A7F600A6D182 /* IGArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGArtist.h; sourceTree = "<group>"; };
+		C18AEAAE1BB4A7F600A6D182 /* IGArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGArtist.m; sourceTree = "<group>"; };
+		C18AEAAF1BB4A7F600A6D182 /* IGPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGPlaylist.h; sourceTree = "<group>"; };
+		C18AEAB01BB4A7F600A6D182 /* IGPlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGPlaylist.m; sourceTree = "<group>"; };
+		C18AEAB11BB4A7F600A6D182 /* IGShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGShow.h; sourceTree = "<group>"; };
+		C18AEAB21BB4A7F600A6D182 /* IGShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGShow.m; sourceTree = "<group>"; };
+		C18AEAB31BB4A7F600A6D182 /* IGShowReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGShowReview.h; sourceTree = "<group>"; };
+		C18AEAB41BB4A7F600A6D182 /* IGShowReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGShowReview.m; sourceTree = "<group>"; };
+		C18AEAB51BB4A7F600A6D182 /* IGTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGTrack.h; sourceTree = "<group>"; };
+		C18AEAB61BB4A7F600A6D182 /* IGTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGTrack.m; sourceTree = "<group>"; };
+		C18AEABB1BB4A7F600A6D182 /* IGVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGVenue.h; sourceTree = "<group>"; };
+		C18AEABC1BB4A7F600A6D182 /* IGVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGVenue.m; sourceTree = "<group>"; };
+		C18AEABD1BB4A7F600A6D182 /* IGYear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGYear.h; sourceTree = "<group>"; };
+		C18AEABE1BB4A7F600A6D182 /* IGYear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGYear.m; sourceTree = "<group>"; };
+		C18AEAC81BB4AFB800A6D182 /* IGAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGAPIClient.h; sourceTree = "<group>"; };
+		C18AEAC91BB4AFB800A6D182 /* IGAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAPIClient.m; sourceTree = "<group>"; };
+		C18AEACB1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+NSDateFromNSStringMilliseconds.h"; sourceTree = "<group>"; };
+		C18AEACC1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+NSDateFromNSStringMilliseconds.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +106,11 @@
 				C18AEA921BB4945F00A6D182 /* RLMainWindowController.h */,
 				C18AEA931BB4945F00A6D182 /* RLMainWindowController.m */,
 				C18AEA941BB4945F00A6D182 /* RLMainWindowController.xib */,
+				C18AEACB1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.h */,
+				C18AEACC1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m */,
+				C18AEAC81BB4AFB800A6D182 /* IGAPIClient.h */,
+				C18AEAC91BB4AFB800A6D182 /* IGAPIClient.m */,
+				C18AEA971BB4A34A00A6D182 /* Model */,
 				C116DFB11BB09EEE006A9F6C /* Supporting Files */,
 			);
 			path = Relisten;
@@ -93,6 +125,27 @@
 				C116DFB41BB09EEE006A9F6C /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C18AEA971BB4A34A00A6D182 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C18AEAAD1BB4A7F600A6D182 /* IGArtist.h */,
+				C18AEAAE1BB4A7F600A6D182 /* IGArtist.m */,
+				C18AEAAF1BB4A7F600A6D182 /* IGPlaylist.h */,
+				C18AEAB01BB4A7F600A6D182 /* IGPlaylist.m */,
+				C18AEAB11BB4A7F600A6D182 /* IGShow.h */,
+				C18AEAB21BB4A7F600A6D182 /* IGShow.m */,
+				C18AEAB31BB4A7F600A6D182 /* IGShowReview.h */,
+				C18AEAB41BB4A7F600A6D182 /* IGShowReview.m */,
+				C18AEAB51BB4A7F600A6D182 /* IGTrack.h */,
+				C18AEAB61BB4A7F600A6D182 /* IGTrack.m */,
+				C18AEABB1BB4A7F600A6D182 /* IGVenue.h */,
+				C18AEABC1BB4A7F600A6D182 /* IGVenue.m */,
+				C18AEABD1BB4A7F600A6D182 /* IGYear.h */,
+				C18AEABE1BB4A7F600A6D182 /* IGYear.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		D35B084755A2E6F9141E9514 /* Frameworks */ = {
@@ -208,8 +261,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18AEAC71BB4A7F600A6D182 /* IGYear.m in Sources */,
+				C18AEAC11BB4A7F600A6D182 /* IGShow.m in Sources */,
+				C18AEAC31BB4A7F600A6D182 /* IGTrack.m in Sources */,
+				C18AEAC61BB4A7F600A6D182 /* IGVenue.m in Sources */,
+				C18AEABF1BB4A7F600A6D182 /* IGArtist.m in Sources */,
+				C18AEAC21BB4A7F600A6D182 /* IGShowReview.m in Sources */,
 				C116DFB31BB09EEE006A9F6C /* main.m in Sources */,
+				C18AEACA1BB4AFB800A6D182 /* IGAPIClient.m in Sources */,
 				C116DFB01BB09EEE006A9F6C /* AppDelegate.m in Sources */,
+				C18AEAC01BB4A7F600A6D182 /* IGPlaylist.m in Sources */,
+				C18AEACD1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m in Sources */,
 				C18AEA951BB4945F00A6D182 /* RLMainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

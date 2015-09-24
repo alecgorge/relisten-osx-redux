@@ -20,6 +20,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     self.mainWindowController = [[RLMainWindowController alloc] initWithWindowNibName:@"RLMainWindowController"];
+    [self.mainWindowController.window center];
     [self.mainWindowController showWindow:nil];
 }
 

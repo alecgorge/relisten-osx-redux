@@ -5,4 +5,5 @@ target "Relisten" do
 	pod 'AFNetworking'
 	pod 'JSONModel'
     pod 'Masonry'
+    pod 'ObjectiveSugar'
 end
