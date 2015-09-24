@@ -11,7 +11,7 @@
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
-@property (strong, nonatomic) RLMainViewController *mainViewController;
+@property (strong, nonatomic) RLMainWindowController *mainWindowController;
 
 @end
 
@@ -19,11 +19,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    self.mainViewController = [[RLMainViewController alloc] initWithNibName:@"RLMainViewController" bundle:nil];
-    [self.window.contentView addSubview:self.mainViewController.view];
-    [self.mainViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.window.contentView);
-    }];
+    self.mainWindowController = [[RLMainWindowController alloc] initWithWindowNibName:@"RLMainWindowController"];
+    [self.mainWindowController showWindow:nil];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *) theApplication

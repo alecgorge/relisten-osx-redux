@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Masonry/Masonry.h>
-#import "RLMainViewController.h"
+#import "RLMainWindowController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
