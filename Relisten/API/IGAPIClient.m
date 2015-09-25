@@ -122,7 +122,7 @@
 - (void)failure:(NSError *)error {
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"OK"];
-    [alert setMessageText:@"Error"];
+    [alert setMessageText:@"Something went wrong :("];
     [alert setInformativeText:error.localizedDescription];
     [alert setAlertStyle:NSWarningAlertStyle];
     [alert runModal];
