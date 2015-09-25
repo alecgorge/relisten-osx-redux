@@ -10,12 +10,6 @@
 
 @implementation RLTableView
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
-    // Drawing code here.
-}
-
 - (void)drawGridInClipRect:(NSRect)clipRect
 {
     NSRect lastRowRect = [self rectOfRow:[self numberOfRows]-1];

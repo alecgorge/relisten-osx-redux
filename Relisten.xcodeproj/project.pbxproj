@@ -190,10 +190,10 @@
 			children = (
 				C18AEAD41BB4E6BB00A6D182 /* RLSplitView.h */,
 				C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */,
-				C187C67D1BB4FA7600F1778C /* RLYearTableCellView.h */,
-				C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */,
 				C187C6801BB5050400F1778C /* RLTableView.h */,
 				C187C6811BB5050400F1778C /* RLTableView.m */,
+				C187C67D1BB4FA7600F1778C /* RLYearTableCellView.h */,
+				C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
