@@ -25,12 +25,15 @@
                     <splitView dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gff-DE-xYh" customClass="RLSplitView">
                         <rect key="frame" x="0.0" y="0.0" width="798" height="455"/>
                         <subviews>
-                            <customView fixedFrame="YES" id="gGD-H8-7dV" userLabel="firstView">
-                                <rect key="frame" x="0.0" y="0.0" width="132" height="455"/>
+                            <customView id="gGD-H8-7dV" userLabel="firstView">
+                                <rect key="frame" x="0.0" y="0.0" width="136" height="455"/>
                                 <autoresizingMask key="autoresizingMask"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="b8r-E7-fjv"/>
+                                </constraints>
                             </customView>
-                            <customView fixedFrame="YES" id="xkP-w6-TDg" userLabel="secondView">
-                                <rect key="frame" x="133" y="0.0" width="139" height="455"/>
+                            <customView id="xkP-w6-TDg" userLabel="secondView">
+                                <rect key="frame" x="137" y="0.0" width="136" height="455"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </customView>
                             <customView fixedFrame="YES" id="Gh9-B3-0Fo" userLabel="thirdView">
@@ -38,6 +41,9 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </customView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="xkP-w6-TDg" firstAttribute="width" secondItem="gGD-H8-7dV" secondAttribute="width" id="iHh-UZ-beX"/>
+                        </constraints>
                         <holdingPriorities>
                             <real value="250"/>
                             <real value="250"/>

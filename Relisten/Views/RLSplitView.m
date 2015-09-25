@@ -13,6 +13,7 @@
 -(void)setFirstViewFromViewController:(NSViewController *)viewController
 {
     [self.firstView addSubview:viewController.view];
+    viewController.view.autoresizingMask = NSViewHeightSizable;
 }
 
 -(void)setSecondViewFromViewController:(NSViewController *)viewController
