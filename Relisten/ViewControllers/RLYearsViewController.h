@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "IGAPIClient.h"
+#import "RLTableView.h"
 #import "RLYearTableCellView.h"
 
 @interface RLYearsViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>

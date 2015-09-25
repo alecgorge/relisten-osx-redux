@@ -10,7 +10,7 @@
 
 @interface RLYearsViewController ()
 
-@property (weak) IBOutlet NSTableView *tableView;
+@property (weak) IBOutlet RLTableView *tableView;
 
 @property (nonatomic, strong) NSArray *years;
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
