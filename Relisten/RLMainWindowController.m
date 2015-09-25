@@ -30,13 +30,13 @@
     //Set up Years
     self.yearsViewController = [[RLYearsViewController alloc] initWithNibName:@"RLYearsViewController" bundle:nil];
     [self.splitView setFirstViewFromViewController:self.yearsViewController];
+    self.splitView.delegate = self;
     
     // Set up the artist popup button
     self.artistPopupManager = [[RLArtistsPopupButtonManager alloc] initWithPopUpButton:_artistsPopupButton];
     [self.artistPopupManager.artistChanged.executionSignals subscribeNext:^(RACSignal *a) {
         [a subscribeNext:^(IGArtist *artist) {
             
-            // Add artist change handling code here
             IGAPIClient.sharedInstance.artist = artist;
             [self.yearsViewController fetchYears];
             [NSUserDefaults.standardUserDefaults setObject:artist.slug
@@ -45,6 +45,13 @@
         }];
     }];
     [self.artistPopupManager refresh];
+}
+
+#pragma mark - NSSplitViewDelegate Methods
+
+-(NSRect)splitView:(NSSplitView *)splitView effectiveRect:(NSRect)proposedEffectiveRect forDrawnRect:(NSRect)drawnRect ofDividerAtIndex:(NSInteger)dividerIndex
+{
+    return NSZeroRect;
 }
 
 @end

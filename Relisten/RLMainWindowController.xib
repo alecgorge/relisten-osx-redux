@@ -29,6 +29,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="136" height="455"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="AHv-lk-r2V"/>
                                     <constraint firstAttribute="width" constant="150" id="b8r-E7-fjv"/>
                                 </constraints>
                             </customView>
@@ -37,7 +38,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </customView>
                             <customView fixedFrame="YES" id="Gh9-B3-0Fo" userLabel="thirdView">
-                                <rect key="frame" x="273" y="0.0" width="525" height="455"/>
+                                <rect key="frame" x="274" y="0.0" width="524" height="455"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </customView>
                         </subviews>

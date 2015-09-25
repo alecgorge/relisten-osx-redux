@@ -11,6 +11,6 @@
 #import "RLYearsViewController.h"
 #import "RLSplitView.h"
 
-@interface RLMainWindowController : NSWindowController
+@interface RLMainWindowController : NSWindowController <NSSplitViewDelegate>
 
 @end
