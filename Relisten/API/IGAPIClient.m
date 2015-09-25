@@ -120,21 +120,12 @@
 }
 
 - (void)failure:(NSError *)error {
-//    UIViewController *present = AppDelegate.sharedDelegate.window.rootViewController;
-//    
-//    UIAlertController *a = [UIAlertController alertControllerWithTitle:@"Error"
-//                                                               message:error.localizedDescription
-//                                                        preferredStyle:UIAlertControllerStyleAlert];
-//    
-//    [a addAction:[UIAlertAction actionWithTitle:@"Okay"
-//                                          style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-//                                              [present dismissViewControllerAnimated:YES
-//                                                                          completion:nil];
-//                                          }]];
-//    
-//   [present presentViewController:a
-//                         animated:YES
-//                       completion:nil];
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"OK"];
+    [alert setMessageText:@"Error"];
+    [alert setInformativeText:error.localizedDescription];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert runModal];
 }
 
 - (void)artists:(void (^)(NSArray *))success {

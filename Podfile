@@ -6,4 +6,5 @@ target "Relisten" do
 	pod 'JSONModel'
     pod 'Masonry'
     pod 'ObjectiveSugar'
+    pod 'ReactiveCocoa', '~> 2.3'
 end

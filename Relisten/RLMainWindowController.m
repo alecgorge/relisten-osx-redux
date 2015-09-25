@@ -10,6 +10,10 @@
 
 @interface RLMainWindowController ()
 
+@property (weak) IBOutlet NSPopUpButton *artistsPopupButton;
+
+@property (nonatomic, strong) RLArtistsPopupButtonManager *artistPopupManager;
+
 @end
 
 @implementation RLMainWindowController
@@ -18,7 +22,20 @@
 {
     [super windowDidLoad];
     
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    self.window.titleVisibility = NSWindowTitleHidden;
+    
+    // Set up the artist popup button
+    self.artistPopupManager = [[RLArtistsPopupButtonManager alloc] initWithPopUpButton:_artistsPopupButton];
+    [self.artistPopupManager.artistChanged.executionSignals subscribeNext:^(RACSignal *a) {
+        [a subscribeNext:^(IGArtist *artist) {
+            
+            // Add artist change handling code here
+            [NSUserDefaults.standardUserDefaults setObject:artist.slug
+                                                    forKey:@"last_selected_artist_slug"];
+            [NSUserDefaults.standardUserDefaults synchronize];
+        }];
+    }];
+    [self.artistPopupManager refresh];
 }
 
 @end

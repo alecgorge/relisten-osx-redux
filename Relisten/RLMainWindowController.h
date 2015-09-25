@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "RLArtistsPopupButtonManager.h"
 
 @interface RLMainWindowController : NSWindowController
 
