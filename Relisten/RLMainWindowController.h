@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import "RLArtistsPopupButtonManager.h"
+#import "RLYearsViewController.h"
+#import "RLSplitView.h"
 
 @interface RLMainWindowController : NSWindowController
 

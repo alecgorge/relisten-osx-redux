@@ -10,9 +10,12 @@
 
 @interface RLMainWindowController ()
 
+// IB properties
+@property (weak) IBOutlet RLSplitView *splitView;
 @property (weak) IBOutlet NSPopUpButton *artistsPopupButton;
 
 @property (nonatomic, strong) RLArtistsPopupButtonManager *artistPopupManager;
+@property (nonatomic, strong) RLYearsViewController *yearsViewController;
 
 @end
 
@@ -24,12 +27,18 @@
     
     self.window.titleVisibility = NSWindowTitleHidden;
     
+    //Set up Years
+    self.yearsViewController = [[RLYearsViewController alloc] initWithNibName:@"RLYearsViewController" bundle:nil];
+    [self.splitView setFirstViewFromViewController:self.yearsViewController];
+    
     // Set up the artist popup button
     self.artistPopupManager = [[RLArtistsPopupButtonManager alloc] initWithPopUpButton:_artistsPopupButton];
     [self.artistPopupManager.artistChanged.executionSignals subscribeNext:^(RACSignal *a) {
         [a subscribeNext:^(IGArtist *artist) {
             
             // Add artist change handling code here
+            IGAPIClient.sharedInstance.artist = artist;
+            [self.yearsViewController fetchYears];
             [NSUserDefaults.standardUserDefaults setObject:artist.slug
                                                     forKey:@"last_selected_artist_slug"];
             [NSUserDefaults.standardUserDefaults synchronize];

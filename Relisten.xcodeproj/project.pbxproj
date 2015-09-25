@@ -186,6 +186,8 @@ fi
 			<key>files</key>
 			<array>
 				<string>C18AEAC71BB4A7F600A6D182</string>
+				<string>C18AEAE01BB4EB2100A6D182</string>
+				<string>C187C67F1BB4FA7600F1778C</string>
 				<string>C18AEAC11BB4A7F600A6D182</string>
 				<string>C18AEAC31BB4A7F600A6D182</string>
 				<string>C18AEAC61BB4A7F600A6D182</string>
@@ -196,6 +198,7 @@ fi
 				<string>C18AEAD21BB4D43000A6D182</string>
 				<string>C116DFB01BB09EEE006A9F6C</string>
 				<string>C18AEAC01BB4A7F600A6D182</string>
+				<string>C18AEAD61BB4E6BB00A6D182</string>
 				<string>C18AEACD1BB4AFEC00A6D182</string>
 				<string>C18AEA951BB4945F00A6D182</string>
 			</array>
@@ -226,6 +229,7 @@ fi
 				<string>C18AEA961BB4945F00A6D182</string>
 				<string>C116DFB51BB09EEE006A9F6C</string>
 				<string>C116DFB81BB09EEE006A9F6C</string>
+				<string>C18AEAE11BB4EB2100A6D182</string>
 			</array>
 			<key>isa</key>
 			<string>PBXResourcesBuildPhase</string>
@@ -294,6 +298,8 @@ fi
 				<string>C18AEA921BB4945F00A6D182</string>
 				<string>C18AEA931BB4945F00A6D182</string>
 				<string>C18AEA941BB4945F00A6D182</string>
+				<string>C18AEAD31BB4E4B800A6D182</string>
+				<string>C18AEAD71BB4E83800A6D182</string>
 				<string>C18AEACF1BB4D1E500A6D182</string>
 				<string>C18AEACE1BB4C99B00A6D182</string>
 				<string>C18AEA971BB4A34A00A6D182</string>
@@ -671,6 +677,44 @@ fi
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
+		</dict>
+		<key>C187C67D1BB4FA7600F1778C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RLYearTableCellView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C187C67E1BB4FA7600F1778C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>RLYearTableCellView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C187C67F1BB4FA7600F1778C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C187C67E1BB4FA7600F1778C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ASSET_TAGS</key>
+				<array/>
+			</dict>
 		</dict>
 		<key>C18AEA921BB4945F00A6D182</key>
 		<dict>
@@ -1128,8 +1172,6 @@ fi
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Managers</string>
 			<key>path</key>
 			<string>Managers</string>
 			<key>sourceTree</key>
@@ -1165,6 +1207,142 @@ fi
 		<dict>
 			<key>fileRef</key>
 			<string>C18AEAD11BB4D43000A6D182</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ASSET_TAGS</key>
+				<array/>
+			</dict>
+		</dict>
+		<key>C18AEAD31BB4E4B800A6D182</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C18AEAD41BB4E6BB00A6D182</string>
+				<string>C18AEAD51BB4E6BB00A6D182</string>
+				<string>C187C67D1BB4FA7600F1778C</string>
+				<string>C187C67E1BB4FA7600F1778C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Views</string>
+			<key>path</key>
+			<string>Views</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C18AEAD41BB4E6BB00A6D182</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RLSplitView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C18AEAD51BB4E6BB00A6D182</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>RLSplitView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C18AEAD61BB4E6BB00A6D182</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C18AEAD51BB4E6BB00A6D182</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ASSET_TAGS</key>
+				<array/>
+			</dict>
+		</dict>
+		<key>C18AEAD71BB4E83800A6D182</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C18AEADD1BB4EB2100A6D182</string>
+				<string>C18AEADE1BB4EB2100A6D182</string>
+				<string>C18AEADF1BB4EB2100A6D182</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ViewControllers</string>
+			<key>path</key>
+			<string>ViewControllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C18AEADD1BB4EB2100A6D182</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RLYearsViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C18AEADE1BB4EB2100A6D182</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>RLYearsViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C18AEADF1BB4EB2100A6D182</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>RLYearsViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C18AEAE01BB4EB2100A6D182</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C18AEADE1BB4EB2100A6D182</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ASSET_TAGS</key>
+				<array/>
+			</dict>
+		</dict>
+		<key>C18AEAE11BB4EB2100A6D182</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C18AEADF1BB4EB2100A6D182</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
