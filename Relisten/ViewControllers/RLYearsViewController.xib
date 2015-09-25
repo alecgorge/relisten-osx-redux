@@ -16,18 +16,10 @@
             <rect key="frame" x="0.0" y="0.0" width="231" height="505"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wdh-K6-toO">
-                    <rect key="frame" x="-2" y="488" width="235" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Years" id="X9A-ZB-mxA">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="41" horizontalPageScroll="10" verticalLineScroll="41" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blm-9g-dtq">
-                    <rect key="frame" x="0.0" y="0.0" width="231" height="488"/>
+                    <rect key="frame" x="0.0" y="0.0" width="231" height="505"/>
                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="vVV-Su-xDx">
-                        <rect key="frame" x="0.0" y="0.0" width="231" height="488"/>
+                        <rect key="frame" x="0.0" y="0.0" width="231" height="505"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="39" rowSizeStyle="automatic" viewBased="YES" id="0dr-VK-3zD" customClass="RLTableView">
@@ -120,13 +112,10 @@
                 </scrollView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Wdh-K6-toO" secondAttribute="trailing" id="EKM-6p-KlP"/>
+                <constraint firstItem="blm-9g-dtq" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="HnU-fD-gor"/>
                 <constraint firstAttribute="trailing" secondItem="blm-9g-dtq" secondAttribute="trailing" id="Qqg-e6-pam"/>
-                <constraint firstItem="Wdh-K6-toO" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="X3B-hm-qv4"/>
                 <constraint firstItem="blm-9g-dtq" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="YrM-Da-YVZ"/>
-                <constraint firstItem="Wdh-K6-toO" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="ZXN-5R-84H"/>
                 <constraint firstAttribute="bottom" secondItem="blm-9g-dtq" secondAttribute="bottom" id="nKD-uc-GuI"/>
-                <constraint firstItem="blm-9g-dtq" firstAttribute="top" secondItem="Wdh-K6-toO" secondAttribute="bottom" id="y8W-CP-qGs"/>
             </constraints>
             <point key="canvasLocation" x="339.5" y="431.5"/>
         </customView>

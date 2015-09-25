@@ -73,4 +73,13 @@
     return cellView;
 }
 
+-(BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex
+{
+    NSTableRowView *myRowView = [aTableView rowViewAtRow:rowIndex makeIfNecessary:NO];
+    [myRowView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleSourceList];
+    [myRowView setEmphasized:NO];
+    
+    return YES;
+}
+
 @end
