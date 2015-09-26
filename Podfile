@@ -7,4 +7,5 @@ target "Relisten" do
     pod 'Masonry'
     pod 'ObjectiveSugar'
     pod 'ReactiveCocoa', '~> 2.3'
+    pod 'EDStarRating'
 end
