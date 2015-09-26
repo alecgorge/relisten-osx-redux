@@ -35,7 +35,11 @@
 - (void)fetchShowsForYear:(IGYear *)year
 {
     [IGAPIClient.sharedInstance year:year.year success:^(IGYear *yr) {
-        self.shows = yr.shows;
+        
+        NSArray *shows = yr.shows;
+        NSSortDescriptor *valueDescriptor = [[NSSortDescriptor alloc] initWithKey:@"averageRating" ascending:NO];
+        NSArray *descriptors = [NSArray arrayWithObject:valueDescriptor];
+        self.shows = [shows sortedArrayUsingDescriptors:descriptors];
         [self.tableView reloadData];
     }];
 }
