@@ -11,7 +11,15 @@
 #import "RLTableView.h"
 #import "RLYearTableCellView.h"
 
+@protocol RLYearSelectedDelegate <NSObject>
+
+- (void)yearSelected:(IGYear *)year;
+
+@end
+
 @interface RLYearsViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
+
+@property (nonatomic, weak) id<RLYearSelectedDelegate> delegate;
 
 - (void)fetchYears;
 

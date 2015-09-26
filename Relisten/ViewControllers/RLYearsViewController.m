@@ -79,6 +79,9 @@
     [myRowView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleSourceList];
     [myRowView setEmphasized:NO];
     
+    IGYear *year = self.years[rowIndex];
+    [self.delegate yearSelected:year];
+    
     return YES;
 }
 

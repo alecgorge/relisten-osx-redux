@@ -9,8 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import "RLArtistsPopupButtonManager.h"
 #import "RLYearsViewController.h"
+#import "RLShowsViewController.h"
 #import "RLSplitView.h"
 
-@interface RLMainWindowController : NSWindowController <NSSplitViewDelegate>
+@interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLYearSelectedDelegate>
 
 @end

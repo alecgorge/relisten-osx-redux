@@ -7,7 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "RLShowTableViewCell.h"
+#import "RLTableView.h"
+#import "IGAPIClient.h"
 
-@interface RLShowsViewController : NSViewController
+@interface RLShowsViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
+
+- (void)fetchShowsForYear:(IGYear *)year;
+- (void)clearAllShows;
 
 @end

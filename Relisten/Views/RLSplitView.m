@@ -23,13 +23,13 @@
 
 -(void)setSecondViewFromViewController:(NSViewController *)viewController
 {
-    self.secondView = viewController.view;
+    [self.secondView addSubview:viewController.view];
     viewController.view.autoresizingMask = NSViewHeightSizable;
 }
 
 -(void)setThirdViewFromViewController:(NSViewController *)viewController
 {
-    self.thirdView = viewController.view;
+    [self.thirdView addSubview:viewController.view];
     viewController.view.autoresizingMask = NSViewHeightSizable;
 }
 

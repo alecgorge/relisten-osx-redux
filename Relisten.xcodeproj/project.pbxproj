@@ -16,6 +16,9 @@
 		C187C6821BB5050400F1778C /* RLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C6811BB5050400F1778C /* RLTableView.m */; settings = {ASSET_TAGS = (); }; };
 		C187C68D1BB735C100F1778C /* RLShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C68B1BB735C100F1778C /* RLShowsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C187C68E1BB735C100F1778C /* RLShowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C187C68C1BB735C100F1778C /* RLShowsViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		C187C6911BB739BF00F1778C /* RLShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C6901BB739BF00F1778C /* RLShowTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C187C6951BB759D900F1778C /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C6931BB759D900F1778C /* star.png */; settings = {ASSET_TAGS = (); }; };
+		C187C6961BB759D900F1778C /* starhighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C6941BB759D900F1778C /* starhighlighted.png */; settings = {ASSET_TAGS = (); }; };
 		C18AEA951BB4945F00A6D182 /* RLMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEA931BB4945F00A6D182 /* RLMainWindowController.m */; settings = {ASSET_TAGS = (); }; };
 		C18AEA961BB4945F00A6D182 /* RLMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AEA941BB4945F00A6D182 /* RLMainWindowController.xib */; settings = {ASSET_TAGS = (); }; };
 		C18AEABF1BB4A7F600A6D182 /* IGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAAE1BB4A7F600A6D182 /* IGArtist.m */; settings = {ASSET_TAGS = (); }; };
@@ -51,6 +54,10 @@
 		C187C68A1BB735C100F1778C /* RLShowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLShowsViewController.h; sourceTree = "<group>"; };
 		C187C68B1BB735C100F1778C /* RLShowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLShowsViewController.m; sourceTree = "<group>"; };
 		C187C68C1BB735C100F1778C /* RLShowsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLShowsViewController.xib; sourceTree = "<group>"; };
+		C187C68F1BB739BF00F1778C /* RLShowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLShowTableViewCell.h; sourceTree = "<group>"; };
+		C187C6901BB739BF00F1778C /* RLShowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLShowTableViewCell.m; sourceTree = "<group>"; };
+		C187C6931BB759D900F1778C /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		C187C6941BB759D900F1778C /* starhighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starhighlighted.png; sourceTree = "<group>"; };
 		C18AEA921BB4945F00A6D182 /* RLMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLMainWindowController.h; sourceTree = "<group>"; };
 		C18AEA931BB4945F00A6D182 /* RLMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLMainWindowController.m; sourceTree = "<group>"; };
 		C18AEA941BB4945F00A6D182 /* RLMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLMainWindowController.xib; sourceTree = "<group>"; };
@@ -141,12 +148,22 @@
 		C116DFB11BB09EEE006A9F6C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C187C6921BB759CF00F1778C /* Images */,
 				C116DFB61BB09EEE006A9F6C /* MainMenu.xib */,
 				C116DFB91BB09EEE006A9F6C /* Info.plist */,
 				C116DFB21BB09EEE006A9F6C /* main.m */,
 				C116DFB41BB09EEE006A9F6C /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C187C6921BB759CF00F1778C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C187C6931BB759D900F1778C /* star.png */,
+				C187C6941BB759D900F1778C /* starhighlighted.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		C18AEA971BB4A34A00A6D182 /* Model */ = {
@@ -199,6 +216,8 @@
 				C187C6811BB5050400F1778C /* RLTableView.m */,
 				C187C67D1BB4FA7600F1778C /* RLYearTableCellView.h */,
 				C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */,
+				C187C68F1BB739BF00F1778C /* RLShowTableViewCell.h */,
+				C187C6901BB739BF00F1778C /* RLShowTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -283,11 +302,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C187C6961BB759D900F1778C /* starhighlighted.png in Resources */,
 				C187C68E1BB735C100F1778C /* RLShowsViewController.xib in Resources */,
 				C18AEA961BB4945F00A6D182 /* RLMainWindowController.xib in Resources */,
 				C116DFB51BB09EEE006A9F6C /* Assets.xcassets in Resources */,
 				C116DFB81BB09EEE006A9F6C /* MainMenu.xib in Resources */,
 				C18AEAE11BB4EB2100A6D182 /* RLYearsViewController.xib in Resources */,
+				C187C6951BB759D900F1778C /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +361,7 @@
 				C18AEABF1BB4A7F600A6D182 /* IGArtist.m in Sources */,
 				C18AEAC21BB4A7F600A6D182 /* IGShowReview.m in Sources */,
 				C116DFB31BB09EEE006A9F6C /* main.m in Sources */,
+				C187C6911BB739BF00F1778C /* RLShowTableViewCell.m in Sources */,
 				C187C68D1BB735C100F1778C /* RLShowsViewController.m in Sources */,
 				C18AEACA1BB4AFB800A6D182 /* IGAPIClient.m in Sources */,
 				C187C6821BB5050400F1778C /* RLTableView.m in Sources */,
