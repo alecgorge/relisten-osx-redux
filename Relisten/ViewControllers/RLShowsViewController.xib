@@ -99,6 +99,7 @@
                                                     <constraint firstItem="RHZ-ty-gAl" firstAttribute="leading" secondItem="0Fp-1I-jXI" secondAttribute="leading" constant="5" id="C8t-PN-x3W"/>
                                                     <constraint firstItem="tjm-zf-WiC" firstAttribute="leading" secondItem="0Fp-1I-jXI" secondAttribute="leading" constant="5" id="CId-CC-fZV"/>
                                                     <constraint firstItem="RHZ-ty-gAl" firstAttribute="top" secondItem="4gi-Ra-pxX" secondAttribute="bottom" constant="2" id="D47-7X-5qY"/>
+                                                    <constraint firstItem="HOL-0f-e3Y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RHZ-ty-gAl" secondAttribute="trailing" constant="10" id="Fkc-Er-wYI"/>
                                                     <constraint firstItem="HOL-0f-e3Y" firstAttribute="trailing" secondItem="izp-Fw-V2m" secondAttribute="trailing" id="P76-E2-nT7"/>
                                                     <constraint firstItem="izp-Fw-V2m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4gi-Ra-pxX" secondAttribute="trailing" constant="10" id="TiI-0x-5i0"/>
                                                     <constraint firstItem="tjm-zf-WiC" firstAttribute="top" secondItem="0Fp-1I-jXI" secondAttribute="top" constant="3" id="URI-K3-Kvl"/>

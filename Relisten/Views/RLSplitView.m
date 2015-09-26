@@ -17,12 +17,14 @@
 
 -(void)setFirstViewFromViewController:(NSViewController *)viewController
 {
+    viewController.view.frame = self.firstView.bounds;
     [self.firstView addSubview:viewController.view];
     viewController.view.autoresizingMask = NSViewHeightSizable;
 }
 
 -(void)setSecondViewFromViewController:(NSViewController *)viewController
 {
+    viewController.view.frame = self.secondView.bounds;
     [self.secondView addSubview:viewController.view];
     viewController.view.autoresizingMask = NSViewHeightSizable;
 }

@@ -26,21 +26,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="798" height="455"/>
                         <subviews>
                             <customView id="gGD-H8-7dV" userLabel="firstView">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="455"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="b8r-E7-fjv"/>
+                                    <constraint firstAttribute="width" constant="140" id="b8r-E7-fjv"/>
                                 </constraints>
                             </customView>
                             <customView id="xkP-w6-TDg" userLabel="secondView">
-                                <rect key="frame" x="151" y="0.0" width="133" height="455"/>
+                                <rect key="frame" x="141" y="0.0" width="133" height="455"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="kOG-ys-iHf"/>
                                 </constraints>
                             </customView>
                             <customView fixedFrame="YES" id="Gh9-B3-0Fo" userLabel="thirdView">
-                                <rect key="frame" x="284" y="0.0" width="514" height="455"/>
+                                <rect key="frame" x="275" y="0.0" width="523" height="455"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </customView>
                         </subviews>
