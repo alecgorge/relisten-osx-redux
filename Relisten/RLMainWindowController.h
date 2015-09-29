@@ -10,6 +10,7 @@
 #import "RLArtistsPopupButtonManager.h"
 #import "RLYearsViewController.h"
 #import "RLShowsViewController.h"
+#import "RLSourceAndTracksViewController.h"
 #import "RLSplitView.h"
 
 @interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLYearSelectedDelegate>

@@ -17,6 +17,7 @@
 @property (nonatomic, strong) RLArtistsPopupButtonManager *artistPopupManager;
 @property (nonatomic, strong) RLYearsViewController *yearsViewController;
 @property (nonatomic, strong) RLShowsViewController *showsViewController;
+@property (nonatomic, strong) RLSourceAndTracksViewController *sourceAndTracksViewController;
 
 @end
 
@@ -37,6 +38,10 @@
     //Set up Shows
     self.showsViewController = [[RLShowsViewController alloc] initWithNibName:@"RLShowsViewController" bundle:nil];
     [self.splitView setSecondViewFromViewController:self.showsViewController];
+    
+    // Set up Source and Tracks
+    self.sourceAndTracksViewController = [[RLSourceAndTracksViewController alloc] initWithNibName:@"RLSourceAndTracksViewController" bundle:nil];
+    [self.splitView setThirdViewFromViewController:self.sourceAndTracksViewController];
     
     // Set up the artist popup button
     self.artistPopupManager = [[RLArtistsPopupButtonManager alloc] initWithPopUpButton:_artistsPopupButton];

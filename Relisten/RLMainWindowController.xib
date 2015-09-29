@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="artistsPopupButton" destination="TF2-3E-ynh" id="PDb-Ih-rUU"/>
                 <outlet property="splitView" destination="gff-DE-xYh" id="08t-ED-ZGl"/>
+                <outlet property="toolbar" destination="Ipc-e9-QTO" id="B4p-A1-XPo"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -23,24 +24,24 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <splitView dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gff-DE-xYh" customClass="RLSplitView">
-                        <rect key="frame" x="0.0" y="0.0" width="798" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="798" height="417"/>
                         <subviews>
                             <customView id="gGD-H8-7dV" userLabel="firstView">
-                                <rect key="frame" x="0.0" y="0.0" width="140" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="417"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="b8r-E7-fjv"/>
                                 </constraints>
                             </customView>
                             <customView id="xkP-w6-TDg" userLabel="secondView">
-                                <rect key="frame" x="141" y="0.0" width="133" height="455"/>
+                                <rect key="frame" x="141" y="0.0" width="133" height="417"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="kOG-ys-iHf"/>
                                 </constraints>
                             </customView>
                             <customView fixedFrame="YES" id="Gh9-B3-0Fo" userLabel="thirdView">
-                                <rect key="frame" x="275" y="0.0" width="523" height="455"/>
+                                <rect key="frame" x="275" y="0.0" width="523" height="417"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </customView>
                         </subviews>
@@ -60,7 +61,7 @@
                     <constraint firstItem="gff-DE-xYh" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="gOY-aJ-Omj"/>
                     <constraint firstAttribute="bottom" secondItem="gff-DE-xYh" secondAttribute="bottom" id="tgP-GX-cHR"/>
                     <constraint firstAttribute="trailing" secondItem="gff-DE-xYh" secondAttribute="trailing" id="xm1-zo-DHB"/>
-                    <constraint firstItem="gff-DE-xYh" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="yTj-vJ-nQI"/>
+                    <constraint firstItem="gff-DE-xYh" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="38" id="yTj-vJ-nQI"/>
                 </constraints>
             </view>
             <toolbar key="toolbar" implicitIdentifier="F6FB432C-C7DA-4A85-9844-4DB80E93D835" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="small" id="Ipc-e9-QTO">

@@ -10,10 +10,10 @@
 
 @implementation RLSplitView
 
--(NSColor *)dividerColor
-{
-    return [NSColor grayColor];
-}
+//-(NSColor *)dividerColor
+//{
+//    return [NSColor grayColor];
+//}
 
 -(void)setFirstViewFromViewController:(NSViewController *)viewController
 {
@@ -31,8 +31,9 @@
 
 -(void)setThirdViewFromViewController:(NSViewController *)viewController
 {
+    viewController.view.frame = self.thirdView.bounds;
     [self.thirdView addSubview:viewController.view];
-    viewController.view.autoresizingMask = NSViewHeightSizable;
+    viewController.view.autoresizingMask = NSViewHeightSizable | NSViewWidthSizable;
 }
 
 @end

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="RLSourceAndTracksViewController">
+            <connections>
+                <outlet property="sourcePopupButton" destination="ux0-Fp-HHr" id="V0n-Jy-nx0"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="520" height="316"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ux0-Fp-HHr">
+                    <rect key="frame" x="72" y="282" width="428" height="25"/>
+                    <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" inset="2" id="mA3-ui-5dL">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="HM2-Hv-WsP">
+                            <items>
+                                <menuItem title="Item 2" id="b9l-qm-l2b"/>
+                                <menuItem title="Item 3" id="ReZ-h7-gSs"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                </popUpButton>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b6q-oE-4KE">
+                    <rect key="frame" x="18" y="287" width="48" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Source" id="AsF-AO-sTh">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="NpB-yu-zzi">
+                    <rect key="frame" x="12" y="271" width="496" height="5"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="NpB-yu-zzi" firstAttribute="top" secondItem="ux0-Fp-HHr" secondAttribute="bottom" constant="10" id="ABq-Ik-7OF"/>
+                <constraint firstItem="ux0-Fp-HHr" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="FhF-AI-3X8"/>
+                <constraint firstItem="b6q-oE-4KE" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="M3b-HD-iSt"/>
+                <constraint firstItem="ux0-Fp-HHr" firstAttribute="leading" secondItem="b6q-oE-4KE" secondAttribute="trailing" constant="8" id="YBj-8d-FnO"/>
+                <constraint firstItem="NpB-yu-zzi" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="lQY-vw-iWM"/>
+                <constraint firstAttribute="trailing" secondItem="NpB-yu-zzi" secondAttribute="trailing" constant="12" id="mRw-UO-0yp"/>
+                <constraint firstItem="b6q-oE-4KE" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="rb7-cs-ANG"/>
+                <constraint firstAttribute="trailing" secondItem="ux0-Fp-HHr" secondAttribute="trailing" constant="20" id="sqm-XK-DDM"/>
+            </constraints>
+            <point key="canvasLocation" x="354" y="265"/>
+        </customView>
+    </objects>
+</document>
