@@ -96,9 +96,8 @@
                     </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
-                    <toolbarItem reference="n1R-83-9Rk"/>
-                    <toolbarItem reference="LbV-E5-LG9"/>
                     <toolbarItem reference="38h-ZA-Rq5"/>
+                    <toolbarItem reference="LbV-E5-LG9"/>
                 </defaultToolbarItems>
             </toolbar>
             <connections>

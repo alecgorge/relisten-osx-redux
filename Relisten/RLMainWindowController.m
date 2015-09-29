@@ -63,9 +63,9 @@
 
 #pragma mark - NSSplitViewDelegate Methods
 
-//-(NSRect)splitView:(NSSplitView *)splitView effectiveRect:(NSRect)proposedEffectiveRect forDrawnRect:(NSRect)drawnRect ofDividerAtIndex:(NSInteger)dividerIndex
-//{
-//    return NSZeroRect;
-//}
+-(NSRect)splitView:(NSSplitView *)splitView effectiveRect:(NSRect)proposedEffectiveRect forDrawnRect:(NSRect)drawnRect ofDividerAtIndex:(NSInteger)dividerIndex
+{
+    return NSZeroRect;
+}
 
 @end
