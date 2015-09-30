@@ -12,6 +12,9 @@
 
 @property (weak) IBOutlet NSPopUpButton *sourcePopupButton;
 
+@property (nonatomic, strong) NSArray *allShows;
+@property (nonatomic, strong) IGShow *selectedShow;
+
 @end
 
 @implementation RLSourceAndTracksViewController
@@ -28,6 +31,25 @@
 {
     [self.sourcePopupButton removeAllItems];
     self.sourcePopupButton.enabled = NO;
+}
+
+-(void)setupSourceSelectionPopupButtonWithSources:(NSArray *)sources
+{
+    [self.sourcePopupButton removeAllItems];
+    self.sourcePopupButton.enabled = YES;
+    NSArray *sourceList = [sources valueForKey:@"source"];
+    [self.sourcePopupButton addItemsWithTitles:sourceList];
+}
+
+-(void)fetchTracksForShow:(IGShow *)show
+{
+    [IGAPIClient.sharedInstance showsOn:show.displayDate
+                                success:^(NSArray *shows) {
+                                    
+                                    self.allShows = shows;
+                                    self.selectedShow = shows[0];
+                                    [self setupSourceSelectionPopupButtonWithSources:self.allShows];
+                                }];
 }
 
 @end

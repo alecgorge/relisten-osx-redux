@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "IGAPIClient.h"
 
 @interface RLSourceAndTracksViewController : NSViewController
 
+-(void)fetchTracksForShow:(IGShow *)show;
 -(void)disableSourceSelection;
 
 @end

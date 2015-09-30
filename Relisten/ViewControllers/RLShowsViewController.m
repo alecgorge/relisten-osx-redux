@@ -103,6 +103,9 @@
     [myRowView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleSourceList];
     [myRowView setEmphasized:NO];
     
+    IGShow *show = self.shows[rowIndex];
+    [self.delegate showSelected:show];
+    
     return YES;
 }
 

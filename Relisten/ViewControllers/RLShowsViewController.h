@@ -11,7 +11,15 @@
 #import "RLTableView.h"
 #import "IGAPIClient.h"
 
+@protocol RLShowSelectedDelegate <NSObject>
+
+- (void)showSelected:(IGShow *)show;
+
+@end
+
 @interface RLShowsViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
+
+@property (nonatomic, weak) id<RLShowSelectedDelegate> delegate;
 
 - (void)fetchShowsForYear:(IGYear *)year;
 - (void)clearAllShows;

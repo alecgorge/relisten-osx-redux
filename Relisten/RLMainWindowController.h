@@ -13,6 +13,6 @@
 #import "RLSourceAndTracksViewController.h"
 #import "RLSplitView.h"
 
-@interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLYearSelectedDelegate>
+@interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLYearSelectedDelegate, RLShowSelectedDelegate>
 
 @end

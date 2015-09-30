@@ -8,7 +8,6 @@
             <connections>
                 <outlet property="artistsPopupButton" destination="TF2-3E-ynh" id="PDb-Ih-rUU"/>
                 <outlet property="splitView" destination="gff-DE-xYh" id="08t-ED-ZGl"/>
-                <outlet property="toolbar" destination="Ipc-e9-QTO" id="B4p-A1-XPo"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>

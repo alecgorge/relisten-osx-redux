@@ -37,6 +37,7 @@
     
     //Set up Shows
     self.showsViewController = [[RLShowsViewController alloc] initWithNibName:@"RLShowsViewController" bundle:nil];
+    self.showsViewController.delegate = self;
     [self.splitView setSecondViewFromViewController:self.showsViewController];
     
     // Set up Source and Tracks
@@ -51,6 +52,7 @@
             IGAPIClient.sharedInstance.artist = artist;
             [self.yearsViewController fetchYears];
             [self.showsViewController clearAllShows];
+            [self.sourceAndTracksViewController disableSourceSelection];
             [NSUserDefaults.standardUserDefaults setObject:artist.slug
                                                     forKey:@"last_selected_artist_slug"];
             [NSUserDefaults.standardUserDefaults synchronize];
@@ -63,7 +65,13 @@
 
 -(void)yearSelected:(IGYear *)year
 {
+    [self.sourceAndTracksViewController disableSourceSelection];
     [self.showsViewController fetchShowsForYear:year];
+}
+
+-(void)showSelected:(IGShow *)show
+{
+    [self.sourceAndTracksViewController fetchTracksForShow:show];
 }
 
 #pragma mark - NSSplitViewDelegate Methods
