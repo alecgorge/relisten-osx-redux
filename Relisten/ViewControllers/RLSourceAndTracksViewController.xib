@@ -25,6 +25,9 @@
                         <font key="font" metaFont="menu"/>
                         <menu key="menu" id="HM2-Hv-WsP"/>
                     </popUpButtonCell>
+                    <connections>
+                        <action selector="sourceSelectionChanged:" target="-2" id="5i9-dX-06e"/>
+                    </connections>
                 </popUpButton>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b6q-oE-4KE">
                     <rect key="frame" x="18" y="287" width="48" height="17"/>

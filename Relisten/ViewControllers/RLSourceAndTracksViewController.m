@@ -64,6 +64,12 @@
                                 }];
 }
 
+- (IBAction)sourceSelectionChanged:(id)sender
+{
+    NSInteger index = [self.sourcePopupButton indexOfSelectedItem];
+    self.selectedShow = self.allShows[index];
+    [self.tableView reloadData];
+}
 #pragma mark - NSTableViewDelegate Methods
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
