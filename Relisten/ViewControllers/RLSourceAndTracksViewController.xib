@@ -6,6 +6,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="RLSourceAndTracksViewController">
             <connections>
+                <outlet property="helpButton" destination="ZHL-Bs-3Ku" id="US1-mZ-Cwg"/>
                 <outlet property="sourcePopupButton" destination="ux0-Fp-HHr" id="V0n-Jy-nx0"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -17,8 +18,8 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <popUpButton verticalHuggingPriority="750" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="ux0-Fp-HHr">
-                    <rect key="frame" x="72" y="282" width="428" height="25"/>
-                    <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" continuous="YES" borderStyle="border" inset="2" preferredEdge="maxX" id="mA3-ui-5dL">
+                    <rect key="frame" x="72" y="283" width="399" height="24"/>
+                    <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" continuous="YES" borderStyle="border" inset="2" id="mA3-ui-5dL">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
                         <menu key="menu" id="HM2-Hv-WsP"/>
@@ -33,21 +34,31 @@
                     </textFieldCell>
                 </textField>
                 <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="NpB-yu-zzi">
-                    <rect key="frame" x="12" y="271" width="496" height="5"/>
+                    <rect key="frame" x="12" y="272" width="496" height="5"/>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <font key="titleFont" metaFont="system"/>
                 </box>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZHL-Bs-3Ku">
+                    <rect key="frame" x="477" y="280" width="25" height="25"/>
+                    <buttonCell key="cell" type="help" bezelStyle="helpButton" imagePosition="left" alignment="left" borderStyle="border" inset="2" id="en7-Jy-q6U">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="ux0-Fp-HHr" secondAttribute="trailing" constant="20" id="4pg-FH-jgy"/>
                 <constraint firstItem="NpB-yu-zzi" firstAttribute="top" secondItem="ux0-Fp-HHr" secondAttribute="bottom" constant="10" id="ABq-Ik-7OF"/>
+                <constraint firstAttribute="trailing" secondItem="ZHL-Bs-3Ku" secondAttribute="trailing" constant="20" id="Bes-qP-zOz"/>
                 <constraint firstItem="ux0-Fp-HHr" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="FhF-AI-3X8"/>
+                <constraint firstItem="ZHL-Bs-3Ku" firstAttribute="height" secondItem="ux0-Fp-HHr" secondAttribute="height" id="FiM-sg-LtS"/>
+                <constraint firstItem="ZHL-Bs-3Ku" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="KTf-7V-ufI"/>
                 <constraint firstItem="b6q-oE-4KE" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="M3b-HD-iSt"/>
                 <constraint firstItem="ux0-Fp-HHr" firstAttribute="leading" secondItem="b6q-oE-4KE" secondAttribute="trailing" constant="8" id="YBj-8d-FnO"/>
                 <constraint firstItem="NpB-yu-zzi" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="lQY-vw-iWM"/>
                 <constraint firstAttribute="trailing" secondItem="NpB-yu-zzi" secondAttribute="trailing" constant="12" id="mRw-UO-0yp"/>
                 <constraint firstItem="b6q-oE-4KE" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="rb7-cs-ANG"/>
+                <constraint firstItem="ZHL-Bs-3Ku" firstAttribute="leading" secondItem="ux0-Fp-HHr" secondAttribute="trailing" constant="8" id="vuG-ZK-SjW"/>
             </constraints>
             <point key="canvasLocation" x="354" y="265"/>
         </customView>

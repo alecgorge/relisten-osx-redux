@@ -11,6 +11,7 @@
 @interface RLSourceAndTracksViewController ()
 
 @property (weak) IBOutlet NSPopUpButton *sourcePopupButton;
+@property (weak) IBOutlet NSButton *helpButton;
 
 @property (nonatomic, strong) NSArray *allShows;
 @property (nonatomic, strong) IGShow *selectedShow;
@@ -31,12 +32,14 @@
 {
     [self.sourcePopupButton removeAllItems];
     self.sourcePopupButton.enabled = NO;
+    self.helpButton.enabled = NO;
 }
 
 -(void)populatePopupButtonWithSources:(NSArray *)sources
 {
     [self.sourcePopupButton removeAllItems];
     self.sourcePopupButton.enabled = YES;
+    self.helpButton.enabled = YES;
     NSArray *sourceList = [sources valueForKey:@"source"];
     [self.sourcePopupButton addItemsWithTitles:sourceList];
 }
