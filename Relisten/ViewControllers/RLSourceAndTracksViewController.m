@@ -33,7 +33,7 @@
     self.sourcePopupButton.enabled = NO;
 }
 
--(void)setupSourceSelectionPopupButtonWithSources:(NSArray *)sources
+-(void)populatePopupButtonWithSources:(NSArray *)sources
 {
     [self.sourcePopupButton removeAllItems];
     self.sourcePopupButton.enabled = YES;
@@ -48,7 +48,7 @@
                                     
                                     self.allShows = shows;
                                     self.selectedShow = shows[0];
-                                    [self setupSourceSelectionPopupButtonWithSources:self.allShows];
+                                    [self populatePopupButtonWithSources:self.allShows];
                                 }];
 }
 
