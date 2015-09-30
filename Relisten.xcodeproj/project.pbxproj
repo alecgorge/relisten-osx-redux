@@ -12,6 +12,7 @@
 		C116DFB31BB09EEE006A9F6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C116DFB21BB09EEE006A9F6C /* main.m */; };
 		C116DFB51BB09EEE006A9F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C116DFB41BB09EEE006A9F6C /* Assets.xcassets */; };
 		C116DFB81BB09EEE006A9F6C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C116DFB61BB09EEE006A9F6C /* MainMenu.xib */; };
+		C15B8A201BBC5B3B00CB2F92 /* RLTrackTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C15B8A1F1BBC5B3B00CB2F92 /* RLTrackTableCellView.m */; settings = {ASSET_TAGS = (); }; };
 		C187C67F1BB4FA7600F1778C /* RLYearTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */; settings = {ASSET_TAGS = (); }; };
 		C187C6821BB5050400F1778C /* RLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C6811BB5050400F1778C /* RLTableView.m */; settings = {ASSET_TAGS = (); }; };
 		C187C68D1BB735C100F1778C /* RLShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C68B1BB735C100F1778C /* RLShowsViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -49,6 +50,8 @@
 		C116DFB41BB09EEE006A9F6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C116DFB71BB09EEE006A9F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C116DFB91BB09EEE006A9F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C15B8A1E1BBC5B3B00CB2F92 /* RLTrackTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLTrackTableCellView.h; sourceTree = "<group>"; };
+		C15B8A1F1BBC5B3B00CB2F92 /* RLTrackTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLTrackTableCellView.m; sourceTree = "<group>"; };
 		C187C67D1BB4FA7600F1778C /* RLYearTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLYearTableCellView.h; sourceTree = "<group>"; };
 		C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLYearTableCellView.m; sourceTree = "<group>"; };
 		C187C6801BB5050400F1778C /* RLTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLTableView.h; sourceTree = "<group>"; };
@@ -223,6 +226,8 @@
 				C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */,
 				C187C68F1BB739BF00F1778C /* RLShowTableViewCell.h */,
 				C187C6901BB739BF00F1778C /* RLShowTableViewCell.m */,
+				C15B8A1E1BBC5B3B00CB2F92 /* RLTrackTableCellView.h */,
+				C15B8A1F1BBC5B3B00CB2F92 /* RLTrackTableCellView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				C18AEACA1BB4AFB800A6D182 /* IGAPIClient.m in Sources */,
 				C187C6821BB5050400F1778C /* RLTableView.m in Sources */,
 				C18AEAD21BB4D43000A6D182 /* RLArtistsPopupButtonManager.m in Sources */,
+				C15B8A201BBC5B3B00CB2F92 /* RLTrackTableCellView.m in Sources */,
 				C116DFB01BB09EEE006A9F6C /* AppDelegate.m in Sources */,
 				C18AEAC01BB4A7F600A6D182 /* IGPlaylist.m in Sources */,
 				C18AEAD61BB4E6BB00A6D182 /* RLSplitView.m in Sources */,

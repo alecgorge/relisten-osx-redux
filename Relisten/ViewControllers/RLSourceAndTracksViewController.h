@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "RLTrackTableCellView.h"
+#import "RLTableView.h"
 #import "IGAPIClient.h"
 
-@interface RLSourceAndTracksViewController : NSViewController
+@interface RLSourceAndTracksViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
 
 -(void)fetchTracksForShow:(IGShow *)show;
 -(void)disableSourceSelection;
