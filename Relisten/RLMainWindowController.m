@@ -10,7 +10,6 @@
 
 @interface RLMainWindowController ()
 
-// IB properties
 @property (weak) IBOutlet RLSplitView *splitView;
 @property (weak) IBOutlet NSPopUpButton *artistsPopupButton;
 
