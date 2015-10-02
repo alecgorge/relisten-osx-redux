@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
     </dependencies>
@@ -25,6 +25,7 @@
                             <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="39" rowSizeStyle="automatic" viewBased="YES" id="0dr-VK-3zD" customClass="RLTableView">
                                 <rect key="frame" x="0.0" y="0.0" width="174" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
+                                <animations/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
@@ -48,7 +49,8 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="YFC-Eh-uh5" userLabel="textField">
-                                                        <rect key="frame" x="3" y="19" width="35" height="17"/>
+                                                        <rect key="frame" x="3" y="19" width="34" height="17"/>
+                                                        <animations/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="2015" id="DUx-R0-YvY">
                                                             <font key="font" size="13" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -56,7 +58,8 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="PiZ-7t-zSR">
-                                                        <rect key="frame" x="3" y="3" width="160" height="14"/>
+                                                        <rect key="frame" x="3" y="3" width="152" height="14"/>
+                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1000 shows, 1000 recordings" id="7Bl-tH-GZ0">
                                                             <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" red="0.080446397428700744" green="0.095905926453622684" blue="0.3261172723288488" alpha="1" colorSpace="calibratedRGB"/>
@@ -65,6 +68,7 @@
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="ufE-gh-ujg">
                                                         <rect key="frame" x="3" y="-8" width="4" height="14"/>
+                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="gOS-Rr-NTg">
                                                             <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -72,7 +76,8 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="UqC-cD-yUm">
-                                                        <rect key="frame" x="119" y="20" width="49" height="14"/>
+                                                        <rect key="frame" x="121" y="20" width="47" height="14"/>
+                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Duration" id="icX-uc-naT">
                                                             <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
@@ -88,6 +93,7 @@
                                                     <constraint firstItem="YFC-Eh-uh5" firstAttribute="leading" secondItem="Kag-EU-hqd" secondAttribute="leading" constant="5" id="f0j-Id-swh"/>
                                                     <constraint firstItem="PiZ-7t-zSR" firstAttribute="top" secondItem="YFC-Eh-uh5" secondAttribute="bottom" constant="2" id="whi-HZ-o9I"/>
                                                 </constraints>
+                                                <animations/>
                                                 <connections>
                                                     <outlet property="durationTextField" destination="UqC-cD-yUm" id="Bq2-RC-JOa"/>
                                                     <outlet property="showsAndRecordingsTextField" destination="PiZ-7t-zSR" id="WlA-3v-teX"/>
@@ -99,15 +105,19 @@
                                 </tableColumns>
                             </tableView>
                         </subviews>
+                        <animations/>
                         <nil key="backgroundColor"/>
                     </clipView>
-                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="VWb-TO-JDc">
+                    <animations/>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="VWb-TO-JDc">
                         <rect key="frame" x="0.0" y="472" width="272" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Gaa-V0-o03">
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="Gaa-V0-o03">
                         <rect key="frame" x="224" y="17" width="15" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </scroller>
                 </scrollView>
             </subviews>
@@ -117,6 +127,7 @@
                 <constraint firstItem="blm-9g-dtq" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="YrM-Da-YVZ"/>
                 <constraint firstAttribute="bottom" secondItem="blm-9g-dtq" secondAttribute="bottom" id="nKD-uc-GuI"/>
             </constraints>
+            <animations/>
             <point key="canvasLocation" x="313" y="431.5"/>
         </customView>
     </objects>

@@ -18,6 +18,12 @@
 -(void)setFirstViewFromViewController:(NSViewController *)viewController
 {
     viewController.view.frame = self.firstView.bounds;
+    
+//    for (NSView *subview in self.firstView.subviews) // May need this in case we have to swap views
+//    {
+//        [subview removeFromSuperview];
+//    }
+    
     [self.firstView addSubview:viewController.view];
     viewController.view.autoresizingMask = NSViewHeightSizable;
 }

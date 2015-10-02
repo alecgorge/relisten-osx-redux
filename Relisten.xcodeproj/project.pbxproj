@@ -120,10 +120,10 @@
 		C116DFA21BB09EEE006A9F6C = {
 			isa = PBXGroup;
 			children = (
-				C116DFAD1BB09EEE006A9F6C /* Relisten */,
-				C116DFAC1BB09EEE006A9F6C /* Products */,
-				0F0CAB0FE1DC738A7BE54E8C /* Pods */,
 				D35B084755A2E6F9141E9514 /* Frameworks */,
+				0F0CAB0FE1DC738A7BE54E8C /* Pods */,
+				C116DFAC1BB09EEE006A9F6C /* Products */,
+				C116DFAD1BB09EEE006A9F6C /* Relisten */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,17 +138,16 @@
 		C116DFAD1BB09EEE006A9F6C /* Relisten */ = {
 			isa = PBXGroup;
 			children = (
+				C18AEACE1BB4C99B00A6D182 /* API */,
+				C18AEACF1BB4D1E500A6D182 /* Managers */,
+				C18AEA971BB4A34A00A6D182 /* Model */,
+				C116DFB11BB09EEE006A9F6C /* Supporting Files */,
+				C18AEAD31BB4E4B800A6D182 /* User Interface */,
 				C116DFAE1BB09EEE006A9F6C /* AppDelegate.h */,
 				C116DFAF1BB09EEE006A9F6C /* AppDelegate.m */,
 				C18AEA921BB4945F00A6D182 /* RLMainWindowController.h */,
 				C18AEA931BB4945F00A6D182 /* RLMainWindowController.m */,
 				C18AEA941BB4945F00A6D182 /* RLMainWindowController.xib */,
-				C18AEAD31BB4E4B800A6D182 /* Views */,
-				C18AEAD71BB4E83800A6D182 /* ViewControllers */,
-				C18AEACF1BB4D1E500A6D182 /* Managers */,
-				C18AEACE1BB4C99B00A6D182 /* API */,
-				C18AEA971BB4A34A00A6D182 /* Model */,
-				C116DFB11BB09EEE006A9F6C /* Supporting Files */,
 			);
 			path = Relisten;
 			sourceTree = "<group>";
@@ -157,10 +156,10 @@
 			isa = PBXGroup;
 			children = (
 				C187C6921BB759CF00F1778C /* Images */,
-				C116DFB61BB09EEE006A9F6C /* MainMenu.xib */,
-				C116DFB91BB09EEE006A9F6C /* Info.plist */,
-				C116DFB21BB09EEE006A9F6C /* main.m */,
 				C116DFB41BB09EEE006A9F6C /* Assets.xcassets */,
+				C116DFB91BB09EEE006A9F6C /* Info.plist */,
+				C116DFB61BB09EEE006A9F6C /* MainMenu.xib */,
+				C116DFB21BB09EEE006A9F6C /* main.m */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -171,7 +170,7 @@
 				C187C6931BB759D900F1778C /* star.png */,
 				C187C6941BB759D900F1778C /* starhighlighted.png */,
 			);
-			name = Images;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		C18AEA971BB4A34A00A6D182 /* Model */ = {
@@ -198,10 +197,10 @@
 		C18AEACE1BB4C99B00A6D182 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				C18AEACB1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.h */,
-				C18AEACC1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m */,
 				C18AEAC81BB4AFB800A6D182 /* IGAPIClient.h */,
 				C18AEAC91BB4AFB800A6D182 /* IGAPIClient.m */,
+				C18AEACB1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.h */,
+				C18AEACC1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -215,37 +214,54 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		C18AEAD31BB4E4B800A6D182 /* Views */ = {
+		C18AEAD31BB4E4B800A6D182 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				C1AA2D7A1BBF3867000D75FC /* Shows */,
+				C1AA2D7B1BBF387C000D75FC /* Source & Tracks */,
+				C1AA2D791BBF3861000D75FC /* Years */,
 				C18AEAD41BB4E6BB00A6D182 /* RLSplitView.h */,
 				C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */,
 				C187C6801BB5050400F1778C /* RLTableView.h */,
 				C187C6811BB5050400F1778C /* RLTableView.m */,
-				C187C67D1BB4FA7600F1778C /* RLYearTableCellView.h */,
-				C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */,
-				C187C68F1BB739BF00F1778C /* RLShowTableViewCell.h */,
-				C187C6901BB739BF00F1778C /* RLShowTableViewCell.m */,
-				C15B8A1E1BBC5B3B00CB2F92 /* RLTrackTableCellView.h */,
-				C15B8A1F1BBC5B3B00CB2F92 /* RLTrackTableCellView.m */,
 			);
-			path = Views;
+			path = "User Interface";
 			sourceTree = "<group>";
 		};
-		C18AEAD71BB4E83800A6D182 /* ViewControllers */ = {
+		C1AA2D791BBF3861000D75FC /* Years */ = {
 			isa = PBXGroup;
 			children = (
+				C187C67D1BB4FA7600F1778C /* RLYearTableCellView.h */,
+				C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */,
 				C18AEADD1BB4EB2100A6D182 /* RLYearsViewController.h */,
 				C18AEADE1BB4EB2100A6D182 /* RLYearsViewController.m */,
 				C18AEADF1BB4EB2100A6D182 /* RLYearsViewController.xib */,
+			);
+			path = Years;
+			sourceTree = "<group>";
+		};
+		C1AA2D7A1BBF3867000D75FC /* Shows */ = {
+			isa = PBXGroup;
+			children = (
+				C187C68F1BB739BF00F1778C /* RLShowTableViewCell.h */,
+				C187C6901BB739BF00F1778C /* RLShowTableViewCell.m */,
 				C187C68A1BB735C100F1778C /* RLShowsViewController.h */,
 				C187C68B1BB735C100F1778C /* RLShowsViewController.m */,
 				C187C68C1BB735C100F1778C /* RLShowsViewController.xib */,
+			);
+			path = Shows;
+			sourceTree = "<group>";
+		};
+		C1AA2D7B1BBF387C000D75FC /* Source & Tracks */ = {
+			isa = PBXGroup;
+			children = (
 				C1E4518B1BBA803B003A0721 /* RLSourceAndTracksViewController.h */,
 				C1E4518C1BBA803B003A0721 /* RLSourceAndTracksViewController.m */,
 				C1E4518D1BBA803B003A0721 /* RLSourceAndTracksViewController.xib */,
+				C15B8A1E1BBC5B3B00CB2F92 /* RLTrackTableCellView.h */,
+				C15B8A1F1BBC5B3B00CB2F92 /* RLTrackTableCellView.m */,
 			);
-			path = ViewControllers;
+			path = "Source & Tracks";
 			sourceTree = "<group>";
 		};
 		D35B084755A2E6F9141E9514 /* Frameworks */ = {
@@ -399,6 +415,7 @@
 				C116DFB71BB09EEE006A9F6C /* Base */,
 			);
 			name = MainMenu.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
