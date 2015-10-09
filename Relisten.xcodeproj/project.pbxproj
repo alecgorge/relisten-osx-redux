@@ -221,9 +221,9 @@
 				C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */,
 				C187C6801BB5050400F1778C /* RLTableView.h */,
 				C187C6811BB5050400F1778C /* RLTableView.m */,
+				C1AA2D791BBF3861000D75FC /* Years */,
 				C1AA2D7A1BBF3867000D75FC /* Shows */,
 				C1AA2D7B1BBF387C000D75FC /* Source & Tracks */,
-				C1AA2D791BBF3861000D75FC /* Years */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";

@@ -27,6 +27,7 @@
     [super windowDidLoad];
     
     self.window.titleVisibility = NSWindowTitleHidden;
+    self.window.collectionBehavior = NSWindowCollectionBehaviorFullScreenPrimary;  
     self.splitView.delegate = self;
     
     //Set up Years
