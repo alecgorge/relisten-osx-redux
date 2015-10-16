@@ -22,6 +22,7 @@
 @property (nonatomic, weak) id<RLShowSelectedDelegate> delegate;
 
 - (void)fetchShowsForYear:(IGYear *)year;
+- (void)fetchShowsForVenue:(IGVenue *)venue;
 - (void)clearAllShows;
 
 @end

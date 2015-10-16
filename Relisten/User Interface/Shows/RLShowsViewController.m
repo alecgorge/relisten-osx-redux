@@ -44,6 +44,17 @@
     }];
 }
 
+- (void)fetchShowsForVenue:(IGVenue *)venue
+{
+    [IGAPIClient.sharedInstance venue:venue success:^(IGVenue *venue) {
+        NSArray *shows = venue.shows;
+        NSSortDescriptor *valueDescriptor = [[NSSortDescriptor alloc] initWithKey:@"averageRating" ascending:NO];
+        NSArray *descriptors = [NSArray arrayWithObject:valueDescriptor];
+        self.shows = [shows sortedArrayUsingDescriptors:descriptors];
+        [self.tableView reloadData];
+    }];
+}
+
 -(void)clearAllShows
 {
     self.shows = nil;

@@ -10,12 +10,13 @@
 
 @interface RLYearsViewController ()
 
-@property (weak) IBOutlet RLTableView *tableView;
+@property (weak) IBOutlet RLTableView *yearsTableView;
+@property (weak) IBOutlet RLTableView *venuesTableView;
 
 @property (nonatomic, strong) NSArray *years;
+@property (nonatomic, strong) NSArray *venues;
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
-@property (weak) IBOutlet NSTabViewItem *topShowsTabeViewItem;
-@property (weak) IBOutlet NSTabViewItem *yearstabViewItem;
+@property (weak) IBOutlet NSTabView *tabView;
 
 @end
 
@@ -26,19 +27,37 @@
     [super viewDidLoad];
     // Do view setup here.
     
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+    self.yearsTableView.dataSource = self;
+    self.yearsTableView.delegate = self;
+    self.venuesTableView.dataSource = self;
+    self.venuesTableView.delegate = self;
     
     self.durationFormatter = [[NSDateComponentsFormatter alloc] init];
     self.durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
     self.durationFormatter.allowedUnits = (NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond);
+    
+    self.tabView.delegate = self;
 }
 
 - (void)fetchYears
 {
+    self.years = @[];
+    [self.yearsTableView reloadData];
     [IGAPIClient.sharedInstance years:^(NSArray *years) {
         self.years = years;
-        [self.tableView reloadData];
+        [self.yearsTableView reloadData];
+    }];
+    
+    [self fetchVenues]; 
+}
+
+-(void)fetchVenues
+{
+    self.venues = @[];
+    [self.venuesTableView reloadData];
+    [IGAPIClient.sharedInstance venues:^(NSArray * venues) {
+        self.venues = venues;
+        [self.venuesTableView reloadData];
     }];
 }
 
@@ -46,7 +65,12 @@
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
-    return [self.years count];
+    if(aTableView == self.yearsTableView)
+        return [self.years count];
+    else if(aTableView == self.venuesTableView)
+        return [self.venues count];
+    else
+        return 0;
 }
 
 #pragma mark - NSTableViewDelegate Methods
@@ -54,23 +78,43 @@
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     RLYearTableCellView *cellView = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
-    IGYear *year = self.years[row];
-    cellView.yearTextField.stringValue = [NSString stringWithFormat:@"%ld", (long)year.year];
-    
-    NSString *shows;
-    if(year.showCount == 1)
-        shows = [NSString stringWithFormat:@"%ld show", year.showCount];
-    else
-        shows = [NSString stringWithFormat:@"%ld shows", year.showCount];
-    
-    NSString *sources;
-    if(year.recordingCount == 1)
-        sources = [NSString stringWithFormat:@"%ld source", year.recordingCount];
-    else
-        sources = [NSString stringWithFormat:@"%ld sources", year.recordingCount];
 
-    cellView.showsAndRecordingsTextField.stringValue = [NSString stringWithFormat:@"%@, %@", shows, sources];
-    cellView.durationTextField.stringValue = [self.durationFormatter stringFromTimeInterval:year.duration];
+    if(tableView == self.yearsTableView)
+    {
+        IGYear *year = self.years[row];
+        
+        cellView.yearTextField.stringValue = [NSString stringWithFormat:@"%ld", (long)year.year];
+        
+        NSString *shows;
+        if(year.showCount == 1)
+            shows = [NSString stringWithFormat:@"%ld show", year.showCount];
+        else
+            shows = [NSString stringWithFormat:@"%ld shows", year.showCount];
+        
+        NSString *sources;
+        if(year.recordingCount == 1)
+            sources = [NSString stringWithFormat:@"%ld source", year.recordingCount];
+        else
+            sources = [NSString stringWithFormat:@"%ld sources", year.recordingCount];
+        
+        cellView.showsAndRecordingsTextField.stringValue = [NSString stringWithFormat:@"%@, %@", shows, sources];
+        cellView.durationTextField.stringValue = [self.durationFormatter stringFromTimeInterval:year.duration];
+    }
+    else if(tableView == self.venuesTableView)
+    {
+        IGVenue *venue = self.venues[row];
+        
+        cellView.yearTextField.stringValue = venue.name;
+        cellView.showsAndRecordingsTextField.stringValue = venue.city;
+        
+        NSString *shows;
+        if([venue.showCount intValue] == 1)
+            shows = [NSString stringWithFormat:@"%@ show", venue.showCount];
+        else
+            shows = [NSString stringWithFormat:@"%@ shows", venue.showCount];
+        
+        cellView.durationTextField.stringValue = shows;
+    }
     
     return cellView;
 }
@@ -81,8 +125,17 @@
     [myRowView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleSourceList];
     [myRowView setEmphasized:NO];
     
-    IGYear *year = self.years[rowIndex];
-    [self.delegate yearSelected:year];
+     if(aTableView == self.yearsTableView)
+     {
+         IGYear *year = self.years[rowIndex];
+         [self.delegate yearSelected:year];
+     }
+    else if(aTableView == self.venuesTableView)
+    {
+        IGVenue *venue = self.venues[rowIndex];
+        [self.delegate venueSelected:venue];
+
+    }
     
     return YES;
 }

@@ -48,8 +48,8 @@
                                                 <rect key="frame" x="1" y="1" width="207" height="55"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tjm-zf-WiC">
-                                                        <rect key="frame" x="3" y="35" width="76" height="17"/>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="tjm-zf-WiC">
+                                                        <rect key="frame" x="3" y="35" width="74" height="17"/>
                                                         <animations/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="2015-06-04" id="Q7G-gu-5jp">
                                                             <font key="font" size="13" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -64,8 +64,8 @@
                                                         </constraints>
                                                         <animations/>
                                                     </customView>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gi-Ra-pxX">
-                                                        <rect key="frame" x="3" y="19" width="96" height="14"/>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4gi-Ra-pxX">
+                                                        <rect key="frame" x="3" y="19" width="91" height="14"/>
                                                         <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Recording Studio" id="0Uh-c6-A4b">
                                                             <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -73,8 +73,8 @@
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izp-Fw-V2m">
-                                                        <rect key="frame" x="154" y="19" width="50" height="14"/>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="izp-Fw-V2m">
+                                                        <rect key="frame" x="156" y="19" width="48" height="14"/>
                                                         <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="23:43:04" id="taQ-4N-JPg">
                                                             <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -82,8 +82,8 @@
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOL-0f-e3Y">
-                                                        <rect key="frame" x="121" y="3" width="83" height="14"/>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HOL-0f-e3Y">
+                                                        <rect key="frame" x="125" y="3" width="79" height="14"/>
                                                         <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="100 recordings" id="MJB-UE-plv">
                                                             <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -91,8 +91,8 @@
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHZ-ty-gAl">
-                                                        <rect key="frame" x="3" y="3" width="98" height="14"/>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RHZ-ty-gAl">
+                                                        <rect key="frame" x="3" y="3" width="93" height="14"/>
                                                         <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="San Fansisco, CA" id="bEN-4X-J4M">
                                                             <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -108,7 +108,6 @@
                                                     <constraint firstItem="RHZ-ty-gAl" firstAttribute="top" secondItem="4gi-Ra-pxX" secondAttribute="bottom" constant="2" id="D47-7X-5qY"/>
                                                     <constraint firstItem="HOL-0f-e3Y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RHZ-ty-gAl" secondAttribute="trailing" constant="10" id="Fkc-Er-wYI"/>
                                                     <constraint firstItem="HOL-0f-e3Y" firstAttribute="trailing" secondItem="izp-Fw-V2m" secondAttribute="trailing" id="P76-E2-nT7"/>
-                                                    <constraint firstItem="izp-Fw-V2m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4gi-Ra-pxX" secondAttribute="trailing" constant="10" id="TiI-0x-5i0"/>
                                                     <constraint firstItem="tjm-zf-WiC" firstAttribute="top" secondItem="0Fp-1I-jXI" secondAttribute="top" constant="3" id="URI-K3-Kvl"/>
                                                     <constraint firstItem="izp-Fw-V2m" firstAttribute="trailing" secondItem="7o1-9l-219" secondAttribute="trailing" id="bDT-Lh-qgg"/>
                                                     <constraint firstItem="4gi-Ra-pxX" firstAttribute="top" secondItem="tjm-zf-WiC" secondAttribute="bottom" constant="2" id="bLH-v8-RhW"/>
@@ -116,6 +115,7 @@
                                                     <constraint firstItem="7o1-9l-219" firstAttribute="top" secondItem="0Fp-1I-jXI" secondAttribute="top" constant="3" id="fUg-jX-Zb7"/>
                                                     <constraint firstItem="izp-Fw-V2m" firstAttribute="top" secondItem="7o1-9l-219" secondAttribute="bottom" constant="2" id="iVb-8W-t7C"/>
                                                     <constraint firstItem="7o1-9l-219" firstAttribute="height" secondItem="tjm-zf-WiC" secondAttribute="height" id="mDv-Yd-w0G"/>
+                                                    <constraint firstItem="izp-Fw-V2m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4gi-Ra-pxX" secondAttribute="trailing" priority="750" constant="10" id="n2F-rQ-k6U"/>
                                                     <constraint firstAttribute="trailing" secondItem="7o1-9l-219" secondAttribute="trailing" constant="5" id="oW1-aL-1yv"/>
                                                 </constraints>
                                                 <animations/>

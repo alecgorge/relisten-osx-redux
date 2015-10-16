@@ -14,10 +14,11 @@
 @protocol RLYearSelectedDelegate <NSObject>
 
 - (void)yearSelected:(IGYear *)year;
+- (void)venueSelected:(IGVenue *)venue;
 
 @end
 
-@interface RLYearsViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
+@interface RLYearsViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource, NSTabViewDelegate>
 
 @property (nonatomic, weak) id<RLYearSelectedDelegate> delegate;
 

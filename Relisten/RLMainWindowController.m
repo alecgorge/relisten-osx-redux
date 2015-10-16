@@ -69,6 +69,12 @@
     [self.showsViewController fetchShowsForYear:year];
 }
 
+-(void)venueSelected:(IGVenue *)venue
+{
+    [self.sourceAndTracksViewController disableSourceSelection];
+    [self.showsViewController fetchShowsForVenue:venue];
+}
+
 -(void)showSelected:(IGShow *)show
 {
     [self.sourceAndTracksViewController fetchTracksForShow:show];
