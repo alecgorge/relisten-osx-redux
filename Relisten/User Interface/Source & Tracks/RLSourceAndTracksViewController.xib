@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
     </dependencies>
@@ -15,11 +15,12 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="520" height="316"/>
+            <rect key="frame" x="0.0" y="0.0" width="515" height="649"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <popUpButton verticalHuggingPriority="750" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="ux0-Fp-HHr">
-                    <rect key="frame" x="72" y="283" width="399" height="24"/>
+                    <rect key="frame" x="71" y="616" width="395" height="24"/>
+                    <animations/>
                     <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" continuous="YES" borderStyle="border" inset="2" id="mA3-ui-5dL">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
@@ -30,7 +31,8 @@
                     </connections>
                 </popUpButton>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b6q-oE-4KE">
-                    <rect key="frame" x="18" y="287" width="48" height="17"/>
+                    <rect key="frame" x="18" y="620" width="47" height="17"/>
+                    <animations/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Source" id="AsF-AO-sTh">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -38,27 +40,29 @@
                     </textFieldCell>
                 </textField>
                 <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZHL-Bs-3Ku">
-                    <rect key="frame" x="477" y="280" width="25" height="25"/>
+                    <rect key="frame" x="472" y="613" width="25" height="25"/>
+                    <animations/>
                     <buttonCell key="cell" type="help" bezelStyle="helpButton" imagePosition="left" alignment="left" borderStyle="border" inset="2" id="en7-Jy-q6U">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="25" horizontalPageScroll="10" verticalLineScroll="25" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cx-M8-hH5">
-                    <rect key="frame" x="0.0" y="0.0" width="520" height="275"/>
+                    <rect key="frame" x="0.0" y="0.0" width="515" height="608"/>
                     <clipView key="contentView" drawsBackground="NO" id="qMs-qD-VIK">
-                        <rect key="frame" x="0.0" y="0.0" width="520" height="275"/>
+                        <rect key="frame" x="0.0" y="0.0" width="515" height="608"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="23" rowSizeStyle="automatic" viewBased="YES" id="Xl2-1C-pTr" customClass="RLTableView">
-                                <rect key="frame" x="0.0" y="0.0" width="520" height="0.0"/>
+                                <rect key="frame" x="0.0" y="0.0" width="515" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
+                                <animations/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
-                                    <tableColumn width="517" minWidth="40" maxWidth="1000" id="IUY-4s-Qtk">
+                                    <tableColumn width="512" minWidth="40" maxWidth="1000" id="IUY-4s-Qtk">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -72,11 +76,12 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView id="lys-Ad-fAF" customClass="RLTrackTableCellView">
-                                                <rect key="frame" x="1" y="1" width="517" height="23"/>
+                                                <rect key="frame" x="1" y="1" width="512" height="23"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DFr-KK-MuZ">
                                                         <rect key="frame" x="3" y="4" width="15" height="16"/>
+                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1." id="fSO-Va-DZu">
                                                             <font key="font" size="12" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" name="knobColor" catalog="System" colorSpace="catalog"/>
@@ -84,7 +89,8 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-fi-4ZX">
-                                                        <rect key="frame" x="19" y="3" width="181" height="17"/>
+                                                        <rect key="frame" x="19" y="3" width="177" height="17"/>
+                                                        <animations/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Big nice track name of song " id="1bu-D7-9HH">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -92,14 +98,16 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fmO-p0-Bvr">
-                                                        <rect key="frame" x="499" y="3" width="13" height="17"/>
+                                                        <rect key="frame" x="494" y="3" width="13" height="17"/>
+                                                        <animations/>
                                                         <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="left" alignment="left" state="on" borderStyle="border" inset="2" id="mOu-KR-3U4">
                                                             <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QPx-Ts-DZV">
-                                                        <rect key="frame" x="454" y="3" width="39" height="17"/>
+                                                        <rect key="frame" x="448" y="3" width="40" height="17"/>
+                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="50:02" id="wg1-S0-2rC">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="knobColor" catalog="System" colorSpace="catalog"/>
@@ -120,6 +128,7 @@
                                                     <constraint firstItem="fmO-p0-Bvr" firstAttribute="centerY" secondItem="lys-Ad-fAF" secondAttribute="centerY" id="u9p-Ep-BfB"/>
                                                     <constraint firstItem="Ua8-fi-4ZX" firstAttribute="centerY" secondItem="lys-Ad-fAF" secondAttribute="centerY" id="wWV-WK-08Z"/>
                                                 </constraints>
+                                                <animations/>
                                                 <connections>
                                                     <outlet property="trackDurationTextField" destination="QPx-Ts-DZV" id="f0a-3D-vju"/>
                                                     <outlet property="trackNameTextField" destination="Ua8-fi-4ZX" id="D5I-zg-XG3"/>
@@ -132,15 +141,19 @@
                                 </tableColumns>
                             </tableView>
                         </subviews>
+                        <animations/>
                         <nil key="backgroundColor"/>
                     </clipView>
-                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="m4V-LM-tJU">
+                    <animations/>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="m4V-LM-tJU">
                         <rect key="frame" x="1" y="119" width="223" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="IHB-I6-HHa">
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="IHB-I6-HHa">
                         <rect key="frame" x="224" y="17" width="15" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </scroller>
                 </scrollView>
             </subviews>
@@ -158,7 +171,8 @@
                 <constraint firstItem="ZHL-Bs-3Ku" firstAttribute="leading" secondItem="ux0-Fp-HHr" secondAttribute="trailing" constant="8" id="vuG-ZK-SjW"/>
                 <constraint firstAttribute="trailing" secondItem="4Cx-M8-hH5" secondAttribute="trailing" id="zOe-31-bKv"/>
             </constraints>
-            <point key="canvasLocation" x="354" y="265"/>
+            <animations/>
+            <point key="canvasLocation" x="894.5" y="550.5"/>
         </customView>
     </objects>
 </document>

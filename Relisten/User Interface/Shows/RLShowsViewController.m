@@ -10,9 +10,12 @@
 
 @interface RLShowsViewController ()
 
-@property (weak) IBOutlet RLTableView *tableView;
+@property (weak) IBOutlet RLTableView *allShowsTableView;
+@property (weak) IBOutlet NSTabView *tabView;
+@property (weak) IBOutlet RLTableView *soundboardShowsTableView;
 
-@property (nonatomic, strong) NSArray *shows;
+@property (nonatomic, strong) NSArray *allShows;
+@property (nonatomic, strong) NSMutableArray *soundboardShows;
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
 
 @end
@@ -23,9 +26,12 @@
 {
     [super viewDidLoad];
     // Do view setup here.
+    self.soundboardShows = [[NSMutableArray alloc] init];
     
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+    self.allShowsTableView.dataSource = self;
+    self.allShowsTableView.delegate = self;
+    self.soundboardShowsTableView.delegate = self;
+    self.soundboardShowsTableView.dataSource = self;
     
     self.durationFormatter = [[NSDateComponentsFormatter alloc] init];
     self.durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
@@ -34,52 +40,76 @@
 
 - (void)fetchShowsForYear:(IGYear *)year
 {
-    self.shows = @[];
-    [self.tableView reloadData];
+    self.allShows = @[];
+    [self.allShowsTableView reloadData];
     [IGAPIClient.sharedInstance year:year.year success:^(IGYear *yr) {
         
         NSArray *shows = yr.shows;
         NSSortDescriptor *valueDescriptor = [[NSSortDescriptor alloc] initWithKey:@"averageRating" ascending:NO];
         NSArray *descriptors = [NSArray arrayWithObject:valueDescriptor];
-        self.shows = [shows sortedArrayUsingDescriptors:descriptors];
-        [self.tableView reloadData];
+        self.allShows = [shows sortedArrayUsingDescriptors:descriptors];
+        [self reloadShows];
     }];
 }
 
 - (void)fetchShowsForVenue:(IGVenue *)venue
 {
-    self.shows = @[];
-    [self.tableView reloadData];
+    self.allShows = @[];
+    [self.allShowsTableView reloadData];
     [IGAPIClient.sharedInstance venue:venue success:^(IGVenue *venue) {
         NSArray *shows = venue.shows;
         NSSortDescriptor *valueDescriptor = [[NSSortDescriptor alloc] initWithKey:@"averageRating" ascending:NO];
         NSArray *descriptors = [NSArray arrayWithObject:valueDescriptor];
-        self.shows = [shows sortedArrayUsingDescriptors:descriptors];
-        [self.tableView reloadData];
+        self.allShows = [shows sortedArrayUsingDescriptors:descriptors];
+        [self reloadShows];
     }];
 }
 
 - (void)fetchTopShows
 {
-    self.shows = @[];
-    [self.tableView reloadData];
+    self.allShows = @[];
+    [self.allShowsTableView reloadData];
     [IGAPIClient.sharedInstance topShows:^(NSArray *topShows) {
-        self.shows = topShows;
-        [self.tableView reloadData];
+        self.allShows = topShows;
+        [self reloadShows];
     }];
 }
 
 -(void)clearAllShows
 {
-    self.shows = nil;
-    [self.tableView reloadData];
+    self.allShows = nil;
+    [self.allShowsTableView reloadData];
+}
+
+-(void)reloadShows
+{
+    [self.tabView selectFirstTabViewItem:nil];
+    [self.allShowsTableView reloadData];
+    
+    [self.soundboardShows removeAllObjects];
+    for(IGShow *show in self.allShows)
+    {
+        if(show.isSoundboard)
+            [self.soundboardShows addObject:show];
+    }
+    
+    
+    NSArray *sortedShows = self.soundboardShows;
+    NSSortDescriptor *valueDescriptor = [[NSSortDescriptor alloc] initWithKey:@"averageRating" ascending:NO];
+    NSArray *descriptors = [NSArray arrayWithObject:valueDescriptor];
+    self.soundboardShows = [[sortedShows sortedArrayUsingDescriptors:descriptors] mutableCopy];
+
+    [self.soundboardShowsTableView reloadData];
 }
 
 #pragma mark - NSTableViewdataSource Methods
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
-    return [self.shows count];
+    if(aTableView == self.allShowsTableView)
+        return [self.allShows count];
+    else
+        return [self.soundboardShows count];
 }
 
 #pragma mark - NSTableViewDelegate Methods
@@ -87,7 +117,13 @@
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     RLShowTableViewCell *cellView = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
-    IGShow *show = self.shows[row];
+    
+    IGShow *show;
+    
+    if(tableView == self.allShowsTableView)
+        show = self.allShows[row];
+    else
+        show = self.soundboardShows[row];
     
     NSString *dateString = [NSDateFormatter localizedStringFromDate:show.date
                                                           dateStyle:NSDateFormatterShortStyle
@@ -127,7 +163,13 @@
     NSTableView *tableview = notification.object;
     NSInteger row = [tableview selectedRow];
     
-    IGShow *show = self.shows[row];
+    IGShow *show;
+    
+    if(tableview == self.allShowsTableView)
+        show = self.allShows[row];
+    else
+        show = self.soundboardShows[row];
+    
     [self.delegate showSelected:show];
 }
 

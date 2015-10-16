@@ -66,18 +66,21 @@
 -(void)yearSelected:(IGYear *)year
 {
     [self.sourceAndTracksViewController disableSourceSelection];
+    [self.showsViewController clearAllShows];
     [self.showsViewController fetchShowsForYear:year];
 }
 
 -(void)venueSelected:(IGVenue *)venue
 {
     [self.sourceAndTracksViewController disableSourceSelection];
+    [self.showsViewController clearAllShows];
     [self.showsViewController fetchShowsForVenue:venue];
 }
 
 -(void)topShowsSelected
 {
     [self.sourceAndTracksViewController disableSourceSelection];
+    [self.showsViewController clearAllShows];
     [self.showsViewController fetchTopShows];
 }
 
