@@ -59,6 +59,16 @@
     }];
 }
 
+- (void)fetchTopShows
+{
+    self.shows = @[];
+    [self.tableView reloadData];
+    [IGAPIClient.sharedInstance topShows:^(NSArray *topShows) {
+        self.shows = topShows;
+        [self.tableView reloadData];
+    }];
+}
+
 -(void)clearAllShows
 {
     self.shows = nil;

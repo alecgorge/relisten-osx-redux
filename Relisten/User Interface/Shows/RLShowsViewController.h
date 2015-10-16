@@ -23,6 +23,7 @@
 
 - (void)fetchShowsForYear:(IGYear *)year;
 - (void)fetchShowsForVenue:(IGVenue *)venue;
+- (void)fetchTopShows;
 - (void)clearAllShows;
 
 @end

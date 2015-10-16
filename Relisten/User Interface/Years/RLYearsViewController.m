@@ -12,11 +12,12 @@
 
 @property (weak) IBOutlet RLTableView *yearsTableView;
 @property (weak) IBOutlet RLTableView *venuesTableView;
+@property (weak) IBOutlet NSTabView *tabView;
+@property (weak) IBOutlet NSTextField *topShowsTextField;
 
 @property (nonatomic, strong) NSArray *years;
 @property (nonatomic, strong) NSArray *venues;
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
-@property (weak) IBOutlet NSTabView *tabView;
 
 @end
 
@@ -49,6 +50,9 @@
     }];
     
     [self fetchVenues];
+    
+    self.topShowsTextField.stringValue = [NSString stringWithFormat:@"%@, top shows", IGAPIClient.sharedInstance.artist.name];
+    [self.tabView selectFirstTabViewItem:nil];
 }
 
 -(void)fetchVenues
@@ -143,6 +147,16 @@
     [myRowView setEmphasized:NO];
     
     return YES;
+}
+
+#pragma mark - NSTabViewDelegate
+
+- (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem
+{
+    if([tabViewItem.label isEqualToString:@"Top Shows"])
+    {
+       [self.delegate topShowsSelected];
+    }
 }
 
 @end

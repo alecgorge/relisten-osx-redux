@@ -25,24 +25,24 @@
                     <splitView dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gff-DE-xYh" customClass="RLSplitView">
                         <rect key="frame" x="0.0" y="0.0" width="798" height="417"/>
                         <subviews>
-                            <customView misplaced="YES" id="gGD-H8-7dV" userLabel="firstView">
-                                <rect key="frame" x="0.0" y="0.0" width="170" height="417"/>
+                            <customView id="gGD-H8-7dV" userLabel="firstView">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="417"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="b8r-E7-fjv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="b8r-E7-fjv"/>
                                 </constraints>
                                 <animations/>
                             </customView>
                             <customView id="xkP-w6-TDg" userLabel="secondView">
-                                <rect key="frame" x="171" y="0.0" width="126" height="417"/>
+                                <rect key="frame" x="251" y="0.0" width="105" height="417"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="kOG-ys-iHf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="kOG-ys-iHf"/>
                                 </constraints>
                                 <animations/>
                             </customView>
                             <customView fixedFrame="YES" id="Gh9-B3-0Fo" userLabel="thirdView">
-                                <rect key="frame" x="298" y="0.0" width="500" height="417"/>
+                                <rect key="frame" x="357" y="0.0" width="441" height="417"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                             </customView>

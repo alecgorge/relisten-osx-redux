@@ -75,6 +75,12 @@
     [self.showsViewController fetchShowsForVenue:venue];
 }
 
+-(void)topShowsSelected
+{
+    [self.sourceAndTracksViewController disableSourceSelection];
+    [self.showsViewController fetchTopShows];
+}
+
 -(void)showSelected:(IGShow *)show
 {
     [self.sourceAndTracksViewController fetchTracksForShow:show];

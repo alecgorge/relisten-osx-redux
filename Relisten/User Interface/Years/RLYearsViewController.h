@@ -15,6 +15,7 @@
 
 - (void)yearSelected:(IGYear *)year;
 - (void)venueSelected:(IGVenue *)venue;
+- (void)topShowsSelected;
 
 @end
 
