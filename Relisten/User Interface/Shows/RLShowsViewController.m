@@ -34,6 +34,8 @@
 
 - (void)fetchShowsForYear:(IGYear *)year
 {
+    self.shows = @[];
+    [self.tableView reloadData];
     [IGAPIClient.sharedInstance year:year.year success:^(IGYear *yr) {
         
         NSArray *shows = yr.shows;
@@ -46,6 +48,8 @@
 
 - (void)fetchShowsForVenue:(IGVenue *)venue
 {
+    self.shows = @[];
+    [self.tableView reloadData];
     [IGAPIClient.sharedInstance venue:venue success:^(IGVenue *venue) {
         NSArray *shows = venue.shows;
         NSSortDescriptor *valueDescriptor = [[NSSortDescriptor alloc] initWithKey:@"averageRating" ascending:NO];
