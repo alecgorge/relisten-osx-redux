@@ -25,14 +25,14 @@
 //    }
     
     [self.firstView addSubview:viewController.view];
-    viewController.view.autoresizingMask = NSViewHeightSizable;
+    viewController.view.autoresizingMask = NSViewHeightSizable | NSViewWidthSizable;
 }
 
 -(void)setSecondViewFromViewController:(NSViewController *)viewController
 {
     viewController.view.frame = self.secondView.bounds;
     [self.secondView addSubview:viewController.view];
-    viewController.view.autoresizingMask = NSViewHeightSizable;
+    viewController.view.autoresizingMask = NSViewHeightSizable | NSViewWidthSizable;
 }
 
 -(void)setThirdViewFromViewController:(NSViewController *)viewController
