@@ -108,14 +108,20 @@
     return cellView;
 }
 
+-(void)tableViewSelectionDidChange:(NSNotification *)notification
+{
+    NSTableView *tableview = notification.object;
+    NSInteger row = [tableview selectedRow];
+    
+    IGShow *show = self.shows[row];
+    [self.delegate showSelected:show];
+}
+
 -(BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex
 {
     NSTableRowView *myRowView = [aTableView rowViewAtRow:rowIndex makeIfNecessary:NO];
     [myRowView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleSourceList];
     [myRowView setEmphasized:NO];
-    
-    IGShow *show = self.shows[rowIndex];
-    [self.delegate showSelected:show];
     
     return YES;
 }

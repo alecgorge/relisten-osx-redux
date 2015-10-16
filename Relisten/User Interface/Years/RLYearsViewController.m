@@ -48,7 +48,7 @@
         [self.yearsTableView reloadData];
     }];
     
-    [self fetchVenues]; 
+    [self fetchVenues];
 }
 
 -(void)fetchVenues
@@ -119,23 +119,28 @@
     return cellView;
 }
 
+-(void)tableViewSelectionDidChange:(NSNotification *)notification
+{
+    NSTableView *tableview = notification.object;
+    NSInteger row = [tableview selectedRow];
+    
+    if(tableview == self.yearsTableView)
+    {
+        IGYear *year = self.years[row];
+        [self.delegate yearSelected:year];
+    }
+    else if(tableview == self.venuesTableView)
+    {
+        IGVenue *venue = self.venues[row];
+        [self.delegate venueSelected:venue];
+    }
+}
+
 -(BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex
 {
     NSTableRowView *myRowView = [aTableView rowViewAtRow:rowIndex makeIfNecessary:NO];
     [myRowView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleSourceList];
     [myRowView setEmphasized:NO];
-    
-     if(aTableView == self.yearsTableView)
-     {
-         IGYear *year = self.years[rowIndex];
-         [self.delegate yearSelected:year];
-     }
-    else if(aTableView == self.venuesTableView)
-    {
-        IGVenue *venue = self.venues[rowIndex];
-        [self.delegate venueSelected:venue];
-
-    }
     
     return YES;
 }
