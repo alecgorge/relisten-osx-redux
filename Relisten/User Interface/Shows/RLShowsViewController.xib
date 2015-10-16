@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
     </dependencies>
@@ -25,6 +25,7 @@
                             <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="55" rowSizeStyle="automatic" viewBased="YES" id="Xtu-k0-aux" customClass="RLTableView">
                                 <rect key="frame" x="0.0" y="0.0" width="210" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
+                                <animations/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
@@ -47,8 +48,9 @@
                                                 <rect key="frame" x="1" y="1" width="207" height="55"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="tjm-zf-WiC">
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tjm-zf-WiC">
                                                         <rect key="frame" x="3" y="35" width="76" height="17"/>
+                                                        <animations/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="2015-06-04" id="Q7G-gu-5jp">
                                                             <font key="font" size="13" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -60,33 +62,38 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="95" id="gIw-ze-gbQ"/>
                                                         </constraints>
+                                                        <animations/>
                                                     </customView>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4gi-Ra-pxX">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gi-Ra-pxX">
                                                         <rect key="frame" x="3" y="19" width="96" height="14"/>
+                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Recording Studio" id="0Uh-c6-A4b">
                                                             <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="izp-Fw-V2m">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izp-Fw-V2m">
                                                         <rect key="frame" x="154" y="19" width="50" height="14"/>
+                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="23:43:04" id="taQ-4N-JPg">
                                                             <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HOL-0f-e3Y">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOL-0f-e3Y">
                                                         <rect key="frame" x="121" y="3" width="83" height="14"/>
+                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="100 recordings" id="MJB-UE-plv">
                                                             <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" red="0.15264728817997678" green="0.045524363528088821" blue="0.33284011994949492" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RHZ-ty-gAl">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHZ-ty-gAl">
                                                         <rect key="frame" x="3" y="3" width="98" height="14"/>
+                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="San Fansisco, CA" id="bEN-4X-J4M">
                                                             <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
@@ -111,6 +118,7 @@
                                                     <constraint firstItem="7o1-9l-219" firstAttribute="height" secondItem="tjm-zf-WiC" secondAttribute="height" id="mDv-Yd-w0G"/>
                                                     <constraint firstAttribute="trailing" secondItem="7o1-9l-219" secondAttribute="trailing" constant="5" id="oW1-aL-1yv"/>
                                                 </constraints>
+                                                <animations/>
                                                 <connections>
                                                     <outlet property="durationTextField" destination="izp-Fw-V2m" id="9wQ-6e-0QP"/>
                                                     <outlet property="recordingCountTextField" destination="HOL-0f-e3Y" id="1xK-OQ-Weq"/>
@@ -126,15 +134,19 @@
                                 </tableColumns>
                             </tableView>
                         </subviews>
+                        <animations/>
                         <nil key="backgroundColor"/>
                     </clipView>
-                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="TDE-nd-Dq3">
+                    <animations/>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="TDE-nd-Dq3">
                         <rect key="frame" x="0.0" y="478" width="304" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="hnN-TI-UnM">
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="hnN-TI-UnM">
                         <rect key="frame" x="224" y="17" width="15" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </scroller>
                 </scrollView>
             </subviews>
@@ -144,6 +156,7 @@
                 <constraint firstItem="ZRv-w6-gED" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="aTo-px-zXB"/>
                 <constraint firstAttribute="bottom" secondItem="ZRv-w6-gED" secondAttribute="bottom" id="uX2-V8-mGi"/>
             </constraints>
+            <animations/>
             <point key="canvasLocation" x="162" y="426"/>
         </customView>
     </objects>

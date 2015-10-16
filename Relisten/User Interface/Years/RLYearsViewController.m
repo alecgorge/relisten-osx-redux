@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSArray *years;
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
+@property (weak) IBOutlet NSTabViewItem *topShowsTabeViewItem;
+@property (weak) IBOutlet NSTabViewItem *yearstabViewItem;
 
 @end
 
