@@ -40,8 +40,7 @@
 
 - (void)fetchShowsForYear:(IGYear *)year
 {
-    self.allShows = @[];
-    [self.allShowsTableView reloadData];
+    [self clearAllShows];
     [IGAPIClient.sharedInstance year:year.year success:^(IGYear *yr) {
         
         NSArray *shows = yr.shows;
@@ -54,8 +53,7 @@
 
 - (void)fetchShowsForVenue:(IGVenue *)venue
 {
-    self.allShows = @[];
-    [self.allShowsTableView reloadData];
+    [self clearAllShows];
     [IGAPIClient.sharedInstance venue:venue success:^(IGVenue *venue) {
         NSArray *shows = venue.shows;
         NSSortDescriptor *valueDescriptor = [[NSSortDescriptor alloc] initWithKey:@"averageRating" ascending:NO];
@@ -67,8 +65,7 @@
 
 - (void)fetchTopShows
 {
-    self.allShows = @[];
-    [self.allShowsTableView reloadData];
+    [self clearAllShows];
     [IGAPIClient.sharedInstance topShows:^(NSArray *topShows) {
         self.allShows = topShows;
         [self reloadShows];
@@ -77,16 +74,16 @@
 
 -(void)clearAllShows
 {
-    self.allShows = nil;
+    self.allShows = @[];
+    [self.soundboardShows removeAllObjects];
     [self.allShowsTableView reloadData];
+    [self.soundboardShowsTableView reloadData];
 }
 
 -(void)reloadShows
 {
-    [self.tabView selectFirstTabViewItem:nil];
     [self.allShowsTableView reloadData];
     
-    [self.soundboardShows removeAllObjects];
     for(IGShow *show in self.allShows)
     {
         if(show.isSoundboard)
