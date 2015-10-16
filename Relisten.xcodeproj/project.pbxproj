@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		411A37424D50DD681B23D334 /* libPods-Relisten.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99023D004ACB7302E2D053DB /* libPods-Relisten.a */; };
+		C108359F1BD092D500A22755 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = C108359E1BD092D500A22755 /* star2.png */; settings = {ASSET_TAGS = (); }; };
+		C10835A11BD094D400A22755 /* star3.png in Resources */ = {isa = PBXBuildFile; fileRef = C10835A01BD094D400A22755 /* star3.png */; settings = {ASSET_TAGS = (); }; };
 		C116DFB01BB09EEE006A9F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C116DFAF1BB09EEE006A9F6C /* AppDelegate.m */; };
 		C116DFB31BB09EEE006A9F6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C116DFB21BB09EEE006A9F6C /* main.m */; };
 		C116DFB51BB09EEE006A9F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C116DFB41BB09EEE006A9F6C /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 		2770E3F2B9EA9D6FAC108AED /* Pods-Relisten.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relisten.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relisten/Pods-Relisten.release.xcconfig"; sourceTree = "<group>"; };
 		478CD6AE1D5F87783189B5F0 /* Pods-Relisten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relisten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Relisten/Pods-Relisten.debug.xcconfig"; sourceTree = "<group>"; };
 		99023D004ACB7302E2D053DB /* libPods-Relisten.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Relisten.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C108359E1BD092D500A22755 /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
+		C10835A01BD094D400A22755 /* star3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star3.png; sourceTree = "<group>"; };
 		C116DFAB1BB09EEE006A9F6C /* Relisten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relisten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C116DFAE1BB09EEE006A9F6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C116DFAF1BB09EEE006A9F6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 			children = (
 				C187C6931BB759D900F1778C /* star.png */,
 				C187C6941BB759D900F1778C /* starhighlighted.png */,
+				C108359E1BD092D500A22755 /* star2.png */,
+				C10835A01BD094D400A22755 /* star3.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -332,11 +338,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C187C6961BB759D900F1778C /* starhighlighted.png in Resources */,
+				C108359F1BD092D500A22755 /* star2.png in Resources */,
 				C187C68E1BB735C100F1778C /* RLShowsViewController.xib in Resources */,
 				C18AEA961BB4945F00A6D182 /* RLMainWindowController.xib in Resources */,
 				C116DFB51BB09EEE006A9F6C /* Assets.xcassets in Resources */,
 				C116DFB81BB09EEE006A9F6C /* MainMenu.xib in Resources */,
 				C1E4518F1BBA803B003A0721 /* RLSourceAndTracksViewController.xib in Resources */,
+				C10835A11BD094D400A22755 /* star3.png in Resources */,
 				C18AEAE11BB4EB2100A6D182 /* RLYearsViewController.xib in Resources */,
 				C187C6951BB759D900F1778C /* star.png in Resources */,
 			);

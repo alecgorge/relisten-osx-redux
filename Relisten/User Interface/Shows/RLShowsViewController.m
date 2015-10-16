@@ -74,8 +74,8 @@
         cellView.showDateTextField.stringValue = dateString;
     
     EDStarRating *starRating = cellView.starRating;
-    starRating.starImage = [NSImage imageNamed:@"star.png"];
-    starRating.starHighlightedImage = [NSImage imageNamed:@"starhighlighted.png"];
+    starRating.starImage = [NSImage imageNamed:@"star3.png"];
+    starRating.starHighlightedImage = [NSImage imageNamed:@"star2.png"];
     starRating.maxRating = 5.0;
     starRating.horizontalMargin = 12;
     starRating.editable = NO;
