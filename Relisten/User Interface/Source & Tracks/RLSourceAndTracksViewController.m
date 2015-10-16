@@ -41,6 +41,8 @@
     [self.sourcePopupButton removeAllItems];
     self.sourcePopupButton.enabled = NO;
     self.helpButton.enabled = NO;
+    self.selectedShow = nil;
+    [self.tableView reloadData];
 }
 
 -(void)populatePopupButtonWithSources:(NSArray *)sources

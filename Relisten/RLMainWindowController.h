@@ -8,11 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import "RLArtistsPopupButtonManager.h"
-#import "RLYearsViewController.h"
+#import "RLYearsVenuesTopShowsViewController.h"
 #import "RLShowsViewController.h"
 #import "RLSourceAndTracksViewController.h"
 #import "RLSplitView.h"
 
-@interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLYearSelectedDelegate, RLShowSelectedDelegate>
+@interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLYearsVenuesTopShowsSelectionDelegate, RLShowSelectedDelegate>
 
 @end

@@ -11,7 +11,7 @@
 #import "RLTableView.h"
 #import "RLYearTableCellView.h"
 
-@protocol RLYearSelectedDelegate <NSObject>
+@protocol RLYearsVenuesTopShowsSelectionDelegate <NSObject>
 
 - (void)yearSelected:(IGYear *)year;
 - (void)venueSelected:(IGVenue *)venue;
@@ -19,9 +19,9 @@
 
 @end
 
-@interface RLYearsViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource, NSTabViewDelegate>
+@interface RLYearsVenuesTopShowsViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource, NSTabViewDelegate>
 
-@property (nonatomic, weak) id<RLYearSelectedDelegate> delegate;
+@property (nonatomic, weak) id<RLYearsVenuesTopShowsSelectionDelegate> delegate;
 
 - (void)fetchYears;
 

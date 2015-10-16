@@ -6,9 +6,9 @@
 //  Copyright © 2015 Relisten. All rights reserved.
 //
 
-#import "RLYearsViewController.h"
+#import "RLYearsVenuesTopShowsViewController.h"
 
-@interface RLYearsViewController ()
+@interface RLYearsVenuesTopShowsViewController ()
 
 @property (weak) IBOutlet RLTableView *yearsTableView;
 @property (weak) IBOutlet RLTableView *venuesTableView;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation RLYearsViewController
+@implementation RLYearsVenuesTopShowsViewController
 
 - (void)viewDidLoad
 {

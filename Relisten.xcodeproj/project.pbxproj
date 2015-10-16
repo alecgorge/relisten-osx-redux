@@ -35,8 +35,8 @@
 		C18AEACD1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEACC1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m */; settings = {ASSET_TAGS = (); }; };
 		C18AEAD21BB4D43000A6D182 /* RLArtistsPopupButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAD11BB4D43000A6D182 /* RLArtistsPopupButtonManager.m */; settings = {ASSET_TAGS = (); }; };
 		C18AEAD61BB4E6BB00A6D182 /* RLSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEAE01BB4EB2100A6D182 /* RLYearsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEADE1BB4EB2100A6D182 /* RLYearsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEAE11BB4EB2100A6D182 /* RLYearsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AEADF1BB4EB2100A6D182 /* RLYearsViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		C18AEAE01BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEADE1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C18AEAE11BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AEADF1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		C1E4518E1BBA803B003A0721 /* RLSourceAndTracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E4518C1BBA803B003A0721 /* RLSourceAndTracksViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C1E4518F1BBA803B003A0721 /* RLSourceAndTracksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E4518D1BBA803B003A0721 /* RLSourceAndTracksViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -92,9 +92,9 @@
 		C18AEAD11BB4D43000A6D182 /* RLArtistsPopupButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLArtistsPopupButtonManager.m; sourceTree = "<group>"; };
 		C18AEAD41BB4E6BB00A6D182 /* RLSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLSplitView.h; sourceTree = "<group>"; };
 		C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLSplitView.m; sourceTree = "<group>"; };
-		C18AEADD1BB4EB2100A6D182 /* RLYearsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLYearsViewController.h; sourceTree = "<group>"; };
-		C18AEADE1BB4EB2100A6D182 /* RLYearsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLYearsViewController.m; sourceTree = "<group>"; };
-		C18AEADF1BB4EB2100A6D182 /* RLYearsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLYearsViewController.xib; sourceTree = "<group>"; };
+		C18AEADD1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLYearsVenuesTopShowsViewController.h; sourceTree = "<group>"; };
+		C18AEADE1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLYearsVenuesTopShowsViewController.m; sourceTree = "<group>"; };
+		C18AEADF1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLYearsVenuesTopShowsViewController.xib; sourceTree = "<group>"; };
 		C1E4518B1BBA803B003A0721 /* RLSourceAndTracksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLSourceAndTracksViewController.h; sourceTree = "<group>"; };
 		C1E4518C1BBA803B003A0721 /* RLSourceAndTracksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLSourceAndTracksViewController.m; sourceTree = "<group>"; };
 		C1E4518D1BBA803B003A0721 /* RLSourceAndTracksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLSourceAndTracksViewController.xib; sourceTree = "<group>"; };
@@ -239,9 +239,9 @@
 			children = (
 				C187C67D1BB4FA7600F1778C /* RLYearTableCellView.h */,
 				C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */,
-				C18AEADD1BB4EB2100A6D182 /* RLYearsViewController.h */,
-				C18AEADE1BB4EB2100A6D182 /* RLYearsViewController.m */,
-				C18AEADF1BB4EB2100A6D182 /* RLYearsViewController.xib */,
+				C18AEADD1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.h */,
+				C18AEADE1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m */,
+				C18AEADF1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib */,
 			);
 			path = Years;
 			sourceTree = "<group>";
@@ -345,7 +345,7 @@
 				C116DFB81BB09EEE006A9F6C /* MainMenu.xib in Resources */,
 				C1E4518F1BBA803B003A0721 /* RLSourceAndTracksViewController.xib in Resources */,
 				C10835A11BD094D400A22755 /* star3.png in Resources */,
-				C18AEAE11BB4EB2100A6D182 /* RLYearsViewController.xib in Resources */,
+				C18AEAE11BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib in Resources */,
 				C187C6951BB759D900F1778C /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,7 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C18AEAC71BB4A7F600A6D182 /* IGYear.m in Sources */,
-				C18AEAE01BB4EB2100A6D182 /* RLYearsViewController.m in Sources */,
+				C18AEAE01BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m in Sources */,
 				C187C67F1BB4FA7600F1778C /* RLYearTableCellView.m in Sources */,
 				C18AEAC11BB4A7F600A6D182 /* IGShow.m in Sources */,
 				C18AEAC31BB4A7F600A6D182 /* IGTrack.m in Sources */,

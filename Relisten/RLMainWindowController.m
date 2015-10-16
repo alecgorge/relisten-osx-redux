@@ -14,7 +14,7 @@
 @property (weak) IBOutlet NSPopUpButton *artistsPopupButton;
 
 @property (nonatomic, strong) RLArtistsPopupButtonManager *artistPopupManager;
-@property (nonatomic, strong) RLYearsViewController *yearsViewController;
+@property (nonatomic, strong) RLYearsVenuesTopShowsViewController *yearsViewController;
 @property (nonatomic, strong) RLShowsViewController *showsViewController;
 @property (nonatomic, strong) RLSourceAndTracksViewController *sourceAndTracksViewController;
 
@@ -31,7 +31,7 @@
     self.splitView.delegate = self;
     
     //Set up Years
-    self.yearsViewController = [[RLYearsViewController alloc] initWithNibName:@"RLYearsViewController" bundle:nil];
+    self.yearsViewController = [[RLYearsVenuesTopShowsViewController alloc] initWithNibName:@"RLYearsVenuesTopShowsViewController" bundle:nil];
     self.yearsViewController.delegate = self;
     [self.splitView setFirstViewFromViewController:self.yearsViewController];
     
