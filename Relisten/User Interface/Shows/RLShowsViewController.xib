@@ -19,22 +19,22 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <tabView initialItem="4Ng-Sl-sNM" translatesAutoresizingMaskIntoConstraints="NO" id="VSc-Gw-SFJ">
-                    <rect key="frame" x="-7" y="-10" width="224" height="505"/>
+                    <rect key="frame" x="-7" y="-10" width="224" height="500"/>
                     <animations/>
                     <tabViewItems>
                         <tabViewItem label="All Shows" identifier="1" id="4Ng-Sl-sNM">
                             <view key="view" id="6Bp-bW-11W">
-                                <rect key="frame" x="10" y="33" width="204" height="459"/>
+                                <rect key="frame" x="10" y="33" width="204" height="454"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="57" horizontalPageScroll="10" verticalLineScroll="57" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRv-w6-gED">
-                                        <rect key="frame" x="0.0" y="0.0" width="204" height="459"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="204" height="454"/>
                                         <clipView key="contentView" drawsBackground="NO" id="NLD-hh-VMz">
-                                            <rect key="frame" x="0.0" y="0.0" width="204" height="459"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="204" height="454"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="55" rowSizeStyle="automatic" viewBased="YES" id="Xtu-k0-aux" customClass="RLTableView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="204" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="204" height="454"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -325,7 +325,7 @@
                 <constraint firstAttribute="bottom" secondItem="VSc-Gw-SFJ" secondAttribute="bottom" id="8RQ-e5-Uag"/>
                 <constraint firstAttribute="trailing" secondItem="VSc-Gw-SFJ" secondAttribute="trailing" id="DAP-nd-35S"/>
                 <constraint firstItem="VSc-Gw-SFJ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="fYX-w4-WHI"/>
-                <constraint firstItem="VSc-Gw-SFJ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="5" id="off-Kg-NYN"/>
+                <constraint firstItem="VSc-Gw-SFJ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="off-Kg-NYN"/>
             </constraints>
             <animations/>
             <point key="canvasLocation" x="162" y="426"/>

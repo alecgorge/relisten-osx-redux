@@ -20,22 +20,22 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <tabView drawsBackground="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jc-Kg-Lcl">
-                    <rect key="frame" x="-7" y="-10" width="268" height="516"/>
+                    <rect key="frame" x="-7" y="-10" width="268" height="511"/>
                     <animations/>
                     <tabViewItems>
                         <tabViewItem label="All Years" identifier="1" id="jV7-tI-fYK" userLabel="All Years">
                             <view key="view" id="l09-OP-xT1">
-                                <rect key="frame" x="10" y="33" width="172" height="470"/>
+                                <rect key="frame" x="10" y="33" width="248" height="465"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="41" horizontalPageScroll="10" verticalLineScroll="41" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blm-9g-dtq">
-                                        <rect key="frame" x="0.0" y="0.0" width="248" height="470"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="465"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="vVV-Su-xDx">
-                                            <rect key="frame" x="0.0" y="0.0" width="248" height="470"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="248" height="465"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="39" rowSizeStyle="automatic" viewBased="YES" id="0dr-VK-3zD" customClass="RLTableView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="465"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -274,7 +274,7 @@
                 <constraint firstAttribute="bottom" secondItem="8jc-Kg-Lcl" secondAttribute="bottom" id="5sp-dr-zx3"/>
                 <constraint firstAttribute="trailing" secondItem="8jc-Kg-Lcl" secondAttribute="trailing" id="JLA-Sj-6Ut"/>
                 <constraint firstItem="8jc-Kg-Lcl" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="qY1-Sz-6fu"/>
-                <constraint firstItem="8jc-Kg-Lcl" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="5" id="v3b-i9-xNj"/>
+                <constraint firstItem="8jc-Kg-Lcl" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="v3b-i9-xNj"/>
             </constraints>
             <animations/>
             <point key="canvasLocation" x="351" y="431.5"/>

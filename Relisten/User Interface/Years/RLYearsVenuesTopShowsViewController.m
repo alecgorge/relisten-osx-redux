@@ -38,6 +38,10 @@
     self.durationFormatter.allowedUnits = (NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond);
     
     self.tabView.delegate = self;
+    
+    self.view.wantsLayer = YES;
+    self.view.layer.borderColor = [NSColor grayColor].CGColor;
+    self.view.layer.borderWidth = 1.5;
 }
 
 - (void)fetchYears

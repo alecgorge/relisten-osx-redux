@@ -100,9 +100,9 @@
                     <toolbarItem implicitItemIdentifier="20A6D2EC-A9E8-4BE0-B305-9CFF34D0F752" label="Custom View" paletteLabel="Custom View" id="38h-ZA-Rq5">
                         <nil key="toolTip"/>
                         <size key="minSize" width="100" height="19"/>
-                        <size key="maxSize" width="140" height="30"/>
+                        <size key="maxSize" width="168" height="30"/>
                         <popUpButton key="view" verticalHuggingPriority="750" id="TF2-3E-ynh" userLabel="Popup Button">
-                            <rect key="frame" x="0.0" y="14" width="140" height="20"/>
+                            <rect key="frame" x="0.0" y="14" width="168" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <animations/>
                             <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fvb-Lv-WLS">

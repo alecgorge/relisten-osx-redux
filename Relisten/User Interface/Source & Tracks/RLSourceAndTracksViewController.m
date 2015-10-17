@@ -34,6 +34,10 @@
     self.durationFormatter = [[NSDateComponentsFormatter alloc] init];
     self.durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
     self.durationFormatter.allowedUnits = (NSCalendarUnitMinute | NSCalendarUnitSecond);
+    
+    self.view.wantsLayer = YES;
+    self.view.layer.borderColor = [NSColor grayColor].CGColor;
+    self.view.layer.borderWidth = 1.5;
 }
 
 -(void)disableSourceSelection
