@@ -12,11 +12,13 @@
 
 @property (weak) IBOutlet RLSplitView *splitView;
 @property (weak) IBOutlet NSPopUpButton *artistsPopupButton;
+@property (weak) IBOutlet NSView *audioPlayBackView;
 
 @property (nonatomic, strong) RLArtistsPopupButtonManager *artistPopupManager;
 @property (nonatomic, strong) RLYearsVenuesTopShowsViewController *yearsViewController;
 @property (nonatomic, strong) RLShowsViewController *showsViewController;
 @property (nonatomic, strong) RLSourceAndTracksViewController *sourceAndTracksViewController;
+@property (nonatomic, strong) RLAudioPlaybackViewController *audioPlayBackController;
 
 @end
 
@@ -58,7 +60,14 @@
             [NSUserDefaults.standardUserDefaults synchronize];
         }];
     }];
+    
     [self.artistPopupManager refresh];
+    
+    // Set up playback controls
+    self.audioPlayBackController = [[RLAudioPlaybackViewController alloc] initWithNibName:@"RLAudioPlaybackViewController" bundle:nil];
+    self.audioPlayBackController.view.frame = self.audioPlayBackView.bounds;
+    self.audioPlayBackController.view.autoresizingMask = NSViewHeightSizable | NSViewWidthSizable;
+    [self.audioPlayBackView addSubview:self.audioPlayBackController.view];
 }
 
 #pragma mark - Delegate Handling

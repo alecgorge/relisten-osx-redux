@@ -72,6 +72,16 @@
     self.selectedShow = self.allShows[index];
     [self.tableView reloadData];
 }
+
+- (IBAction)showSourceInfo:(id)sender // TODO
+{
+    NSPopover *popover = [[NSPopover alloc] init];
+    
+    popover.behavior = NSPopoverBehaviorTransient;
+    popover.animates = YES;
+    //[popover showRelativeToRect:NSZeroRect ofView:sender preferredEdge:NSMaxYEdge];
+}
+
 #pragma mark - NSTableViewDelegate Methods
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView

@@ -1,0 +1,14 @@
+//
+//  RLAudioPlaybackViewController.h
+//  Relisten
+//
+//  Created by Manik Kalra on 10/17/15.
+//  Copyright © 2015 Relisten. All rights reserved.
+//
+
+#import <Cocoa/Cocoa.h>
+#import <CoreImage/CoreImage.h>
+
+@interface RLAudioPlaybackViewController : NSViewController
+
+@end

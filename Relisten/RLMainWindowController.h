@@ -11,6 +11,7 @@
 #import "RLYearsVenuesTopShowsViewController.h"
 #import "RLShowsViewController.h"
 #import "RLSourceAndTracksViewController.h"
+#import "RLAudioPlaybackViewController.h"
 #import "RLSplitView.h"
 
 @interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLYearsVenuesTopShowsSelectionDelegate, RLShowSelectedDelegate>

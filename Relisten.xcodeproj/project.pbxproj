@@ -14,6 +14,8 @@
 		C116DFB31BB09EEE006A9F6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C116DFB21BB09EEE006A9F6C /* main.m */; };
 		C116DFB51BB09EEE006A9F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C116DFB41BB09EEE006A9F6C /* Assets.xcassets */; };
 		C116DFB81BB09EEE006A9F6C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C116DFB61BB09EEE006A9F6C /* MainMenu.xib */; };
+		C11FA5181BD2194000C4FDEE /* RLAudioPlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C11FA5161BD2194000C4FDEE /* RLAudioPlaybackViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C11FA5191BD2194000C4FDEE /* RLAudioPlaybackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C11FA5171BD2194000C4FDEE /* RLAudioPlaybackViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		C15B8A201BBC5B3B00CB2F92 /* RLTrackTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C15B8A1F1BBC5B3B00CB2F92 /* RLTrackTableCellView.m */; settings = {ASSET_TAGS = (); }; };
 		C187C67F1BB4FA7600F1778C /* RLYearTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */; settings = {ASSET_TAGS = (); }; };
 		C187C6821BB5050400F1778C /* RLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C6811BB5050400F1778C /* RLTableView.m */; settings = {ASSET_TAGS = (); }; };
@@ -54,6 +56,9 @@
 		C116DFB41BB09EEE006A9F6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C116DFB71BB09EEE006A9F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C116DFB91BB09EEE006A9F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C11FA5151BD2194000C4FDEE /* RLAudioPlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLAudioPlaybackViewController.h; sourceTree = "<group>"; };
+		C11FA5161BD2194000C4FDEE /* RLAudioPlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLAudioPlaybackViewController.m; sourceTree = "<group>"; };
+		C11FA5171BD2194000C4FDEE /* RLAudioPlaybackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLAudioPlaybackViewController.xib; sourceTree = "<group>"; };
 		C15B8A1E1BBC5B3B00CB2F92 /* RLTrackTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLTrackTableCellView.h; sourceTree = "<group>"; };
 		C15B8A1F1BBC5B3B00CB2F92 /* RLTrackTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLTrackTableCellView.m; sourceTree = "<group>"; };
 		C187C67D1BB4FA7600F1778C /* RLYearTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLYearTableCellView.h; sourceTree = "<group>"; };
@@ -124,10 +129,10 @@
 		C116DFA21BB09EEE006A9F6C = {
 			isa = PBXGroup;
 			children = (
-				C116DFAD1BB09EEE006A9F6C /* Relisten */,
 				D35B084755A2E6F9141E9514 /* Frameworks */,
 				0F0CAB0FE1DC738A7BE54E8C /* Pods */,
 				C116DFAC1BB09EEE006A9F6C /* Products */,
+				C116DFAD1BB09EEE006A9F6C /* Relisten */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,16 +147,16 @@
 		C116DFAD1BB09EEE006A9F6C /* Relisten */ = {
 			isa = PBXGroup;
 			children = (
+				C18AEACE1BB4C99B00A6D182 /* API */,
+				C18AEACF1BB4D1E500A6D182 /* Managers */,
+				C18AEA971BB4A34A00A6D182 /* Model */,
+				C116DFB11BB09EEE006A9F6C /* Supporting Files */,
+				C18AEAD31BB4E4B800A6D182 /* User Interface */,
 				C116DFAE1BB09EEE006A9F6C /* AppDelegate.h */,
 				C116DFAF1BB09EEE006A9F6C /* AppDelegate.m */,
 				C18AEA921BB4945F00A6D182 /* RLMainWindowController.h */,
 				C18AEA931BB4945F00A6D182 /* RLMainWindowController.m */,
 				C18AEA941BB4945F00A6D182 /* RLMainWindowController.xib */,
-				C18AEAD31BB4E4B800A6D182 /* User Interface */,
-				C18AEACE1BB4C99B00A6D182 /* API */,
-				C18AEACF1BB4D1E500A6D182 /* Managers */,
-				C18AEA971BB4A34A00A6D182 /* Model */,
-				C116DFB11BB09EEE006A9F6C /* Supporting Files */,
 			);
 			path = Relisten;
 			sourceTree = "<group>";
@@ -168,13 +173,23 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C11FA5141BD2191000C4FDEE /* Audio Playback */ = {
+			isa = PBXGroup;
+			children = (
+				C11FA5151BD2194000C4FDEE /* RLAudioPlaybackViewController.h */,
+				C11FA5161BD2194000C4FDEE /* RLAudioPlaybackViewController.m */,
+				C11FA5171BD2194000C4FDEE /* RLAudioPlaybackViewController.xib */,
+			);
+			path = "Audio Playback";
+			sourceTree = "<group>";
+		};
 		C187C6921BB759CF00F1778C /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				C187C6931BB759D900F1778C /* star.png */,
-				C187C6941BB759D900F1778C /* starhighlighted.png */,
 				C108359E1BD092D500A22755 /* star2.png */,
 				C10835A01BD094D400A22755 /* star3.png */,
+				C187C6941BB759D900F1778C /* starhighlighted.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -223,13 +238,14 @@
 		C18AEAD31BB4E4B800A6D182 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				C11FA5141BD2191000C4FDEE /* Audio Playback */,
+				C1AA2D7A1BBF3867000D75FC /* Shows */,
+				C1AA2D7B1BBF387C000D75FC /* Source & Tracks */,
+				C1AA2D791BBF3861000D75FC /* Years */,
 				C18AEAD41BB4E6BB00A6D182 /* RLSplitView.h */,
 				C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */,
 				C187C6801BB5050400F1778C /* RLTableView.h */,
 				C187C6811BB5050400F1778C /* RLTableView.m */,
-				C1AA2D791BBF3861000D75FC /* Years */,
-				C1AA2D7A1BBF3867000D75FC /* Shows */,
-				C1AA2D7B1BBF387C000D75FC /* Source & Tracks */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -343,6 +359,7 @@
 				C18AEA961BB4945F00A6D182 /* RLMainWindowController.xib in Resources */,
 				C116DFB51BB09EEE006A9F6C /* Assets.xcassets in Resources */,
 				C116DFB81BB09EEE006A9F6C /* MainMenu.xib in Resources */,
+				C11FA5191BD2194000C4FDEE /* RLAudioPlaybackViewController.xib in Resources */,
 				C1E4518F1BBA803B003A0721 /* RLSourceAndTracksViewController.xib in Resources */,
 				C10835A11BD094D400A22755 /* star3.png in Resources */,
 				C18AEAE11BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib in Resources */,
@@ -410,6 +427,7 @@
 				C18AEAC01BB4A7F600A6D182 /* IGPlaylist.m in Sources */,
 				C18AEAD61BB4E6BB00A6D182 /* RLSplitView.m in Sources */,
 				C18AEACD1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m in Sources */,
+				C11FA5181BD2194000C4FDEE /* RLAudioPlaybackViewController.m in Sources */,
 				C18AEA951BB4945F00A6D182 /* RLMainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
