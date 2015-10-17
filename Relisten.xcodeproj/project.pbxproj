@@ -129,10 +129,11 @@
 		C116DFA21BB09EEE006A9F6C = {
 			isa = PBXGroup;
 			children = (
+				C116DFAD1BB09EEE006A9F6C /* Relisten */,
+				C116DFB11BB09EEE006A9F6C /* Supporting Files */,
 				D35B084755A2E6F9141E9514 /* Frameworks */,
 				0F0CAB0FE1DC738A7BE54E8C /* Pods */,
 				C116DFAC1BB09EEE006A9F6C /* Products */,
-				C116DFAD1BB09EEE006A9F6C /* Relisten */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,16 +148,15 @@
 		C116DFAD1BB09EEE006A9F6C /* Relisten */ = {
 			isa = PBXGroup;
 			children = (
-				C18AEACE1BB4C99B00A6D182 /* API */,
-				C18AEACF1BB4D1E500A6D182 /* Managers */,
-				C18AEA971BB4A34A00A6D182 /* Model */,
-				C116DFB11BB09EEE006A9F6C /* Supporting Files */,
-				C18AEAD31BB4E4B800A6D182 /* User Interface */,
 				C116DFAE1BB09EEE006A9F6C /* AppDelegate.h */,
 				C116DFAF1BB09EEE006A9F6C /* AppDelegate.m */,
 				C18AEA921BB4945F00A6D182 /* RLMainWindowController.h */,
 				C18AEA931BB4945F00A6D182 /* RLMainWindowController.m */,
 				C18AEA941BB4945F00A6D182 /* RLMainWindowController.xib */,
+				C18AEAD31BB4E4B800A6D182 /* User Interface */,
+				C18AEACE1BB4C99B00A6D182 /* API */,
+				C18AEACF1BB4D1E500A6D182 /* Managers */,
+				C18AEA971BB4A34A00A6D182 /* Model */,
 			);
 			path = Relisten;
 			sourceTree = "<group>";
@@ -170,7 +170,8 @@
 				C116DFB61BB09EEE006A9F6C /* MainMenu.xib */,
 				C116DFB21BB09EEE006A9F6C /* main.m */,
 			);
-			path = "Supporting Files";
+			name = "Supporting Files";
+			path = "Relisten/Supporting Files";
 			sourceTree = "<group>";
 		};
 		C11FA5141BD2191000C4FDEE /* Audio Playback */ = {
@@ -238,14 +239,14 @@
 		C18AEAD31BB4E4B800A6D182 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				C11FA5141BD2191000C4FDEE /* Audio Playback */,
-				C1AA2D7A1BBF3867000D75FC /* Shows */,
-				C1AA2D7B1BBF387C000D75FC /* Source & Tracks */,
-				C1AA2D791BBF3861000D75FC /* Years */,
 				C18AEAD41BB4E6BB00A6D182 /* RLSplitView.h */,
 				C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */,
 				C187C6801BB5050400F1778C /* RLTableView.h */,
 				C187C6811BB5050400F1778C /* RLTableView.m */,
+				C1AA2D791BBF3861000D75FC /* Years */,
+				C1AA2D7A1BBF3867000D75FC /* Shows */,
+				C1AA2D7B1BBF387C000D75FC /* Source & Tracks */,
+				C11FA5141BD2191000C4FDEE /* Audio Playback */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";

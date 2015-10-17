@@ -121,19 +121,19 @@
                             <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="below" sliderType="linear" id="qJ3-CO-dHr"/>
                         </slider>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wQL-hq-eV9">
-                            <rect key="frame" x="155" y="49" width="100" height="16"/>
+                            <rect key="frame" x="155" y="47" width="100" height="16"/>
                             <animations/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="You Enjoy Myself" id="8Yh-xo-VMQ">
-                                <font key="font" metaFont="system" size="12"/>
+                                <font key="font" metaFont="cellTitle"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="skT-PI-1xf">
-                            <rect key="frame" x="158" y="35" width="95" height="14"/>
+                            <rect key="frame" x="158" y="33" width="95" height="14"/>
                             <animations/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Phish - The Hitsy" id="R48-2Y-ViI">
-                                <font key="font" metaFont="system" size="11"/>
+                                <font key="font" metaFont="smallSystem"/>
                                 <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
@@ -157,7 +157,7 @@
                             </textFieldCell>
                         </textField>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qnp-NR-d1A">
-                            <rect key="frame" x="355" y="35" width="35" height="35"/>
+                            <rect key="frame" x="355" y="33" width="35" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="qnp-NR-d1A" secondAttribute="height" multiplier="1:1" id="Gkm-VR-EyX"/>
                                 <constraint firstAttribute="width" constant="35" id="c7C-qe-BZ4"/>
@@ -172,16 +172,16 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="fvh-nB-6fU" secondAttribute="trailing" constant="20" id="1ky-fb-fp3"/>
                         <constraint firstItem="skT-PI-1xf" firstAttribute="top" secondItem="wQL-hq-eV9" secondAttribute="bottom" id="2Dh-1D-6qP"/>
-                        <constraint firstItem="wQL-hq-eV9" firstAttribute="top" secondItem="Z54-66-1R5" secondAttribute="top" constant="5" id="4dg-Ml-Zbs"/>
+                        <constraint firstItem="wQL-hq-eV9" firstAttribute="top" secondItem="Z54-66-1R5" secondAttribute="top" constant="7" id="4dg-Ml-Zbs"/>
                         <constraint firstItem="JBP-1x-GCH" firstAttribute="centerY" secondItem="hcK-yu-vdf" secondAttribute="centerY" id="Pna-Om-1Nu"/>
                         <constraint firstAttribute="trailing" secondItem="qnp-NR-d1A" secondAttribute="trailing" constant="20" id="PzW-Yz-iFo"/>
-                        <constraint firstItem="fvh-nB-6fU" firstAttribute="top" secondItem="qnp-NR-d1A" secondAttribute="bottom" constant="5" id="Rya-9m-GZx"/>
+                        <constraint firstItem="fvh-nB-6fU" firstAttribute="top" secondItem="qnp-NR-d1A" secondAttribute="bottom" constant="3" id="Rya-9m-GZx"/>
                         <constraint firstItem="skT-PI-1xf" firstAttribute="centerX" secondItem="Z54-66-1R5" secondAttribute="centerX" id="Ugw-oT-gKT"/>
                         <constraint firstItem="wQL-hq-eV9" firstAttribute="centerX" secondItem="Z54-66-1R5" secondAttribute="centerX" id="cfL-OD-9wV"/>
                         <constraint firstItem="fvh-nB-6fU" firstAttribute="leading" secondItem="JBP-1x-GCH" secondAttribute="trailing" constant="8" id="j28-ep-hEt"/>
                         <constraint firstItem="JBP-1x-GCH" firstAttribute="leading" secondItem="hcK-yu-vdf" secondAttribute="trailing" constant="8" id="m07-1G-qBA"/>
                         <constraint firstItem="fvh-nB-6fU" firstAttribute="top" secondItem="hcK-yu-vdf" secondAttribute="top" id="nM1-7c-5kM"/>
-                        <constraint firstItem="hcK-yu-vdf" firstAttribute="top" secondItem="skT-PI-1xf" secondAttribute="bottom" constant="5" id="sqh-8C-705"/>
+                        <constraint firstItem="hcK-yu-vdf" firstAttribute="top" secondItem="skT-PI-1xf" secondAttribute="bottom" constant="3" id="sqh-8C-705"/>
                         <constraint firstItem="hcK-yu-vdf" firstAttribute="leading" secondItem="Z54-66-1R5" secondAttribute="leading" constant="20" id="wzb-5E-0zM"/>
                     </constraints>
                     <animations/>
