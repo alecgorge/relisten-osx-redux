@@ -11,7 +11,15 @@
 #import "RLTableView.h"
 #import "IGAPIClient.h"
 
+@protocol RLTrackSelectedDelegate <NSObject>
+
+- (void)trackSelected:(IGTrack *)track;
+
+@end
+
 @interface RLSourceAndTracksViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
+
+@property (nonatomic, weak) id<RLTrackSelectedDelegate> delegate;
 
 -(void)fetchTracksForShow:(IGShow *)show;
 -(void)disableSourceSelection;

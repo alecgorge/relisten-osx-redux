@@ -8,7 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 #import <CoreImage/CoreImage.h>
+#import "IGAPIClient.h"
 
 @interface RLAudioPlaybackViewController : NSViewController
+
+-(void)playTrack:(IGTrack *)track;
 
 @end

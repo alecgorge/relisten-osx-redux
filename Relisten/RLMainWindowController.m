@@ -44,6 +44,7 @@
     
     // Set up Source and Tracks
     self.sourceAndTracksViewController = [[RLSourceAndTracksViewController alloc] initWithNibName:@"RLSourceAndTracksViewController" bundle:nil];
+    self.sourceAndTracksViewController.delegate = self;
     [self.splitView setThirdViewFromViewController:self.sourceAndTracksViewController];
     
     // Set up the artist popup button
@@ -98,11 +99,9 @@
     [self.sourceAndTracksViewController fetchTracksForShow:show];
 }
 
-#pragma mark - NSSplitViewDelegate Methods
-
-//-(NSRect)splitView:(NSSplitView *)splitView effectiveRect:(NSRect)proposedEffectiveRect forDrawnRect:(NSRect)drawnRect ofDividerAtIndex:(NSInteger)dividerIndex
-//{
-//    return NSZeroRect;
-//}
+-(void)trackSelected:(IGTrack *)track
+{
+    [self.audioPlayBackController playTrack:track];
+}
 
 @end

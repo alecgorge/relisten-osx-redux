@@ -30,6 +30,7 @@
     [self disableSourceSelection];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.doubleAction = @selector(doubleClickedTrack:);
     
     self.durationFormatter = [[NSDateComponentsFormatter alloc] init];
     self.durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
@@ -84,6 +85,14 @@
     popover.behavior = NSPopoverBehaviorTransient;
     popover.animates = YES;
     //[popover showRelativeToRect:NSZeroRect ofView:sender preferredEdge:NSMaxYEdge];
+}
+
+-(void)doubleClickedTrack:(id)sender
+{
+    NSInteger row = [sender clickedRow];
+    IGTrack *selectedTrack = self.selectedShow.tracks[row];
+    
+    [self.delegate trackSelected:selectedTrack];
 }
 
 #pragma mark - NSTableViewDelegate Methods

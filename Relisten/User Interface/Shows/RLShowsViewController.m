@@ -126,14 +126,10 @@
     else
         show = self.soundboardShows[row];
     
-    NSString *dateString = [NSDateFormatter localizedStringFromDate:show.date
-                                                          dateStyle:NSDateFormatterShortStyle
-                                                          timeStyle:NSDateFormatterNoStyle];
-    
     if(show.isSoundboard)
-        cellView.showDateTextField.stringValue = [NSString stringWithFormat:@"%@(SBD)", dateString];
+        cellView.showDateTextField.stringValue = [NSString stringWithFormat:@"%@(SBD)", show.displayDate];
     else
-        cellView.showDateTextField.stringValue = dateString;
+        cellView.showDateTextField.stringValue = show.displayDate;
     
     EDStarRating *starRating = cellView.starRating;
     starRating.starImage = [NSImage imageNamed:@"star3.png"];
