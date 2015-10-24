@@ -80,7 +80,7 @@
                         <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xiT-K4-iQP">
                             <rect key="frame" x="18" y="25" width="114" height="21"/>
                             <animations/>
-                            <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="CAa-V3-sqo"/>
+                            <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="100" tickMarkPosition="above" sliderType="linear" id="CAa-V3-sqo"/>
                         </slider>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M0Q-Ft-V60">
                             <rect key="frame" x="120" y="5" width="25" height="25"/>

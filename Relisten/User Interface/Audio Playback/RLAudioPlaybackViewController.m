@@ -20,6 +20,7 @@
 @property (weak) IBOutlet NSSlider *volumeSlider;
 
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
+@property (nonatomic, strong) NSMutableArray <NSURL *> *trackQueue;
 
 @end
 
@@ -29,6 +30,13 @@
 {
     [super viewDidLoad];
     // Do view setup here
+    
+    // Set up HyteriaPlayer
+    HysteriaPlayer *hysteriaPlayer = [HysteriaPlayer sharedInstance];
+    hysteriaPlayer.delegate = self;
+    hysteriaPlayer.datasource = self;
+    
+    self.trackQueue = [[NSMutableArray alloc] init];
     
     self.view.wantsLayer = YES;
     self.view.layer.borderColor = [NSColor grayColor].CGColor;
@@ -49,6 +57,30 @@
     self.trackTitleTextField.stringValue = track.title;
     self.trackSubtitleTextField.stringValue = [NSString stringWithFormat:@"%@ | %@", IGAPIClient.sharedInstance.artist.name, track.show.displayDate];
     self.trackEndingTImeTextField.stringValue = [self.durationFormatter stringFromTimeInterval:track.length];
+    
+    [self.trackQueue removeAllObjects]; // TODO TEMP
+    NSURL *currentTrackURL = [NSURL URLWithString:track.file];
+    [self.trackQueue addObject:currentTrackURL];
+    
+    HysteriaPlayer *hysteriaPlayer = [HysteriaPlayer sharedInstance];
+    [hysteriaPlayer removeAllItems];
+    [hysteriaPlayer fetchAndPlayPlayerItem:0];
 }
+
+
+#pragma mark - HysteriaPlayerDataSource
+
+- (NSInteger)hysteriaPlayerNumberOfItems
+{
+     return [self.trackQueue count];
+}
+
+- (NSURL *)hysteriaPlayerURLForItemAtIndex:(NSInteger)index preBuffer:(BOOL)preBuffer
+{
+    return [self.trackQueue objectAtIndex:index];
+}
+
+#pragma mark - HysteriaPlayerDelegate
+
 
 @end

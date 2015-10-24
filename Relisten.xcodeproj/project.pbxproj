@@ -307,6 +307,7 @@
 				C116DFA81BB09EEE006A9F6C /* Frameworks */,
 				C116DFA91BB09EEE006A9F6C /* Resources */,
 				C1213D4298368E48EF731A90 /* Copy Pods Resources */,
+				90E51F7D1DD0C3A68DDDEBA2 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -371,6 +372,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		90E51F7D1DD0C3A68DDDEBA2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Relisten/Pods-Relisten-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		96D148DC06667DF4376D3A9D /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
