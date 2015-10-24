@@ -13,7 +13,7 @@
 
 @protocol RLTrackSelectedDelegate <NSObject>
 
-- (void)trackSelected:(IGTrack *)track;
+- (void)trackSelected:(IGTrack *)track FromShow:(IGShow *)show;
 
 @end
 

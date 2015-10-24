@@ -13,6 +13,6 @@
 
 @interface RLAudioPlaybackViewController : NSViewController <HysteriaPlayerDataSource, HysteriaPlayerDelegate>
 
--(void)playTrack:(IGTrack *)track;
+-(void)playTrack:(IGTrack *)track FromShow:(IGShow *)show;
 
 @end

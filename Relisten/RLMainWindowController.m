@@ -99,9 +99,9 @@
     [self.sourceAndTracksViewController fetchTracksForShow:show];
 }
 
--(void)trackSelected:(IGTrack *)track
+-(void)trackSelected:(IGTrack *)track FromShow:(IGShow *)show
 {
-    [self.audioPlayBackController playTrack:track];
+    [self.audioPlayBackController playTrack:track FromShow:show];
 }
 
 @end

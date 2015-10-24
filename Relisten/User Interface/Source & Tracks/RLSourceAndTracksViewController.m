@@ -92,7 +92,7 @@
     NSInteger row = [sender clickedRow];
     IGTrack *selectedTrack = self.selectedShow.tracks[row];
     
-    [self.delegate trackSelected:selectedTrack];
+    [self.delegate trackSelected:selectedTrack FromShow:self.selectedShow];
 }
 
 #pragma mark - NSTableViewDelegate Methods
@@ -107,7 +107,7 @@
     RLTrackTableCellView *cellView = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
     
     IGTrack *track = self.selectedShow.tracks[row];
-    cellView.trackNumberTextField.stringValue = [NSString stringWithFormat:@"%ld.", (long)row];
+    cellView.trackNumberTextField.stringValue = [NSString stringWithFormat:@"%ld.", (long)row + 1];
     cellView.trackNameTextField.stringValue = track.title;
     
     cellView.trackDurationTextField.stringValue = [self.durationFormatter stringFromTimeInterval:track.length];
