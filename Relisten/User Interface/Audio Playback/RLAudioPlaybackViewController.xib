@@ -102,6 +102,9 @@
                             <rect key="frame" x="18" y="22" width="114" height="21"/>
                             <animations/>
                             <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="100" tickMarkPosition="above" sliderType="linear" id="CAa-V3-sqo"/>
+                            <connections>
+                                <action selector="volumeSliderMoved:" target="-2" id="GEo-gF-MJU"/>
+                            </connections>
                         </slider>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M0Q-Ft-V60">
                             <rect key="frame" x="120" y="5" width="25" height="25"/>

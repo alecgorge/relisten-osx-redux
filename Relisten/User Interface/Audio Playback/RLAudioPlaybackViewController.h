@@ -10,6 +10,7 @@
 #import <CoreImage/CoreImage.h>
 #import <ObjectiveSugar/ObjectiveSugar.h>
 #import <AGAudioPlayer/AGAudioPlayer.h>
+#import <CoreAudio/CoreAudio.h>
 #import "IguanaMediaItem.h"
 #import "IGAPIClient.h"
 

@@ -34,7 +34,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - AGAudioPlayer (from `https://github.com/manikkalra/AGAudioPlayer.git`)
+  - AGAudioPlayer (from `https://github.com/alecgorge/AGAudioPlayer.git`)
   - EDStarRating
   - JSONModel
   - Masonry
@@ -43,12 +43,12 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   AGAudioPlayer:
-    :git: https://github.com/manikkalra/AGAudioPlayer.git
+    :git: https://github.com/alecgorge/AGAudioPlayer.git
 
 CHECKOUT OPTIONS:
   AGAudioPlayer:
-    :commit: c8e43570a7a9442bd070a12d28f5bc847a249554
-    :git: https://github.com/manikkalra/AGAudioPlayer.git
+    :commit: fadfcdf15ec3a7c986c590779a1864bca169c38d
+    :git: https://github.com/alecgorge/AGAudioPlayer.git
 
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399

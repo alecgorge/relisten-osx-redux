@@ -48,6 +48,8 @@
     self.trackBeginningTimeTextField.stringValue = @"00:00:00";
     self.trackEndingTImeTextField.stringValue = @"00:00:00";
     self.bufferingTextField.stringValue = @"";
+    self.volumeSlider.minValue = 0.0;
+    self.volumeSlider.maxValue = 1.0;
     
     self.durationFormatter = [[NSDateComponentsFormatter alloc] init];
     self.durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
@@ -110,6 +112,12 @@
     double value = [slider doubleValue];
     self.trackBeginningTimeTextField.stringValue = [self.durationFormatter stringFromTimeInterval:value];
     [self.audioPlayer seekTo:value];
+}
+
+- (IBAction)volumeSliderMoved:(id)sender
+{
+    NSSlider *slider = sender;
+    double value = [slider doubleValue];
 }
 
 #pragma mark - AGAudioPlayerDelegate Methods
