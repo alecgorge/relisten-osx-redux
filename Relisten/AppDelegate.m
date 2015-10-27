@@ -10,7 +10,6 @@
 
 @interface AppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
 @property (strong, nonatomic) RLMainWindowController *mainWindowController;
 
 @end
@@ -24,8 +23,17 @@
     [self.mainWindowController showWindow:nil];
 }
 
-- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *) theApplication
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)visibleWindows
 {
+    if (visibleWindows)
+    {
+        [self.self.mainWindowController.window orderFront:self];
+    }
+    else
+    {
+        [self.self.mainWindowController.window makeKeyAndOrderFront:self];
+    }
+    
     return YES;
 }
 
