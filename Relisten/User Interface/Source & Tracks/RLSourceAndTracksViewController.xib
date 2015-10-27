@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="RLSourceAndTracksViewController">
@@ -35,7 +35,7 @@
                     <animations/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Source" id="AsF-AO-sTh">
                         <font key="font" metaFont="system"/>
-                        <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
@@ -51,13 +51,13 @@
                     </connections>
                 </button>
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="25" horizontalPageScroll="10" verticalLineScroll="25" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cx-M8-hH5">
-                    <rect key="frame" x="0.0" y="0.0" width="515" height="608"/>
+                    <rect key="frame" x="0.0" y="0.0" width="515" height="551"/>
                     <clipView key="contentView" drawsBackground="NO" id="qMs-qD-VIK">
-                        <rect key="frame" x="0.0" y="0.0" width="515" height="608"/>
+                        <rect key="frame" x="0.0" y="0.0" width="515" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="23" rowSizeStyle="automatic" viewBased="YES" id="Xl2-1C-pTr" customClass="RLTableView">
-                                <rect key="frame" x="0.0" y="0.0" width="515" height="0.0"/>
+                                <rect key="frame" x="0.0" y="0.0" width="515" height="551"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -159,20 +159,54 @@
                         <animations/>
                     </scroller>
                 </scrollView>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="bFP-Vp-zwb">
+                    <rect key="frame" x="18" y="595" width="479" height="17"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Taper" id="0mD-lG-7SN">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Td9-RV-zFL">
+                    <rect key="frame" x="18" y="570" width="479" height="17"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Lineage" id="lNQ-4U-jPF">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Tpq-gc-bo6">
+                    <rect key="frame" x="12" y="559" width="491" height="5"/>
+                    <animations/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
             </subviews>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Td9-RV-zFL" secondAttribute="trailing" constant="20" id="41X-Ux-fOO"/>
                 <constraint firstAttribute="trailing" secondItem="ZHL-Bs-3Ku" secondAttribute="trailing" constant="20" id="Bes-qP-zOz"/>
                 <constraint firstItem="ux0-Fp-HHr" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="FhF-AI-3X8"/>
                 <constraint firstItem="ZHL-Bs-3Ku" firstAttribute="height" secondItem="ux0-Fp-HHr" secondAttribute="height" id="FiM-sg-LtS"/>
+                <constraint firstAttribute="trailing" secondItem="bFP-Vp-zwb" secondAttribute="trailing" constant="20" id="GAY-WQ-Amn"/>
                 <constraint firstAttribute="bottom" secondItem="4Cx-M8-hH5" secondAttribute="bottom" id="GzU-CZ-CGS"/>
+                <constraint firstItem="Tpq-gc-bo6" firstAttribute="top" secondItem="Td9-RV-zFL" secondAttribute="bottom" constant="8" id="I59-m4-QLc"/>
                 <constraint firstItem="ZHL-Bs-3Ku" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="KTf-7V-ufI"/>
+                <constraint firstItem="Tpq-gc-bo6" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="KUT-jz-ZSk"/>
                 <constraint firstItem="b6q-oE-4KE" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="M3b-HD-iSt"/>
+                <constraint firstItem="bFP-Vp-zwb" firstAttribute="top" secondItem="b6q-oE-4KE" secondAttribute="bottom" constant="8" id="Trj-gC-vAC"/>
                 <constraint firstItem="4Cx-M8-hH5" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Y1B-81-p9q"/>
                 <constraint firstItem="ux0-Fp-HHr" firstAttribute="leading" secondItem="b6q-oE-4KE" secondAttribute="trailing" constant="8" id="YBj-8d-FnO"/>
-                <constraint firstItem="4Cx-M8-hH5" firstAttribute="top" secondItem="ux0-Fp-HHr" secondAttribute="bottom" constant="10" id="jxR-Hw-i5p"/>
+                <constraint firstAttribute="trailing" secondItem="Tpq-gc-bo6" secondAttribute="trailing" constant="12" id="cai-IO-n8R"/>
+                <constraint firstItem="Td9-RV-zFL" firstAttribute="top" secondItem="bFP-Vp-zwb" secondAttribute="bottom" constant="8" id="dhy-Sp-EpX"/>
+                <constraint firstItem="bFP-Vp-zwb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="iHP-Ct-YiZ"/>
                 <constraint firstItem="b6q-oE-4KE" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="rb7-cs-ANG"/>
                 <constraint firstItem="ZHL-Bs-3Ku" firstAttribute="leading" secondItem="ux0-Fp-HHr" secondAttribute="trailing" constant="8" id="vuG-ZK-SjW"/>
+                <constraint firstItem="4Cx-M8-hH5" firstAttribute="top" secondItem="Tpq-gc-bo6" secondAttribute="bottom" constant="10" id="zAg-gR-ohs"/>
                 <constraint firstAttribute="trailing" secondItem="4Cx-M8-hH5" secondAttribute="trailing" id="zOe-31-bKv"/>
+                <constraint firstItem="Td9-RV-zFL" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="zRB-wo-m2d"/>
             </constraints>
             <animations/>
             <point key="canvasLocation" x="894.5" y="550.5"/>
