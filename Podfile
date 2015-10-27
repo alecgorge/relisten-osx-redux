@@ -9,5 +9,5 @@ target "Relisten" do
     pod 'ObjectiveSugar'
     pod 'ReactiveCocoa', '~> 2.3'
     pod 'EDStarRating'
-    pod 'HysteriaPlayer'
+    pod 'AGAudioPlayer', :git => 'https://github.com/alecgorge/AGAudioPlayer.git'
 end

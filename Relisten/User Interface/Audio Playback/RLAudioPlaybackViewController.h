@@ -8,10 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 #import <CoreImage/CoreImage.h>
-#import <HysteriaPlayer/HysteriaPlayer.h>
+#import <AGAudioPlayer/AGAudioPlayer.h>
 #import "IGAPIClient.h"
 
-@interface RLAudioPlaybackViewController : NSViewController <HysteriaPlayerDataSource, HysteriaPlayerDelegate>
+@interface RLAudioPlaybackViewController : NSViewController <AGAudioPlayerDelegate>
 
 -(void)playTrack:(IGTrack *)track FromShow:(IGShow *)show;
 

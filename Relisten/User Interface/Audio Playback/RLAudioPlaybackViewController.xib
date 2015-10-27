@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -75,7 +75,7 @@
                             <rect key="frame" x="44" y="3" width="63" height="14"/>
                             <animations/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Buffering..." id="H3s-VV-aNM">
-                                <font key="font" metaFont="system" size="11"/>
+                                <font key="font" metaFont="smallSystem"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
@@ -147,6 +147,9 @@
                             <rect key="frame" x="71" y="8" width="268" height="21"/>
                             <animations/>
                             <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="below" sliderType="linear" id="qJ3-CO-dHr"/>
+                            <connections>
+                                <action selector="trackSliderMoved:" target="-2" id="cFM-I0-52U"/>
+                            </connections>
                         </slider>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wQL-hq-eV9">
                             <rect key="frame" x="155" y="42" width="100" height="16"/>

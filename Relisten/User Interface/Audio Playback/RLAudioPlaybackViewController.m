@@ -17,12 +17,13 @@
 @property (weak) IBOutlet NSTextField *bufferingTextField;
 
 @property (weak) IBOutlet NSSlider *trackSlider;
-
-@property (weak) IBOutlet NSButton *playButton;
 @property (weak) IBOutlet NSSlider *volumeSlider;
 
+@property (weak) IBOutlet NSButton *playButton;
+
+@property (nonatomic, strong) AGAudioPlayer *audioPlayer;
+@property (nonatomic, strong) AGAudioPlayerUpNextQueue *queue;
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
-@property (nonatomic, strong) NSMutableArray <IGTrack *> *trackQueue;
 
 @end
 
@@ -33,12 +34,10 @@
     [super viewDidLoad];
     // Do view setup here
     
-    // Set up HyteriaPlayer
-    HysteriaPlayer *hysteriaPlayer = [HysteriaPlayer sharedInstance];
-    hysteriaPlayer.delegate = self;
-    hysteriaPlayer.datasource = self;
-    
-    self.trackQueue = [[NSMutableArray alloc] init];
+    // Set up AudioPlayer
+    self.queue = [[AGAudioPlayerUpNextQueue alloc] init];
+    self.audioPlayer = [[AGAudioPlayer alloc] initWithQueue:self.queue];
+    self.audioPlayer.delegate = self;
     
     self.view.wantsLayer = YES;
     self.view.layer.borderColor = [NSColor grayColor].CGColor;
@@ -57,19 +56,9 @@
 
 -(void)playTrack:(IGTrack *)track FromShow:(IGShow *)show
 {
-    [self.trackQueue removeAllObjects]; // TODO TEMP
-
-    int index = (int)[show.tracks indexOfObject:track];
+    NSInteger index = [show.tracks indexOfObject:track];
     
-    for(int i = index; i < show.tracks.count; i++)
-    {
-        IGTrack *track = show.tracks[i];
-        [self.trackQueue addObject:track];
-    }
-    
-    HysteriaPlayer *hysteriaPlayer = [HysteriaPlayer sharedInstance];
-    [hysteriaPlayer removeAllItems];
-    [hysteriaPlayer fetchAndPlayPlayerItem:0];
+     [self.audioPlayer playItemAtIndex:index];
 }
 
 -(void)updateTrackInfo:(IGTrack *)track
@@ -77,105 +66,67 @@
     self.trackTitleTextField.stringValue = track.title;
     self.trackSubtitleTextField.stringValue = [NSString stringWithFormat:@"%@ | %@", IGAPIClient.sharedInstance.artist.name, track.show.displayDate];
     self.trackEndingTImeTextField.stringValue = [self.durationFormatter stringFromTimeInterval:track.length];
+    self.trackSlider.maxValue = track.length;
+    self.trackSlider.minValue = 0.0;
 }
 
 #pragma mark - UI Button Interaction Methods
 
 -(void)updatePlayPauseButton
 {
-    HysteriaPlayer *hysteriaPlayer = [HysteriaPlayer sharedInstance];
-    
-    if ([hysteriaPlayer isPlaying])
-    {
-        [self.playButton setImage:[NSImage imageNamed:@"Pause"]];
-    }
-    else
-    {
-        [self.playButton setImage:[NSImage imageNamed:@"Play"]];
-    }
-
+   
 }
 
 - (IBAction)playPauseButtonPressed:(id)sender
 {
-    HysteriaPlayer *hysteriaPlayer = [HysteriaPlayer sharedInstance];
-    
-    if ([hysteriaPlayer isPlaying])
-    {
-        [hysteriaPlayer pausePlayerForcibly:YES];
-        [hysteriaPlayer pause];
-    }
-    else
-    {
-        [hysteriaPlayer pausePlayerForcibly:NO];
-        [hysteriaPlayer play];
-    }
 }
 
 - (IBAction)nextButtonPressed:(id)sender
 {
-    [[HysteriaPlayer sharedInstance] playNext];
+    [self.audioPlayer forward];
 }
 
 - (IBAction)previousButtonPressed:(id)sender
 {
-    [[HysteriaPlayer sharedInstance] playPrevious];
+    [self.audioPlayer backward];
 }
 
-#pragma mark - HysteriaPlayerDataSource
-
-- (NSInteger)hysteriaPlayerNumberOfItems
+- (IBAction)trackSliderMoved:(id)sender
 {
-     return [self.trackQueue count];
+    NSSlider *slider = sender;
+    double value = [slider doubleValue];
+    [self.audioPlayer seekToPercent:value];
+    slider.doubleValue = value;
 }
 
-- (NSURL *)hysteriaPlayerURLForItemAtIndex:(NSInteger)index preBuffer:(BOOL)preBuffer
-{
-    NSString *stringUrl = self.trackQueue[index].file;
-    NSURL *currentTrackURL = [NSURL URLWithString:stringUrl];
-    
-    return currentTrackURL;
-}
+#pragma mark - AGAudioPlayerDelegate Methods
 
-#pragma mark - HysteriaPlayerDelegate
-
-- (void)hysteriaPlayerDidFailed:(HysteriaPlayerFailed)identifier error:(NSError *)error
+- (void)audioPlayer:(AGAudioPlayer *)audioPlayer uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason extraInfo:(NSDictionary *)dict
 {
-    switch (identifier)
+    if(reason == AGAudioPlayerTrackProgressUpdated)
     {
-        case HysteriaPlayerFailedPlayer:
-            break;
-        case HysteriaPlayerFailedCurrentItem:
-            [[HysteriaPlayer sharedInstance] playNext];
-            break;
-        default:
-            break;
+        
     }
-    
-    NSLog(@"%@", [error localizedDescription]);
+    else if(reason == AGAudioPlayerTrackBuffering)
+    {
+        
+    }
+    else if(reason == AGAudioPlayerTrackPlaying)
+    {
+        
+    }
+    else if(reason == AGAudioPlayerTrackStopped)
+    {
+        
+    }
+    else if(reason == AGAudioPlayerTrackPaused)
+    {
+        
+    }
+    else if(reason == AGAudioPlayerError)
+    {
+        
+    }
 }
-
-- (void)hysteriaPlayerCurrentItemChanged:(AVPlayerItem *)item
-{
-    NSLog(@"current item changed");
-}
-
-- (void)hysteriaPlayerDidReachEnd
-{
-    NSLog(@"End reached!");
-}
-
-- (void)hysteriaPlayerRateChanged:(BOOL)isPlaying
-{
-    [self updatePlayPauseButton];
-}
-
-- (void)hysteriaPlayerWillChangedAtIndex:(NSInteger)index
-{
-    IGTrack *currentTrack = self.trackQueue[index];
-    [self updateTrackInfo:currentTrack];
-}
-
-
 
 @end
