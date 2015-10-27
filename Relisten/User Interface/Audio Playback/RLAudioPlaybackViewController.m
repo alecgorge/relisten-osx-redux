@@ -58,15 +58,21 @@
 {
     NSInteger index = [show.tracks indexOfObject:track];
     
-     [self.audioPlayer playItemAtIndex:index];
+    NSArray *queue = [show.tracks map:^id(id object) {
+        return [[IguanaMediaItem alloc] initWithTrack:object
+                                             inShow:show];
+    }];
+    
+    [self.queue clearAndReplaceWithItems:queue];
+    [self.audioPlayer playItemAtIndex:index];
 }
 
--(void)updateTrackInfo:(IGTrack *)track
+-(void)updateCurrentTrackInfo:(IguanaMediaItem *)mediaItem
 {
-    self.trackTitleTextField.stringValue = track.title;
-    self.trackSubtitleTextField.stringValue = [NSString stringWithFormat:@"%@ | %@", IGAPIClient.sharedInstance.artist.name, track.show.displayDate];
-    self.trackEndingTImeTextField.stringValue = [self.durationFormatter stringFromTimeInterval:track.length];
-    self.trackSlider.maxValue = track.length;
+    self.trackTitleTextField.stringValue = mediaItem.iguanaTrack.title;
+    self.trackSubtitleTextField.stringValue = [NSString stringWithFormat:@"%@ | %@", IGAPIClient.sharedInstance.artist.name, mediaItem.iguanaTrack.show.displayDate];
+    self.trackEndingTImeTextField.stringValue = [self.durationFormatter stringFromTimeInterval:mediaItem.iguanaTrack.length];
+    self.trackSlider.maxValue = mediaItem.iguanaTrack.length;
     self.trackSlider.minValue = 0.0;
 }
 
@@ -103,25 +109,27 @@
 
 - (void)audioPlayer:(AGAudioPlayer *)audioPlayer uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason extraInfo:(NSDictionary *)dict
 {
+    if(reason == AGAudioPlayerTrackBuffering)
+        self.bufferingTextField.stringValue = @"Buffering...";
+    else
+        self.bufferingTextField.stringValue = @"";
+    
     if(reason == AGAudioPlayerTrackProgressUpdated)
     {
-        
-    }
-    else if(reason == AGAudioPlayerTrackBuffering)
-    {
-        
+        self.trackSlider.doubleValue = self.audioPlayer.elapsed;
     }
     else if(reason == AGAudioPlayerTrackPlaying)
     {
-        
+        IguanaMediaItem *currentMediaItem = (IguanaMediaItem *)self.audioPlayer.currentItem;
+        [self updateCurrentTrackInfo:currentMediaItem];
     }
     else if(reason == AGAudioPlayerTrackStopped)
     {
-        
+        NSLog(@"Stopped");
     }
     else if(reason == AGAudioPlayerTrackPaused)
     {
-        
+        NSLog(@"Paused");
     }
     else if(reason == AGAudioPlayerError)
     {

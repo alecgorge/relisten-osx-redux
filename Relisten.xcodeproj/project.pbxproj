@@ -8,39 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		411A37424D50DD681B23D334 /* libPods-Relisten.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99023D004ACB7302E2D053DB /* libPods-Relisten.a */; };
-		C108359F1BD092D500A22755 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = C108359E1BD092D500A22755 /* star2.png */; settings = {ASSET_TAGS = (); }; };
-		C10835A11BD094D400A22755 /* star3.png in Resources */ = {isa = PBXBuildFile; fileRef = C10835A01BD094D400A22755 /* star3.png */; settings = {ASSET_TAGS = (); }; };
+		C108359F1BD092D500A22755 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = C108359E1BD092D500A22755 /* star2.png */; };
+		C10835A11BD094D400A22755 /* star3.png in Resources */ = {isa = PBXBuildFile; fileRef = C10835A01BD094D400A22755 /* star3.png */; };
 		C116DFB01BB09EEE006A9F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C116DFAF1BB09EEE006A9F6C /* AppDelegate.m */; };
 		C116DFB31BB09EEE006A9F6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C116DFB21BB09EEE006A9F6C /* main.m */; };
 		C116DFB51BB09EEE006A9F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C116DFB41BB09EEE006A9F6C /* Assets.xcassets */; };
 		C116DFB81BB09EEE006A9F6C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C116DFB61BB09EEE006A9F6C /* MainMenu.xib */; };
-		C11FA5181BD2194000C4FDEE /* RLAudioPlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C11FA5161BD2194000C4FDEE /* RLAudioPlaybackViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C11FA5191BD2194000C4FDEE /* RLAudioPlaybackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C11FA5171BD2194000C4FDEE /* RLAudioPlaybackViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		C15B8A201BBC5B3B00CB2F92 /* RLTrackTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C15B8A1F1BBC5B3B00CB2F92 /* RLTrackTableCellView.m */; settings = {ASSET_TAGS = (); }; };
-		C187C67F1BB4FA7600F1778C /* RLYearTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */; settings = {ASSET_TAGS = (); }; };
-		C187C6821BB5050400F1778C /* RLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C6811BB5050400F1778C /* RLTableView.m */; settings = {ASSET_TAGS = (); }; };
-		C187C68D1BB735C100F1778C /* RLShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C68B1BB735C100F1778C /* RLShowsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C187C68E1BB735C100F1778C /* RLShowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C187C68C1BB735C100F1778C /* RLShowsViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		C187C6911BB739BF00F1778C /* RLShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C6901BB739BF00F1778C /* RLShowTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		C187C6951BB759D900F1778C /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C6931BB759D900F1778C /* star.png */; settings = {ASSET_TAGS = (); }; };
-		C187C6961BB759D900F1778C /* starhighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C6941BB759D900F1778C /* starhighlighted.png */; settings = {ASSET_TAGS = (); }; };
-		C18AEA951BB4945F00A6D182 /* RLMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEA931BB4945F00A6D182 /* RLMainWindowController.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEA961BB4945F00A6D182 /* RLMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AEA941BB4945F00A6D182 /* RLMainWindowController.xib */; settings = {ASSET_TAGS = (); }; };
-		C18AEABF1BB4A7F600A6D182 /* IGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAAE1BB4A7F600A6D182 /* IGArtist.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEAC01BB4A7F600A6D182 /* IGPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAB01BB4A7F600A6D182 /* IGPlaylist.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEAC11BB4A7F600A6D182 /* IGShow.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAB21BB4A7F600A6D182 /* IGShow.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEAC21BB4A7F600A6D182 /* IGShowReview.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAB41BB4A7F600A6D182 /* IGShowReview.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEAC31BB4A7F600A6D182 /* IGTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAB61BB4A7F600A6D182 /* IGTrack.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEAC61BB4A7F600A6D182 /* IGVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEABC1BB4A7F600A6D182 /* IGVenue.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEAC71BB4A7F600A6D182 /* IGYear.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEABE1BB4A7F600A6D182 /* IGYear.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEACA1BB4AFB800A6D182 /* IGAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAC91BB4AFB800A6D182 /* IGAPIClient.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEACD1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEACC1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEAD21BB4D43000A6D182 /* RLArtistsPopupButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAD11BB4D43000A6D182 /* RLArtistsPopupButtonManager.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEAD61BB4E6BB00A6D182 /* RLSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEAE01BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEADE1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C18AEAE11BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AEADF1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		C1E4518E1BBA803B003A0721 /* RLSourceAndTracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E4518C1BBA803B003A0721 /* RLSourceAndTracksViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C1E4518F1BBA803B003A0721 /* RLSourceAndTracksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E4518D1BBA803B003A0721 /* RLSourceAndTracksViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		C11B1C8D1BDF6FFD001851DE /* IguanaMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B1C8C1BDF6FFD001851DE /* IguanaMediaItem.m */; };
+		C11FA5181BD2194000C4FDEE /* RLAudioPlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C11FA5161BD2194000C4FDEE /* RLAudioPlaybackViewController.m */; };
+		C11FA5191BD2194000C4FDEE /* RLAudioPlaybackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C11FA5171BD2194000C4FDEE /* RLAudioPlaybackViewController.xib */; };
+		C15B8A201BBC5B3B00CB2F92 /* RLTrackTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C15B8A1F1BBC5B3B00CB2F92 /* RLTrackTableCellView.m */; };
+		C187C67F1BB4FA7600F1778C /* RLYearTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */; };
+		C187C6821BB5050400F1778C /* RLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C6811BB5050400F1778C /* RLTableView.m */; };
+		C187C68D1BB735C100F1778C /* RLShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C68B1BB735C100F1778C /* RLShowsViewController.m */; };
+		C187C68E1BB735C100F1778C /* RLShowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C187C68C1BB735C100F1778C /* RLShowsViewController.xib */; };
+		C187C6911BB739BF00F1778C /* RLShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C6901BB739BF00F1778C /* RLShowTableViewCell.m */; };
+		C187C6951BB759D900F1778C /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C6931BB759D900F1778C /* star.png */; };
+		C187C6961BB759D900F1778C /* starhighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C6941BB759D900F1778C /* starhighlighted.png */; };
+		C18AEA951BB4945F00A6D182 /* RLMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEA931BB4945F00A6D182 /* RLMainWindowController.m */; };
+		C18AEA961BB4945F00A6D182 /* RLMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AEA941BB4945F00A6D182 /* RLMainWindowController.xib */; };
+		C18AEABF1BB4A7F600A6D182 /* IGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAAE1BB4A7F600A6D182 /* IGArtist.m */; };
+		C18AEAC01BB4A7F600A6D182 /* IGPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAB01BB4A7F600A6D182 /* IGPlaylist.m */; };
+		C18AEAC11BB4A7F600A6D182 /* IGShow.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAB21BB4A7F600A6D182 /* IGShow.m */; };
+		C18AEAC21BB4A7F600A6D182 /* IGShowReview.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAB41BB4A7F600A6D182 /* IGShowReview.m */; };
+		C18AEAC31BB4A7F600A6D182 /* IGTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAB61BB4A7F600A6D182 /* IGTrack.m */; };
+		C18AEAC61BB4A7F600A6D182 /* IGVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEABC1BB4A7F600A6D182 /* IGVenue.m */; };
+		C18AEAC71BB4A7F600A6D182 /* IGYear.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEABE1BB4A7F600A6D182 /* IGYear.m */; };
+		C18AEACA1BB4AFB800A6D182 /* IGAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAC91BB4AFB800A6D182 /* IGAPIClient.m */; };
+		C18AEACD1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEACC1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m */; };
+		C18AEAD21BB4D43000A6D182 /* RLArtistsPopupButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAD11BB4D43000A6D182 /* RLArtistsPopupButtonManager.m */; };
+		C18AEAD61BB4E6BB00A6D182 /* RLSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */; };
+		C18AEAE01BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEADE1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m */; };
+		C18AEAE11BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AEADF1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib */; };
+		C1E4518E1BBA803B003A0721 /* RLSourceAndTracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E4518C1BBA803B003A0721 /* RLSourceAndTracksViewController.m */; };
+		C1E4518F1BBA803B003A0721 /* RLSourceAndTracksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E4518D1BBA803B003A0721 /* RLSourceAndTracksViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		C116DFB41BB09EEE006A9F6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C116DFB71BB09EEE006A9F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C116DFB91BB09EEE006A9F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C11B1C8B1BDF6FFD001851DE /* IguanaMediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IguanaMediaItem.h; sourceTree = "<group>"; };
+		C11B1C8C1BDF6FFD001851DE /* IguanaMediaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IguanaMediaItem.m; sourceTree = "<group>"; };
 		C11FA5151BD2194000C4FDEE /* RLAudioPlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLAudioPlaybackViewController.h; sourceTree = "<group>"; };
 		C11FA5161BD2194000C4FDEE /* RLAudioPlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLAudioPlaybackViewController.m; sourceTree = "<group>"; };
 		C11FA5171BD2194000C4FDEE /* RLAudioPlaybackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLAudioPlaybackViewController.xib; sourceTree = "<group>"; };
@@ -198,6 +201,8 @@
 		C18AEA971BB4A34A00A6D182 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C11B1C8B1BDF6FFD001851DE /* IguanaMediaItem.h */,
+				C11B1C8C1BDF6FFD001851DE /* IguanaMediaItem.m */,
 				C18AEAAD1BB4A7F600A6D182 /* IGArtist.h */,
 				C18AEAAE1BB4A7F600A6D182 /* IGArtist.m */,
 				C18AEAAF1BB4A7F600A6D182 /* IGPlaylist.h */,
@@ -442,6 +447,7 @@
 				C15B8A201BBC5B3B00CB2F92 /* RLTrackTableCellView.m in Sources */,
 				C116DFB01BB09EEE006A9F6C /* AppDelegate.m in Sources */,
 				C18AEAC01BB4A7F600A6D182 /* IGPlaylist.m in Sources */,
+				C11B1C8D1BDF6FFD001851DE /* IguanaMediaItem.m in Sources */,
 				C18AEAD61BB4E6BB00A6D182 /* RLSplitView.m in Sources */,
 				C18AEACD1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m in Sources */,
 				C11FA5181BD2194000C4FDEE /* RLAudioPlaybackViewController.m in Sources */,
