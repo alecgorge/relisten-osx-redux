@@ -80,11 +80,18 @@
 
 -(void)updatePlayPauseButton
 {
-   
+    if(self.audioPlayer.isPlaying)
+        [self.playButton setImage:[NSImage imageNamed:@"Pause"]];
+    else
+        [self.playButton setImage:[NSImage imageNamed:@"Play"]];;
 }
 
 - (IBAction)playPauseButtonPressed:(id)sender
 {
+    if(self.audioPlayer.isPlaying)
+        [self.audioPlayer pause];
+    else
+        [self.audioPlayer resume];
 }
 
 - (IBAction)nextButtonPressed:(id)sender
@@ -101,8 +108,8 @@
 {
     NSSlider *slider = sender;
     double value = [slider doubleValue];
-    [self.audioPlayer seekToPercent:value];
-    slider.doubleValue = value;
+    self.trackBeginningTimeTextField.stringValue = [self.durationFormatter stringFromTimeInterval:value];
+    [self.audioPlayer seekTo:value];
 }
 
 #pragma mark - AGAudioPlayerDelegate Methods
@@ -117,6 +124,7 @@
     if(reason == AGAudioPlayerTrackProgressUpdated)
     {
         self.trackSlider.doubleValue = self.audioPlayer.elapsed;
+        self.trackBeginningTimeTextField.stringValue = [self.durationFormatter stringFromTimeInterval:self.audioPlayer.elapsed];
     }
     else if(reason == AGAudioPlayerTrackPlaying)
     {
@@ -125,16 +133,18 @@
     }
     else if(reason == AGAudioPlayerTrackStopped)
     {
-        NSLog(@"Stopped");
+        
     }
     else if(reason == AGAudioPlayerTrackPaused)
     {
-        NSLog(@"Paused");
+        
     }
     else if(reason == AGAudioPlayerError)
     {
         
     }
+    
+    [self updatePlayPauseButton];
 }
 
 @end

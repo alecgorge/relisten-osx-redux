@@ -146,7 +146,7 @@
                         <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JBP-1x-GCH">
                             <rect key="frame" x="71" y="8" width="268" height="21"/>
                             <animations/>
-                            <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="below" sliderType="linear" id="qJ3-CO-dHr"/>
+                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" tickMarkPosition="below" sliderType="linear" id="qJ3-CO-dHr"/>
                             <connections>
                                 <action selector="trackSliderMoved:" target="-2" id="cFM-I0-52U"/>
                             </connections>
