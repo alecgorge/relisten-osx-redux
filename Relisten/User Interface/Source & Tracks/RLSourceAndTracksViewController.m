@@ -11,8 +11,10 @@
 @interface RLSourceAndTracksViewController ()
 
 @property (weak) IBOutlet NSPopUpButton *sourcePopupButton;
-@property (weak) IBOutlet NSButton *helpButton;
+@property (weak) IBOutlet NSButton *reviewsButton;
 @property (weak) IBOutlet RLTableView *tableView;
+@property (weak) IBOutlet NSTextField *lineageTextField;
+@property (weak) IBOutlet NSTextField *taperTextField;
 
 @property (nonatomic, strong) NSArray *allShows;
 @property (nonatomic, strong) IGShow *selectedShow;
@@ -45,18 +47,27 @@
 {
     [self.sourcePopupButton removeAllItems];
     self.sourcePopupButton.enabled = NO;
-    self.helpButton.enabled = NO;
+    self.reviewsButton.enabled = NO;
     self.selectedShow = nil;
     [self.tableView reloadData];
+    
+    self.lineageTextField.stringValue = @"";
+    self.taperTextField.stringValue = @"";
 }
 
 -(void)populatePopupButtonWithSources:(NSArray *)sources
 {
     [self.sourcePopupButton removeAllItems];
     self.sourcePopupButton.enabled = YES;
-    self.helpButton.enabled = YES;
+    self.reviewsButton.enabled = YES;
     NSArray *sourceList = [sources valueForKey:@"source"];
     [self.sourcePopupButton addItemsWithTitles:sourceList];
+}
+
+-(void)setLineageAndTaperInfo
+{
+    self.lineageTextField.stringValue = self.selectedShow.lineage;
+    self.taperTextField.stringValue = self.selectedShow.taper;
 }
 
 -(void)fetchTracksForShow:(IGShow *)show
@@ -67,6 +78,7 @@
                                     self.allShows = shows;
                                     self.selectedShow = shows[0];
                                     [self populatePopupButtonWithSources:self.allShows];
+                                    [self setLineageAndTaperInfo];
                                     [self.tableView reloadData];
                                 }];
 }
@@ -75,10 +87,11 @@
 {
     NSInteger index = [self.sourcePopupButton indexOfSelectedItem];
     self.selectedShow = self.allShows[index];
+    [self setLineageAndTaperInfo];
     [self.tableView reloadData];
 }
 
-- (IBAction)showSourceInfo:(id)sender // TODO
+- (IBAction)showReviews:(id)sender // TODO
 {
     NSPopover *popover = [[NSPopover alloc] init];
     
