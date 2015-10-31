@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="RLSourceAndTracksViewController">
             <connections>
+                <outlet property="lineageTextField" destination="fbU-cp-auV" id="3nb-Uh-OGs"/>
                 <outlet property="reviewsButton" destination="38Y-oK-qMx" id="33o-5w-a3o"/>
                 <outlet property="sourcePopupButton" destination="ux0-Fp-HHr" id="V0n-Jy-nx0"/>
                 <outlet property="tableView" destination="Xl2-1C-pTr" id="tzg-zo-Brj"/>
+                <outlet property="taperTextField" destination="2x4-nT-sZ0" id="rrC-h8-WiT"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -49,7 +51,7 @@
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="38Y-oK-qMx">
                     <rect key="frame" x="434" y="618" width="61" height="19"/>
                     <animations/>
-                    <buttonCell key="cell" type="roundRect" title="Reviews" bezelStyle="roundedRect" image="985C1171-9A73-455C-B24A-421D2C683244" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="E3b-8H-saw">
+                    <buttonCell key="cell" type="roundRect" title="Reviews" bezelStyle="roundedRect" image="D0574DB2-1336-46DA-BE98-7AFB7A1D81C1" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="E3b-8H-saw">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="cellTitle"/>
                     </buttonCell>
@@ -183,24 +185,48 @@
                         <animations/>
                     </scroller>
                 </scrollView>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="fbU-cp-auV">
+                    <rect key="frame" x="74" y="595" width="423" height="17"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="L3Y-FI-8j1">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="2x4-nT-sZ0">
+                    <rect key="frame" x="74" y="570" width="423" height="17"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="OJS-Xr-rIt">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="38Y-oK-qMx" secondAttribute="trailing" constant="20" id="AVf-7a-ZoK"/>
+                <constraint firstItem="fbU-cp-auV" firstAttribute="leading" secondItem="By4-g8-Sqz" secondAttribute="trailing" constant="5" id="CpP-qK-cGn"/>
                 <constraint firstItem="ux0-Fp-HHr" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="FhF-AI-3X8"/>
                 <constraint firstItem="By4-g8-Sqz" firstAttribute="top" secondItem="b6q-oE-4KE" secondAttribute="bottom" constant="8" id="GVJ-qU-KBd"/>
                 <constraint firstItem="By4-g8-Sqz" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="GaE-JB-jwP"/>
                 <constraint firstAttribute="bottom" secondItem="4Cx-M8-hH5" secondAttribute="bottom" id="GzU-CZ-CGS"/>
                 <constraint firstItem="Tpq-gc-bo6" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="KUT-jz-ZSk"/>
+                <constraint firstItem="2x4-nT-sZ0" firstAttribute="leading" secondItem="fbU-cp-auV" secondAttribute="leading" id="L6D-3h-G9C"/>
                 <constraint firstItem="b6q-oE-4KE" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="M3b-HD-iSt"/>
+                <constraint firstItem="2x4-nT-sZ0" firstAttribute="top" secondItem="fbU-cp-auV" secondAttribute="bottom" constant="8" id="MQB-B1-Gf2"/>
                 <constraint firstItem="38Y-oK-qMx" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="RHU-pW-HW8"/>
                 <constraint firstItem="4Cx-M8-hH5" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Y1B-81-p9q"/>
                 <constraint firstItem="ux0-Fp-HHr" firstAttribute="leading" secondItem="b6q-oE-4KE" secondAttribute="trailing" constant="10" id="YBj-8d-FnO"/>
                 <constraint firstItem="iPo-pR-2mI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="atP-z5-dwT"/>
                 <constraint firstAttribute="trailing" secondItem="Tpq-gc-bo6" secondAttribute="trailing" constant="12" id="cai-IO-n8R"/>
-                <constraint firstItem="iPo-pR-2mI" firstAttribute="top" secondItem="By4-g8-Sqz" secondAttribute="bottom" constant="8" symbolic="YES" id="iYF-Ji-joB"/>
-                <constraint firstItem="Tpq-gc-bo6" firstAttribute="top" secondItem="iPo-pR-2mI" secondAttribute="bottom" constant="8" id="kqD-Jw-1C7"/>
+                <constraint firstAttribute="trailing" secondItem="fbU-cp-auV" secondAttribute="trailing" constant="20" id="kJh-Fe-mNI"/>
+                <constraint firstItem="fbU-cp-auV" firstAttribute="top" secondItem="ux0-Fp-HHr" secondAttribute="bottom" constant="5" id="laQ-15-F8Q"/>
+                <constraint firstAttribute="trailing" secondItem="2x4-nT-sZ0" secondAttribute="trailing" constant="20" id="ptN-jR-WtJ"/>
                 <constraint firstItem="38Y-oK-qMx" firstAttribute="leading" secondItem="ux0-Fp-HHr" secondAttribute="trailing" constant="10" id="qBf-yZ-O4q"/>
                 <constraint firstItem="b6q-oE-4KE" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="rb7-cs-ANG"/>
+                <constraint firstItem="Tpq-gc-bo6" firstAttribute="top" secondItem="2x4-nT-sZ0" secondAttribute="bottom" constant="8" id="wQM-Xi-Nf3"/>
+                <constraint firstItem="iPo-pR-2mI" firstAttribute="top" secondItem="2x4-nT-sZ0" secondAttribute="top" id="x4T-c8-4Tf"/>
                 <constraint firstItem="4Cx-M8-hH5" firstAttribute="top" secondItem="Tpq-gc-bo6" secondAttribute="bottom" constant="10" id="zAg-gR-ohs"/>
                 <constraint firstAttribute="trailing" secondItem="4Cx-M8-hH5" secondAttribute="trailing" id="zOe-31-bKv"/>
             </constraints>
@@ -209,7 +235,7 @@
         </customView>
     </objects>
     <resources>
-        <image name="985C1171-9A73-455C-B24A-421D2C683244" width="1" height="1">
+        <image name="D0574DB2-1336-46DA-BE98-7AFB7A1D81C1" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
