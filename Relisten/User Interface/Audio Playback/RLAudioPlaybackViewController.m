@@ -41,7 +41,7 @@
     
     self.view.wantsLayer = YES;
     self.view.layer.borderColor = [NSColor grayColor].CGColor;
-    self.view.layer.borderWidth = 1.5;
+    self.view.layer.borderWidth = 1.0;
     
     self.trackTitleTextField.stringValue = @"";
     self.trackSubtitleTextField.stringValue = @"";
