@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="RLYearsVenuesTopShowsViewController">
@@ -34,12 +34,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="465"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="39" rowSizeStyle="automatic" viewBased="YES" id="0dr-VK-3zD" customClass="RLTableView">
+                                                <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="39" rowSizeStyle="automatic" viewBased="YES" id="0dr-VK-3zD" customClass="RLTableView">
                                                     <rect key="frame" x="0.0" y="0.0" width="248" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
-                                                    <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" red="0.98521872108378072" green="0.98933997529072326" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                                     <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
@@ -110,7 +110,7 @@
                                                 </tableView>
                                             </subviews>
                                             <animations/>
-                                            <nil key="backgroundColor"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                         </clipView>
                                         <animations/>
                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="VWb-TO-JDc">
@@ -136,25 +136,25 @@
                         </tabViewItem>
                         <tabViewItem label="Venues" identifier="2" id="gSQ-Ye-Dxc" userLabel="Venues">
                             <view key="view" id="POS-li-Ijy">
-                                <rect key="frame" x="10" y="33" width="172" height="470"/>
+                                <rect key="frame" x="10" y="33" width="248" height="465"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="41" horizontalPageScroll="10" verticalLineScroll="41" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clq-gs-iKw">
-                                        <rect key="frame" x="0.0" y="0.0" width="172" height="470"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="465"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="KBG-ZP-pXl">
-                                            <rect key="frame" x="0.0" y="0.0" width="172" height="470"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="248" height="465"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="39" rowSizeStyle="automatic" viewBased="YES" id="vgR-Qy-U3V" customClass="RLTableView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="0.0"/>
+                                                <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="39" rowSizeStyle="automatic" viewBased="YES" id="vgR-Qy-U3V" customClass="RLTableView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="465"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
-                                                    <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                                     <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn width="169" minWidth="40" maxWidth="1000" id="YSQ-b2-wez">
+                                                        <tableColumn width="245" minWidth="40" maxWidth="1000" id="YSQ-b2-wez">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -168,7 +168,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="Ucl-fQ-E63" userLabel="Venue Cell View" customClass="RLYearTableCellView">
-                                                                    <rect key="frame" x="1" y="1" width="169" height="39"/>
+                                                                    <rect key="frame" x="1" y="1" width="245" height="39"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="VRW-Wc-rkW" userLabel="textField">
@@ -190,7 +190,7 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="tUM-l0-QaC">
-                                                                            <rect key="frame" x="119" y="20" width="47" height="14"/>
+                                                                            <rect key="frame" x="195" y="20" width="47" height="14"/>
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Duration" id="lwg-X3-3lY">
                                                                                 <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -247,11 +247,11 @@
                         </tabViewItem>
                         <tabViewItem label="Top Shows" identifier="2" id="zS6-5w-VOt" userLabel="Top Shows">
                             <view key="view" id="vfW-sD-k4D">
-                                <rect key="frame" x="10" y="33" width="248" height="470"/>
+                                <rect key="frame" x="10" y="33" width="248" height="465"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2jZ-oJ-TiH">
-                                        <rect key="frame" x="56" y="226" width="137" height="19"/>
+                                        <rect key="frame" x="56" y="223" width="137" height="19"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Showing top shows" id="0pH-H4-3z7">
                                             <font key="font" metaFont="system" size="15"/>

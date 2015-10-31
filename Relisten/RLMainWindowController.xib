@@ -19,7 +19,7 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="798" height="455"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
-            <view key="contentView" id="se5-gp-TjO" customClass="NSVisualEffectView">
+            <view key="contentView" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="798" height="455"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -60,7 +60,7 @@
                             <outlet property="thirdView" destination="Gh9-B3-0Fo" id="nUV-DX-0a6"/>
                         </connections>
                     </splitView>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="FTW-Ye-BXq">
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="FTW-Ye-BXq" customClass="NSVisualEffectView">
                         <rect key="frame" x="0.0" y="0.0" width="798" height="65"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="65" id="93W-st-HNs"/>

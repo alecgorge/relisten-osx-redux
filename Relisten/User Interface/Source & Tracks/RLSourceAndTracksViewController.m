@@ -39,8 +39,7 @@
     self.durationFormatter.allowedUnits = (NSCalendarUnitMinute | NSCalendarUnitSecond);
     
     self.view.wantsLayer = YES;
-    self.view.layer.borderColor = [NSColor grayColor].CGColor;
-    self.view.layer.borderWidth = 1.5;
+    self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
 }
 
 -(void)disableSourceSelection
@@ -131,8 +130,8 @@
 -(BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex
 {
     NSTableRowView *myRowView = [aTableView rowViewAtRow:rowIndex makeIfNecessary:NO];
-    [myRowView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleSourceList];
-    [myRowView setEmphasized:NO];
+    [myRowView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleRegular];
+//    [myRowView setEmphasized:NO];
     
     return YES;
 }
