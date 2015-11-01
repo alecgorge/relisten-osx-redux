@@ -10,6 +10,7 @@
 #import "RLTrackTableCellView.h"
 #import "RLTableView.h"
 #import "IGAPIClient.h"
+#import "RLShowReviewsViewController.h"
 
 @protocol RLTrackSelectedDelegate <NSObject>
 

@@ -12,7 +12,7 @@
 @interface RLShowTableViewCell : NSTableCellView
 
 @property (assign) IBOutlet NSTextField *showDateTextField;
-@property (assign) IBOutlet EDStarRating *starRating;
+@property (assign) IBOutlet  EDStarRating *starRating;
 @property (assign) IBOutlet NSTextField *venueNameTextField;
 @property (assign) IBOutlet NSTextField *venueCityTextField;
 @property (assign) IBOutlet NSTextField *durationTextField;

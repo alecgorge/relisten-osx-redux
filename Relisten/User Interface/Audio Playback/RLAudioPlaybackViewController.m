@@ -65,6 +65,7 @@
                                              inShow:show];
     }];
     
+    self.trackSlider.doubleValue = 0.0;
     [self.queue clearAndReplaceWithItems:queue];
     [self.audioPlayer playItemAtIndex:index];
 }

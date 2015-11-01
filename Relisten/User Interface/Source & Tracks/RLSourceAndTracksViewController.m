@@ -93,10 +93,14 @@
 - (IBAction)showReviews:(id)sender // TODO
 {
     NSPopover *popover = [[NSPopover alloc] init];
+    RLShowReviewsViewController *reviews = [[RLShowReviewsViewController alloc] initWithShow:self.selectedShow];
     
     popover.behavior = NSPopoverBehaviorTransient;
     popover.animates = YES;
-    //[popover showRelativeToRect:NSZeroRect ofView:sender preferredEdge:NSMaxYEdge];
+    popover.contentSize = NSMakeSize(500, 400);
+    popover.contentViewController = reviews;
+    
+    [popover showRelativeToRect:NSZeroRect ofView:sender preferredEdge:NSMaxYEdge];
 }
 
 -(void)doubleClickedTrack:(id)sender

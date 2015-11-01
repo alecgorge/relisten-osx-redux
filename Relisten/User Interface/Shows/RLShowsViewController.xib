@@ -182,7 +182,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="55" rowSizeStyle="automatic" viewBased="YES" id="8w4-ND-gam" customClass="RLTableView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="204" height="454"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="204" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
