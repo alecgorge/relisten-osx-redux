@@ -42,6 +42,7 @@
 		C18AEAD61BB4E6BB00A6D182 /* RLSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */; };
 		C18AEAE01BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEADE1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m */; };
 		C18AEAE11BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AEADF1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib */; };
+		C1C6F95C1BE6A22600EDF168 /* RLShowReviewCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C6F95B1BE6A22600EDF168 /* RLShowReviewCellView.m */; settings = {ASSET_TAGS = (); }; };
 		C1E4518E1BBA803B003A0721 /* RLSourceAndTracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E4518C1BBA803B003A0721 /* RLSourceAndTracksViewController.m */; };
 		C1E4518F1BBA803B003A0721 /* RLSourceAndTracksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E4518D1BBA803B003A0721 /* RLSourceAndTracksViewController.xib */; };
 /* End PBXBuildFile section */
@@ -108,6 +109,8 @@
 		C18AEADD1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLYearsVenuesTopShowsViewController.h; sourceTree = "<group>"; };
 		C18AEADE1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLYearsVenuesTopShowsViewController.m; sourceTree = "<group>"; };
 		C18AEADF1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLYearsVenuesTopShowsViewController.xib; sourceTree = "<group>"; };
+		C1C6F95A1BE6A22600EDF168 /* RLShowReviewCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLShowReviewCellView.h; sourceTree = "<group>"; };
+		C1C6F95B1BE6A22600EDF168 /* RLShowReviewCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLShowReviewCellView.m; sourceTree = "<group>"; };
 		C1E4518B1BBA803B003A0721 /* RLSourceAndTracksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLSourceAndTracksViewController.h; sourceTree = "<group>"; };
 		C1E4518C1BBA803B003A0721 /* RLSourceAndTracksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLSourceAndTracksViewController.m; sourceTree = "<group>"; };
 		C1E4518D1BBA803B003A0721 /* RLSourceAndTracksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLSourceAndTracksViewController.xib; sourceTree = "<group>"; };
@@ -296,6 +299,8 @@
 				C11B1CA51BE68C35001851DE /* RLShowReviewsViewController.h */,
 				C11B1CA61BE68C35001851DE /* RLShowReviewsViewController.m */,
 				C11B1CA71BE68C35001851DE /* RLShowReviewsViewController.xib */,
+				C1C6F95A1BE6A22600EDF168 /* RLShowReviewCellView.h */,
+				C1C6F95B1BE6A22600EDF168 /* RLShowReviewCellView.m */,
 			);
 			path = "Source & Tracks";
 			sourceTree = "<group>";
@@ -450,6 +455,7 @@
 				C187C6911BB739BF00F1778C /* RLShowTableViewCell.m in Sources */,
 				C187C68D1BB735C100F1778C /* RLShowsViewController.m in Sources */,
 				C1E4518E1BBA803B003A0721 /* RLSourceAndTracksViewController.m in Sources */,
+				C1C6F95C1BE6A22600EDF168 /* RLShowReviewCellView.m in Sources */,
 				C18AEACA1BB4AFB800A6D182 /* IGAPIClient.m in Sources */,
 				C187C6821BB5050400F1778C /* RLTableView.m in Sources */,
 				C18AEAD21BB4D43000A6D182 /* RLArtistsPopupButtonManager.m in Sources */,

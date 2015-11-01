@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import <EDStarRating/EDStarRating.h>
+#import "RLShowReviewCellView.h"
+#import "RLTableView.h"
 #import "IGShow.h"
 
 @interface RLShowReviewsViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
