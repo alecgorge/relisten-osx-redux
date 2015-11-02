@@ -76,7 +76,7 @@
     
     CGFloat height = titleHeight + reviewertextHeight + bodyTextHeight;
     
-    return height + 17;
+    return height + 18;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row

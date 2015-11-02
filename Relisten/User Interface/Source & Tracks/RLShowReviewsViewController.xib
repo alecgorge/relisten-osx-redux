@@ -96,7 +96,7 @@
                                                                 </constraints>
                                                                 <animations/>
                                                             </customView>
-                                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="sX3-3e-oUI">
+                                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sX3-3e-oUI">
                                                                 <rect key="frame" x="3" y="28" width="360" height="17"/>
                                                                 <animations/>
                                                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Reviewer" drawsBackground="YES" id="PQW-ew-CG1">
@@ -105,7 +105,7 @@
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
-                                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="r8C-S7-5ze">
+                                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r8C-S7-5ze">
                                                                 <rect key="frame" x="3" y="3" width="468" height="17"/>
                                                                 <animations/>
                                                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" drawsBackground="YES" id="MPn-1E-mEP">
@@ -114,7 +114,7 @@
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
-                                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="A2X-Tx-V36">
+                                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A2X-Tx-V36">
                                                                 <rect key="frame" x="3" y="48" width="360" height="17"/>
                                                                 <animations/>
                                                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Review Title" drawsBackground="YES" id="yab-vM-ybi">
