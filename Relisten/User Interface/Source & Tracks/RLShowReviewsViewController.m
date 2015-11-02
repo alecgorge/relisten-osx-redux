@@ -56,7 +56,28 @@
     return self.currentShow.reviewsCount;
 }
 
-#pragma mark - NSTableViewDelegate Methods 
+#pragma mark - NSTableViewDelegate Methods
+
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
+{
+    IGShowReview *review = self.currentShow.reviews[row];
+    
+    NSTextField *titleText = [[NSTextField alloc] init];
+    titleText.stringValue = review.reviewtitle;
+    CGFloat titleHeight = [((NSTextFieldCell *)[titleText cell]) cellSizeForBounds:NSMakeRect(0, 0, 360, FLT_MAX)].height;
+    
+    NSTextField *reviewerText = [[NSTextField alloc] init];
+    reviewerText.stringValue = [NSString stringWithFormat:@"%@ | %@", review.reviewer, review.reviewdate];
+    CGFloat reviewertextHeight = [((NSTextFieldCell *)[reviewerText cell]) cellSizeForBounds:NSMakeRect(0, 0, 360, FLT_MAX)].height;
+    
+    NSTextField *bodyText = [[NSTextField alloc] init];
+    bodyText.stringValue = review.reviewbody;
+    CGFloat bodyTextHeight = [((NSTextFieldCell *)[bodyText cell]) cellSizeForBounds:NSMakeRect(0, 0, 468, FLT_MAX)].height;
+    
+    CGFloat height = titleHeight + reviewertextHeight + bodyTextHeight;
+    
+    return height + 17;
+}
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
@@ -78,5 +99,6 @@
     
     return cellView;
 }
+
 
 @end

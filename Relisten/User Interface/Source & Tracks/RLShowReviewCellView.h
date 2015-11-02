@@ -15,5 +15,6 @@
 @property (assign) IBOutlet NSTextField *reviewerTextField;
 @property (assign) IBOutlet NSTextField *reviewBodytextField;
 @property (assign) IBOutlet EDStarRating *starRating;
+@property (assign) IBOutlet NSView *containerView;
 
 @end
