@@ -10,4 +10,5 @@ target "Relisten" do
     pod 'ReactiveCocoa', '~> 2.3'
     pod 'EDStarRating'
     pod 'AGAudioPlayer', :git => 'https://github.com/alecgorge/AGAudioPlayer.git'
+    pod 'CMEqualizerIndicatorView', '~> 1.0'
 end

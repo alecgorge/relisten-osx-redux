@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <CMEqualizerIndicatorView/CMEqualizerIndicatorView.h>
 #import "RLTrackTableCellView.h"
 #import "RLTableView.h"
 #import "IGAPIClient.h"
@@ -24,5 +25,7 @@
 
 -(void)fetchTracksForShow:(IGShow *)show;
 -(void)disableSourceSelection;
+-(void)showTrackVisualizationForTrackIndex:(NSInteger)index;
+-(void)pauseTrackVisualizationForTrackIndex:(NSInteger)index;
 
 @end

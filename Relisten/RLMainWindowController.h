@@ -14,6 +14,6 @@
 #import "RLAudioPlaybackViewController.h"
 #import "RLSplitView.h"
 
-@interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLYearsVenuesTopShowsSelectionDelegate, RLShowSelectedDelegate, RLTrackSelectedDelegate>
+@interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLYearsVenuesTopShowsSelectionDelegate, RLShowSelectedDelegate, RLTrackSelectedDelegate, RLAudioPlaybackDelegate>
 
 @end

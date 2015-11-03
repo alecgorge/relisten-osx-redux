@@ -14,7 +14,16 @@
 #import "IguanaMediaItem.h"
 #import "IGAPIClient.h"
 
+@protocol RLAudioPlaybackDelegate <NSObject>
+
+- (void)trackPlayedAtIndex:(NSInteger)index;
+- (void)trackPausedAtIndex:(NSInteger)index;
+
+@end
+
 @interface RLAudioPlaybackViewController : NSViewController <AGAudioPlayerDelegate>
+
+@property (nonatomic, weak) id<RLAudioPlaybackDelegate> delegate;
 
 -(void)playTrack:(IGTrack *)track FromShow:(IGShow *)show;
 

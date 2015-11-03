@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eYO-NA-Cv6">
-                    <rect key="frame" x="18" y="288" width="68" height="19"/>
+                    <rect key="frame" x="6" y="300" width="68" height="19"/>
                     <animations/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Reviews" id="9Yb-Hm-90h">
                         <font key="font" metaFont="systemBold" size="16"/>
@@ -28,7 +28,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zad-4G-ilV">
-                    <rect key="frame" x="18" y="263" width="100" height="17"/>
+                    <rect key="frame" x="6" y="275" width="100" height="17"/>
                     <animations/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Average Rating:" id="og1-FZ-Qks">
                         <font key="font" metaFont="system"/>
@@ -37,7 +37,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cek-pe-Pob">
-                    <rect key="frame" x="18" y="238" width="87" height="17"/>
+                    <rect key="frame" x="6" y="250" width="87" height="17"/>
                     <animations/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Review Count" id="lEs-dQ-wSr">
                         <font key="font" metaFont="system"/>
@@ -46,20 +46,20 @@
                     </textFieldCell>
                 </textField>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="R3I-zs-mIr" customClass="EDStarRating">
-                    <rect key="frame" x="116" y="254" width="100" height="35"/>
+                    <rect key="frame" x="104" y="266" width="100" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="4Kq-fX-oMP"/>
                         <constraint firstAttribute="height" constant="35" id="sjg-lj-oGE"/>
                     </constraints>
                     <animations/>
                 </customView>
-                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="69" horizontalPageScroll="10" verticalLineScroll="69" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbO-1f-dZb">
-                    <rect key="frame" x="0.0" y="0.0" width="477" height="230"/>
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="70" horizontalPageScroll="10" verticalLineScroll="70" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbO-1f-dZb">
+                    <rect key="frame" x="0.0" y="0.0" width="477" height="242"/>
                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="upA-I5-WJP">
-                        <rect key="frame" x="0.0" y="0.0" width="477" height="230"/>
+                        <rect key="frame" x="0.0" y="0.0" width="477" height="242"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="67" rowSizeStyle="automatic" viewBased="YES" id="wTu-Rf-fq6" customClass="RLTableView">
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="68" rowSizeStyle="automatic" viewBased="YES" id="wTu-Rf-fq6" customClass="RLTableView">
                                 <rect key="frame" x="0.0" y="0.0" width="477" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
@@ -178,18 +178,18 @@
                 </scrollView>
             </subviews>
             <constraints>
-                <constraint firstItem="cek-pe-Pob" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="23m-6A-PKf"/>
                 <constraint firstAttribute="bottom" secondItem="EbO-1f-dZb" secondAttribute="bottom" id="8AK-VR-L7D"/>
                 <constraint firstItem="EbO-1f-dZb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Cbw-1a-Kwu"/>
                 <constraint firstAttribute="trailing" secondItem="EbO-1f-dZb" secondAttribute="trailing" id="Hg3-5k-OuZ"/>
-                <constraint firstItem="eYO-NA-Cv6" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="ILw-Il-Pss"/>
-                <constraint firstItem="eYO-NA-Cv6" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="JA0-7J-EcC"/>
+                <constraint firstItem="eYO-NA-Cv6" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="ILw-Il-Pss"/>
+                <constraint firstItem="eYO-NA-Cv6" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="JA0-7J-EcC"/>
                 <constraint firstItem="zad-4G-ilV" firstAttribute="top" secondItem="eYO-NA-Cv6" secondAttribute="bottom" constant="8" id="LNM-8W-Jfz"/>
                 <constraint firstItem="R3I-zs-mIr" firstAttribute="leading" secondItem="zad-4G-ilV" secondAttribute="trailing" id="WXH-DL-amh"/>
                 <constraint firstItem="cek-pe-Pob" firstAttribute="top" secondItem="zad-4G-ilV" secondAttribute="bottom" constant="8" id="dWu-HX-iHz"/>
-                <constraint firstItem="zad-4G-ilV" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="nw7-2S-rMr"/>
+                <constraint firstItem="cek-pe-Pob" firstAttribute="leading" secondItem="zad-4G-ilV" secondAttribute="leading" id="g8L-hg-2xN"/>
                 <constraint firstItem="R3I-zs-mIr" firstAttribute="centerY" secondItem="zad-4G-ilV" secondAttribute="centerY" id="p9w-bt-rFf"/>
                 <constraint firstItem="EbO-1f-dZb" firstAttribute="top" secondItem="cek-pe-Pob" secondAttribute="bottom" constant="8" id="rMp-Mg-GlJ"/>
+                <constraint firstItem="zad-4G-ilV" firstAttribute="leading" secondItem="eYO-NA-Cv6" secondAttribute="leading" id="xa8-TL-mpH"/>
             </constraints>
             <animations/>
             <point key="canvasLocation" x="291.5" y="342.5"/>

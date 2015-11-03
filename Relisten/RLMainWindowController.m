@@ -68,6 +68,7 @@
     self.audioPlayBackController = [[RLAudioPlaybackViewController alloc] initWithNibName:@"RLAudioPlaybackViewController" bundle:nil];
     self.audioPlayBackController.view.frame = self.audioPlayBackView.bounds;
     self.audioPlayBackController.view.autoresizingMask = NSViewHeightSizable | NSViewWidthSizable;
+    self.audioPlayBackController.delegate = self;
     [self.audioPlayBackView addSubview:self.audioPlayBackController.view];
 }
 
@@ -102,6 +103,15 @@
 -(void)trackSelected:(IGTrack *)track FromShow:(IGShow *)show
 {
     [self.audioPlayBackController playTrack:track FromShow:show];
+}
+
+-(void)trackPlayedAtIndex:(NSInteger)index
+{
+    [self.sourceAndTracksViewController showTrackVisualizationForTrackIndex:index];
+}
+-(void)trackPausedAtIndex:(NSInteger)index
+{
+    [self.sourceAndTracksViewController pauseTrackVisualizationForTrackIndex:index];
 }
 
 @end

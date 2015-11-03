@@ -111,6 +111,65 @@
     [self.delegate trackSelected:selectedTrack FromShow:self.selectedShow];
 }
 
+#pragma mark - Track Playing Visuals 
+
+-(void)showTrackVisualizationForTrackIndex:(NSInteger)index
+{
+//    RLTrackTableCellView *cellView =  [self.tableView viewAtColumn:0 row:index makeIfNecessary:NO];
+//    BOOL found = NO;
+//    
+//    for(NSView *view in cellView.subviews)
+//    {
+//        if([view isKindOfClass:[CMEqualizerIndicatorView class]])
+//        {
+//            [(CMEqualizerIndicatorView *)view startAnimated:YES];
+//            found = YES;
+//        }
+//    }
+//    
+//    if(!found)
+//    {
+//        [self removeAllVisualizations];
+//        
+//        CMEqualizerIndicatorView *equalizerIndicatorView = [[CMEqualizerIndicatorView alloc] initWithFrame:cellView.trackNumberTextField.frame];
+//        
+//        [cellView addSubview:equalizerIndicatorView];
+//        cellView.trackNumberTextField.hidden = YES;
+//        equalizerIndicatorView.tintColor = [NSColor redColor];
+//        [equalizerIndicatorView startAnimated:YES];
+//    }
+}
+
+-(void)pauseTrackVisualizationForTrackIndex:(NSInteger)index
+{
+//    RLTrackTableCellView *cellView =  [self.tableView viewAtColumn:0 row:index makeIfNecessary:NO];
+//    
+//    for(NSView *view in cellView.subviews)
+//    {
+//        if([view isKindOfClass:[CMEqualizerIndicatorView class]])
+//        {
+//            [(CMEqualizerIndicatorView *)view pauseAnimated:YES];
+//        }
+//    }
+}
+
+-(void)removeAllVisualizations
+{
+//    for (int i = 0; i < [self.tableView numberOfRows]; i++)
+//    {
+//        RLTrackTableCellView *cellView =  [self.tableView viewAtColumn:0 row:i makeIfNecessary:NO];
+//        cellView.trackNumberTextField.hidden = NO;
+//    
+//        for(NSView *view in cellView.subviews)
+//        {
+//            if([view isKindOfClass:[CMEqualizerIndicatorView class]])
+//            {
+//                [view removeFromSuperview];
+//            }
+//        }
+//    }
+}
+
 #pragma mark - NSTableViewDelegate Methods
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView

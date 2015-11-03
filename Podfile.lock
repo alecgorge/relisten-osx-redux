@@ -19,6 +19,7 @@ PODS:
   - AFNetworking/Serialization (2.6.1)
   - AGAudioPlayer (0.8.0):
     - HysteriaPlayer
+  - CMEqualizerIndicatorView (1.0)
   - EDStarRating (1.1)
   - HysteriaPlayer (2.1.4)
   - JSONModel (1.1.2)
@@ -35,6 +36,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - AGAudioPlayer (from `https://github.com/alecgorge/AGAudioPlayer.git`)
+  - CMEqualizerIndicatorView (~> 1.0)
   - EDStarRating
   - JSONModel
   - Masonry
@@ -53,6 +55,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
   AGAudioPlayer: 356be857859b28e293f3cb4ecf493f42aa2cfba5
+  CMEqualizerIndicatorView: c5f52093d9267dcf6e9f55dad5fd3dab9acf9408
   EDStarRating: a41a6440a945020745d0e9ff8ada7d1afa952114
   HysteriaPlayer: 81433239fa79ca7c446ccb994d91d34eaa533ab3
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc

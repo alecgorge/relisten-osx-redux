@@ -39,9 +39,9 @@
     self.audioPlayer = [[AGAudioPlayer alloc] initWithQueue:self.queue];
     self.audioPlayer.delegate = self;
     
-    self.view.wantsLayer = YES;
-    self.view.layer.borderColor = [NSColor grayColor].CGColor;
-    self.view.layer.borderWidth = 1.0;
+//    self.view.wantsLayer = YES;
+//    self.view.layer.borderColor = [NSColor grayColor].CGColor;
+//    self.view.layer.borderWidth = 1.0;
     
     self.trackTitleTextField.stringValue = @"";
     self.trackSubtitleTextField.stringValue = @"";
@@ -139,6 +139,7 @@
     {
         IguanaMediaItem *currentMediaItem = (IguanaMediaItem *)self.audioPlayer.currentItem;
         [self updateCurrentTrackInfo:currentMediaItem];
+        [self.delegate trackPlayedAtIndex:self.audioPlayer.currentIndex];
     }
     else if(reason == AGAudioPlayerTrackStopped)
     {
@@ -146,7 +147,7 @@
     }
     else if(reason == AGAudioPlayerTrackPaused)
     {
-        
+        [self.delegate trackPausedAtIndex:self.audioPlayer.currentIndex];
     }
     else if(reason == AGAudioPlayerError)
     {
