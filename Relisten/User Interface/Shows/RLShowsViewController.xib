@@ -351,9 +351,6 @@
                             </view>
                         </tabViewItem>
                     </tabViewItems>
-                    <connections>
-                        <outlet property="delegate" destination="tjm-zf-WiC" id="LOf-on-f4u"/>
-                    </connections>
                 </tabView>
             </subviews>
             <constraints>
