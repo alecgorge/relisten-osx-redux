@@ -146,7 +146,7 @@
         show = self.soundboardShows[row];
     
     if(show.isSoundboard)
-        cellView.showDateTextField.stringValue = [NSString stringWithFormat:@"%@(SBD)", show.displayDate];
+        cellView.showDateTextField.stringValue = [NSString stringWithFormat:@"%@ (SBD)", show.displayDate];
     else
         cellView.showDateTextField.stringValue = show.displayDate;
     

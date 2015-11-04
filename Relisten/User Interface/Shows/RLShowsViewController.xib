@@ -34,7 +34,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="55" rowSizeStyle="automatic" viewBased="YES" id="Xtu-k0-aux" customClass="RLTableView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="271" height="463"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="271" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -188,17 +188,17 @@
                         </tabViewItem>
                         <tabViewItem label="Soundboard" identifier="2" id="fTd-T6-ac0">
                             <view key="view" id="iMW-4b-4hR">
-                                <rect key="frame" x="10" y="33" width="204" height="454"/>
+                                <rect key="frame" x="10" y="33" width="271" height="463"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="57" horizontalPageScroll="10" verticalLineScroll="57" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjB-Rr-tWU">
-                                        <rect key="frame" x="0.0" y="0.0" width="204" height="454"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="463"/>
                                         <clipView key="contentView" drawsBackground="NO" id="i9o-2d-lEQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="204" height="454"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="271" height="463"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="55" rowSizeStyle="automatic" viewBased="YES" id="8w4-ND-gam" customClass="RLTableView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="204" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="271" height="463"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -206,7 +206,7 @@
                                                     <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn width="201" minWidth="40" maxWidth="1000" id="3nt-HN-eOu">
+                                                        <tableColumn width="268" minWidth="40" maxWidth="1000" id="3nt-HN-eOu">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -220,7 +220,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="4Tb-gT-V46" customClass="RLShowTableViewCell">
-                                                                    <rect key="frame" x="1" y="1" width="201" height="55"/>
+                                                                    <rect key="frame" x="1" y="1" width="268" height="55"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="11k-yY-f8W">
@@ -233,7 +233,7 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="guY-f1-Rh3" customClass="EDStarRating">
-                                                                            <rect key="frame" x="101" y="35" width="95" height="17"/>
+                                                                            <rect key="frame" x="168" y="35" width="95" height="17"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="95" id="P4s-Dh-ODC"/>
                                                                             </constraints>
@@ -249,7 +249,7 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8TW-zV-cLD">
-                                                                            <rect key="frame" x="150" y="19" width="48" height="14"/>
+                                                                            <rect key="frame" x="217" y="19" width="48" height="14"/>
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="23:43:04" id="Aa8-Aa-aio">
                                                                                 <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -258,7 +258,7 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iZH-z3-ChG">
-                                                                            <rect key="frame" x="119" y="3" width="79" height="14"/>
+                                                                            <rect key="frame" x="186" y="3" width="79" height="14"/>
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="100 recordings" id="hcu-mm-atS">
                                                                                 <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -275,16 +275,31 @@
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
+                                                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="oer-74-PU0" customClass="CMEqualizerIndicatorView">
+                                                                            <rect key="frame" x="138" y="35" width="22" height="17"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="22" id="WvV-x8-i24"/>
+                                                                            </constraints>
+                                                                            <animations/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                                                    <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </customView>
                                                                     </subviews>
                                                                     <constraints>
+                                                                        <constraint firstItem="guY-f1-Rh3" firstAttribute="leading" secondItem="oer-74-PU0" secondAttribute="trailing" constant="8" id="0H7-Tu-9t1"/>
                                                                         <constraint firstItem="guY-f1-Rh3" firstAttribute="top" secondItem="4Tb-gT-V46" secondAttribute="top" constant="3" id="1zy-s2-4uf"/>
                                                                         <constraint firstItem="ftn-pQ-q4S" firstAttribute="leading" secondItem="4Tb-gT-V46" secondAttribute="leading" constant="5" id="7yX-xe-y5c"/>
                                                                         <constraint firstItem="iZH-z3-ChG" firstAttribute="top" secondItem="8TW-zV-cLD" secondAttribute="bottom" constant="2" id="8DV-qW-1ND"/>
+                                                                        <constraint firstItem="oer-74-PU0" firstAttribute="height" secondItem="guY-f1-Rh3" secondAttribute="height" id="BPN-gM-iaf"/>
                                                                         <constraint firstItem="11k-yY-f8W" firstAttribute="leading" secondItem="4Tb-gT-V46" secondAttribute="leading" constant="5" id="CyH-WM-NlK"/>
                                                                         <constraint firstItem="8TW-zV-cLD" firstAttribute="trailing" secondItem="guY-f1-Rh3" secondAttribute="trailing" id="ObV-r0-vMj"/>
                                                                         <constraint firstItem="8TW-zV-cLD" firstAttribute="top" secondItem="guY-f1-Rh3" secondAttribute="bottom" constant="2" id="Ud2-EI-oo0"/>
                                                                         <constraint firstItem="11k-yY-f8W" firstAttribute="top" secondItem="4Tb-gT-V46" secondAttribute="top" constant="3" id="Ypf-F8-7vj"/>
                                                                         <constraint firstItem="8TW-zV-cLD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5XV-N3-fbc" secondAttribute="trailing" priority="750" constant="10" id="aNw-KJ-gOS"/>
+                                                                        <constraint firstItem="oer-74-PU0" firstAttribute="top" secondItem="guY-f1-Rh3" secondAttribute="top" id="gXG-f3-TqS"/>
                                                                         <constraint firstItem="iZH-z3-ChG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ftn-pQ-q4S" secondAttribute="trailing" constant="10" id="giK-9O-zRp"/>
                                                                         <constraint firstItem="5XV-N3-fbc" firstAttribute="leading" secondItem="4Tb-gT-V46" secondAttribute="leading" constant="5" id="gkE-Y8-aFt"/>
                                                                         <constraint firstItem="ftn-pQ-q4S" firstAttribute="top" secondItem="5XV-N3-fbc" secondAttribute="bottom" constant="2" id="l94-My-ibL"/>
@@ -296,6 +311,7 @@
                                                                     <animations/>
                                                                     <connections>
                                                                         <outlet property="durationTextField" destination="8TW-zV-cLD" id="kFg-aO-EfV"/>
+                                                                        <outlet property="equilizerView" destination="oer-74-PU0" id="Z49-TZ-XJ6"/>
                                                                         <outlet property="recordingCountTextField" destination="iZH-z3-ChG" id="6ml-r1-DuW"/>
                                                                         <outlet property="showDateTextField" destination="11k-yY-f8W" id="PFA-xb-qfF"/>
                                                                         <outlet property="starRating" destination="guY-f1-Rh3" id="Atf-Ej-tlw"/>
