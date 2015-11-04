@@ -42,7 +42,7 @@
 		C18AEAD61BB4E6BB00A6D182 /* RLSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */; };
 		C18AEAE01BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEADE1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m */; };
 		C18AEAE11BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AEADF1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib */; };
-		C1C6F95C1BE6A22600EDF168 /* RLShowReviewCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C6F95B1BE6A22600EDF168 /* RLShowReviewCellView.m */; settings = {ASSET_TAGS = (); }; };
+		C1C6F95C1BE6A22600EDF168 /* RLShowReviewCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C6F95B1BE6A22600EDF168 /* RLShowReviewCellView.m */; };
 		C1E4518E1BBA803B003A0721 /* RLSourceAndTracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E4518C1BBA803B003A0721 /* RLSourceAndTracksViewController.m */; };
 		C1E4518F1BBA803B003A0721 /* RLSourceAndTracksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E4518D1BBA803B003A0721 /* RLSourceAndTracksViewController.xib */; };
 /* End PBXBuildFile section */
@@ -165,8 +165,8 @@
 				C18AEA931BB4945F00A6D182 /* RLMainWindowController.m */,
 				C18AEA941BB4945F00A6D182 /* RLMainWindowController.xib */,
 				C18AEAD31BB4E4B800A6D182 /* User Interface */,
-				C18AEACE1BB4C99B00A6D182 /* API */,
 				C18AEACF1BB4D1E500A6D182 /* Managers */,
+				C18AEACE1BB4C99B00A6D182 /* API */,
 				C18AEA971BB4A34A00A6D182 /* Model */,
 			);
 			path = Relisten;

@@ -18,5 +18,6 @@
 
 - (instancetype)initWithPopUpButton:(NSPopUpButton *)popupButton;
 - (void)refresh;
+- (void)selectArtist:(IGArtist *)artist;
 
 @end

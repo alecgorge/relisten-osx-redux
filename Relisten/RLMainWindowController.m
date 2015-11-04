@@ -13,12 +13,15 @@
 @property (weak) IBOutlet RLSplitView *splitView;
 @property (weak) IBOutlet NSPopUpButton *artistsPopupButton;
 @property (weak) IBOutlet NSView *audioPlayBackView;
+@property (weak) IBOutlet NSButton *nowPlayingButton;
 
 @property (nonatomic, strong) RLArtistsPopupButtonManager *artistPopupManager;
 @property (nonatomic, strong) RLYearsVenuesTopShowsViewController *yearsViewController;
 @property (nonatomic, strong) RLShowsViewController *showsViewController;
 @property (nonatomic, strong) RLSourceAndTracksViewController *sourceAndTracksViewController;
 @property (nonatomic, strong) RLAudioPlaybackViewController *audioPlayBackController;
+@property (nonatomic, strong) IGShow *currentlyPlayingShow;
+@property (nonatomic, strong) IGArtist *currentlyPlayingArtist;
 
 @end
 
@@ -31,6 +34,8 @@
     self.window.titleVisibility = NSWindowTitleHidden;
     self.window.collectionBehavior = NSWindowCollectionBehaviorFullScreenPrimary;  
     self.splitView.delegate = self;
+    
+    self.nowPlayingButton.enabled = NO;
     
     //Set up Years
     self.yearsViewController = [[RLYearsVenuesTopShowsViewController alloc] initWithNibName:@"RLYearsVenuesTopShowsViewController" bundle:nil];
@@ -72,6 +77,17 @@
     [self.audioPlayBackView addSubview:self.audioPlayBackController.view];
 }
 
+- (IBAction)showNowPlayingShow:(id)sender
+{
+    [self.artistPopupManager selectArtist:self.currentlyPlayingArtist];
+    IGAPIClient.sharedInstance.artist = self.currentlyPlayingArtist;
+    [self.sourceAndTracksViewController fetchTracksForShow:self.currentlyPlayingShow];
+    [self.yearsViewController fetchYears];
+    IGYear *year = [[IGYear alloc] init];
+    year.year = self.currentlyPlayingShow.year;
+    [self.showsViewController fetchShowsForYear:year];
+}
+
 #pragma mark - Delegate Handling
 
 -(void)yearSelected:(IGYear *)year
@@ -107,6 +123,10 @@
 
 -(void)trackPlayedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show
 {
+    self.nowPlayingButton.enabled = YES;
+    self.currentlyPlayingShow = show;
+    self.currentlyPlayingArtist = [IGAPIClient sharedInstance].artist;
+    
     [self.sourceAndTracksViewController showTrackVisualizationForTrackIndex:index andTrack:track];
     [self.showsViewController setCurrentlyPLayingShow:show];
 }

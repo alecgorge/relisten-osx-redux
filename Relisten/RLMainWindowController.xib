@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="artistsPopupButton" destination="TF2-3E-ynh" id="PDb-Ih-rUU"/>
                 <outlet property="audioPlayBackView" destination="FTW-Ye-BXq" id="9hg-bq-eDi"/>
+                <outlet property="nowPlayingButton" destination="9Bn-Bp-hJx" id="Bhs-9h-dT1"/>
                 <outlet property="splitView" destination="gff-DE-xYh" id="08t-ED-ZGl"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
@@ -100,10 +101,28 @@
                             </popUpButtonCell>
                         </popUpButton>
                     </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="D298685A-615A-46BC-8143-6FB34FD0518D" label="Custom View" paletteLabel="Custom View" id="fkb-aA-siQ" userLabel="Now Playing Button">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="82" height="32"/>
+                        <size key="maxSize" width="120" height="32"/>
+                        <button key="view" verticalHuggingPriority="750" id="9Bn-Bp-hJx">
+                            <rect key="frame" x="0.0" y="14" width="108" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <animations/>
+                            <buttonCell key="cell" type="recessed" title="Now Playing" bezelStyle="recessed" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="z5B-24-A6q">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="systemBold" size="12"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="showNowPlayingShow:" target="-2" id="umQ-fs-ege"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="38h-ZA-Rq5"/>
                     <toolbarItem reference="LbV-E5-LG9"/>
+                    <toolbarItem reference="fkb-aA-siQ"/>
                 </defaultToolbarItems>
             </toolbar>
             <connections>

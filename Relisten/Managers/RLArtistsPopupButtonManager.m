@@ -40,6 +40,11 @@
     self.artistChanged = self.artistPopupButton.rac_command;
 }
 
+-(void)selectArtist:(IGArtist *)artist
+{
+    [self.artistPopupButton selectItemWithTitle:artist.name];
+}
+
 - (void)refresh
 {
     [IGAPIClient.sharedInstance artists:^(NSArray *artists)
