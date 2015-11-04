@@ -51,7 +51,7 @@
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="38Y-oK-qMx">
                     <rect key="frame" x="434" y="618" width="61" height="19"/>
                     <animations/>
-                    <buttonCell key="cell" type="roundRect" title="Reviews" bezelStyle="roundedRect" image="14185E1E-9251-4A27-9966-83AF6888BD8F" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="E3b-8H-saw">
+                    <buttonCell key="cell" type="roundRect" title="Reviews" bezelStyle="roundedRect" image="9B4D2A6E-1814-469D-96EA-F2A0804A2FBF" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="E3b-8H-saw">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="cellTitle"/>
                     </buttonCell>
@@ -164,23 +164,37 @@
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
+                                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="kjF-pV-s1W" customClass="CMEqualizerIndicatorView">
+                                                        <rect key="frame" x="5" y="3" width="22" height="16"/>
+                                                        <animations/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </customView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="DFr-KK-MuZ" firstAttribute="leading" secondItem="lys-Ad-fAF" secondAttribute="leading" constant="5" id="3qN-MU-9oI"/>
+                                                    <constraint firstItem="kjF-pV-s1W" firstAttribute="top" secondItem="DFr-KK-MuZ" secondAttribute="top" id="6r5-KO-RIw"/>
                                                     <constraint firstItem="Ua8-fi-4ZX" firstAttribute="leading" secondItem="DFr-KK-MuZ" secondAttribute="trailing" constant="3" id="9oK-U5-Qyk"/>
+                                                    <constraint firstItem="kjF-pV-s1W" firstAttribute="width" secondItem="DFr-KK-MuZ" secondAttribute="width" id="9r4-Qf-lWs"/>
                                                     <constraint firstItem="fmO-p0-Bvr" firstAttribute="leading" secondItem="QPx-Ts-DZV" secondAttribute="trailing" constant="8" id="D1O-QZ-GrU"/>
                                                     <constraint firstItem="DFr-KK-MuZ" firstAttribute="top" secondItem="lys-Ad-fAF" secondAttribute="top" constant="3" id="Iwb-Gr-zJz"/>
                                                     <constraint firstItem="QPx-Ts-DZV" firstAttribute="top" secondItem="lys-Ad-fAF" secondAttribute="top" constant="3" id="MEv-js-IgF"/>
                                                     <constraint firstAttribute="trailing" secondItem="fmO-p0-Bvr" secondAttribute="trailing" constant="5" id="StO-ID-Ath"/>
+                                                    <constraint firstItem="kjF-pV-s1W" firstAttribute="leading" secondItem="lys-Ad-fAF" secondAttribute="leading" constant="5" id="aCt-xX-Mv1"/>
                                                     <constraint firstItem="fmO-p0-Bvr" firstAttribute="top" secondItem="lys-Ad-fAF" secondAttribute="top" constant="3" id="hM5-Lj-GgC"/>
                                                     <constraint firstItem="Ua8-fi-4ZX" firstAttribute="top" secondItem="lys-Ad-fAF" secondAttribute="top" constant="3" id="hfv-vu-rom"/>
                                                     <constraint firstItem="DFr-KK-MuZ" firstAttribute="height" secondItem="Ua8-fi-4ZX" secondAttribute="height" id="mLq-wl-roC"/>
                                                     <constraint firstItem="QPx-Ts-DZV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ua8-fi-4ZX" secondAttribute="trailing" constant="10" id="seN-yA-xEI"/>
+                                                    <constraint firstItem="kjF-pV-s1W" firstAttribute="height" secondItem="DFr-KK-MuZ" secondAttribute="height" id="tFZ-jS-BYZ"/>
                                                     <constraint firstItem="fmO-p0-Bvr" firstAttribute="centerY" secondItem="lys-Ad-fAF" secondAttribute="centerY" id="u9p-Ep-BfB"/>
                                                     <constraint firstItem="Ua8-fi-4ZX" firstAttribute="centerY" secondItem="lys-Ad-fAF" secondAttribute="centerY" id="wWV-WK-08Z"/>
                                                 </constraints>
                                                 <animations/>
                                                 <connections>
+                                                    <outlet property="equilizerView" destination="kjF-pV-s1W" id="z81-FQ-C8N"/>
                                                     <outlet property="trackDurationTextField" destination="QPx-Ts-DZV" id="f0a-3D-vju"/>
                                                     <outlet property="trackNameTextField" destination="Ua8-fi-4ZX" id="D5I-zg-XG3"/>
                                                     <outlet property="trackNumberTextField" destination="DFr-KK-MuZ" id="lsq-gt-NPZ"/>
@@ -239,7 +253,7 @@
         </customView>
     </objects>
     <resources>
-        <image name="14185E1E-9251-4A27-9966-83AF6888BD8F" width="1" height="1">
+        <image name="9B4D2A6E-1814-469D-96EA-F2A0804A2FBF" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

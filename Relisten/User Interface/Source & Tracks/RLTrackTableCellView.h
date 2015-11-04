@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <CMEqualizerIndicatorView/CMEqualizerIndicatorView.h>
 
 @interface RLTrackTableCellView : NSTableCellView
 
@@ -14,5 +15,6 @@
 @property (assign) IBOutlet NSTextField *trackNameTextField;
 @property (assign) IBOutlet NSTextField *trackDurationTextField;
 @property (assign) IBOutlet NSButton *trackPullDownButton;
+@property (assign) IBOutlet CMEqualizerIndicatorView *equilizerView;
 
 @end
