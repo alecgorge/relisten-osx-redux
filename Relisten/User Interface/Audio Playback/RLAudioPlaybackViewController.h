@@ -16,8 +16,8 @@
 
 @protocol RLAudioPlaybackDelegate <NSObject>
 
-- (void)trackPlayedAtIndex:(NSInteger)index;
-- (void)trackPausedAtIndex:(NSInteger)index;
+- (void)trackPlayedAtIndex:(NSInteger)index forTrack:(IGTrack *)track;
+- (void)trackPausedAtIndex:(NSInteger)index forTrack:(IGTrack *)track;
 
 @end
 

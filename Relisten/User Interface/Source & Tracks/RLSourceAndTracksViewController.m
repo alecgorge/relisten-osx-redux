@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) NSArray *allShows;
 @property (nonatomic, strong) IGShow *selectedShow;
+@property (nonatomic, strong) IGTrack *currentlyPlayingTrack;
+@property (nonatomic) BOOL playing;
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
 
 @end
@@ -113,37 +115,18 @@
 
 #pragma mark - Track Playing Visuals 
 
--(void)showTrackVisualizationForTrackIndex:(NSInteger)index
+-(void)showTrackVisualizationForTrackIndex:(NSInteger)index andTrack:(IGTrack *)track
 {
-
-    RLTrackTableCellView *cellView =  [self.tableView viewAtColumn:0 row:index makeIfNecessary:NO];
-    
-    if(!cellView.trackNumberTextField.hidden)
-    {
-         [self removeAllVisualizations];
-        cellView.trackNumberTextField.hidden = YES;
-    }
-    
-    [cellView.equilizerView startAnimated:YES];
+    self.currentlyPlayingTrack = track;
+    self.playing = YES;
+    [self.tableView reloadData];
 }
 
--(void)pauseTrackVisualizationForTrackIndex:(NSInteger)index
+-(void)pauseTrackVisualizationForTrackIndex:(NSInteger)index andTrack:(IGTrack *)track
 {
-    RLTrackTableCellView *cellView =  [self.tableView viewAtColumn:0 row:index makeIfNecessary:NO];
-    [cellView.equilizerView pauseAnimated:YES];}
-
--(void)removeAllVisualizations
-{
-    for (int i = 0; i < [self.tableView numberOfRows]; i++)
-    {
-        RLTrackTableCellView *cellView =  [self.tableView viewAtColumn:0 row:i makeIfNecessary:NO];
-        
-        if(cellView.trackNumberTextField.hidden)
-        {
-            [cellView.equilizerView stopAnimated:YES];
-            cellView.trackNumberTextField.hidden = NO;
-        }
-    }
+    self.currentlyPlayingTrack = track;
+    self.playing = NO;
+    [self.tableView reloadData];
 }
 
 #pragma mark - NSTableViewDelegate Methods
@@ -158,6 +141,29 @@
     RLTrackTableCellView *cellView = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
     
     IGTrack *track = self.selectedShow.tracks[row];
+    
+    if(track.id == self.currentlyPlayingTrack.id) // Show equalizer
+    {
+        if(self.playing)
+        {
+            cellView.trackNumberTextField.hidden = YES;
+            cellView.equilizerView.hidden = NO;
+            [cellView.equilizerView startAnimated:YES];
+        }
+        else // Paused
+        {
+            cellView.trackNumberTextField.hidden = YES;
+            cellView.equilizerView.hidden = NO;
+            [cellView.equilizerView pauseAnimated:YES];
+        }
+    }
+    else // Don't show equalizer
+    {
+        cellView.equilizerView.hidden = YES;
+        [cellView.equilizerView stopAnimated:NO];
+        cellView.trackNumberTextField.hidden = NO;
+    }
+    
     cellView.trackNumberTextField.stringValue = [NSString stringWithFormat:@"%ld.", (long)row + 1];
     cellView.trackNameTextField.stringValue = track.title;
     

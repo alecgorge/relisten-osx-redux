@@ -139,7 +139,7 @@
     {
         IguanaMediaItem *currentMediaItem = (IguanaMediaItem *)self.audioPlayer.currentItem;
         [self updateCurrentTrackInfo:currentMediaItem];
-        [self.delegate trackPlayedAtIndex:self.audioPlayer.currentIndex];
+        [self.delegate trackPlayedAtIndex:self.audioPlayer.currentIndex forTrack:currentMediaItem.iguanaTrack];
     }
     else if(reason == AGAudioPlayerTrackStopped)
     {
@@ -147,7 +147,8 @@
     }
     else if(reason == AGAudioPlayerTrackPaused)
     {
-        [self.delegate trackPausedAtIndex:self.audioPlayer.currentIndex];
+         IguanaMediaItem *currentMediaItem = (IguanaMediaItem *)self.audioPlayer.currentItem;
+        [self.delegate trackPausedAtIndex:self.audioPlayer.currentIndex forTrack:currentMediaItem.iguanaTrack];
     }
     else if(reason == AGAudioPlayerError)
     {

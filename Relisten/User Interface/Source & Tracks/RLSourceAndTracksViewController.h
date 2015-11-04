@@ -25,7 +25,7 @@
 
 -(void)fetchTracksForShow:(IGShow *)show;
 -(void)disableSourceSelection;
--(void)showTrackVisualizationForTrackIndex:(NSInteger)index;
--(void)pauseTrackVisualizationForTrackIndex:(NSInteger)index;
+-(void)showTrackVisualizationForTrackIndex:(NSInteger)index andTrack:(IGTrack *)track;
+-(void)pauseTrackVisualizationForTrackIndex:(NSInteger)index andTrack:(IGTrack *)track;
 
 @end
