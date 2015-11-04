@@ -17,7 +17,7 @@
 
 @end
 
-@interface RLShowsViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
+@interface RLShowsViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate, NSTabViewDelegate>
 
 @property (nonatomic, weak) id<RLShowSelectedDelegate> delegate;
 
@@ -25,5 +25,7 @@
 - (void)fetchShowsForVenue:(IGVenue *)venue;
 - (void)fetchTopShows;
 - (void)clearAllShows;
+- (void)setCurrentlyPLayingShow:(IGShow *)show;
+- (void)pauseCurrentlyPLayingShow:(IGShow *)show;
 
 @end

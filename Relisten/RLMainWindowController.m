@@ -105,13 +105,15 @@
     [self.audioPlayBackController playTrack:track FromShow:show];
 }
 
--(void)trackPlayedAtIndex:(NSInteger)index forTrack:(IGTrack *)track
+-(void)trackPlayedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show
 {
     [self.sourceAndTracksViewController showTrackVisualizationForTrackIndex:index andTrack:track];
+    [self.showsViewController setCurrentlyPLayingShow:show];
 }
--(void)trackPausedAtIndex:(NSInteger)index forTrack:(IGTrack *)track
+-(void)trackPausedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show
 {
     [self.sourceAndTracksViewController pauseTrackVisualizationForTrackIndex:index andTrack:track];
+    [self.showsViewController pauseCurrentlyPLayingShow:show];
 }
 
 @end

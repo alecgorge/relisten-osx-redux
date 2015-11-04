@@ -17,6 +17,8 @@
 @property (nonatomic, strong) NSArray *allShows;
 @property (nonatomic, strong) NSMutableArray *soundboardShows;
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
+@property (nonatomic, strong) IGShow *currentlyPlayingShow;
+@property (nonatomic) BOOL playing;
 
 @end
 
@@ -36,6 +38,8 @@
     self.durationFormatter = [[NSDateComponentsFormatter alloc] init];
     self.durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
     self.durationFormatter.allowedUnits = (NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond);
+    
+    self.tabView.delegate = self;
     
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
@@ -102,6 +106,22 @@
     [self.soundboardShowsTableView reloadData];
 }
 
+-(void)setCurrentlyPLayingShow:(IGShow *)show
+{
+    self.playing = YES;
+    self.currentlyPlayingShow = show;
+    [self.allShowsTableView reloadData];
+    [self.soundboardShowsTableView reloadData];
+}
+
+-(void)pauseCurrentlyPLayingShow:(IGShow *)show
+{
+    self.playing = NO;
+    self.currentlyPlayingShow = show;
+    [self.allShowsTableView reloadData];
+    [self.soundboardShowsTableView reloadData];
+}
+
 #pragma mark - NSTableViewdataSource Methods
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
@@ -129,6 +149,25 @@
         cellView.showDateTextField.stringValue = [NSString stringWithFormat:@"%@(SBD)", show.displayDate];
     else
         cellView.showDateTextField.stringValue = show.displayDate;
+    
+    if(show.id == self.currentlyPlayingShow.id)
+    {
+        if(self.playing)
+        {
+            cellView.equilizerView.hidden = NO;
+            [cellView.equilizerView startAnimated:YES];
+        }
+        else // Paused
+        {
+            cellView.equilizerView.hidden = NO;
+            [cellView.equilizerView pauseAnimated:YES];
+        }
+    }
+    else // Don't show equalizer
+    {
+        cellView.equilizerView.hidden = YES;
+        [cellView.equilizerView stopAnimated:NO];
+    }
     
     EDStarRating *starRating = cellView.starRating;
     starRating.starImage = [NSImage imageNamed:@"star3.png"];
@@ -176,6 +215,14 @@
     //    [myRowView setEmphasized:NO];
     
     return YES;
+}
+
+#pragma mark - NSTabViewDelegate
+
+- (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem
+{
+//    [self.allShowsTableView reloadData];
+//    [self.soundboardShowsTableView reloadData];
 }
 
 @end

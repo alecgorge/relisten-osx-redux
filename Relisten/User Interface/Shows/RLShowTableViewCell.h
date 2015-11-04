@@ -8,14 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 #import <EDStarRating/EDStarRating.h>
+#import <CMEqualizerIndicatorView/CMEqualizerIndicatorView.h>
 
 @interface RLShowTableViewCell : NSTableCellView
 
 @property (assign) IBOutlet NSTextField *showDateTextField;
-@property (assign) IBOutlet  EDStarRating *starRating;
+@property (assign) IBOutlet EDStarRating *starRating;
 @property (assign) IBOutlet NSTextField *venueNameTextField;
 @property (assign) IBOutlet NSTextField *venueCityTextField;
 @property (assign) IBOutlet NSTextField *durationTextField;
 @property (assign) IBOutlet NSTextField *recordingCountTextField;
+@property (assign) IBOutlet CMEqualizerIndicatorView *equilizerView;
 
 @end
