@@ -73,7 +73,8 @@
 -(void)updateCurrentTrackInfo:(IguanaMediaItem *)mediaItem
 {
     self.trackTitleTextField.stringValue = mediaItem.iguanaTrack.title;
-    self.trackSubtitleTextField.stringValue = [NSString stringWithFormat:@"%@ | %@", IGAPIClient.sharedInstance.artist.name, mediaItem.iguanaTrack.show.displayDate];
+    NSString *subtitleText = [NSString stringWithFormat:@"%@ - %@ - %@ - %@", IGAPIClient.sharedInstance.artist.name, mediaItem.iguanaTrack.show.displayDate, mediaItem.iguanaShow.venue.name, mediaItem.iguanaShow.venue.city];
+    self.trackSubtitleTextField.stringValue = subtitleText;
     self.trackEndingTImeTextField.stringValue = [self.durationFormatter stringFromTimeInterval:mediaItem.iguanaTrack.length];
     self.trackSlider.maxValue = mediaItem.iguanaTrack.length;
     self.trackSlider.minValue = 0.0;

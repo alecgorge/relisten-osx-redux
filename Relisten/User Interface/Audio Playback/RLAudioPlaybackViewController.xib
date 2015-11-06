@@ -168,7 +168,7 @@
                             <animations/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Phish - The Hitsy" id="R48-2Y-ViI">
                                 <font key="font" metaFont="smallSystem"/>
-                                <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
@@ -191,7 +191,7 @@
                             </textFieldCell>
                         </textField>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qnp-NR-d1A">
-                            <rect key="frame" x="355" y="28" width="35" height="35"/>
+                            <rect key="frame" x="355" y="32" width="35" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="qnp-NR-d1A" secondAttribute="height" multiplier="1:1" id="Gkm-VR-EyX"/>
                                 <constraint firstAttribute="width" constant="35" id="c7C-qe-BZ4"/>
@@ -209,7 +209,7 @@
                         <constraint firstItem="wQL-hq-eV9" firstAttribute="top" secondItem="Z54-66-1R5" secondAttribute="top" constant="7" id="4dg-Ml-Zbs"/>
                         <constraint firstItem="JBP-1x-GCH" firstAttribute="centerY" secondItem="hcK-yu-vdf" secondAttribute="centerY" id="Pna-Om-1Nu"/>
                         <constraint firstAttribute="trailing" secondItem="qnp-NR-d1A" secondAttribute="trailing" constant="20" id="PzW-Yz-iFo"/>
-                        <constraint firstItem="fvh-nB-6fU" firstAttribute="top" secondItem="qnp-NR-d1A" secondAttribute="bottom" constant="3" id="Rya-9m-GZx"/>
+                        <constraint firstItem="fvh-nB-6fU" firstAttribute="top" secondItem="qnp-NR-d1A" secondAttribute="bottom" constant="7" id="Rya-9m-GZx"/>
                         <constraint firstItem="skT-PI-1xf" firstAttribute="centerX" secondItem="Z54-66-1R5" secondAttribute="centerX" id="Ugw-oT-gKT"/>
                         <constraint firstItem="wQL-hq-eV9" firstAttribute="centerX" secondItem="Z54-66-1R5" secondAttribute="centerX" id="cfL-OD-9wV"/>
                         <constraint firstItem="fvh-nB-6fU" firstAttribute="leading" secondItem="JBP-1x-GCH" secondAttribute="trailing" constant="8" id="j28-ep-hEt"/>
