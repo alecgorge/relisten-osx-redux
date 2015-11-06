@@ -36,7 +36,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="39" rowSizeStyle="automatic" viewBased="YES" id="0dr-VK-3zD" customClass="RLTableView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -75,7 +75,7 @@
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1000 shows, 1000 recordings" id="7Bl-tH-GZ0">
                                                                                 <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
-                                                                                <color key="textColor" red="0.080446397428700744" green="0.095905926453622684" blue="0.3261172723288488" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -84,7 +84,7 @@
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Duration" id="icX-uc-naT">
                                                                                 <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
-                                                                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -137,11 +137,11 @@
                         </tabViewItem>
                         <tabViewItem label="Venues" identifier="2" id="gSQ-Ye-Dxc" userLabel="Venues">
                             <view key="view" id="POS-li-Ijy">
-                                <rect key="frame" x="10" y="33" width="248" height="465"/>
+                                <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="41" horizontalPageScroll="10" verticalLineScroll="41" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clq-gs-iKw">
-                                        <rect key="frame" x="0.0" y="0.0" width="248" height="465"/>
+                                    <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="41" horizontalPageScroll="10" verticalLineScroll="41" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clq-gs-iKw">
+                                        <rect key="frame" x="0.0" y="-2" width="248" height="465"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="KBG-ZP-pXl">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="465"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,7 +186,7 @@
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1000 shows, 1000 recordings" id="cSe-WP-CXr">
                                                                                 <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
-                                                                                <color key="textColor" red="0.080446397429999997" green="0.095905926449999998" blue="0.32611727229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -195,7 +195,7 @@
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Duration" id="lwg-X3-3lY">
                                                                                 <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
-                                                                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -248,11 +248,11 @@
                         </tabViewItem>
                         <tabViewItem label="Top Shows" identifier="2" id="zS6-5w-VOt" userLabel="Top Shows">
                             <view key="view" id="vfW-sD-k4D">
-                                <rect key="frame" x="10" y="33" width="248" height="465"/>
+                                <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2jZ-oJ-TiH">
-                                        <rect key="frame" x="56" y="223" width="137" height="19"/>
+                                        <rect key="frame" x="59" y="222" width="137" height="19"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Showing top shows" id="0pH-H4-3z7">
                                             <font key="font" metaFont="system" size="15"/>
