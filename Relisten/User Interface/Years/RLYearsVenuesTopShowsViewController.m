@@ -8,12 +8,17 @@
 
 #import "RLYearsVenuesTopShowsViewController.h"
 
+#define ALL_YEARS    0
+#define VENUES       1
+#define TOP_SHOWS    2
+
 @interface RLYearsVenuesTopShowsViewController ()
 
 @property (weak) IBOutlet RLTableView *yearsTableView;
 @property (weak) IBOutlet RLTableView *venuesTableView;
 @property (weak) IBOutlet NSTabView *tabView;
 @property (weak) IBOutlet NSTextField *topShowsTextField;
+@property (weak) IBOutlet NSSegmentedControl *segmentedControl;
 
 @property (nonatomic, strong) NSArray *years;
 @property (nonatomic, strong) NSArray *venues;
@@ -38,6 +43,7 @@
     self.durationFormatter.allowedUnits = (NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond);
     
     self.tabView.delegate = self;
+    [self.segmentedControl setSelected:YES forSegment:ALL_YEARS];
     
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
@@ -55,7 +61,9 @@
     [self fetchVenues];
     
     self.topShowsTextField.stringValue = [NSString stringWithFormat:@"%@, top shows", IGAPIClient.sharedInstance.artist.name];
-    [self.tabView selectFirstTabViewItem:nil];
+    
+    [self.segmentedControl setSelected:YES forSegment:ALL_YEARS];
+    [self.tabView selectTabViewItemAtIndex:ALL_YEARS];
 }
 
 -(void)fetchVenues
@@ -159,6 +167,28 @@
     if([tabViewItem.label isEqualToString:@"Top Shows"])
     {
        [self.delegate topShowsSelected];
+    }
+}
+
+- (IBAction)segmentedControlSelectionChanged:(id)sender
+{
+    NSSegmentedControl *control = (NSSegmentedControl *)sender;
+    
+    NSInteger selectedSeg = [control selectedSegment];
+    
+    switch (selectedSeg)
+    {
+        case ALL_YEARS:
+            [self.tabView selectTabViewItemAtIndex:ALL_YEARS];
+            break;
+        case VENUES:
+            [self.tabView selectTabViewItemAtIndex:VENUES];
+            break;
+        case TOP_SHOWS:
+            [self.tabView selectTabViewItemAtIndex:TOP_SHOWS];
+            break;
+        default:
+            break;
     }
 }
 

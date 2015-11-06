@@ -6,6 +6,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="RLYearsVenuesTopShowsViewController">
             <connections>
+                <outlet property="segmentedControl" destination="kmE-Vv-gDC" id="Op2-yi-NKL"/>
                 <outlet property="tabView" destination="8jc-Kg-Lcl" id="Xdm-LN-g7y"/>
                 <outlet property="topShowsTextField" destination="2jZ-oJ-TiH" id="tBO-ob-C6N"/>
                 <outlet property="venuesTableView" destination="vgR-Qy-U3V" id="s18-Ev-QPZ"/>
@@ -19,23 +20,23 @@
             <rect key="frame" x="0.0" y="0.0" width="254" height="505"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <tabView drawsBackground="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jc-Kg-Lcl">
-                    <rect key="frame" x="-7" y="-10" width="268" height="511"/>
+                <tabView drawsBackground="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="8jc-Kg-Lcl">
+                    <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
                     <animations/>
                     <tabViewItems>
                         <tabViewItem label="All Years" identifier="1" id="jV7-tI-fYK" userLabel="All Years">
                             <view key="view" id="l09-OP-xT1">
-                                <rect key="frame" x="10" y="33" width="248" height="465"/>
+                                <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="41" horizontalPageScroll="10" verticalLineScroll="41" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blm-9g-dtq">
-                                        <rect key="frame" x="0.0" y="0.0" width="248" height="465"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="vVV-Su-xDx">
-                                            <rect key="frame" x="0.0" y="0.0" width="248" height="465"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="39" rowSizeStyle="automatic" viewBased="YES" id="0dr-VK-3zD" customClass="RLTableView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -43,7 +44,7 @@
                                                     <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn width="245" minWidth="40" maxWidth="1000" id="av9-LC-KUy">
+                                                        <tableColumn width="251" minWidth="40" maxWidth="1000" id="av9-LC-KUy">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -57,7 +58,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="Kag-EU-hqd" customClass="RLYearTableCellView">
-                                                                    <rect key="frame" x="1" y="1" width="245" height="39"/>
+                                                                    <rect key="frame" x="1" y="1" width="251" height="39"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="YFC-Eh-uh5" userLabel="textField">
@@ -79,7 +80,7 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="UqC-cD-yUm">
-                                                                            <rect key="frame" x="195" y="20" width="47" height="14"/>
+                                                                            <rect key="frame" x="201" y="20" width="47" height="14"/>
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Duration" id="icX-uc-naT">
                                                                                 <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -269,12 +270,29 @@
                         </tabViewItem>
                     </tabViewItems>
                 </tabView>
+                <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kmE-Vv-gDC">
+                    <rect key="frame" x="8" y="474" width="238" height="23"/>
+                    <animations/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="capsule" trackingMode="selectOne" id="Wn1-r8-aF3">
+                        <font key="font" metaFont="system"/>
+                        <segments>
+                            <segment label="All Shows"/>
+                            <segment label="Venues" selected="YES" tag="1"/>
+                            <segment label="Top Shows"/>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="segmentedControlSelectionChanged:" target="-2" id="71o-P3-iLL"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="8jc-Kg-Lcl" secondAttribute="bottom" id="5sp-dr-zx3"/>
+                <constraint firstItem="kmE-Vv-gDC" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="AAc-0g-exf"/>
+                <constraint firstItem="kmE-Vv-gDC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="HqK-Yd-mHo"/>
+                <constraint firstItem="8jc-Kg-Lcl" firstAttribute="top" secondItem="kmE-Vv-gDC" secondAttribute="bottom" constant="8" id="IKX-rX-WBP"/>
                 <constraint firstAttribute="trailing" secondItem="8jc-Kg-Lcl" secondAttribute="trailing" id="JLA-Sj-6Ut"/>
                 <constraint firstItem="8jc-Kg-Lcl" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="qY1-Sz-6fu"/>
-                <constraint firstItem="8jc-Kg-Lcl" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="v3b-i9-xNj"/>
             </constraints>
             <animations/>
             <point key="canvasLocation" x="351" y="431.5"/>
