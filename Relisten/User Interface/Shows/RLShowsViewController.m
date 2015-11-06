@@ -8,11 +8,15 @@
 
 #import "RLShowsViewController.h"
 
+#define ALL_SHOWS       0
+#define SOUNDBOARD      1
+
 @interface RLShowsViewController ()
 
 @property (weak) IBOutlet RLTableView *allShowsTableView;
 @property (weak) IBOutlet NSTabView *tabView;
 @property (weak) IBOutlet RLTableView *soundboardShowsTableView;
+@property (weak) IBOutlet NSSegmentedControl *segmentedControl;
 
 @property (nonatomic, strong) NSArray *allShows;
 @property (nonatomic, strong) NSMutableArray *soundboardShows;
@@ -40,6 +44,7 @@
     self.durationFormatter.allowedUnits = (NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond);
     
     self.tabView.delegate = self;
+    [self.segmentedControl setSelected:YES forSegment:ALL_SHOWS];
     
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
@@ -217,12 +222,25 @@
     return YES;
 }
 
-#pragma mark - NSTabViewDelegate
+#pragma mark - Segmented Control Handling
 
-- (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem
+- (IBAction)segmentedControlIndexChanged:(id)sender
 {
-//    [self.allShowsTableView reloadData];
-//    [self.soundboardShowsTableView reloadData];
+    NSSegmentedControl *control = (NSSegmentedControl *)sender;
+    
+    NSInteger selectedSeg = [control selectedSegment];
+    
+    switch (selectedSeg)
+    {
+        case ALL_SHOWS:
+            [self.tabView selectTabViewItemAtIndex:ALL_SHOWS];
+            break;
+        case SOUNDBOARD:
+            [self.tabView selectTabViewItemAtIndex:SOUNDBOARD];
+            break;
+        default:
+            break;
+    }
 }
 
 @end

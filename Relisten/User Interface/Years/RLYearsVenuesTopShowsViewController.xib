@@ -21,22 +21,22 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <tabView drawsBackground="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="8jc-Kg-Lcl">
-                    <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
+                    <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
                     <animations/>
                     <tabViewItems>
                         <tabViewItem label="All Years" identifier="1" id="jV7-tI-fYK" userLabel="All Years">
                             <view key="view" id="l09-OP-xT1">
-                                <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
+                                <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="41" horizontalPageScroll="10" verticalLineScroll="41" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blm-9g-dtq">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="vVV-Su-xDx">
-                                            <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="39" rowSizeStyle="automatic" viewBased="YES" id="0dr-VK-3zD" customClass="RLTableView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -271,7 +271,7 @@
                     </tabViewItems>
                 </tabView>
                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kmE-Vv-gDC">
-                    <rect key="frame" x="8" y="474" width="238" height="23"/>
+                    <rect key="frame" x="8" y="472" width="238" height="23"/>
                     <animations/>
                     <segmentedCell key="cell" borderStyle="border" alignment="left" style="capsule" trackingMode="selectOne" id="Wn1-r8-aF3">
                         <font key="font" metaFont="system"/>
@@ -289,8 +289,8 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="8jc-Kg-Lcl" secondAttribute="bottom" id="5sp-dr-zx3"/>
                 <constraint firstItem="kmE-Vv-gDC" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="AAc-0g-exf"/>
-                <constraint firstItem="kmE-Vv-gDC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="HqK-Yd-mHo"/>
-                <constraint firstItem="8jc-Kg-Lcl" firstAttribute="top" secondItem="kmE-Vv-gDC" secondAttribute="bottom" constant="8" id="IKX-rX-WBP"/>
+                <constraint firstItem="kmE-Vv-gDC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="HqK-Yd-mHo"/>
+                <constraint firstItem="8jc-Kg-Lcl" firstAttribute="top" secondItem="kmE-Vv-gDC" secondAttribute="bottom" constant="10" id="IKX-rX-WBP"/>
                 <constraint firstAttribute="trailing" secondItem="8jc-Kg-Lcl" secondAttribute="trailing" id="JLA-Sj-6Ut"/>
                 <constraint firstItem="8jc-Kg-Lcl" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="qY1-Sz-6fu"/>
             </constraints>
