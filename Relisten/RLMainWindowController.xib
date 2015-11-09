@@ -118,9 +118,26 @@
                             </connections>
                         </button>
                     </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="3D57F362-DF48-435D-90F2-CCB6AB6695D7" label="Custom View" paletteLabel="Custom View" id="uvg-BD-TKb">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="38" height="17"/>
+                        <size key="maxSize" width="64" height="17"/>
+                        <textField key="view" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="7HS-eM-Hrx">
+                            <rect key="frame" x="6" y="14" width="64" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <animations/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Relisten" id="Mo9-uv-6Ih">
+                                <font key="font" metaFont="systemSemibold" size="12"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="38h-ZA-Rq5"/>
+                    <toolbarItem reference="LbV-E5-LG9"/>
+                    <toolbarItem reference="uvg-BD-TKb"/>
                     <toolbarItem reference="LbV-E5-LG9"/>
                     <toolbarItem reference="fkb-aA-siQ"/>
                 </defaultToolbarItems>

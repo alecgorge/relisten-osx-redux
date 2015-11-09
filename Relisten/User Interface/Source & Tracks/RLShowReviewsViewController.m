@@ -76,7 +76,7 @@
     
     CGFloat height = titleHeight + reviewertextHeight + bodyTextHeight;
     
-    return height + 18;
+    return height + 18; // 18 needed for the spacing between the texfield and margins. 
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row

@@ -84,14 +84,6 @@
     }];
 }
 
--(void)clearAllShows
-{
-    self.allShows = @[];
-    [self.soundboardShows removeAllObjects];
-    [self.allShowsTableView reloadData];
-    [self.soundboardShowsTableView reloadData];
-}
-
 -(void)reloadShows
 {
     [self.allShowsTableView reloadData];
@@ -108,6 +100,14 @@
     NSArray *descriptors = [NSArray arrayWithObject:valueDescriptor];
     self.soundboardShows = [[sortedShows sortedArrayUsingDescriptors:descriptors] mutableCopy];
 
+    [self.soundboardShowsTableView reloadData];
+}
+
+-(void)clearAllShows
+{
+    self.allShows = @[];
+    [self.soundboardShows removeAllObjects];
+    [self.allShowsTableView reloadData];
     [self.soundboardShowsTableView reloadData];
 }
 

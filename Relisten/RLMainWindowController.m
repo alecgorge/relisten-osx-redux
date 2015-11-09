@@ -57,7 +57,7 @@
     [self.artistPopupManager.artistChanged.executionSignals subscribeNext:^(RACSignal *a) {
         [a subscribeNext:^(IGArtist *artist) {
             
-            IGAPIClient.sharedInstance.artist = artist;
+            [IGAPIClient sharedInstance].artist = artist;
             [self.yearsViewController fetchYears];
             [self.showsViewController clearAllShows];
             [self.sourceAndTracksViewController disableSourceSelection];
@@ -72,10 +72,12 @@
     // Set up playback controls
     self.audioPlayBackController = [[RLAudioPlaybackViewController alloc] initWithNibName:@"RLAudioPlaybackViewController" bundle:nil];
     self.audioPlayBackController.view.frame = self.audioPlayBackView.bounds;
-    self.audioPlayBackController.view.autoresizingMask = NSViewHeightSizable | NSViewWidthSizable;
+    self.audioPlayBackController.view.autoresizingMask = NSViewWidthSizable;
     self.audioPlayBackController.delegate = self;
     [self.audioPlayBackView addSubview:self.audioPlayBackController.view];
 }
+
+#pragma mark - 'Now Playing' Button Handling
 
 - (IBAction)showNowPlayingShow:(id)sender
 {
@@ -88,7 +90,7 @@
     [self.showsViewController fetchShowsForYear:year];
 }
 
-#pragma mark - Delegate Handling
+#pragma mark - RLYearsVenuesTopShowsSelectionDelegate Handling
 
 -(void)yearSelected:(IGYear *)year
 {
@@ -111,15 +113,21 @@
     [self.showsViewController fetchTopShows];
 }
 
+#pragma mark - RLShowSelectedDelegate Handling
+
 -(void)showSelected:(IGShow *)show
 {
     [self.sourceAndTracksViewController fetchTracksForShow:show];
 }
 
+#pragma mark - RLTrackSelectedDelegate Handling
+
 -(void)trackSelected:(IGTrack *)track FromShow:(IGShow *)show
 {
     [self.audioPlayBackController playTrack:track FromShow:show];
 }
+
+#pragma mark - RLAudioPlaybackDelegate Handling
 
 -(void)trackPlayedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show
 {

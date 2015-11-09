@@ -113,6 +113,34 @@
     [self.delegate trackSelected:selectedTrack FromShow:self.selectedShow];
 }
 
+#pragma mark - Queue Manipulation from Popup
+
+- (IBAction)playNextButtonPressed:(id)sender
+{
+   // INEFFICIENT :(
+    NSMenuItem *currentItem = (NSMenuItem *)sender;
+    
+    for (int i = 0; i < self.tableView.numberOfRows; i++)
+    {
+        RLTrackTableCellView *cellView = [self.tableView viewAtColumn:0 row:i makeIfNecessary:NO];
+        if(cellView.playNextMenuItem == currentItem)
+        {
+            NSLog(@"%d", i);
+            break;
+        }
+    }
+}
+
+- (IBAction)addToEndOfQueueButtonPressed:(id)sender
+{
+    
+}
+
+- (IBAction)addRemainingConcertToEndOfQueueButtonPressed:(id)sender
+{
+    
+}
+
 #pragma mark - Track Playing Visuals 
 
 -(void)showTrackVisualizationForTrackIndex:(NSInteger)index andTrack:(IGTrack *)track

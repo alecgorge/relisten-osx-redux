@@ -14,7 +14,7 @@
 @property (assign) IBOutlet NSTextField *trackNumberTextField;
 @property (assign) IBOutlet NSTextField *trackNameTextField;
 @property (assign) IBOutlet NSTextField *trackDurationTextField;
-@property (assign) IBOutlet NSButton *trackPullDownButton;
+@property (assign) IBOutlet NSMenuItem *playNextMenuItem;
 @property (assign) IBOutlet CMEqualizerIndicatorView *equilizerView;
 
 @end

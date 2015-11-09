@@ -122,6 +122,8 @@
     double value = [slider doubleValue];
 }
 
+#pragma mark - Queue Manipulation Methods
+
 #pragma mark - AGAudioPlayerDelegate Methods
 
 - (void)audioPlayer:(AGAudioPlayer *)audioPlayer uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason extraInfo:(NSDictionary *)dict
