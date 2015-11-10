@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="RLMainWindowController">
@@ -133,9 +133,27 @@
                             </textFieldCell>
                         </textField>
                     </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="7B1FDB71-7035-4E6D-A9C7-C56FC2BB1FE5" label="Custom View" paletteLabel="Custom View" image="NSRefreshTemplate" id="8Ym-k0-TP1">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="21" height="21"/>
+                        <size key="maxSize" width="32" height="21"/>
+                        <button key="view" verticalHuggingPriority="750" id="BfT-zj-uCu">
+                            <rect key="frame" x="23" y="14" width="31" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <animations/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRefreshTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3pT-DC-mKU">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="refreshArtists:" target="-2" id="V5D-XE-6vr"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="38h-ZA-Rq5"/>
+                    <toolbarItem reference="8Ym-k0-TP1"/>
                     <toolbarItem reference="LbV-E5-LG9"/>
                     <toolbarItem reference="uvg-BD-TKb"/>
                     <toolbarItem reference="LbV-E5-LG9"/>
@@ -148,4 +166,7 @@
             <point key="canvasLocation" x="415" y="341.5"/>
         </window>
     </objects>
+    <resources>
+        <image name="NSRefreshTemplate" width="11" height="15"/>
+    </resources>
 </document>

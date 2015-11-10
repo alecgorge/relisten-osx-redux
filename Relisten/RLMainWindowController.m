@@ -90,6 +90,11 @@
     [self.showsViewController fetchShowsForYear:year];
 }
 
+- (IBAction)refreshArtists:(id)sender
+{
+    [self.artistPopupManager refresh];
+}
+
 #pragma mark - RLYearsVenuesTopShowsSelectionDelegate Handling
 
 -(void)yearSelected:(IGYear *)year
