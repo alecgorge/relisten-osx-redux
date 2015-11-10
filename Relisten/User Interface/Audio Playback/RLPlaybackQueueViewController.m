@@ -45,6 +45,7 @@
     [super viewDidAppear];
     
     [self.tableView reloadData];
+    [self.tableView scrollRowToVisible:self.audioPlayer.currentIndex];
 }
 
 -(void)reloadData

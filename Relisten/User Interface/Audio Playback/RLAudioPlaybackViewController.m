@@ -30,16 +30,6 @@
 
 @implementation RLAudioPlaybackViewController
 
-- (RLPlaybackQueueViewController *)queueViewController
-{
-    if(!_queueViewController)
-    {
-        _queueViewController = [[RLPlaybackQueueViewController alloc] initWithAudioPlayer:self.audioPlayer];
-    }
-    
-    return _queueViewController;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -47,9 +37,9 @@
     
     // Set up AudioPlayer
     self.queue = [[AGAudioPlayerUpNextQueue alloc] init];
-    self.queue.delegate = self;
     self.audioPlayer = [[AGAudioPlayer alloc] initWithQueue:self.queue];
     self.audioPlayer.delegate = self;
+    self.queueViewController = [[RLPlaybackQueueViewController alloc] initWithAudioPlayer:self.audioPlayer];
     
 //    self.view.wantsLayer = YES;
 //    self.view.layer.borderColor = [NSColor grayColor].CGColor;
@@ -197,18 +187,6 @@
     }
     
     [self updatePlayPauseButton];
-}
-
-#pragma mark - AGAudioPlayerUpNextQueueDelegate Methods
-
-- (void)upNextQueue:(AGAudioPlayerUpNextQueue *)queue removedItem:(id<AGAudioItem>)item fromIndex:(NSInteger)idx
-{
-    
-}
-
-- (void)upNextQueueRemovedAllItems:(AGAudioPlayerUpNextQueue *)queue
-{
-    
 }
 
 @end
