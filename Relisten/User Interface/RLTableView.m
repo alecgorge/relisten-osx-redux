@@ -18,4 +18,20 @@
     [super drawGridInClipRect:finalClipRect];
 }
 
+- (void)keyDown:(NSEvent *)theEvent
+{
+    unichar key = [[theEvent charactersIgnoringModifiers] characterAtIndex:0];
+    if(key == NSDeleteCharacter)
+    {
+        
+        [self.deleteDelegate deleteKeyPressedAtIndex:[self selectedRow]];
+        return;
+    }
+    else
+    {
+        [super keyDown:theEvent];
+    }
+    
+}
+
 @end

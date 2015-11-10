@@ -133,7 +133,7 @@
 {
     self.nowPlayingButton.enabled = YES;
     self.currentlyPlayingShow = show;
-    self.currentlyPlayingArtist = [IGAPIClient sharedInstance].artist;
+    self.currentlyPlayingArtist = [IGAPIClient sharedInstance].artist; // TODO. won't work with multi-artist queue
     
     [self.sourceAndTracksViewController showTrackVisualizationForTrackIndex:index andTrack:track];
     [self.showsViewController setCurrentlyPLayingShow:show];

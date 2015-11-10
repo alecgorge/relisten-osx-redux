@@ -17,6 +17,9 @@
 		C11B1C8D1BDF6FFD001851DE /* IguanaMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B1C8C1BDF6FFD001851DE /* IguanaMediaItem.m */; };
 		C11B1CA81BE68C35001851DE /* RLShowReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B1CA61BE68C35001851DE /* RLShowReviewsViewController.m */; };
 		C11B1CA91BE68C35001851DE /* RLShowReviewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C11B1CA71BE68C35001851DE /* RLShowReviewsViewController.xib */; };
+		C11DC32F1BF1331E007152D6 /* RLPlaybackQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C11DC32D1BF1331E007152D6 /* RLPlaybackQueueViewController.m */; };
+		C11DC3301BF1331E007152D6 /* RLPlaybackQueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C11DC32E1BF1331E007152D6 /* RLPlaybackQueueViewController.xib */; };
+		C11DC3331BF14066007152D6 /* RLPlaybackQueueCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11DC3321BF14066007152D6 /* RLPlaybackQueueCellView.m */; };
 		C11FA5181BD2194000C4FDEE /* RLAudioPlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C11FA5161BD2194000C4FDEE /* RLAudioPlaybackViewController.m */; };
 		C11FA5191BD2194000C4FDEE /* RLAudioPlaybackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C11FA5171BD2194000C4FDEE /* RLAudioPlaybackViewController.xib */; };
 		C15B8A201BBC5B3B00CB2F92 /* RLTrackTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C15B8A1F1BBC5B3B00CB2F92 /* RLTrackTableCellView.m */; };
@@ -65,6 +68,11 @@
 		C11B1CA51BE68C35001851DE /* RLShowReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLShowReviewsViewController.h; sourceTree = "<group>"; };
 		C11B1CA61BE68C35001851DE /* RLShowReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLShowReviewsViewController.m; sourceTree = "<group>"; };
 		C11B1CA71BE68C35001851DE /* RLShowReviewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLShowReviewsViewController.xib; sourceTree = "<group>"; };
+		C11DC32C1BF1331E007152D6 /* RLPlaybackQueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLPlaybackQueueViewController.h; sourceTree = "<group>"; };
+		C11DC32D1BF1331E007152D6 /* RLPlaybackQueueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLPlaybackQueueViewController.m; sourceTree = "<group>"; };
+		C11DC32E1BF1331E007152D6 /* RLPlaybackQueueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLPlaybackQueueViewController.xib; sourceTree = "<group>"; };
+		C11DC3311BF14066007152D6 /* RLPlaybackQueueCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLPlaybackQueueCellView.h; sourceTree = "<group>"; };
+		C11DC3321BF14066007152D6 /* RLPlaybackQueueCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLPlaybackQueueCellView.m; sourceTree = "<group>"; };
 		C11FA5151BD2194000C4FDEE /* RLAudioPlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLAudioPlaybackViewController.h; sourceTree = "<group>"; };
 		C11FA5161BD2194000C4FDEE /* RLAudioPlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLAudioPlaybackViewController.m; sourceTree = "<group>"; };
 		C11FA5171BD2194000C4FDEE /* RLAudioPlaybackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLAudioPlaybackViewController.xib; sourceTree = "<group>"; };
@@ -191,6 +199,11 @@
 				C11FA5151BD2194000C4FDEE /* RLAudioPlaybackViewController.h */,
 				C11FA5161BD2194000C4FDEE /* RLAudioPlaybackViewController.m */,
 				C11FA5171BD2194000C4FDEE /* RLAudioPlaybackViewController.xib */,
+				C11DC32C1BF1331E007152D6 /* RLPlaybackQueueViewController.h */,
+				C11DC32D1BF1331E007152D6 /* RLPlaybackQueueViewController.m */,
+				C11DC32E1BF1331E007152D6 /* RLPlaybackQueueViewController.xib */,
+				C11DC3311BF14066007152D6 /* RLPlaybackQueueCellView.h */,
+				C11DC3321BF14066007152D6 /* RLPlaybackQueueCellView.m */,
 			);
 			path = "Audio Playback";
 			sourceTree = "<group>";
@@ -385,6 +398,7 @@
 				C10835A11BD094D400A22755 /* star3.png in Resources */,
 				C18AEAE11BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib in Resources */,
 				C187C6951BB759D900F1778C /* star.png in Resources */,
+				C11DC3301BF1331E007152D6 /* RLPlaybackQueueViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +460,7 @@
 				C18AEAC71BB4A7F600A6D182 /* IGYear.m in Sources */,
 				C18AEAE01BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m in Sources */,
 				C187C67F1BB4FA7600F1778C /* RLYearTableCellView.m in Sources */,
+				C11DC32F1BF1331E007152D6 /* RLPlaybackQueueViewController.m in Sources */,
 				C18AEAC11BB4A7F600A6D182 /* IGShow.m in Sources */,
 				C18AEAC31BB4A7F600A6D182 /* IGTrack.m in Sources */,
 				C18AEAC61BB4A7F600A6D182 /* IGVenue.m in Sources */,
@@ -462,6 +477,7 @@
 				C15B8A201BBC5B3B00CB2F92 /* RLTrackTableCellView.m in Sources */,
 				C116DFB01BB09EEE006A9F6C /* AppDelegate.m in Sources */,
 				C18AEAC01BB4A7F600A6D182 /* IGPlaylist.m in Sources */,
+				C11DC3331BF14066007152D6 /* RLPlaybackQueueCellView.m in Sources */,
 				C11B1C8D1BDF6FFD001851DE /* IguanaMediaItem.m in Sources */,
 				C11B1CA81BE68C35001851DE /* RLShowReviewsViewController.m in Sources */,
 				C18AEAD61BB4E6BB00A6D182 /* RLSplitView.m in Sources */,

@@ -11,6 +11,7 @@
 #import <ObjectiveSugar/ObjectiveSugar.h>
 #import <AGAudioPlayer/AGAudioPlayer.h>
 #import <CoreAudio/CoreAudio.h>
+#import "RLPlaybackQueueViewController.h"
 #import "IguanaMediaItem.h"
 #import "IGAPIClient.h"
 
@@ -21,7 +22,7 @@
 
 @end
 
-@interface RLAudioPlaybackViewController : NSViewController <AGAudioPlayerDelegate>
+@interface RLAudioPlaybackViewController : NSViewController <AGAudioPlayerDelegate, AGAudioPlayerUpNextQueueDelegate>
 
 @property (nonatomic, weak) id<RLAudioPlaybackDelegate> delegate;
 

@@ -8,6 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
+@protocol RLTableViewDeleteDelegate <NSObject>
+
+- (void)deleteKeyPressedAtIndex:(NSInteger)index;
+
+@end
+
 @interface RLTableView : NSTableView
+
+@property (nonatomic, weak) id<RLTableViewDeleteDelegate> deleteDelegate;
 
 @end

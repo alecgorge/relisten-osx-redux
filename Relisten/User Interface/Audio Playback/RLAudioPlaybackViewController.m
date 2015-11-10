@@ -24,10 +24,21 @@
 @property (nonatomic, strong) AGAudioPlayer *audioPlayer;
 @property (nonatomic, strong) AGAudioPlayerUpNextQueue *queue;
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
+@property (nonatomic, strong) RLPlaybackQueueViewController *queueViewController;
 
 @end
 
 @implementation RLAudioPlaybackViewController
+
+- (RLPlaybackQueueViewController *)queueViewController
+{
+    if(!_queueViewController)
+    {
+        _queueViewController = [[RLPlaybackQueueViewController alloc] initWithAudioPlayer:self.audioPlayer];
+    }
+    
+    return _queueViewController;
+}
 
 - (void)viewDidLoad
 {
@@ -36,6 +47,7 @@
     
     // Set up AudioPlayer
     self.queue = [[AGAudioPlayerUpNextQueue alloc] init];
+    self.queue.delegate = self;
     self.audioPlayer = [[AGAudioPlayer alloc] initWithQueue:self.queue];
     self.audioPlayer.delegate = self;
     
@@ -73,10 +85,23 @@
 -(void)updateCurrentTrackInfo:(IguanaMediaItem *)mediaItem
 {
     self.trackTitleTextField.stringValue = mediaItem.iguanaTrack.title;
+    // TODO CHANGE ARTIST FOR MULTI-ARTIST
     NSString *subtitleText = [NSString stringWithFormat:@"%@ - %@ - %@ - %@", IGAPIClient.sharedInstance.artist.name, mediaItem.iguanaTrack.show.displayDate, mediaItem.iguanaShow.venue.name, mediaItem.iguanaShow.venue.city];
     self.trackSubtitleTextField.stringValue = subtitleText;
     self.trackEndingTImeTextField.stringValue = [self.durationFormatter stringFromTimeInterval:mediaItem.iguanaTrack.length];
     self.trackSlider.maxValue = mediaItem.iguanaTrack.length;
+    self.trackSlider.minValue = 0.0;
+}
+
+-(void)clearTrackInfo
+{
+    [self.audioPlayer stop];
+    self.trackTitleTextField.stringValue = @"";
+    self.trackSubtitleTextField.stringValue = @"";
+    self.trackBeginningTimeTextField.stringValue = @"00:00:00";
+    self.trackEndingTImeTextField.stringValue = @"00:00:00";
+    self.trackSlider.doubleValue = 0.0;
+    self.trackSlider.maxValue = 0.0;
     self.trackSlider.minValue = 0.0;
 }
 
@@ -118,11 +143,22 @@
 
 - (IBAction)volumeSliderMoved:(id)sender
 {
-    NSSlider *slider = sender;
-    double value = [slider doubleValue];
+//    NSSlider *slider = sender;
+//    double value = [slider doubleValue];
 }
 
 #pragma mark - Queue Manipulation Methods
+
+- (IBAction)showPlaybackQueue:(id)sender
+{
+    NSPopover *popover = [[NSPopover alloc] init];
+    popover.behavior = NSPopoverBehaviorTransient;
+    popover.animates = YES;
+    popover.contentSize = NSMakeSize(400, 300);
+    popover.contentViewController = self.queueViewController;
+    
+    [popover showRelativeToRect:NSZeroRect ofView:sender preferredEdge:NSMaxYEdge];
+}
 
 #pragma mark - AGAudioPlayerDelegate Methods
 
@@ -159,6 +195,19 @@
     }
     
     [self updatePlayPauseButton];
+    [self.queueViewController reloadData];
+}
+
+#pragma mark - AGAudioPlayerUpNextQueueDelegate Methods
+
+- (void)upNextQueue:(AGAudioPlayerUpNextQueue *)queue removedItem:(id<AGAudioItem>)item fromIndex:(NSInteger)idx
+{
+    
+}
+
+- (void)upNextQueueRemovedAllItems:(AGAudioPlayerUpNextQueue *)queue
+{
+    
 }
 
 @end
