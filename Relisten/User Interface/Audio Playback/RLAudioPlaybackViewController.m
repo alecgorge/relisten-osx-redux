@@ -179,6 +179,7 @@
         IguanaMediaItem *currentMediaItem = (IguanaMediaItem *)self.audioPlayer.currentItem;
         [self updateCurrentTrackInfo:currentMediaItem];
         [self.delegate trackPlayedAtIndex:self.audioPlayer.currentIndex forTrack:currentMediaItem.iguanaTrack andShow:currentMediaItem.iguanaShow];
+        [self.queueViewController reloadData];
     }
     else if(reason == AGAudioPlayerTrackStopped)
     {
@@ -188,6 +189,7 @@
     {
          IguanaMediaItem *currentMediaItem = (IguanaMediaItem *)self.audioPlayer.currentItem;
         [self.delegate trackPausedAtIndex:self.audioPlayer.currentIndex forTrack:currentMediaItem.iguanaTrack andShow:currentMediaItem.iguanaShow];
+        [self.queueViewController reloadData];
     }
     else if(reason == AGAudioPlayerError)
     {
@@ -195,7 +197,6 @@
     }
     
     [self updatePlayPauseButton];
-    [self.queueViewController reloadData];
 }
 
 #pragma mark - AGAudioPlayerUpNextQueueDelegate Methods
