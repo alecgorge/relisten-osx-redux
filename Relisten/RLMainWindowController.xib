@@ -137,7 +137,7 @@
                     <toolbarItem implicitItemIdentifier="7B1FDB71-7035-4E6D-A9C7-C56FC2BB1FE5" label="Custom View" paletteLabel="Custom View" image="NSRefreshTemplate" id="8Ym-k0-TP1">
                         <nil key="toolTip"/>
                         <size key="minSize" width="21" height="21"/>
-                        <size key="maxSize" width="42" height="21"/>
+                        <size key="maxSize" width="25" height="21"/>
                         <button key="view" verticalHuggingPriority="750" id="BfT-zj-uCu">
                             <rect key="frame" x="26" y="14" width="25" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>

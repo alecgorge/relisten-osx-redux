@@ -102,21 +102,18 @@
 -(void)yearSelected:(IGYear *)year
 {
     [self.sourceAndTracksViewController disableSourceSelection];
-    [self.showsViewController clearAllShows];
     [self.showsViewController fetchShowsForYear:year withProgressIndicator:self.progressIndicator];
 }
 
 -(void)venueSelected:(IGVenue *)venue
 {
     [self.sourceAndTracksViewController disableSourceSelection];
-    [self.showsViewController clearAllShows];
     [self.showsViewController fetchShowsForVenue:venue withProgressIndicator:self.progressIndicator];
 }
 
 -(void)topShowsSelected
 {
     [self.sourceAndTracksViewController disableSourceSelection];
-    [self.showsViewController clearAllShows];
     [self.showsViewController fetchTopShowsWithProgressIndicator:self.progressIndicator];
 }
 
