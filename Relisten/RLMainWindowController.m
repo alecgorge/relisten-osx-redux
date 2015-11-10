@@ -33,6 +33,7 @@
     [super windowDidLoad];
     
     self.window.titleVisibility = NSWindowTitleHidden;
+    self.window.titlebarAppearsTransparent = YES;
     self.window.collectionBehavior = NSWindowCollectionBehaviorFullScreenPrimary;  
     self.splitView.delegate = self;
     
