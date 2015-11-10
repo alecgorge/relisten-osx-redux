@@ -9,6 +9,7 @@
                 <outlet property="artistsPopupButton" destination="TF2-3E-ynh" id="PDb-Ih-rUU"/>
                 <outlet property="audioPlayBackView" destination="FTW-Ye-BXq" id="9hg-bq-eDi"/>
                 <outlet property="nowPlayingButton" destination="9Bn-Bp-hJx" id="Bhs-9h-dT1"/>
+                <outlet property="progressIndicator" destination="EEA-iA-hDj" id="mQ2-tT-lx8"/>
                 <outlet property="splitView" destination="gff-DE-xYh" id="08t-ED-ZGl"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
@@ -136,12 +137,12 @@
                     <toolbarItem implicitItemIdentifier="7B1FDB71-7035-4E6D-A9C7-C56FC2BB1FE5" label="Custom View" paletteLabel="Custom View" image="NSRefreshTemplate" id="8Ym-k0-TP1">
                         <nil key="toolTip"/>
                         <size key="minSize" width="21" height="21"/>
-                        <size key="maxSize" width="32" height="21"/>
+                        <size key="maxSize" width="42" height="21"/>
                         <button key="view" verticalHuggingPriority="750" id="BfT-zj-uCu">
-                            <rect key="frame" x="23" y="14" width="31" height="21"/>
+                            <rect key="frame" x="26" y="14" width="25" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <animations/>
-                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRefreshTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3pT-DC-mKU">
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRefreshTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3pT-DC-mKU">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
@@ -150,10 +151,21 @@
                             </connections>
                         </button>
                     </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="1894F1EA-3A9A-49AC-AB87-E960F96BA832" label="Custom View" paletteLabel="Custom View" tag="-1" id="Mti-4f-bgK">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="16" height="16"/>
+                        <size key="maxSize" width="16" height="16"/>
+                        <progressIndicator key="view" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="EEA-iA-hDj">
+                            <rect key="frame" x="30" y="14" width="16" height="16"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <animations/>
+                        </progressIndicator>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="38h-ZA-Rq5"/>
                     <toolbarItem reference="8Ym-k0-TP1"/>
+                    <toolbarItem reference="Mti-4f-bgK"/>
                     <toolbarItem reference="LbV-E5-LG9"/>
                     <toolbarItem reference="uvg-BD-TKb"/>
                     <toolbarItem reference="LbV-E5-LG9"/>

@@ -14,6 +14,7 @@
 @property (weak) IBOutlet NSPopUpButton *artistsPopupButton;
 @property (weak) IBOutlet NSView *audioPlayBackView;
 @property (weak) IBOutlet NSButton *nowPlayingButton;
+@property (weak) IBOutlet NSProgressIndicator *progressIndicator;
 
 @property (nonatomic, strong) RLArtistsPopupButtonManager *artistPopupManager;
 @property (nonatomic, strong) RLYearsVenuesTopShowsViewController *yearsViewController;
@@ -58,7 +59,7 @@
         [a subscribeNext:^(IGArtist *artist) {
             
             [IGAPIClient sharedInstance].artist = artist;
-            [self.yearsViewController fetchYears];
+            [self.yearsViewController fetchYearsWithProgressIndicator:self.progressIndicator];
             [self.showsViewController clearAllShows];
             [self.sourceAndTracksViewController disableSourceSelection];
             [NSUserDefaults.standardUserDefaults setObject:artist.slug
@@ -67,7 +68,7 @@
         }];
     }];
     
-    [self.artistPopupManager refresh];
+    [self.artistPopupManager refreshWithProgressIndictor:self.progressIndicator];
     
     // Set up playback controls
     self.audioPlayBackController = [[RLAudioPlaybackViewController alloc] initWithNibName:@"RLAudioPlaybackViewController" bundle:nil];
@@ -83,16 +84,16 @@
 {
     [self.artistPopupManager selectArtist:self.currentlyPlayingArtist];
     IGAPIClient.sharedInstance.artist = self.currentlyPlayingArtist;
-    [self.sourceAndTracksViewController fetchTracksForShow:self.currentlyPlayingShow];
-    [self.yearsViewController fetchYears];
+    [self.sourceAndTracksViewController fetchTracksForShow:self.currentlyPlayingShow withProgressIndicator:self.progressIndicator];
+    [self.yearsViewController fetchYearsWithProgressIndicator:self.progressIndicator];
     IGYear *year = [[IGYear alloc] init];
     year.year = self.currentlyPlayingShow.year;
-    [self.showsViewController fetchShowsForYear:year];
+    [self.showsViewController fetchShowsForYear:year withProgressIndicator:self.progressIndicator];
 }
 
 - (IBAction)refreshArtists:(id)sender
 {
-    [self.artistPopupManager refresh];
+    [self.artistPopupManager refreshWithProgressIndictor:self.progressIndicator];
 }
 
 #pragma mark - RLYearsVenuesTopShowsSelectionDelegate Handling
@@ -101,28 +102,28 @@
 {
     [self.sourceAndTracksViewController disableSourceSelection];
     [self.showsViewController clearAllShows];
-    [self.showsViewController fetchShowsForYear:year];
+    [self.showsViewController fetchShowsForYear:year withProgressIndicator:self.progressIndicator];
 }
 
 -(void)venueSelected:(IGVenue *)venue
 {
     [self.sourceAndTracksViewController disableSourceSelection];
     [self.showsViewController clearAllShows];
-    [self.showsViewController fetchShowsForVenue:venue];
+    [self.showsViewController fetchShowsForVenue:venue withProgressIndicator:self.progressIndicator];
 }
 
 -(void)topShowsSelected
 {
     [self.sourceAndTracksViewController disableSourceSelection];
     [self.showsViewController clearAllShows];
-    [self.showsViewController fetchTopShows];
+    [self.showsViewController fetchTopShowsWithProgressIndicator:self.progressIndicator];
 }
 
 #pragma mark - RLShowSelectedDelegate Handling
 
 -(void)showSelected:(IGShow *)show
 {
-    [self.sourceAndTracksViewController fetchTracksForShow:show];
+    [self.sourceAndTracksViewController fetchTracksForShow:show withProgressIndicator:self.progressIndicator];
 }
 
 #pragma mark - RLTrackSelectedDelegate Handling

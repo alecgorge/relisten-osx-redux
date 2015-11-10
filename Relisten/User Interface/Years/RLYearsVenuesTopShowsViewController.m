@@ -49,8 +49,9 @@
     self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
 }
 
-- (void)fetchYears
+- (void)fetchYearsWithProgressIndicator:(NSProgressIndicator *)indicator
 {
+    [indicator startAnimation:nil];
     self.years = @[];
     [self.yearsTableView reloadData];
     [IGAPIClient.sharedInstance years:^(NSArray *years) {
@@ -58,7 +59,7 @@
         [self.yearsTableView reloadData];
     }];
     
-    [self fetchVenues];
+    [self fetchVenuesWithProgressIndicator:indicator];
     
     self.topShowsTextField.stringValue = [NSString stringWithFormat:@"%@, top shows", IGAPIClient.sharedInstance.artist.name];
     
@@ -66,13 +67,14 @@
     [self.tabView selectTabViewItemAtIndex:ALL_YEARS];
 }
 
--(void)fetchVenues
+-(void)fetchVenuesWithProgressIndicator:(NSProgressIndicator *)indicator
 {
     self.venues = @[];
     [self.venuesTableView reloadData];
     [IGAPIClient.sharedInstance venues:^(NSArray * venues) {
         self.venues = venues;
         [self.venuesTableView reloadData];
+        [indicator stopAnimation:nil];
     }];
 }
 

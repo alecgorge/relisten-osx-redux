@@ -23,7 +23,7 @@
 
 @property (nonatomic, weak) id<RLTrackSelectedDelegate> delegate;
 
--(void)fetchTracksForShow:(IGShow *)show;
+-(void)fetchTracksForShow:(IGShow *)show withProgressIndicator:(NSProgressIndicator *)indicator;
 -(void)disableSourceSelection;
 -(void)showTrackVisualizationForTrackIndex:(NSInteger)index andTrack:(IGTrack *)track;
 -(void)pauseTrackVisualizationForTrackIndex:(NSInteger)index andTrack:(IGTrack *)track;

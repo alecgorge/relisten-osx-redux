@@ -71,8 +71,9 @@
     self.taperTextField.stringValue = self.selectedShow.taper;
 }
 
--(void)fetchTracksForShow:(IGShow *)show
+-(void)fetchTracksForShow:(IGShow *)show withProgressIndicator:(NSProgressIndicator *)indicator
 {
+    [indicator startAnimation:nil];
     [IGAPIClient.sharedInstance showsOn:show.displayDate
                                 success:^(NSArray *shows) {
                                     
@@ -81,6 +82,7 @@
                                     [self populatePopupButtonWithSources:self.allShows];
                                     [self setLineageAndTaperInfo];
                                     [self.tableView reloadData];
+                                    [indicator stopAnimation:nil];
                                 }];
 }
 

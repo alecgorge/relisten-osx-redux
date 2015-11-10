@@ -50,9 +50,10 @@
     self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
 }
 
-- (void)fetchShowsForYear:(IGYear *)year
+- (void)fetchShowsForYear:(IGYear *)year withProgressIndicator:(NSProgressIndicator *)indicator
 {
     [self clearAllShows];
+    [indicator startAnimation:nil];
     [IGAPIClient.sharedInstance year:year.year success:^(IGYear *yr) {
         
         NSArray *shows = yr.shows;
@@ -60,27 +61,32 @@
         NSArray *descriptors = [NSArray arrayWithObject:valueDescriptor];
         self.allShows = [shows sortedArrayUsingDescriptors:descriptors];
         [self reloadShows];
+        [indicator stopAnimation:nil];
     }];
 }
 
-- (void)fetchShowsForVenue:(IGVenue *)venue
+- (void)fetchShowsForVenue:(IGVenue *)venue withProgressIndicator:(NSProgressIndicator *)indicator
 {
     [self clearAllShows];
+    [indicator startAnimation:nil];
     [IGAPIClient.sharedInstance venue:venue success:^(IGVenue *venue) {
         NSArray *shows = venue.shows;
         NSSortDescriptor *valueDescriptor = [[NSSortDescriptor alloc] initWithKey:@"averageRating" ascending:NO];
         NSArray *descriptors = [NSArray arrayWithObject:valueDescriptor];
         self.allShows = [shows sortedArrayUsingDescriptors:descriptors];
         [self reloadShows];
+        [indicator stopAnimation:nil];
     }];
 }
 
-- (void)fetchTopShows
+- (void)fetchTopShowsWithProgressIndicator:(NSProgressIndicator *)indicator
 {
     [self clearAllShows];
+    [indicator startAnimation:nil];
     [IGAPIClient.sharedInstance topShows:^(NSArray *topShows) {
         self.allShows = topShows;
         [self reloadShows];
+        [indicator stopAnimation:nil];
     }];
 }
 

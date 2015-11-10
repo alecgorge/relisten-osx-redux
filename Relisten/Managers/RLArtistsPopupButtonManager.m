@@ -45,8 +45,9 @@
     [self.artistPopupButton selectItemWithTitle:artist.name];
 }
 
-- (void)refresh
+- (void)refreshWithProgressIndictor:(NSProgressIndicator *)indicator
 {
+    [indicator startAnimation:nil];
     [IGAPIClient.sharedInstance artists:^(NSArray *artists)
     {
         self.artists = [artists sortedArrayUsingComparator:^NSComparisonResult(IGArtist *obj1, IGArtist *obj2) {
@@ -73,6 +74,8 @@
                 [self.artistPopupButton.rac_command execute:self];
             }
         }
+        
+        [indicator stopAnimation:nil];
     }];
 }
 

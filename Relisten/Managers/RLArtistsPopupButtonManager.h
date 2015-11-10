@@ -17,7 +17,7 @@
 @property (nonatomic) RACCommand *artistChanged;
 
 - (instancetype)initWithPopUpButton:(NSPopUpButton *)popupButton;
-- (void)refresh;
+- (void)refreshWithProgressIndictor:(NSProgressIndicator *)indicator;
 - (void)selectArtist:(IGArtist *)artist;
 
 @end
