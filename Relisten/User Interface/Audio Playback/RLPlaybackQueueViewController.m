@@ -88,18 +88,25 @@
 - (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
 {
     self.draggedRow = [rowIndexes firstIndex]; // only one row allowed for drag and drop
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:rowIndexes];
+    [pboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:self];
+    [pboard setData:data forType:NSStringPboardType];
     return YES;
 }
 
 - (NSDragOperation)tableView:(NSTableView *)aTableView validateDrop:(id<NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)operation
 {
-    NSLog(@"VALIDATE DROP");
-    return NSDragOperationEvery;
+    if(operation == NSTableViewDropAbove)
+        return NSDragOperationEvery;
+    else
+        return NSDragOperationNone;
 }
 
 - (BOOL)tableView:(NSTableView *)aTableView acceptDrop:(id<NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)operation
 {
-        NSLog(@"ACCEPT DROP");
+    [self.audioPlayer.queue moveItemAtIndex:self.draggedRow toIndex:row];
+    [self.tableView reloadData];
+    
     return YES;
 }
 
@@ -127,11 +134,11 @@
         
         if(self.audioPlayer.isPlaying)
         {
-            [cellView.equilizerView startAnimated:NO];
+            [cellView.equilizerView startAnimated:YES];
         }
         else
         {
-            [cellView.equilizerView pauseAnimated:NO];
+            [cellView.equilizerView pauseAnimated:YES];
         }
     }
     else

@@ -43,7 +43,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="51" rowSizeStyle="automatic" viewBased="YES" id="IYn-8A-VwF" customClass="RLTableView">
-                                <rect key="frame" x="0.0" y="0.0" width="478" height="231"/>
+                                <rect key="frame" x="0.0" y="0.0" width="478" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -72,7 +72,7 @@
                                                         <rect key="frame" x="25" y="17" width="67" height="14"/>
                                                         <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Artist Name" drawsBackground="YES" id="HjZ-bi-kHK">
-                                                            <font key="font" metaFont="system" size="11"/>
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" red="0.98521872109999997" green="0.98933997529999995" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                                         </textFieldCell>
@@ -81,7 +81,7 @@
                                                         <rect key="frame" x="25" y="3" width="71" height="14"/>
                                                         <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Show details" drawsBackground="YES" id="KI5-uz-eqP">
-                                                            <font key="font" metaFont="system" size="11"/>
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                                         </textFieldCell>
@@ -146,6 +146,10 @@
                                         </prototypeCellViews>
                                     </tableColumn>
                                 </tableColumns>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="spe-eM-uvf"/>
+                                    <outlet property="delegate" destination="-2" id="x1D-8R-Yys"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>
