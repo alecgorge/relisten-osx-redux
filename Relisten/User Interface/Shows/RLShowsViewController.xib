@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="277" height="465"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="57" horizontalPageScroll="10" verticalLineScroll="57" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRv-w6-gED">
+                                    <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="57" horizontalPageScroll="10" verticalLineScroll="57" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRv-w6-gED">
                                         <rect key="frame" x="0.0" y="0.0" width="277" height="461"/>
                                         <clipView key="contentView" drawsBackground="NO" id="NLD-hh-VMz">
                                             <rect key="frame" x="0.0" y="0.0" width="277" height="461"/>

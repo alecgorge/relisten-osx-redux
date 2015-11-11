@@ -97,6 +97,14 @@
     [self.artistPopupManager refreshWithProgressIndictor:self.progressIndicator];
 }
 
+- (IBAction)randomShow:(id)sender
+{
+    [self.showsViewController fetchRandomShowWithProgressIndicator:self.progressIndicator andShow:^(IGShow *show)
+    {
+        [self.sourceAndTracksViewController fetchTracksForShow:show withProgressIndicator:self.progressIndicator];
+    }];
+}
+
 #pragma mark - RLYearsVenuesTopShowsSelectionDelegate Handling
 
 -(void)yearSelected:(IGYear *)year

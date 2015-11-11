@@ -119,6 +119,23 @@
                             </connections>
                         </button>
                     </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="F1E3AF1C-A288-4436-BC0E-BD639E92D24F" label="Custom View" paletteLabel="Custom View" id="siJ-x3-WDu" userLabel="Now Playing Button">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="81" height="19"/>
+                        <size key="maxSize" width="120" height="32"/>
+                        <button key="view" verticalHuggingPriority="750" id="goa-My-HFl">
+                            <rect key="frame" x="0.0" y="14" width="99" height="26"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <animations/>
+                            <buttonCell key="cell" type="roundTextured" title="Random Show" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="BV1-77-3ci">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <connections>
+                            <action selector="randomShow:" target="-2" id="qJp-lh-36x"/>
+                        </connections>
+                    </toolbarItem>
                     <toolbarItem implicitItemIdentifier="3D57F362-DF48-435D-90F2-CCB6AB6695D7" label="Custom View" paletteLabel="Custom View" id="uvg-BD-TKb">
                         <nil key="toolTip"/>
                         <size key="minSize" width="38" height="17"/>
@@ -169,6 +186,7 @@
                     <toolbarItem reference="LbV-E5-LG9"/>
                     <toolbarItem reference="uvg-BD-TKb"/>
                     <toolbarItem reference="LbV-E5-LG9"/>
+                    <toolbarItem reference="siJ-x3-WDu"/>
                     <toolbarItem reference="fkb-aA-siQ"/>
                 </defaultToolbarItems>
             </toolbar>

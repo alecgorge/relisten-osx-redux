@@ -90,6 +90,21 @@
     }];
 }
 
+-(void)fetchRandomShowWithProgressIndicator:(NSProgressIndicator *)indicator andShow:(void (^)(IGShow *))success
+{
+    [self clearAllShows];
+    [indicator startAnimation:nil];
+    [IGAPIClient.sharedInstance randomShow:^(NSArray *randomShow) {
+        self.allShows = [NSArray arrayWithObject:randomShow[0]];
+        [self reloadShows];
+        [self.tabView selectTabViewItemAtIndex:ALL_SHOWS];
+        
+        success(randomShow[0]);
+        
+        [indicator stopAnimation:nil];
+    }];
+}
+
 -(void)reloadShows
 {
     [self.allShowsTableView reloadData];
@@ -189,8 +204,8 @@
     starRating.displayMode = EDStarRatingDisplayAccurate;
     starRating.rating= show.averageRating;
 
-    cellView.venueNameTextField.stringValue = show.venueName;
-    cellView.venueCityTextField.stringValue = show.venueCity;
+    cellView.venueNameTextField.stringValue = show.venueName ? show.venueName : @"Unknown";
+    cellView.venueCityTextField.stringValue = show.venueCity ? show.venueCity : @"Unknown";
     cellView.durationTextField.stringValue = [self.durationFormatter stringFromTimeInterval:show.duration];
     
     NSString *recordings;
@@ -209,14 +224,17 @@
     NSTableView *tableview = notification.object;
     NSInteger row = [tableview selectedRow];
     
-    IGShow *show;
+    if(row > -1 && row < [tableview numberOfRows])
+    {
+        IGShow *show;
     
-    if(tableview == self.allShowsTableView)
-        show = self.allShows[row];
-    else
-        show = self.soundboardShows[row];
+        if(tableview == self.allShowsTableView)
+            show = self.allShows[row];
+        else
+            show = self.soundboardShows[row];
     
-    [self.delegate showSelected:show];
+        [self.delegate showSelected:show];
+    }
 }
 
 -(BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex
