@@ -204,8 +204,8 @@
     starRating.displayMode = EDStarRatingDisplayAccurate;
     starRating.rating= show.averageRating;
 
-    cellView.venueNameTextField.stringValue = show.venueName ? show.venueName : @"Unknown";
-    cellView.venueCityTextField.stringValue = show.venueCity ? show.venueCity : @"Unknown";
+    cellView.venueNameTextField.stringValue = show.venueName ? show.venueName : (show.venue ? show.venue.name : @"Unknown");
+    cellView.venueCityTextField.stringValue = show.venueCity ? show.venueCity : (show.venue ? show.venue.city : @"Unknown");
     cellView.durationTextField.stringValue = [self.durationFormatter stringFromTimeInterval:show.duration];
     
     NSString *recordings;
