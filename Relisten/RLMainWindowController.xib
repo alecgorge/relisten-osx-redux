@@ -21,7 +21,7 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="852" height="455"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
-            <view key="contentView" id="se5-gp-TjO">
+            <view key="contentView" id="se5-gp-TjO" customClass="NSVisualEffectView">
                 <rect key="frame" x="0.0" y="0.0" width="852" height="455"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>

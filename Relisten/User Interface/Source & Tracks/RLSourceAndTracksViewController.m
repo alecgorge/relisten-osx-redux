@@ -194,7 +194,7 @@
         cellView.trackNumberTextField.hidden = NO;
     }
     
-    cellView.trackNumberTextField.stringValue = [NSString stringWithFormat:@"%ld.", (long)row + 1];
+    cellView.trackNumberTextField.stringValue = [NSString stringWithFormat:@"%ld", (long)row + 1];
     cellView.trackNameTextField.stringValue = track.title;
     
     cellView.trackDurationTextField.stringValue = [self.durationFormatter stringFromTimeInterval:track.length];

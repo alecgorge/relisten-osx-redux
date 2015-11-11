@@ -45,8 +45,8 @@
     self.tabView.delegate = self;
     [self.segmentedControl setSelected:YES forSegment:ALL_YEARS];
     
-    self.view.wantsLayer = YES;
-    self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
+   // self.view.wantsLayer = YES;
+    //self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
 }
 
 - (void)fetchYearsWithProgressIndicator:(NSProgressIndicator *)indicator
