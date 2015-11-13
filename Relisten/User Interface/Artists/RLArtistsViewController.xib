@@ -36,6 +36,7 @@
                     </searchFieldCell>
                     <connections>
                         <action selector="searchFieldUpdated:" target="-2" id="5lN-7j-h0x"/>
+                        <outlet property="delegate" destination="-2" id="OJl-AX-Ngm"/>
                     </connections>
                 </searchField>
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="48" horizontalPageScroll="10" verticalLineScroll="48" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dz-dK-M1c">

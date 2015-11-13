@@ -81,6 +81,7 @@
 
 - (IBAction)showNowPlayingShow:(id)sender
 {
+    [self.artistButton setTitle:self.currentlyPlayingArtist.name];
     [self.artistViewController setSelectedArtist:self.currentlyPlayingArtist];
     IGAPIClient.sharedInstance.artist = self.currentlyPlayingArtist;
     [self.sourceAndTracksViewController fetchTracksForShow:self.currentlyPlayingShow withProgressIndicator:self.progressIndicator];

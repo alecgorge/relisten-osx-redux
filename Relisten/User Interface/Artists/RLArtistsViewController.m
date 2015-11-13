@@ -94,6 +94,21 @@
     }
 }
 
+//- (BOOL)control:(NSControl *)control textView:(NSTextView *)textView doCommandBySelector:(SEL)commandSelector
+//{
+//    if([control isKindOfClass:[NSSearchField class]])
+//    {
+//        if( commandSelector == @selector(moveDown:))
+//        {
+//            NSTableRowView *rowView = [self.tableView rowViewAtRow:0 makeIfNecessary:NO];
+//            [rowView setSelected:YES];
+//            return YES;
+//        }
+//    }
+//
+//    return NO;
+//}
+
 #pragma mark - NSTableViewdataSource Methods
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
