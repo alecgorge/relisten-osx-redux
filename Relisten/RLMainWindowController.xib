@@ -123,9 +123,9 @@
                     <toolbarItem implicitItemIdentifier="9B24D526-A7D2-48B7-8C50-60522468AAEF" label="Custom View" paletteLabel="Custom View" id="mLN-iU-Cpu" userLabel="Now Playing Button">
                         <nil key="toolTip"/>
                         <size key="minSize" width="81" height="19"/>
-                        <size key="maxSize" width="185" height="32"/>
+                        <size key="maxSize" width="216" height="32"/>
                         <button key="view" verticalHuggingPriority="750" id="vub-WG-CZJ">
-                            <rect key="frame" x="0.0" y="14" width="180" height="26"/>
+                            <rect key="frame" x="0.0" y="14" width="200" height="26"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <animations/>
                             <buttonCell key="cell" type="roundTextured" title="Select Artist" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="Qo8-v3-PZJ">
