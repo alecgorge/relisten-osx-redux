@@ -108,6 +108,9 @@
                                                             </prototypeCellViews>
                                                         </tableColumn>
                                                     </tableColumns>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-2" id="cfc-uF-AKo"/>
+                                                    </connections>
                                                 </tableView>
                                             </subviews>
                                             <animations/>

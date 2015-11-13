@@ -12,6 +12,7 @@
 #import "IguanaMediaItem.h"
 #import "IGAPIClient.h"
 #import "RLTableView.h"
+#import "RLTableRowView.h"
 
 @interface RLPlaybackQueueViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate, RLTableViewDeleteDelegate>
 

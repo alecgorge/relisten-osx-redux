@@ -161,6 +161,11 @@
 
 #pragma mark - NSTableViewDelegate Methods
 
+- (NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row
+{
+    return [[RLTableRowView alloc] init];
+}
+
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
     return [self.selectedShow.tracks count];

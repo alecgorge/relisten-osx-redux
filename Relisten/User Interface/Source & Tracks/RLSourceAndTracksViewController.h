@@ -10,6 +10,7 @@
 #import <CMEqualizerIndicatorView/CMEqualizerIndicatorView.h>
 #import "RLTrackTableCellView.h"
 #import "RLTableView.h"
+#import "RLTableRowView.h"
 #import "IGAPIClient.h"
 #import "RLShowReviewsViewController.h"
 

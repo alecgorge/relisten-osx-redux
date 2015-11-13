@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "IGAPIClient.h"
 #import "RLArtistTableCellView.h"
+#import "RLTableRowView.h"
 
 @protocol RLArtistSelectionDelegate <NSObject>
 

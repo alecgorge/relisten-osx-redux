@@ -160,6 +160,11 @@
 
 #pragma mark - NSTableViewDelegate Methods
 
+- (NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row
+{
+    return [[RLTableRowView alloc] init];
+}
+
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     RLShowTableViewCell *cellView = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];

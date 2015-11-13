@@ -10,6 +10,7 @@
 #import "IGAPIClient.h"
 #import "RLTableView.h"
 #import "RLYearTableCellView.h"
+#import "RLTableRowView.h"
 
 @protocol RLYearsVenuesTopShowsSelectionDelegate <NSObject>
 

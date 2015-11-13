@@ -26,6 +26,7 @@
 		C171E8F91BF59A83003B12EB /* RLArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C171E8F71BF59A83003B12EB /* RLArtistsViewController.m */; };
 		C171E8FA1BF59A83003B12EB /* RLArtistsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C171E8F81BF59A83003B12EB /* RLArtistsViewController.xib */; };
 		C171E8FD1BF59E35003B12EB /* RLArtistTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C171E8FC1BF59E35003B12EB /* RLArtistTableCellView.m */; };
+		C171E9001BF5BF6E003B12EB /* RLTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C171E8FF1BF5BF6E003B12EB /* RLTableRowView.m */; };
 		C187C67F1BB4FA7600F1778C /* RLYearTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */; };
 		C187C6821BB5050400F1778C /* RLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C6811BB5050400F1778C /* RLTableView.m */; };
 		C187C68D1BB735C100F1778C /* RLShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C187C68B1BB735C100F1778C /* RLShowsViewController.m */; };
@@ -85,6 +86,8 @@
 		C171E8F81BF59A83003B12EB /* RLArtistsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLArtistsViewController.xib; sourceTree = "<group>"; };
 		C171E8FB1BF59E35003B12EB /* RLArtistTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLArtistTableCellView.h; sourceTree = "<group>"; };
 		C171E8FC1BF59E35003B12EB /* RLArtistTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLArtistTableCellView.m; sourceTree = "<group>"; };
+		C171E8FE1BF5BF6E003B12EB /* RLTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLTableRowView.h; sourceTree = "<group>"; };
+		C171E8FF1BF5BF6E003B12EB /* RLTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLTableRowView.m; sourceTree = "<group>"; };
 		C187C67D1BB4FA7600F1778C /* RLYearTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLYearTableCellView.h; sourceTree = "<group>"; };
 		C187C67E1BB4FA7600F1778C /* RLYearTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLYearTableCellView.m; sourceTree = "<group>"; };
 		C187C6801BB5050400F1778C /* RLTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLTableView.h; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */,
 				C187C6801BB5050400F1778C /* RLTableView.h */,
 				C187C6811BB5050400F1778C /* RLTableView.m */,
+				C171E8FE1BF5BF6E003B12EB /* RLTableRowView.h */,
+				C171E8FF1BF5BF6E003B12EB /* RLTableRowView.m */,
 				C171E8F51BF59A4D003B12EB /* Artists */,
 				C1AA2D791BBF3861000D75FC /* Years */,
 				C1AA2D7A1BBF3867000D75FC /* Shows */,
@@ -472,6 +477,7 @@
 				C18AEAC11BB4A7F600A6D182 /* IGShow.m in Sources */,
 				C18AEAC31BB4A7F600A6D182 /* IGTrack.m in Sources */,
 				C18AEAC61BB4A7F600A6D182 /* IGVenue.m in Sources */,
+				C171E9001BF5BF6E003B12EB /* RLTableRowView.m in Sources */,
 				C18AEABF1BB4A7F600A6D182 /* IGArtist.m in Sources */,
 				C18AEAC21BB4A7F600A6D182 /* IGShowReview.m in Sources */,
 				C116DFB31BB09EEE006A9F6C /* main.m in Sources */,

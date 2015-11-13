@@ -164,6 +164,11 @@
 
 #pragma mark - NSTabViewDelegate
 
+- (NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row
+{
+    return [[RLTableRowView alloc] init];
+}
+
 - (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem
 {
     if([tabViewItem.label isEqualToString:@"Top Shows"])

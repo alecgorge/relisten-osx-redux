@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "RLShowTableViewCell.h"
 #import "RLTableView.h"
+#import "RLTableRowView.h"
 #import "IGAPIClient.h"
 
 @protocol RLShowSelectedDelegate <NSObject>
