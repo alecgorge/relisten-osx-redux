@@ -7,13 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "RLArtistsPopupButtonManager.h"
+#import "RLArtistsViewController.h"
 #import "RLYearsVenuesTopShowsViewController.h"
 #import "RLShowsViewController.h"
 #import "RLSourceAndTracksViewController.h"
 #import "RLAudioPlaybackViewController.h"
 #import "RLSplitView.h"
 
-@interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLYearsVenuesTopShowsSelectionDelegate, RLShowSelectedDelegate, RLTrackSelectedDelegate, RLAudioPlaybackDelegate>
+@interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLArtistSelectionDelegate, RLYearsVenuesTopShowsSelectionDelegate, RLShowSelectedDelegate, RLTrackSelectedDelegate, RLAudioPlaybackDelegate>
 
 @end

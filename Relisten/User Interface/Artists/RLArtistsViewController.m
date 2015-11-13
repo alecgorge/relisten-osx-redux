@@ -14,7 +14,6 @@
 @property (weak) IBOutlet NSTableView *tableView;
 
 @property (nonatomic, strong) NSArray *artists;
-@property (nonatomic, weak) IGArtist *selectedArtist;
 
 @end
 
@@ -34,6 +33,8 @@
 {
     [super viewDidLoad];
     // Do view setup here.
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
 
 -(void)viewWillAppear
@@ -66,11 +67,6 @@
          
          [indicator stopAnimation:nil];
      }];
-}
-
--(void)setSelectedArtist:(IGArtist *)artist
-{
-    self.selectedArtist = artist;
 }
 
 #pragma mark - NSTableViewdataSource Methods

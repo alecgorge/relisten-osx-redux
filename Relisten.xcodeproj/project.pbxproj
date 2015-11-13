@@ -44,7 +44,6 @@
 		C18AEAC71BB4A7F600A6D182 /* IGYear.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEABE1BB4A7F600A6D182 /* IGYear.m */; };
 		C18AEACA1BB4AFB800A6D182 /* IGAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAC91BB4AFB800A6D182 /* IGAPIClient.m */; };
 		C18AEACD1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEACC1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m */; };
-		C18AEAD21BB4D43000A6D182 /* RLArtistsPopupButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAD11BB4D43000A6D182 /* RLArtistsPopupButtonManager.m */; };
 		C18AEAD61BB4E6BB00A6D182 /* RLSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */; };
 		C18AEAE01BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18AEADE1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m */; };
 		C18AEAE11BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AEADF1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib */; };
@@ -118,8 +117,6 @@
 		C18AEAC91BB4AFB800A6D182 /* IGAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAPIClient.m; sourceTree = "<group>"; };
 		C18AEACB1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+NSDateFromNSStringMilliseconds.h"; sourceTree = "<group>"; };
 		C18AEACC1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+NSDateFromNSStringMilliseconds.m"; sourceTree = "<group>"; };
-		C18AEAD01BB4D43000A6D182 /* RLArtistsPopupButtonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLArtistsPopupButtonManager.h; sourceTree = "<group>"; };
-		C18AEAD11BB4D43000A6D182 /* RLArtistsPopupButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLArtistsPopupButtonManager.m; sourceTree = "<group>"; };
 		C18AEAD41BB4E6BB00A6D182 /* RLSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLSplitView.h; sourceTree = "<group>"; };
 		C18AEAD51BB4E6BB00A6D182 /* RLSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLSplitView.m; sourceTree = "<group>"; };
 		C18AEADD1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLYearsVenuesTopShowsViewController.h; sourceTree = "<group>"; };
@@ -157,10 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				C116DFAD1BB09EEE006A9F6C /* Relisten */,
-				C116DFB11BB09EEE006A9F6C /* Supporting Files */,
 				D35B084755A2E6F9141E9514 /* Frameworks */,
 				0F0CAB0FE1DC738A7BE54E8C /* Pods */,
 				C116DFAC1BB09EEE006A9F6C /* Products */,
+				C116DFB11BB09EEE006A9F6C /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,7 +178,6 @@
 				C18AEA931BB4945F00A6D182 /* RLMainWindowController.m */,
 				C18AEA941BB4945F00A6D182 /* RLMainWindowController.xib */,
 				C18AEAD31BB4E4B800A6D182 /* User Interface */,
-				C18AEACF1BB4D1E500A6D182 /* Managers */,
 				C18AEACE1BB4C99B00A6D182 /* API */,
 				C18AEA971BB4A34A00A6D182 /* Model */,
 			);
@@ -197,8 +193,7 @@
 				C116DFB61BB09EEE006A9F6C /* MainMenu.xib */,
 				C116DFB21BB09EEE006A9F6C /* main.m */,
 			);
-			name = "Supporting Files";
-			path = "Relisten/Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C11FA5141BD2191000C4FDEE /* Audio Playback */ = {
@@ -207,11 +202,11 @@
 				C11FA5151BD2194000C4FDEE /* RLAudioPlaybackViewController.h */,
 				C11FA5161BD2194000C4FDEE /* RLAudioPlaybackViewController.m */,
 				C11FA5171BD2194000C4FDEE /* RLAudioPlaybackViewController.xib */,
+				C11DC3311BF14066007152D6 /* RLPlaybackQueueCellView.h */,
+				C11DC3321BF14066007152D6 /* RLPlaybackQueueCellView.m */,
 				C11DC32C1BF1331E007152D6 /* RLPlaybackQueueViewController.h */,
 				C11DC32D1BF1331E007152D6 /* RLPlaybackQueueViewController.m */,
 				C11DC32E1BF1331E007152D6 /* RLPlaybackQueueViewController.xib */,
-				C11DC3311BF14066007152D6 /* RLPlaybackQueueCellView.h */,
-				C11DC3321BF14066007152D6 /* RLPlaybackQueueCellView.m */,
 			);
 			path = "Audio Playback";
 			sourceTree = "<group>";
@@ -225,7 +220,7 @@
 				C171E8F71BF59A83003B12EB /* RLArtistsViewController.m */,
 				C171E8F81BF59A83003B12EB /* RLArtistsViewController.xib */,
 			);
-			name = Artists;
+			path = Artists;
 			sourceTree = "<group>";
 		};
 		C187C6921BB759CF00F1778C /* Images */ = {
@@ -242,8 +237,6 @@
 		C18AEA971BB4A34A00A6D182 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C11B1C8B1BDF6FFD001851DE /* IguanaMediaItem.h */,
-				C11B1C8C1BDF6FFD001851DE /* IguanaMediaItem.m */,
 				C18AEAAD1BB4A7F600A6D182 /* IGArtist.h */,
 				C18AEAAE1BB4A7F600A6D182 /* IGArtist.m */,
 				C18AEAAF1BB4A7F600A6D182 /* IGPlaylist.h */,
@@ -258,6 +251,8 @@
 				C18AEABC1BB4A7F600A6D182 /* IGVenue.m */,
 				C18AEABD1BB4A7F600A6D182 /* IGYear.h */,
 				C18AEABE1BB4A7F600A6D182 /* IGYear.m */,
+				C11B1C8B1BDF6FFD001851DE /* IguanaMediaItem.h */,
+				C11B1C8C1BDF6FFD001851DE /* IguanaMediaItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,15 +266,6 @@
 				C18AEACC1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		C18AEACF1BB4D1E500A6D182 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				C18AEAD01BB4D43000A6D182 /* RLArtistsPopupButtonManager.h */,
-				C18AEAD11BB4D43000A6D182 /* RLArtistsPopupButtonManager.m */,
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		C18AEAD31BB4E4B800A6D182 /* User Interface */ = {
@@ -325,16 +311,16 @@
 		C1AA2D7B1BBF387C000D75FC /* Source & Tracks */ = {
 			isa = PBXGroup;
 			children = (
+				C1C6F95A1BE6A22600EDF168 /* RLShowReviewCellView.h */,
+				C1C6F95B1BE6A22600EDF168 /* RLShowReviewCellView.m */,
+				C11B1CA51BE68C35001851DE /* RLShowReviewsViewController.h */,
+				C11B1CA61BE68C35001851DE /* RLShowReviewsViewController.m */,
+				C11B1CA71BE68C35001851DE /* RLShowReviewsViewController.xib */,
 				C1E4518B1BBA803B003A0721 /* RLSourceAndTracksViewController.h */,
 				C1E4518C1BBA803B003A0721 /* RLSourceAndTracksViewController.m */,
 				C1E4518D1BBA803B003A0721 /* RLSourceAndTracksViewController.xib */,
 				C15B8A1E1BBC5B3B00CB2F92 /* RLTrackTableCellView.h */,
 				C15B8A1F1BBC5B3B00CB2F92 /* RLTrackTableCellView.m */,
-				C11B1CA51BE68C35001851DE /* RLShowReviewsViewController.h */,
-				C11B1CA61BE68C35001851DE /* RLShowReviewsViewController.m */,
-				C11B1CA71BE68C35001851DE /* RLShowReviewsViewController.xib */,
-				C1C6F95A1BE6A22600EDF168 /* RLShowReviewCellView.h */,
-				C1C6F95B1BE6A22600EDF168 /* RLShowReviewCellView.m */,
 			);
 			path = "Source & Tracks";
 			sourceTree = "<group>";
@@ -497,7 +483,6 @@
 				C1C6F95C1BE6A22600EDF168 /* RLShowReviewCellView.m in Sources */,
 				C18AEACA1BB4AFB800A6D182 /* IGAPIClient.m in Sources */,
 				C187C6821BB5050400F1778C /* RLTableView.m in Sources */,
-				C18AEAD21BB4D43000A6D182 /* RLArtistsPopupButtonManager.m in Sources */,
 				C15B8A201BBC5B3B00CB2F92 /* RLTrackTableCellView.m in Sources */,
 				C116DFB01BB09EEE006A9F6C /* AppDelegate.m in Sources */,
 				C18AEAC01BB4A7F600A6D182 /* IGPlaylist.m in Sources */,
@@ -611,7 +596,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Relisten/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = net.relisten.osx.Relisten;
@@ -625,7 +610,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Relisten/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = net.relisten.osx.Relisten;

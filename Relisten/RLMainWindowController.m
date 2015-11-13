@@ -11,18 +11,19 @@
 @interface RLMainWindowController ()
 
 @property (weak) IBOutlet RLSplitView *splitView;
-@property (weak) IBOutlet NSPopUpButton *artistsPopupButton;
 @property (weak) IBOutlet NSView *audioPlayBackView;
 @property (weak) IBOutlet NSButton *nowPlayingButton;
 @property (weak) IBOutlet NSProgressIndicator *progressIndicator;
+@property (weak) IBOutlet NSButton *artistButton;
 
-@property (nonatomic, strong) RLArtistsPopupButtonManager *artistPopupManager;
+@property (nonatomic, strong) RLArtistsViewController *artistViewController;
 @property (nonatomic, strong) RLYearsVenuesTopShowsViewController *yearsViewController;
 @property (nonatomic, strong) RLShowsViewController *showsViewController;
 @property (nonatomic, strong) RLSourceAndTracksViewController *sourceAndTracksViewController;
 @property (nonatomic, strong) RLAudioPlaybackViewController *audioPlayBackController;
 @property (nonatomic, strong) IGShow *currentlyPlayingShow;
 @property (nonatomic, strong) IGArtist *currentlyPlayingArtist;
+@property (nonatomic, strong) NSPopover *artistPopover;
 
 @end
 
@@ -54,22 +55,14 @@
     self.sourceAndTracksViewController.delegate = self;
     [self.splitView setThirdViewFromViewController:self.sourceAndTracksViewController];
     
-    // Set up the artist popup button
-    self.artistPopupManager = [[RLArtistsPopupButtonManager alloc] initWithPopUpButton:_artistsPopupButton];
-    [self.artistPopupManager.artistChanged.executionSignals subscribeNext:^(RACSignal *a) {
-        [a subscribeNext:^(IGArtist *artist) {
-            
-            [IGAPIClient sharedInstance].artist = artist;
-            [self.yearsViewController fetchYearsWithProgressIndicator:self.progressIndicator];
-            [self.showsViewController clearAllShows];
-            [self.sourceAndTracksViewController disableSourceSelection];
-            [NSUserDefaults.standardUserDefaults setObject:artist.slug
-                                                    forKey:@"last_selected_artist_slug"];
-            [NSUserDefaults.standardUserDefaults synchronize];
-        }];
-    }];
-    
-    [self.artistPopupManager refreshWithProgressIndictor:self.progressIndicator];
+    // Set up the artists
+    self.artistViewController = [[RLArtistsViewController alloc] initWithProgressIndictor:self.progressIndicator];
+    self.artistViewController.delegate = self;
+    self.artistPopover = [[NSPopover alloc] init];
+    self.artistPopover.behavior = NSPopoverBehaviorTransient;
+    self.artistPopover.animates = YES;
+    self.artistPopover.contentSize = NSMakeSize(300, 500);
+    self.artistPopover.contentViewController = self.artistViewController;
     
     // Set up playback controls
     self.audioPlayBackController = [[RLAudioPlaybackViewController alloc] initWithNibName:@"RLAudioPlaybackViewController" bundle:nil];
@@ -79,11 +72,16 @@
     [self.audioPlayBackView addSubview:self.audioPlayBackController.view];
 }
 
+- (IBAction)showArtistPopover:(id)sender
+{
+    [self.artistPopover showRelativeToRect:NSZeroRect ofView:sender preferredEdge:NSMaxYEdge];
+}
+
 #pragma mark - 'Now Playing' Button Handling
 
 - (IBAction)showNowPlayingShow:(id)sender
 {
-    [self.artistPopupManager selectArtist:self.currentlyPlayingArtist];
+    [self.artistViewController setSelectedArtist:self.currentlyPlayingArtist];
     IGAPIClient.sharedInstance.artist = self.currentlyPlayingArtist;
     [self.sourceAndTracksViewController fetchTracksForShow:self.currentlyPlayingShow withProgressIndicator:self.progressIndicator];
     [self.yearsViewController fetchYearsWithProgressIndicator:self.progressIndicator];
@@ -94,7 +92,7 @@
 
 - (IBAction)refreshArtists:(id)sender
 {
-    [self.artistPopupManager refreshWithProgressIndictor:self.progressIndicator];
+    [self.artistViewController fetchArtistsWithProgressIndictor:self.progressIndicator];
 }
 
 - (IBAction)randomShow:(id)sender
@@ -103,6 +101,21 @@
     {
         [self.sourceAndTracksViewController fetchTracksForShow:show withProgressIndicator:self.progressIndicator];
     }];
+}
+
+#pragma mark - RLArtistSelectionDelegate Handling
+
+-(void)artistSelected:(IGArtist *)artist
+{
+    [self.artistButton setTitle:artist.name];
+    [self.artistPopover close];
+    [IGAPIClient sharedInstance].artist = artist;
+    [self.yearsViewController fetchYearsWithProgressIndicator:self.progressIndicator];
+    [self.showsViewController clearAllShows];
+    [self.sourceAndTracksViewController disableSourceSelection];
+    [NSUserDefaults.standardUserDefaults setObject:artist.slug
+                                            forKey:@"last_selected_artist_slug"];
+    [NSUserDefaults.standardUserDefaults synchronize];
 }
 
 #pragma mark - RLYearsVenuesTopShowsSelectionDelegate Handling

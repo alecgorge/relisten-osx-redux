@@ -19,9 +19,9 @@
 @interface RLArtistsViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
 
 @property (nonatomic, weak) id<RLArtistSelectionDelegate>delegate;
+@property (nonatomic, weak) IGArtist *selectedArtist;
 
 -(instancetype)initWithProgressIndictor:(NSProgressIndicator *)indicator;
 -(void)fetchArtistsWithProgressIndictor:(NSProgressIndicator *)indicator; // This is automatically called on init
--(void)setSelectedArtist:(IGArtist *)artist;
 
 @end
