@@ -7,7 +7,6 @@
         <customObject id="-2" userLabel="File's Owner" customClass="RLMainWindowController">
             <connections>
                 <outlet property="artistButton" destination="vub-WG-CZJ" id="5F5-Re-AOQ"/>
-                <outlet property="artistsPopupButton" destination="TF2-3E-ynh" id="PDb-Ih-rUU"/>
                 <outlet property="audioPlayBackView" destination="FTW-Ye-BXq" id="9hg-bq-eDi"/>
                 <outlet property="nowPlayingButton" destination="9Bn-Bp-hJx" id="Bhs-9h-dT1"/>
                 <outlet property="progressIndicator" destination="EEA-iA-hDj" id="mQ2-tT-lx8"/>
@@ -88,21 +87,6 @@
             <toolbar key="toolbar" implicitIdentifier="F6FB432C-C7DA-4A85-9844-4DB80E93D835" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="small" id="Ipc-e9-QTO">
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="LbV-E5-LG9"/>
-                    <toolbarItem implicitItemIdentifier="20A6D2EC-A9E8-4BE0-B305-9CFF34D0F752" label="Custom View" paletteLabel="Custom View" id="38h-ZA-Rq5">
-                        <nil key="toolTip"/>
-                        <size key="minSize" width="100" height="19"/>
-                        <size key="maxSize" width="168" height="30"/>
-                        <popUpButton key="view" verticalHuggingPriority="750" id="TF2-3E-ynh" userLabel="Popup Button">
-                            <rect key="frame" x="0.0" y="14" width="168" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <animations/>
-                            <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fvb-Lv-WLS">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="menu"/>
-                                <menu key="menu" id="lvN-6D-ZT4"/>
-                            </popUpButtonCell>
-                        </popUpButton>
-                    </toolbarItem>
                     <toolbarItem implicitItemIdentifier="D298685A-615A-46BC-8143-6FB34FD0518D" label="Custom View" paletteLabel="Custom View" id="fkb-aA-siQ" userLabel="Now Playing Button">
                         <nil key="toolTip"/>
                         <size key="minSize" width="81" height="19"/>

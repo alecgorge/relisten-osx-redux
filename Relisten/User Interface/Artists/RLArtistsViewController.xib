@@ -29,11 +29,14 @@
                 <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qna-WQ-htp">
                     <rect key="frame" x="117" y="376" width="345" height="22"/>
                     <animations/>
-                    <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search Artist..." usesSingleLineMode="YES" bezelStyle="round" id="nyU-7J-giO">
+                    <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Search Artist..." usesSingleLineMode="YES" bezelStyle="round" sendsSearchStringImmediately="YES" id="nyU-7J-giO">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </searchFieldCell>
+                    <connections>
+                        <action selector="searchFieldUpdated:" target="-2" id="5lN-7j-h0x"/>
+                    </connections>
                 </searchField>
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="48" horizontalPageScroll="10" verticalLineScroll="48" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dz-dK-M1c">
                     <rect key="frame" x="0.0" y="0.0" width="482" height="357"/>
@@ -42,7 +45,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="46" rowSizeStyle="automatic" viewBased="YES" id="vgF-64-NZe" customClass="RLTableView">
-                                <rect key="frame" x="0.0" y="0.0" width="482" height="357"/>
+                                <rect key="frame" x="0.0" y="0.0" width="482" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                                 <size key="intercellSpacing" width="3" height="2"/>

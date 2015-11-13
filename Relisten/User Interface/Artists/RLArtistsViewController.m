@@ -14,6 +14,7 @@
 @property (weak) IBOutlet NSTableView *tableView;
 
 @property (nonatomic, strong) NSArray *artists;
+@property (nonatomic, strong) NSArray *unfilteredArtists;
 
 @end
 
@@ -40,6 +41,10 @@
 -(void)viewWillAppear
 {
     [super viewWillAppear];
+    
+    self.searchField.stringValue = @"";
+    self.artists = self.unfilteredArtists;
+    [self.tableView reloadData];
 }
 
 -(void)fetchArtistsWithProgressIndictor:(NSProgressIndicator *)indicator
@@ -47,7 +52,7 @@
     [indicator startAnimation:nil];
     [IGAPIClient.sharedInstance artists:^(NSArray *artists)
      {
-         self.artists = [artists sortedArrayUsingComparator:^NSComparisonResult(IGArtist *obj1, IGArtist *obj2) {
+         self.unfilteredArtists = [artists sortedArrayUsingComparator:^NSComparisonResult(IGArtist *obj1, IGArtist *obj2) {
              
              return [obj1.name localizedCaseInsensitiveCompare:obj2.name];
          }];
@@ -56,17 +61,37 @@
          
          if(slug)
          {
-             NSInteger index = [[self.artists valueForKeyPath:@"slug"] indexOfObject:slug];
+             NSInteger index = [[self.unfilteredArtists valueForKeyPath:@"slug"] indexOfObject:slug];
              
-             if(index >= 0 && index < self.artists.count)
+             if(index >= 0 && index < self.unfilteredArtists.count)
              {
-                 self.selectedArtist = self.artists[index];
-                 [self.delegate artistSelected:self.artists[index]];
+                 self.selectedArtist = self.unfilteredArtists[index];
+                 [self.delegate artistSelected:self.unfilteredArtists[index]];
+                 self.artists = self.unfilteredArtists;
              }
          }
          
          [indicator stopAnimation:nil];
      }];
+}
+
+#pragma mark - Filtering Methods
+
+- (IBAction)searchFieldUpdated:(NSSearchField *)sender
+{
+    NSString *substring = [sender stringValue];
+    
+    if([substring isEqualToString:@""])
+    {
+        self.artists = self.unfilteredArtists;
+        [self.tableView reloadData];
+    }
+    else
+    {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", substring];
+        self.artists = [self.unfilteredArtists filteredArrayUsingPredicate:predicate];
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - NSTableViewdataSource Methods
