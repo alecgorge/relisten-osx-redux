@@ -115,12 +115,14 @@
 
 - (IBAction)nextButtonPressed:(id)sender
 {
-    [self.audioPlayer forward];
+    if(self.audioPlayer.queue.count > 0)
+        [self.audioPlayer forward];
 }
 
 - (IBAction)previousButtonPressed:(id)sender
 {
-    [self.audioPlayer backward];
+    if(self.audioPlayer.queue.count > 0)
+        [self.audioPlayer backward];
 }
 
 - (IBAction)trackSliderMoved:(id)sender
