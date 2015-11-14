@@ -144,13 +144,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="41" horizontalPageScroll="10" verticalLineScroll="41" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clq-gs-iKw">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="442"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="441"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="KBG-ZP-pXl">
-                                            <rect key="frame" x="0.0" y="0.0" width="254" height="442"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="254" height="441"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="39" rowSizeStyle="automatic" viewBased="YES" id="vgR-Qy-U3V" customClass="RLTableView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="441"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -239,24 +239,27 @@
                                             <animations/>
                                         </scroller>
                                     </scrollView>
-                                    <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QBS-vT-a0p">
-                                        <rect key="frame" x="0.0" y="442" width="254" height="21"/>
+                                    <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3RL-NP-yJE">
+                                        <rect key="frame" x="-3" y="441" width="260" height="22"/>
                                         <animations/>
-                                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="border" placeholderString="Search Venues..." drawsBackground="YES" usesSingleLineMode="YES" sendsSearchStringImmediately="YES" id="RKm-G9-dX3">
+                                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Search Venues..." usesSingleLineMode="YES" bezelStyle="round" sendsSearchStringImmediately="YES" id="vKm-UJ-b7G">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </searchFieldCell>
+                                        <connections>
+                                            <action selector="filterVenues:" target="-2" id="8cJ-90-oWQ"/>
+                                        </connections>
                                     </searchField>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="3RL-NP-yJE" firstAttribute="top" secondItem="POS-li-Ijy" secondAttribute="top" id="FHo-cM-ayu"/>
                                     <constraint firstAttribute="trailing" secondItem="Clq-gs-iKw" secondAttribute="trailing" id="HfV-wn-ikI"/>
-                                    <constraint firstItem="QBS-vT-a0p" firstAttribute="top" secondItem="POS-li-Ijy" secondAttribute="top" id="WYa-Gg-VdI"/>
+                                    <constraint firstItem="Clq-gs-iKw" firstAttribute="top" secondItem="3RL-NP-yJE" secondAttribute="bottom" id="Ll4-1T-v2Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="3RL-NP-yJE" secondAttribute="trailing" constant="-3" id="NLl-DY-sz0"/>
+                                    <constraint firstItem="3RL-NP-yJE" firstAttribute="leading" secondItem="POS-li-Ijy" secondAttribute="leading" constant="-3" id="RnI-yz-9gL"/>
                                     <constraint firstAttribute="bottom" secondItem="Clq-gs-iKw" secondAttribute="bottom" id="nS6-t6-DV4"/>
-                                    <constraint firstItem="Clq-gs-iKw" firstAttribute="top" secondItem="QBS-vT-a0p" secondAttribute="bottom" id="qre-Up-k8n"/>
                                     <constraint firstItem="Clq-gs-iKw" firstAttribute="leading" secondItem="POS-li-Ijy" secondAttribute="leading" id="tcw-qg-bv8"/>
-                                    <constraint firstItem="QBS-vT-a0p" firstAttribute="leading" secondItem="POS-li-Ijy" secondAttribute="leading" id="tud-rR-gEx"/>
-                                    <constraint firstAttribute="trailing" secondItem="QBS-vT-a0p" secondAttribute="trailing" id="zRg-nw-R7L"/>
                                 </constraints>
                                 <animations/>
                             </view>

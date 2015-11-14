@@ -22,6 +22,7 @@
 
 @property (nonatomic, strong) NSArray *years;
 @property (nonatomic, strong) NSArray *venues;
+@property (nonatomic, strong) NSArray *unfilteredVenues;
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
 
 @end
@@ -72,7 +73,10 @@
     self.venues = @[];
     [self.venuesTableView reloadData];
     [IGAPIClient.sharedInstance venues:^(NSArray * venues) {
-        self.venues = venues;
+        NSSortDescriptor *valueDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        NSArray *descriptors = [NSArray arrayWithObject:valueDescriptor];
+        self.unfilteredVenues = [venues sortedArrayUsingDescriptors:descriptors];
+        self.venues = self.unfilteredVenues;
         [self.venuesTableView reloadData];
         [indicator stopAnimation:nil];
     }];
@@ -196,6 +200,27 @@
             break;
         default:
             break;
+    }
+}
+
+#pragma mark - Venue Filtering
+
+- (IBAction)filterVenues:(NSSearchField *)sender
+{
+    NSString *substring = [sender stringValue];
+    
+    if([substring isEqualToString:@""])
+    {
+        self.venues = self.unfilteredVenues;
+        [self.venuesTableView reloadData];
+    }
+    else
+    {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", substring];
+        NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"city contains[c] %@", substring];
+        NSCompoundPredicate *compound = [NSCompoundPredicate orPredicateWithSubpredicates:@[predicate, predicate2]];
+        self.venues = [self.unfilteredVenues filteredArrayUsingPredicate:compound];
+        [self.venuesTableView reloadData];
     }
 }
 
