@@ -28,4 +28,9 @@
 
 -(void)playTrack:(IGTrack *)track FromShow:(IGShow *)show;
 
+// handle playback
+- (IBAction)playPauseButtonPressed:(id)sender;
+- (IBAction)nextButtonPressed:(id)sender;
+- (IBAction)previousButtonPressed:(id)sender;
+
 @end

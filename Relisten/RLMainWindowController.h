@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <SPMediaKeyTap/SPMediaKeyTap.h>
 #import "RLArtistsViewController.h"
 #import "RLYearsVenuesTopShowsViewController.h"
 #import "RLShowsViewController.h"

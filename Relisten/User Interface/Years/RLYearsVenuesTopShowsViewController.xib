@@ -144,9 +144,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="41" horizontalPageScroll="10" verticalLineScroll="41" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clq-gs-iKw">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="442"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="KBG-ZP-pXl">
-                                            <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="254" height="442"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="39" rowSizeStyle="automatic" viewBased="YES" id="vgR-Qy-U3V" customClass="RLTableView">
@@ -239,12 +239,24 @@
                                             <animations/>
                                         </scroller>
                                     </scrollView>
+                                    <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QBS-vT-a0p">
+                                        <rect key="frame" x="0.0" y="442" width="254" height="21"/>
+                                        <animations/>
+                                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="border" placeholderString="Search Venues..." drawsBackground="YES" usesSingleLineMode="YES" sendsSearchStringImmediately="YES" id="RKm-G9-dX3">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </searchFieldCell>
+                                    </searchField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Clq-gs-iKw" secondAttribute="trailing" id="HfV-wn-ikI"/>
+                                    <constraint firstItem="QBS-vT-a0p" firstAttribute="top" secondItem="POS-li-Ijy" secondAttribute="top" id="WYa-Gg-VdI"/>
                                     <constraint firstAttribute="bottom" secondItem="Clq-gs-iKw" secondAttribute="bottom" id="nS6-t6-DV4"/>
+                                    <constraint firstItem="Clq-gs-iKw" firstAttribute="top" secondItem="QBS-vT-a0p" secondAttribute="bottom" id="qre-Up-k8n"/>
                                     <constraint firstItem="Clq-gs-iKw" firstAttribute="leading" secondItem="POS-li-Ijy" secondAttribute="leading" id="tcw-qg-bv8"/>
-                                    <constraint firstItem="Clq-gs-iKw" firstAttribute="top" secondItem="POS-li-Ijy" secondAttribute="top" id="ymZ-m5-73c"/>
+                                    <constraint firstItem="QBS-vT-a0p" firstAttribute="leading" secondItem="POS-li-Ijy" secondAttribute="leading" id="tud-rR-gEx"/>
+                                    <constraint firstAttribute="trailing" secondItem="QBS-vT-a0p" secondAttribute="trailing" id="zRg-nw-R7L"/>
                                 </constraints>
                                 <animations/>
                             </view>

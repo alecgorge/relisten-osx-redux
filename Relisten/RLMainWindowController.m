@@ -24,6 +24,7 @@
 @property (nonatomic, strong) IGShow *currentlyPlayingShow;
 @property (nonatomic, strong) IGArtist *currentlyPlayingArtist;
 @property (nonatomic, strong) NSPopover *artistPopover;
+@property (nonatomic, strong) SPMediaKeyTap *keyTap;
 
 @end
 
@@ -70,6 +71,14 @@
     self.audioPlayBackController.view.autoresizingMask = NSViewWidthSizable;
     self.audioPlayBackController.delegate = self;
     [self.audioPlayBackView addSubview:self.audioPlayBackController.view];
+    
+    // Handle global media keys
+    self.keyTap = [[SPMediaKeyTap alloc] init];
+    [self.keyTap setDelegate:self];
+    if([SPMediaKeyTap usesGlobalMediaKeyTap])
+    {
+        [self.keyTap startWatchingMediaKeys];
+    }
 }
 
 - (IBAction)showArtistPopover:(id)sender
@@ -168,6 +177,38 @@
 {
     [self.sourceAndTracksViewController pauseTrackVisualizationForTrackIndex:index andTrack:track];
     [self.showsViewController pauseCurrentlyPLayingShow:show];
+}
+
+#pragma mark - Handle global media keys 
+
+-(void)mediaKeyTap:(SPMediaKeyTap*)keyTap receivedMediaKeyEvent:(NSEvent*)event;
+{
+    NSAssert([event type] == NSSystemDefined && [event subtype] == SPSystemDefinedEventMediaKeys, @"Unexpected NSEvent in mediaKeyTap:receivedMediaKeyEvent:");
+    
+    // Weird hex stuff needed, too lazy to figure it out...
+    int keyCode = (([event data1] & 0xFFFF0000) >> 16);
+    int keyFlags = ([event data1] & 0x0000FFFF);
+    BOOL keyIsPressed = (((keyFlags & 0xFF00) >> 8)) == 0xA;
+    
+    if (keyIsPressed)
+    {
+        switch (keyCode)
+        {
+            case NX_KEYTYPE_PLAY:
+                [self.audioPlayBackController playPauseButtonPressed:nil];
+                break;
+                
+            case NX_KEYTYPE_FAST:
+                [self.audioPlayBackController nextButtonPressed:nil];
+                break;
+                
+            case NX_KEYTYPE_REWIND:
+                [self.audioPlayBackController previousButtonPressed:nil];
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 @end

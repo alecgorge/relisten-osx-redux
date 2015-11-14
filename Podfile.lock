@@ -25,6 +25,7 @@ PODS:
   - JSONModel (1.1.2)
   - Masonry (0.6.3)
   - ObjectiveSugar (1.1.0)
+  - SPMediaKeyTap (0.1.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -34,15 +35,21 @@ DEPENDENCIES:
   - JSONModel
   - Masonry
   - ObjectiveSugar
+  - SPMediaKeyTap (from `https://github.com/Coppertino/SPMediaKeyTap.git`)
 
 EXTERNAL SOURCES:
   AGAudioPlayer:
     :git: https://github.com/alecgorge/AGAudioPlayer.git
+  SPMediaKeyTap:
+    :git: https://github.com/Coppertino/SPMediaKeyTap.git
 
 CHECKOUT OPTIONS:
   AGAudioPlayer:
     :commit: fadfcdf15ec3a7c986c590779a1864bca169c38d
     :git: https://github.com/alecgorge/AGAudioPlayer.git
+  SPMediaKeyTap:
+    :commit: 04608dd46d8f63b1e251b30a96753e7c22705e23
+    :git: https://github.com/Coppertino/SPMediaKeyTap.git
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
@@ -53,5 +60,6 @@ SPEC CHECKSUMS:
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
+  SPMediaKeyTap: cb0637667c5ccae7ba41bc7c72404bd83318abac
 
 COCOAPODS: 0.39.0
