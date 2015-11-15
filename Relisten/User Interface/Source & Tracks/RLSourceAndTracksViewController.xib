@@ -95,13 +95,13 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cx-M8-hH5">
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="30" horizontalPageScroll="10" verticalLineScroll="30" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cx-M8-hH5">
                     <rect key="frame" x="0.0" y="0.0" width="515" height="551"/>
                     <clipView key="contentView" drawsBackground="NO" id="qMs-qD-VIK">
                         <rect key="frame" x="0.0" y="0.0" width="515" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" rowSizeStyle="automatic" viewBased="YES" id="Xl2-1C-pTr" customClass="RLTableView">
+                            <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="28" rowSizeStyle="automatic" viewBased="YES" id="Xl2-1C-pTr" customClass="RLTableView">
                                 <rect key="frame" x="0.0" y="0.0" width="515" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
@@ -123,41 +123,32 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView id="lys-Ad-fAF" customClass="RLTrackTableCellView">
-                                                <rect key="frame" x="1" y="1" width="512" height="22"/>
+                                                <rect key="frame" x="1" y="1" width="512" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DFr-KK-MuZ">
-                                                        <rect key="frame" x="3" y="3" width="26" height="16"/>
+                                                        <rect key="frame" x="10" y="6" width="22" height="16"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="22" id="BDg-4O-zbz"/>
                                                         </constraints>
                                                         <animations/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="132." id="fSO-Va-DZu">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="132." drawsBackground="YES" id="fSO-Va-DZu">
                                                             <font key="font" size="12" name=".HelveticaNeueDeskInterface-Regular"/>
-                                                            <color key="textColor" name="knobColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-fi-4ZX">
-                                                        <rect key="frame" x="30" y="3" width="177" height="16"/>
-                                                        <animations/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Big nice track name of song " drawsBackground="YES" id="1bu-D7-9HH">
-                                                            <font key="font" metaFont="system"/>
-                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" red="0.98521872109999997" green="0.98933997529999995" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QPx-Ts-DZV">
-                                                        <rect key="frame" x="437" y="2" width="40" height="17"/>
+                                                        <rect key="frame" x="430" y="6" width="38" height="16"/>
                                                         <animations/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="50:02" id="wg1-S0-2rC">
-                                                            <font key="font" metaFont="system"/>
-                                                            <color key="textColor" name="knobColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="50:02" drawsBackground="YES" id="wg1-S0-2rC">
+                                                            <font key="font" metaFont="system" size="12"/>
+                                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" red="0.98521872109999997" green="0.98933997529999995" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                                         </textFieldCell>
                                                     </textField>
                                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="kjF-pV-s1W" customClass="CMEqualizerIndicatorView">
-                                                        <rect key="frame" x="5" y="3" width="22" height="16"/>
+                                                        <rect key="frame" x="10" y="6" width="22" height="16"/>
                                                         <animations/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
@@ -166,9 +157,9 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </customView>
                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PtU-ya-gxz">
-                                                        <rect key="frame" x="483" y="3" width="26" height="19"/>
+                                                        <rect key="frame" x="476" y="4" width="26" height="19"/>
                                                         <animations/>
-                                                        <popUpButtonCell key="cell" type="recessed" bezelStyle="recessed" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" pullsDown="YES" altersStateOfSelectedItem="NO" selectedItem="rF5-t8-3Gh" id="9EB-bZ-r0k">
+                                                        <popUpButtonCell key="cell" type="recessed" bezelStyle="recessed" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" pullsDown="YES" altersStateOfSelectedItem="NO" id="9EB-bZ-r0k">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                             <menu key="menu" id="jpi-4C-OaK">
@@ -197,23 +188,29 @@
                                                             </menu>
                                                         </popUpButtonCell>
                                                     </popUpButton>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-fi-4ZX">
+                                                        <rect key="frame" x="35" y="5" width="188" height="18"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Big nice track name of song " drawsBackground="YES" id="1bu-D7-9HH">
+                                                            <font key="font" metaFont="system" size="14"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" red="0.98521872109999997" green="0.98933997529999995" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                        </textFieldCell>
+                                                    </textField>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="DFr-KK-MuZ" firstAttribute="leading" secondItem="lys-Ad-fAF" secondAttribute="leading" constant="5" id="3qN-MU-9oI"/>
+                                                    <constraint firstItem="DFr-KK-MuZ" firstAttribute="leading" secondItem="lys-Ad-fAF" secondAttribute="leading" constant="10" id="3qN-MU-9oI"/>
                                                     <constraint firstItem="kjF-pV-s1W" firstAttribute="top" secondItem="DFr-KK-MuZ" secondAttribute="top" id="6r5-KO-RIw"/>
-                                                    <constraint firstItem="Ua8-fi-4ZX" firstAttribute="leading" secondItem="DFr-KK-MuZ" secondAttribute="trailing" constant="3" id="9oK-U5-Qyk"/>
+                                                    <constraint firstItem="PtU-ya-gxz" firstAttribute="centerY" secondItem="Ua8-fi-4ZX" secondAttribute="centerY" id="96h-1k-UKc"/>
                                                     <constraint firstItem="kjF-pV-s1W" firstAttribute="width" secondItem="DFr-KK-MuZ" secondAttribute="width" id="9r4-Qf-lWs"/>
-                                                    <constraint firstItem="DFr-KK-MuZ" firstAttribute="top" secondItem="lys-Ad-fAF" secondAttribute="top" constant="3" id="Iwb-Gr-zJz"/>
-                                                    <constraint firstItem="QPx-Ts-DZV" firstAttribute="top" secondItem="lys-Ad-fAF" secondAttribute="top" constant="3" id="MEv-js-IgF"/>
                                                     <constraint firstItem="PtU-ya-gxz" firstAttribute="leading" secondItem="QPx-Ts-DZV" secondAttribute="trailing" constant="8" id="NZT-0C-JQl"/>
-                                                    <constraint firstItem="PtU-ya-gxz" firstAttribute="top" secondItem="lys-Ad-fAF" secondAttribute="top" id="Uu9-HZ-dzp"/>
-                                                    <constraint firstItem="kjF-pV-s1W" firstAttribute="leading" secondItem="lys-Ad-fAF" secondAttribute="leading" constant="5" id="aCt-xX-Mv1"/>
-                                                    <constraint firstItem="Ua8-fi-4ZX" firstAttribute="top" secondItem="lys-Ad-fAF" secondAttribute="top" constant="3" id="hfv-vu-rom"/>
-                                                    <constraint firstItem="DFr-KK-MuZ" firstAttribute="height" secondItem="Ua8-fi-4ZX" secondAttribute="height" id="mLq-wl-roC"/>
-                                                    <constraint firstAttribute="trailing" secondItem="PtU-ya-gxz" secondAttribute="trailing" constant="3" id="rT7-Hr-0wR"/>
-                                                    <constraint firstItem="QPx-Ts-DZV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ua8-fi-4ZX" secondAttribute="trailing" constant="10" id="seN-yA-xEI"/>
+                                                    <constraint firstItem="Ua8-fi-4ZX" firstAttribute="leading" secondItem="kjF-pV-s1W" secondAttribute="trailing" constant="3" id="YwA-Pa-svl"/>
+                                                    <constraint firstItem="kjF-pV-s1W" firstAttribute="centerY" secondItem="Ua8-fi-4ZX" secondAttribute="centerY" id="aUU-75-F5T"/>
+                                                    <constraint firstItem="Ua8-fi-4ZX" firstAttribute="centerY" secondItem="lys-Ad-fAF" secondAttribute="centerY" id="gcP-7P-QVw"/>
+                                                    <constraint firstItem="QPx-Ts-DZV" firstAttribute="centerY" secondItem="Ua8-fi-4ZX" secondAttribute="centerY" id="nMg-YR-npz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PtU-ya-gxz" secondAttribute="trailing" constant="10" id="rT7-Hr-0wR"/>
                                                     <constraint firstItem="kjF-pV-s1W" firstAttribute="height" secondItem="DFr-KK-MuZ" secondAttribute="height" id="tFZ-jS-BYZ"/>
-                                                    <constraint firstItem="Ua8-fi-4ZX" firstAttribute="centerY" secondItem="lys-Ad-fAF" secondAttribute="centerY" id="wWV-WK-08Z"/>
+                                                    <constraint firstItem="kjF-pV-s1W" firstAttribute="leading" secondItem="DFr-KK-MuZ" secondAttribute="leading" id="v0f-w3-foS"/>
                                                 </constraints>
                                                 <animations/>
                                                 <connections>
