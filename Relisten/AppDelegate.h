@@ -12,6 +12,10 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+-(void)enableDockButtons;
+-(void)disableDockButtons;
+-(void)setDockButtonPlayButton;
+-(void)setDockPauseButton;
 
 @end
 

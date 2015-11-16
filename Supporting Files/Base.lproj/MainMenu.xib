@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
             <connections>
                 <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+                <outlet property="dockMenu" destination="DHW-9X-8f1" id="WOn-Ht-qtc"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="nextDockButtonMenuItem" destination="cz4-Iq-pAX" id="yTE-Yn-n2J"/>
+                <outlet property="playDockButtonMenuItem" destination="PQt-K6-Qqe" id="QXr-gh-u6F"/>
+                <outlet property="previousDockButtonMenuItem" destination="Qob-zS-VfZ" id="Xxv-yq-tZS"/>
+            </connections>
+        </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
@@ -661,6 +668,29 @@
                     </menu>
                 </menuItem>
             </items>
+        </menu>
+        <menu autoenablesItems="NO" id="DHW-9X-8f1">
+            <items>
+                <menuItem title="Play" id="PQt-K6-Qqe">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="playOrPauseDockButtonPressed:" target="Voe-Tx-rLC" id="IWO-Ra-5XA"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Next" id="cz4-Iq-pAX">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="nextDockButtonpressed:" target="Voe-Tx-rLC" id="suj-vN-ijf"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Previous" id="Qob-zS-VfZ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="previousDockButtonPressed:" target="Voe-Tx-rLC" id="XDb-vP-Ewc"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="685" y="112.5"/>
         </menu>
     </objects>
 </document>

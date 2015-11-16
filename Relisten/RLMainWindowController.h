@@ -14,7 +14,12 @@
 #import "RLSourceAndTracksViewController.h"
 #import "RLAudioPlaybackViewController.h"
 #import "RLSplitView.h"
+#import "AppDelegate.h"
 
 @interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLArtistSelectionDelegate, RLYearsVenuesTopShowsSelectionDelegate, RLShowSelectedDelegate, RLTrackSelectedDelegate, RLAudioPlaybackDelegate>
+
+-(void)playPauseDockButtonPressed;
+-(void)nextDockButtonPressed;
+-(void)previousDockButtonPressed;
 
 @end

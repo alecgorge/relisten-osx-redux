@@ -11,6 +11,9 @@
 @interface AppDelegate ()
 
 @property (strong, nonatomic) RLMainWindowController *mainWindowController;
+@property (weak) IBOutlet NSMenuItem *playDockButtonMenuItem;
+@property (weak) IBOutlet NSMenuItem *nextDockButtonMenuItem;
+@property (weak) IBOutlet NSMenuItem *previousDockButtonMenuItem;
 
 @end
 
@@ -21,6 +24,8 @@
     self.mainWindowController = [[RLMainWindowController alloc] initWithWindowNibName:@"RLMainWindowController"];
     [self.mainWindowController.window center];
     [self.mainWindowController showWindow:nil];
+    
+    [self disableDockButtons];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)visibleWindows
@@ -35,6 +40,49 @@
     }
     
     return YES;
+}
+
+#pragma maek - Dock Button Handling
+
+-(void)enableDockButtons
+{
+    self.playDockButtonMenuItem.enabled = YES;
+    self.nextDockButtonMenuItem.enabled = YES;
+    self.previousDockButtonMenuItem.enabled = YES;
+}
+
+-(void)disableDockButtons
+{
+    self.playDockButtonMenuItem.enabled = NO;
+    self.nextDockButtonMenuItem.enabled = NO;
+    self.previousDockButtonMenuItem.enabled = NO;
+}
+
+-(void)setDockButtonPlayButton
+{
+    [self enableDockButtons];
+    self.playDockButtonMenuItem.title = @"Play";
+}
+
+-(void)setDockPauseButton
+{
+    [self enableDockButtons];
+    self.playDockButtonMenuItem.title = @"Pause";
+}
+
+- (IBAction)playOrPauseDockButtonPressed:(id)sender
+{
+    [self.mainWindowController playPauseDockButtonPressed];
+}
+
+- (IBAction)nextDockButtonpressed:(id)sender
+{
+    [self.mainWindowController nextDockButtonPressed];
+}
+
+- (IBAction)previousDockButtonPressed:(id)sender
+{
+    [self.mainWindowController previousDockButtonPressed];
 }
 
 @end

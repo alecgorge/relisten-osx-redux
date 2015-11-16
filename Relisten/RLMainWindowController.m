@@ -166,6 +166,8 @@
 
 -(void)trackPlayedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show
 {
+    [(AppDelegate *)[[NSApplication sharedApplication] delegate] setDockPauseButton];
+    
     self.nowPlayingButton.enabled = YES;
     self.currentlyPlayingShow = show;
     self.currentlyPlayingArtist = [IGAPIClient sharedInstance].artist; // TODO. won't work with multi-artist queue
@@ -175,6 +177,8 @@
 }
 -(void)trackPausedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show
 {
+    [(AppDelegate *)[[NSApplication sharedApplication] delegate] setDockButtonPlayButton];
+    
     [self.sourceAndTracksViewController pauseTrackVisualizationForTrackIndex:index andTrack:track];
     [self.showsViewController pauseCurrentlyPLayingShow:show];
 }
@@ -209,6 +213,23 @@
                 break;
         }
     }
+}
+
+#pragma mark Handle Dock Menu Button
+
+-(void)playPauseDockButtonPressed
+{
+    [self.audioPlayBackController playPauseButtonPressed:nil];
+}
+
+-(void)nextDockButtonPressed
+{
+     [self.audioPlayBackController nextButtonPressed:nil];
+}
+
+-(void)previousDockButtonPressed
+{
+    [self.audioPlayBackController previousButtonPressed:nil];
 }
 
 @end
