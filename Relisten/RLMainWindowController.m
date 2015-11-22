@@ -22,7 +22,6 @@
 @property (nonatomic, strong) RLSourceAndTracksViewController *sourceAndTracksViewController;
 @property (nonatomic, strong) RLAudioPlaybackViewController *audioPlayBackController;
 @property (nonatomic, strong) IGShow *currentlyPlayingShow;
-@property (nonatomic, strong) IGArtist *currentlyPlayingArtist;
 @property (nonatomic, strong) NSPopover *artistPopover;
 @property (nonatomic, strong) SPMediaKeyTap *keyTap;
 
@@ -90,9 +89,9 @@
 
 - (IBAction)showNowPlayingShow:(id)sender
 {
-    [self.artistButton setTitle:self.currentlyPlayingArtist.name];
-    [self.artistViewController setSelectedArtist:self.currentlyPlayingArtist];
-    IGAPIClient.sharedInstance.artist = self.currentlyPlayingArtist;
+    [self.artistButton setTitle:self.currentlyPlayingShow.artist.name];
+    [self.artistViewController setSelectedArtist:self.currentlyPlayingShow.artist];
+    IGAPIClient.sharedInstance.artist = self.currentlyPlayingShow.artist;
     [self.sourceAndTracksViewController fetchTracksForShow:self.currentlyPlayingShow withProgressIndicator:self.progressIndicator];
     [self.yearsViewController fetchYearsWithProgressIndicator:self.progressIndicator];
     IGYear *year = [[IGYear alloc] init];
@@ -170,7 +169,6 @@
     
     self.nowPlayingButton.enabled = YES;
     self.currentlyPlayingShow = show;
-    self.currentlyPlayingArtist = [IGAPIClient sharedInstance].artist; // TODO. won't work with multi-artist queue
     
     [self.sourceAndTracksViewController showTrackVisualizationForTrackIndex:index andTrack:track];
     [self.showsViewController setCurrentlyPLayingShow:show];
