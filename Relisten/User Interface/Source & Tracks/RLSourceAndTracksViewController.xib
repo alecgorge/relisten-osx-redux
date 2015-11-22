@@ -162,7 +162,7 @@
                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PtU-ya-gxz">
                                                         <rect key="frame" x="476" y="4" width="26" height="19"/>
                                                         <animations/>
-                                                        <popUpButtonCell key="cell" type="recessed" bezelStyle="recessed" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" pullsDown="YES" altersStateOfSelectedItem="NO" id="9EB-bZ-r0k">
+                                                        <popUpButtonCell key="cell" type="recessed" bezelStyle="recessed" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" pullsDown="YES" altersStateOfSelectedItem="NO" selectedItem="uEV-QE-A1f" id="9EB-bZ-r0k">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                             <menu key="menu" id="jpi-4C-OaK">
@@ -216,6 +216,8 @@
                                                 </constraints>
                                                 <animations/>
                                                 <connections>
+                                                    <outlet property="addRemainingConcertToQueueMenuItem" destination="5t5-hD-orP" id="MDD-ek-j1f"/>
+                                                    <outlet property="addToEndOfQueueMenuItem" destination="uEV-QE-A1f" id="FWy-UL-OB6"/>
                                                     <outlet property="equilizerView" destination="kjF-pV-s1W" id="z81-FQ-C8N"/>
                                                     <outlet property="playNextMenuItem" destination="rF5-t8-3Gh" id="Q5D-sg-PRa"/>
                                                     <outlet property="trackDurationTextField" destination="QPx-Ts-DZV" id="f0a-3D-vju"/>

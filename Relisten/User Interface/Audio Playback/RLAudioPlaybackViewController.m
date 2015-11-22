@@ -58,18 +58,41 @@
     self.durationFormatter.allowedUnits = (NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond);
 }
 
+#pragma mark - Track Manipulation
+
 -(void)playTrack:(IGTrack *)track FromShow:(IGShow *)show
 {
     NSInteger index = [show.tracks indexOfObject:track];
     
     NSArray *queue = [show.tracks map:^id(id object) {
-        return [[IguanaMediaItem alloc] initWithTrack:object
-                                             inShow:show];
+        return [[IguanaMediaItem alloc] initWithTrack:object inShow:show];
     }];
     
     self.trackSlider.doubleValue = 0.0;
     [self.queue clearAndReplaceWithItems:queue];
     [self.audioPlayer playItemAtIndex:index];
+}
+
+-(void)playNextTrack:(IGTrack *)track FromShow:(IGShow *)show
+{
+    IguanaMediaItem *item = [[IguanaMediaItem alloc] initWithTrack:track inShow:show];
+    [self.queue appendItem:item];
+    [self.queue moveItem:item toIndex:self.audioPlayer.currentIndex + 1]; // POSSIBLY WRONG
+}
+
+-(void)addToEndOfQueueTrack:(IGTrack *)track FromShow:(IGShow *)show
+{
+    IguanaMediaItem *item = [[IguanaMediaItem alloc] initWithTrack:track inShow:show];
+    [self.queue appendItem:item];
+}
+
+-(void)addToEndOfQueueTracks:(NSArray *)tracks FromShow:(IGShow *)show
+{
+    NSArray *queue = [show.tracks map:^id(id object) {
+        return [[IguanaMediaItem alloc] initWithTrack:object inShow:show];
+    }];
+    
+    [self.queue appendItems:queue];
 }
 
 -(void)updateCurrentTrackInfo:(IguanaMediaItem *)mediaItem

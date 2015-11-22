@@ -27,6 +27,9 @@
 @property (nonatomic, weak) id<RLAudioPlaybackDelegate> delegate;
 
 -(void)playTrack:(IGTrack *)track FromShow:(IGShow *)show;
+-(void)playNextTrack:(IGTrack *)track FromShow:(IGShow *)show;
+-(void)addToEndOfQueueTrack:(IGTrack *)track FromShow:(IGShow *)show;
+-(void)addToEndOfQueueTracks:(NSArray *)tracks FromShow:(IGShow *)show;
 
 // handle playback
 - (IBAction)playPauseButtonPressed:(id)sender;

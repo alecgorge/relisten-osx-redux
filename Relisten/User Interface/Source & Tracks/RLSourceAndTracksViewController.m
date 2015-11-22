@@ -20,7 +20,6 @@
 @property (nonatomic, strong) IGShow *selectedShow;
 @property (nonatomic, strong) IGTrack *currentlyPlayingTrack;
 @property (nonatomic) BOOL playing;
-@property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
 
 @end
 
@@ -35,10 +34,6 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.doubleAction = @selector(doubleClickedTrack:);
-    
-    self.durationFormatter = [[NSDateComponentsFormatter alloc] init];
-    self.durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
-    self.durationFormatter.allowedUnits = (NSCalendarUnitMinute | NSCalendarUnitSecond);
     
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
@@ -119,28 +114,25 @@
 
 - (IBAction)playNextButtonPressed:(id)sender
 {
-   // INEFFICIENT :(
     NSMenuItem *currentItem = (NSMenuItem *)sender;
-    
-    for (int i = 0; i < self.tableView.numberOfRows; i++)
-    {
-        RLTrackTableCellView *cellView = [self.tableView viewAtColumn:0 row:i makeIfNecessary:NO];
-        if(cellView.playNextMenuItem == currentItem)
-        {
-            NSLog(@"%d", i);
-            break;
-        }
-    }
+    IGTrack *track = self.selectedShow.tracks[currentItem.tag];
+    [self.delegate playTrackNext:track FromShow:self.selectedShow];
 }
 
 - (IBAction)addToEndOfQueueButtonPressed:(id)sender
 {
-    
+    NSMenuItem *currentItem = (NSMenuItem *)sender;
+    IGTrack *track = self.selectedShow.tracks[currentItem.tag];
+    [self.delegate addTrackToEndOfQueue:track FromShow:self.selectedShow];
 }
 
 - (IBAction)addRemainingConcertToEndOfQueueButtonPressed:(id)sender
 {
-    
+    NSMenuItem *currentItem = (NSMenuItem *)sender;
+    NSInteger index = currentItem.tag;
+    NSInteger size = self.selectedShow.tracks.count;
+    NSArray *items = [self.selectedShow.tracks subarrayWithRange:NSMakeRange(index, size - index - 1)];
+    [self.delegate addTracksToQueue:items FromShow:self.selectedShow];
 }
 
 #pragma mark - Track Playing Visuals 
@@ -177,6 +169,8 @@
     
     IGTrack *track = self.selectedShow.tracks[row];
     
+    [cellView populateWithTrack:track forIndex:row];
+    
     if(track.id == self.currentlyPlayingTrack.id) // Show equalizer
     {
         if(self.playing)
@@ -198,11 +192,6 @@
         [cellView.equilizerView stopAnimated:NO];
         cellView.trackNumberTextField.hidden = NO;
     }
-    
-    cellView.trackNumberTextField.stringValue = [NSString stringWithFormat:@"%ld", (long)row + 1];
-    cellView.trackNameTextField.stringValue = track.title;
-    
-    cellView.trackDurationTextField.stringValue = [self.durationFormatter stringFromTimeInterval:track.length];
 
     return cellView;
 }

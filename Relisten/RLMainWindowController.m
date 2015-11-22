@@ -161,6 +161,21 @@
     [self.audioPlayBackController playTrack:track FromShow:show];
 }
 
+- (void)playTrackNext:(IGTrack *)track FromShow:(IGShow *)show
+{
+    [self.audioPlayBackController playNextTrack:track FromShow:show];
+}
+
+- (void)addTrackToEndOfQueue:(IGTrack *)track FromShow:(IGShow *)show
+{
+    [self.audioPlayBackController addToEndOfQueueTrack:track FromShow:show];
+}
+
+- (void)addTracksToQueue:(NSArray *)tracks FromShow:(IGShow *)show
+{
+    [self.audioPlayBackController addToEndOfQueueTracks:tracks FromShow:show];
+}
+
 #pragma mark - RLAudioPlaybackDelegate Handling
 
 -(void)trackPlayedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show

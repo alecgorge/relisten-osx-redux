@@ -17,6 +17,9 @@
 @protocol RLTrackSelectedDelegate <NSObject>
 
 - (void)trackSelected:(IGTrack *)track FromShow:(IGShow *)show;
+- (void)playTrackNext:(IGTrack *)track FromShow:(IGShow *)show;
+- (void)addTrackToEndOfQueue:(IGTrack *)track FromShow:(IGShow *)show;
+- (void)addTracksToQueue:(NSArray *)tracks FromShow:(IGShow *)show;
 
 @end
 
