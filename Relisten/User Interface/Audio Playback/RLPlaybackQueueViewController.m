@@ -126,8 +126,7 @@
     cellView.trackTitleTextField.stringValue = item.iguanaTrack.title;
     cellView.trackNumberTextField.stringValue = [NSString stringWithFormat:@"%ld", row + 1];
     
-    // TODO CHANGE ARTIST FOR MULTI-ARTIST
-    cellView.trackArtistTextField.stringValue = [[IGAPIClient sharedInstance] artist].name;
+    cellView.trackArtistTextField.stringValue = item.iguanaTrack.show.artist.name;
     
     NSString *subtitleText = [NSString stringWithFormat:@"%@ - %@ - %@", item.iguanaTrack.show.displayDate, item.iguanaShow.venue.name, item.iguanaShow.venue.city];
     cellView.trackShowDetailsTextField.stringValue = subtitleText;

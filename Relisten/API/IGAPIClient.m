@@ -285,10 +285,12 @@
     [self GET:[NSString stringWithFormat:@"artists/%@/top_shows/", self.artist.slug]
    parameters:nil
       success:^(NSURLSessionDataTask *task, id responseObject) {
+          IGArtist *currentArtist = [self.artist copy];
           NSArray *r = [responseObject[@"data"] map:^id(id item) {
               NSError *err;
               IGShow *y = [[IGShow alloc] initWithDictionary:item
                                                        error:&err];
+              y.artist = currentArtist;
               
               if(err) {
                   [self failure: err];
@@ -317,10 +319,12 @@
                stringByAppendingFormat:@"%@/shows/%@", [displayDate substringToIndex:4], displayDate]
    parameters:nil
       success:^(NSURLSessionDataTask *task, id responseObject) {
+          IGArtist *currentArtist = [self.artist copy];
           NSArray *r = [responseObject[@"data"] map:^id(id item) {
               NSError *err;
               IGShow *y = [[IGShow alloc] initWithDictionary:item
                                                        error:&err];
+              y.artist = currentArtist;
               
               if(err) {
                   [self failure: err];
@@ -348,10 +352,12 @@
     [self GET:[NSString stringWithFormat:@"artists/%@/random_show/", self.artist.slug]
    parameters:nil
       success:^(NSURLSessionDataTask *task, id responseObject) {
+          IGArtist *currentArtist = [self.artist copy];
           NSArray *r = [responseObject[@"data"] map:^id(id item) {
               NSError *err;
               IGShow *y = [[IGShow alloc] initWithDictionary:item
                                                        error:&err];
+              y.artist = currentArtist;
               
               if(err) {
                   [self failure: err];
