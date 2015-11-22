@@ -88,7 +88,7 @@
 
 -(void)addToEndOfQueueTracks:(NSArray *)tracks FromShow:(IGShow *)show
 {
-    NSArray *queue = [show.tracks map:^id(id object) {
+    NSArray *queue = [tracks map:^id(id object) {
         return [[IguanaMediaItem alloc] initWithTrack:object inShow:show];
     }];
     
