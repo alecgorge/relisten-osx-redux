@@ -15,6 +15,7 @@
 @property (weak) IBOutlet RLTableView *tableView;
 @property (weak) IBOutlet NSTextField *lineageTextField;
 @property (weak) IBOutlet NSTextField *taperTextField;
+@property (weak) IBOutlet NSButton *addToQueueButton;
 
 @property (nonatomic, strong) NSArray *allShows;
 @property (nonatomic, strong) IGShow *selectedShow;
@@ -44,6 +45,7 @@
     [self.sourcePopupButton removeAllItems];
     self.sourcePopupButton.enabled = NO;
     self.reviewsButton.enabled = NO;
+    self.addToQueueButton.enabled = NO;
     self.selectedShow = nil;
     [self.tableView reloadData];
     
@@ -56,6 +58,8 @@
     [self.sourcePopupButton removeAllItems];
     self.sourcePopupButton.enabled = YES;
     self.reviewsButton.enabled = YES;
+    self.addToQueueButton.enabled = YES;
+    
     NSArray *sourceList = [sources valueForKey:@"source"];
     [self.sourcePopupButton addItemsWithTitles:sourceList];
 }
@@ -133,6 +137,11 @@
     NSInteger size = self.selectedShow.tracks.count;
     NSArray *items = [self.selectedShow.tracks subarrayWithRange:NSMakeRange(index, size - index - 1)];
     [self.delegate addTracksToQueue:items FromShow:self.selectedShow];
+}
+
+- (IBAction)addConcertToQueue:(id)sender
+{
+    [self.delegate addTracksToQueue:self.selectedShow.tracks FromShow:self.selectedShow];
 }
 
 #pragma mark - Track Playing Visuals 
