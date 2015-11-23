@@ -16,6 +16,7 @@
 @property (assign) IBOutlet NSTextField *showDateTextField;
 @property (assign) IBOutlet NSTextField *soundBoardtextField;
 @property (assign) IBOutlet EDStarRating *starRating;
+@property (assign) IBOutlet NSTextField *reviewCountTextField;
 @property (assign) IBOutlet NSTextField *venueNameTextField;
 @property (assign) IBOutlet NSTextField *venueCityTextField;
 @property (assign) IBOutlet NSTextField *durationTextField;

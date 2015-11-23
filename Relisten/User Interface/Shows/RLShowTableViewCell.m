@@ -36,6 +36,8 @@
     starRating.displayMode = EDStarRatingDisplayAccurate;
     starRating.rating= show.averageRating;
     
+    self.reviewCountTextField.stringValue = [NSString stringWithFormat:@"(%ld)", (long)show.reviewsCount];
+    
     self.venueNameTextField.stringValue = show.venueName ? show.venueName : (show.venue ? show.venue.name : @"Unknown");
     self.venueCityTextField.stringValue = show.venueCity ? show.venueCity : (show.venue ? show.venue.city : @"Unknown");
     
