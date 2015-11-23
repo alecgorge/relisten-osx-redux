@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="277" height="503"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <tabView type="noTabsNoBorder" initialItem="4Ng-Sl-sNM" translatesAutoresizingMaskIntoConstraints="NO" id="VSc-Gw-SFJ">
+                <tabView misplaced="YES" type="noTabsNoBorder" initialItem="4Ng-Sl-sNM" translatesAutoresizingMaskIntoConstraints="NO" id="VSc-Gw-SFJ">
                     <rect key="frame" x="0.0" y="0.0" width="277" height="461"/>
                     <animations/>
                     <tabViewItems>
@@ -192,7 +192,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="277" height="461"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="57" horizontalPageScroll="10" verticalLineScroll="57" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjB-Rr-tWU">
+                                    <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="57" horizontalPageScroll="10" verticalLineScroll="57" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjB-Rr-tWU">
                                         <rect key="frame" x="0.0" y="0.0" width="277" height="461"/>
                                         <clipView key="contentView" drawsBackground="NO" id="i9o-2d-lEQ">
                                             <rect key="frame" x="0.0" y="0.0" width="277" height="461"/>
@@ -354,10 +354,10 @@
                     </tabViewItems>
                 </tabView>
                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7uE-rP-Mah">
-                    <rect key="frame" x="49" y="470" width="180" height="23"/>
+                    <rect key="frame" x="62" y="473" width="154" height="21"/>
                     <animations/>
-                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="capsule" trackingMode="selectOne" id="0Cg-Ap-uZj">
-                        <font key="font" metaFont="system"/>
+                    <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="capsule" trackingMode="selectOne" id="0Cg-Ap-uZj">
+                        <font key="font" metaFont="smallSystem"/>
                         <segments>
                             <segment label="All Shows"/>
                             <segment label="Soundboard" selected="YES" tag="1"/>
