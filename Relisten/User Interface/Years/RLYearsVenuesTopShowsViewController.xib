@@ -36,7 +36,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="48" rowSizeStyle="automatic" viewBased="YES" id="0dr-VK-3zD" customClass="RLTableView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -289,12 +289,12 @@
                     </tabViewItems>
                 </tabView>
                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kmE-Vv-gDC">
-                    <rect key="frame" x="26" y="475" width="203" height="21"/>
+                    <rect key="frame" x="28" y="475" width="198" height="21"/>
                     <animations/>
                     <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="capsule" trackingMode="selectOne" id="Wn1-r8-aF3">
                         <font key="font" metaFont="smallSystem"/>
                         <segments>
-                            <segment label="All Shows"/>
+                            <segment label="All Years"/>
                             <segment label="Venues" selected="YES" tag="1"/>
                             <segment label="Top Shows"/>
                         </segments>
