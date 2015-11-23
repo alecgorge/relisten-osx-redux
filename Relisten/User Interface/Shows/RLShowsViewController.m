@@ -176,10 +176,7 @@
     else
         show = self.soundboardShows[row];
     
-    if(show.isSoundboard)
-        cellView.showDateTextField.stringValue = [NSString stringWithFormat:@"%@ (SBD)", show.displayDate];
-    else
-        cellView.showDateTextField.stringValue = show.displayDate;
+    [cellView populateWithShow:show];
     
     if(show.id == self.currentlyPlayingShow.id)
     {
@@ -199,27 +196,6 @@
         cellView.equilizerView.hidden = YES;
         [cellView.equilizerView stopAnimated:NO];
     }
-    
-    EDStarRating *starRating = cellView.starRating;
-    starRating.starImage = [NSImage imageNamed:@"star3.png"];
-    starRating.starHighlightedImage = [NSImage imageNamed:@"star2.png"];
-    starRating.maxRating = 5.0;
-    starRating.horizontalMargin = 12;
-    starRating.editable = NO;
-    starRating.displayMode = EDStarRatingDisplayAccurate;
-    starRating.rating= show.averageRating;
-
-    cellView.venueNameTextField.stringValue = show.venueName ? show.venueName : (show.venue ? show.venue.name : @"Unknown");
-    cellView.venueCityTextField.stringValue = show.venueCity ? show.venueCity : (show.venue ? show.venue.city : @"Unknown");
-    cellView.durationTextField.stringValue = [self.durationFormatter stringFromTimeInterval:show.duration];
-    
-    NSString *recordings;
-    if(show.recordingCount == 1)
-        recordings = [NSString stringWithFormat:@"%ld recording", show.recordingCount];
-    else
-        recordings = [NSString stringWithFormat:@"%ld recordings", show.recordingCount];
-    
-    cellView.recordingCountTextField.stringValue = recordings;
     
     return cellView;
 }
