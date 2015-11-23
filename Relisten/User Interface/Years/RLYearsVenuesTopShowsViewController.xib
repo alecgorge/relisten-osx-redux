@@ -20,23 +20,23 @@
             <rect key="frame" x="0.0" y="0.0" width="254" height="505"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <tabView misplaced="YES" drawsBackground="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="8jc-Kg-Lcl">
-                    <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
+                <tabView drawsBackground="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="8jc-Kg-Lcl">
+                    <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
                     <animations/>
                     <tabViewItems>
                         <tabViewItem label="All Years" identifier="1" id="jV7-tI-fYK" userLabel="All Years">
                             <view key="view" id="l09-OP-xT1">
-                                <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
+                                <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="50" horizontalPageScroll="10" verticalLineScroll="50" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blm-9g-dtq">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
+                                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="50" horizontalPageScroll="10" verticalLineScroll="50" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blm-9g-dtq">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="vVV-Su-xDx">
-                                            <rect key="frame" x="0.0" y="0.0" width="254" height="463"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="48" rowSizeStyle="automatic" viewBased="YES" id="0dr-VK-3zD" customClass="RLTableView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="467"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>

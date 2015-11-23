@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="addToQueueButton" destination="qrC-9N-KaI" id="sGU-N7-dkb"/>
                 <outlet property="lineageTextField" destination="fbU-cp-auV" id="3nb-Uh-OGs"/>
+                <outlet property="listenOnArchiveButton" destination="gLK-SG-tlR" id="dN2-xd-7ok"/>
                 <outlet property="reviewsButton" destination="38Y-oK-qMx" id="33o-5w-a3o"/>
                 <outlet property="sourcePopupButton" destination="ux0-Fp-HHr" id="V0n-Jy-nx0"/>
                 <outlet property="tableView" destination="Xl2-1C-pTr" id="tzg-zo-Brj"/>
@@ -75,7 +76,7 @@
                     <rect key="frame" x="74" y="595" width="423" height="14"/>
                     <animations/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="L3Y-FI-8j1">
-                        <font key="font" metaFont="system" size="11"/>
+                        <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -87,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="28" rowSizeStyle="automatic" viewBased="YES" id="Xl2-1C-pTr" customClass="RLTableView">
-                                <rect key="frame" x="0.0" y="0.0" width="515" height="525"/>
+                                <rect key="frame" x="0.0" y="0.0" width="515" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -236,17 +237,6 @@
                         <animations/>
                     </scroller>
                 </scrollView>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qrC-9N-KaI">
-                    <rect key="frame" x="412" y="545" width="83" height="19"/>
-                    <animations/>
-                    <buttonCell key="cell" type="roundTextured" title="Add to queue" bezelStyle="texturedRounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3BX-7w-QgM">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="addConcertToQueue:" target="-2" id="v14-ub-FtN"/>
-                    </connections>
-                </button>
                 <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Tpq-gc-bo6">
                     <rect key="frame" x="20" y="533" width="475" height="5"/>
                     <animations/>
@@ -258,15 +248,37 @@
                     <rect key="frame" x="74" y="572" width="423" height="14"/>
                     <animations/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="OJS-Xr-rIt">
-                        <font key="font" metaFont="system" size="11"/>
+                        <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gLK-SG-tlR">
+                    <rect key="frame" x="373" y="545" width="122" height="19"/>
+                    <animations/>
+                    <buttonCell key="cell" type="roundTextured" title="Listen on archive.org" bezelStyle="texturedRounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="g1m-My-jeC">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="listenOnArchiveButtonPressed:" target="-2" id="TwI-8a-Fep"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qrC-9N-KaI">
+                    <rect key="frame" x="282" y="545" width="83" height="19"/>
+                    <animations/>
+                    <buttonCell key="cell" type="roundTextured" title="Add to queue" bezelStyle="texturedRounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3BX-7w-QgM">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="addConcertToQueue:" target="-2" id="v14-ub-FtN"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="38Y-oK-qMx" firstAttribute="centerY" secondItem="ux0-Fp-HHr" secondAttribute="centerY" id="0gS-r3-Mv3"/>
-                <constraint firstItem="qrC-9N-KaI" firstAttribute="trailing" secondItem="38Y-oK-qMx" secondAttribute="trailing" id="2Kg-mH-zlE"/>
+                <constraint firstItem="gLK-SG-tlR" firstAttribute="trailing" secondItem="38Y-oK-qMx" secondAttribute="trailing" id="41i-pA-Cyb"/>
                 <constraint firstAttribute="trailing" secondItem="38Y-oK-qMx" secondAttribute="trailing" constant="20" id="AVf-7a-ZoK"/>
                 <constraint firstItem="fbU-cp-auV" firstAttribute="leading" secondItem="By4-g8-Sqz" secondAttribute="trailing" constant="5" id="CpP-qK-cGn"/>
                 <constraint firstItem="By4-g8-Sqz" firstAttribute="top" secondItem="b6q-oE-4KE" secondAttribute="bottom" constant="8" id="GVJ-qU-KBd"/>
@@ -279,10 +291,12 @@
                 <constraint firstItem="2x4-nT-sZ0" firstAttribute="top" secondItem="fbU-cp-auV" secondAttribute="bottom" constant="9" id="MQB-B1-Gf2"/>
                 <constraint firstItem="ux0-Fp-HHr" firstAttribute="centerY" secondItem="b6q-oE-4KE" secondAttribute="centerY" id="MTw-Fb-hso"/>
                 <constraint firstItem="iPo-pR-2mI" firstAttribute="top" secondItem="fbU-cp-auV" secondAttribute="bottom" constant="6" id="N6T-XL-LLy"/>
+                <constraint firstItem="gLK-SG-tlR" firstAttribute="leading" secondItem="qrC-9N-KaI" secondAttribute="trailing" constant="8" id="T90-qu-0OK"/>
                 <constraint firstItem="4Cx-M8-hH5" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Y1B-81-p9q"/>
                 <constraint firstItem="ux0-Fp-HHr" firstAttribute="leading" secondItem="b6q-oE-4KE" secondAttribute="trailing" constant="10" id="YBj-8d-FnO"/>
                 <constraint firstItem="iPo-pR-2mI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="atP-z5-dwT"/>
                 <constraint firstItem="Tpq-gc-bo6" firstAttribute="top" secondItem="qrC-9N-KaI" secondAttribute="bottom" constant="10" id="emK-CS-Bfr"/>
+                <constraint firstItem="gLK-SG-tlR" firstAttribute="centerY" secondItem="qrC-9N-KaI" secondAttribute="centerY" id="hvb-Yn-E04"/>
                 <constraint firstAttribute="trailing" secondItem="Tpq-gc-bo6" secondAttribute="trailing" constant="20" id="ihK-SY-UKR"/>
                 <constraint firstAttribute="trailing" secondItem="fbU-cp-auV" secondAttribute="trailing" constant="20" id="kJh-Fe-mNI"/>
                 <constraint firstItem="fbU-cp-auV" firstAttribute="top" secondItem="ux0-Fp-HHr" secondAttribute="bottom" constant="11" id="laQ-15-F8Q"/>

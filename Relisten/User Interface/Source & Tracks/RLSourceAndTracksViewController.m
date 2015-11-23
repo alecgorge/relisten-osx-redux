@@ -16,6 +16,7 @@
 @property (weak) IBOutlet NSTextField *lineageTextField;
 @property (weak) IBOutlet NSTextField *taperTextField;
 @property (weak) IBOutlet NSButton *addToQueueButton;
+@property (weak) IBOutlet NSButton *listenOnArchiveButton;
 
 @property (nonatomic, strong) NSArray *allShows;
 @property (nonatomic, strong) IGShow *selectedShow;
@@ -46,6 +47,7 @@
     self.sourcePopupButton.enabled = NO;
     self.reviewsButton.enabled = NO;
     self.addToQueueButton.enabled = NO;
+    self.listenOnArchiveButton.enabled = NO;
     self.selectedShow = nil;
     [self.tableView reloadData];
     
@@ -59,6 +61,7 @@
     self.sourcePopupButton.enabled = YES;
     self.reviewsButton.enabled = YES;
     self.addToQueueButton.enabled = YES;
+    self.listenOnArchiveButton.enabled = YES;
     
     NSArray *sourceList = [sources valueForKey:@"source"];
     [self.sourcePopupButton addItemsWithTitles:sourceList];
@@ -214,5 +217,12 @@
     return YES;
 }
 
+#pragma mark - Archive.org routing
+
+- (IBAction)listenOnArchiveButtonPressed:(id)sender
+{
+    NSString *urlString = [NSString stringWithFormat:@"https://archive.org/details/%@", self.selectedShow.archiveIdentifier];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
+}
 
 @end
