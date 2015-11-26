@@ -177,10 +177,10 @@
                                                             </menu>
                                                         </popUpButtonCell>
                                                     </popUpButton>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-fi-4ZX">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-fi-4ZX">
                                                         <rect key="frame" x="29" y="5" width="188" height="18"/>
                                                         <animations/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Big nice track name of song " drawsBackground="YES" id="1bu-D7-9HH">
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" title="Big nice track name of song " drawsBackground="YES" id="1bu-D7-9HH">
                                                             <font key="font" metaFont="system" size="14"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" red="0.98521872109999997" green="0.98933997529999995" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -202,6 +202,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="PtU-ya-gxz" secondAttribute="trailing" constant="10" id="rT7-Hr-0wR"/>
                                                     <constraint firstItem="kjF-pV-s1W" firstAttribute="height" secondItem="DFr-KK-MuZ" secondAttribute="height" id="tFZ-jS-BYZ"/>
                                                     <constraint firstItem="kjF-pV-s1W" firstAttribute="leading" secondItem="DFr-KK-MuZ" secondAttribute="leading" id="v0f-w3-foS"/>
+                                                    <constraint firstItem="QPx-Ts-DZV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ua8-fi-4ZX" secondAttribute="trailing" constant="10" id="xHC-Pg-RqR"/>
                                                 </constraints>
                                                 <animations/>
                                                 <connections>

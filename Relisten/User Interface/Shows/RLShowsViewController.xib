@@ -76,10 +76,10 @@
                                                                             </constraints>
                                                                             <animations/>
                                                                         </customView>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7SM-sv-MAw">
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="7SM-sv-MAw">
                                                                             <rect key="frame" x="10" y="25" width="107" height="17"/>
                                                                             <animations/>
-                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Recording Studio" drawsBackground="YES" id="WFP-F7-cEW">
+                                                                            <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" title="Recording Studio" drawsBackground="YES" id="WFP-F7-cEW">
                                                                                 <font key="font" size="13" name=".HelveticaNeueDeskInterface-Regular"/>
                                                                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -313,7 +313,7 @@
                                                                             <rect key="frame" x="244" y="46" width="26" height="16"/>
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(10)" drawsBackground="YES" id="cas-JX-XJ8">
-                                                                                <font key="font" metaFont="system" size="12"/>
+                                                                                <font key="font" metaFont="cellTitle"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                                                             </textFieldCell>

@@ -45,7 +45,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AGAudioPlayer:
-    :commit: fadfcdf15ec3a7c986c590779a1864bca169c38d
+    :commit: 06fbfc56eca3dd2fc87d3fa0ad4ce355546ae389
     :git: https://github.com/alecgorge/AGAudioPlayer.git
   SPMediaKeyTap:
     :commit: 04608dd46d8f63b1e251b30a96753e7c22705e23

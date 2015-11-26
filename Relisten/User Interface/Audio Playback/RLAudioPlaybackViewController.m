@@ -197,7 +197,7 @@
     }
     else if(reason == AGAudioPlayerTrackStopped)
     {
-        
+        [self clearTrackInfo];
     }
     else if(reason == AGAudioPlayerTrackPaused)
     {

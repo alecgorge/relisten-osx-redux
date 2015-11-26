@@ -64,8 +64,9 @@
 
 - (IBAction)clearQueue:(id)sender
 {
-//    [self.audioPlayer.queue clear];
-//    [self.tableView reloadData];
+    [self.audioPlayer.queue clear];
+    [self.audioPlayer stop];
+    [self.tableView reloadData];
 }
 
 -(void)deleteKeyPressedAtIndex:(NSInteger)index
@@ -74,6 +75,7 @@
     {
         [self.audioPlayer forward];
     }
+    
     [self.audioPlayer.queue removeItemAtIndex:index];
     [self.tableView reloadData];
 }
@@ -140,7 +142,7 @@
         {
             [cellView.equilizerView startAnimated:YES];
         }
-        else
+        else 
         {
             [cellView.equilizerView pauseAnimated:YES];
         }
