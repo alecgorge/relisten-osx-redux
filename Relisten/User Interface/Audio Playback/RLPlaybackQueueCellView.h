@@ -11,7 +11,6 @@
 
 @interface RLPlaybackQueueCellView : NSTableCellView
 
-@property (assign) IBOutlet NSTextField *trackNumberTextField;
 @property (assign) IBOutlet NSTextField *trackTitleTextField;
 @property (assign) IBOutlet CMEqualizerIndicatorView *equilizerView;
 @property (assign) IBOutlet NSTextField *trackArtistTextField;

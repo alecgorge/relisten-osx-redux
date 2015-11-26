@@ -126,7 +126,6 @@
     IguanaMediaItem *item = self.audioPlayer.queue.queue[row];
     
     cellView.trackTitleTextField.stringValue = item.iguanaTrack.title;
-    cellView.trackNumberTextField.stringValue = [NSString stringWithFormat:@"%ld", row + 1];
     
     cellView.trackArtistTextField.stringValue = item.iguanaTrack.show.artist.name;
     
@@ -136,7 +135,6 @@
     if(row == self.audioPlayer.currentIndex)
     {
         cellView.equilizerView.hidden = NO;
-        cellView.trackNumberTextField.hidden = YES;
         
         if(self.audioPlayer.isPlaying)
         {
@@ -151,7 +149,6 @@
     {
         [cellView.equilizerView stopAnimated:NO];
         cellView.equilizerView.hidden = YES;
-        cellView.trackNumberTextField.hidden = NO;
     }
     
     return cellView;

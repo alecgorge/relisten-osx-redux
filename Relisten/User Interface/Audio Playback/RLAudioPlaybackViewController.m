@@ -168,7 +168,7 @@
     NSPopover *popover = [[NSPopover alloc] init];
     popover.behavior = NSPopoverBehaviorTransient;
     popover.animates = YES;
-    popover.contentSize = NSMakeSize(400, 300);
+    popover.contentSize = NSMakeSize(400, 400);
     popover.contentViewController = self.queueViewController;
     
     [popover showRelativeToRect:NSZeroRect ofView:sender preferredEdge:NSMaxYEdge];
