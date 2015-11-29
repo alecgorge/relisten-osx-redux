@@ -178,7 +178,7 @@
     
     [cellView populateWithShow:show];
     
-    if(show.id == self.currentlyPlayingShow.id)
+    if(show.ArtistId == self.currentlyPlayingShow.ArtistId && [show.displayDate isEqualToString:self.currentlyPlayingShow.displayDate])
     {
         if(self.playing)
         {
