@@ -52,6 +52,7 @@
     self.bufferingTextField.stringValue = @"";
     self.volumeSlider.minValue = 0.0;
     self.volumeSlider.maxValue = 1.0;
+    self.volumeSlider.doubleValue = 1.0;
     
     self.durationFormatter = [[NSDateComponentsFormatter alloc] init];
     self.durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
@@ -157,8 +158,11 @@
 
 - (IBAction)volumeSliderMoved:(id)sender
 {
-//    NSSlider *slider = sender;
-//    double value = [slider doubleValue];
+    NSSlider *slider = sender;
+    double value = [slider doubleValue];
+    AVQueuePlayer *queuePlayer; // TODO 
+    
+    queuePlayer.volume = value;
 }
 
 #pragma mark - Queue Manipulation Methods

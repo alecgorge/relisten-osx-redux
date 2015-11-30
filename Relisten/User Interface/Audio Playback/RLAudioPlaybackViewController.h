@@ -11,6 +11,7 @@
 #import <ObjectiveSugar/ObjectiveSugar.h>
 #import <AGAudioPlayer/AGAudioPlayer.h>
 #import <CoreAudio/CoreAudio.h>
+#import <AVFoundation/AVFoundation.h>
 #import "RLPlaybackQueueViewController.h"
 #import "IguanaMediaItem.h"
 #import "IGAPIClient.h"
