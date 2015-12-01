@@ -16,6 +16,8 @@
 #import "IguanaMediaItem.h"
 #import "IGAPIClient.h"
 
+extern NSString *RLAudioPlaybackTrackChanged;
+
 @protocol RLAudioPlaybackDelegate <NSObject>
 
 - (void)trackPlayedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show;

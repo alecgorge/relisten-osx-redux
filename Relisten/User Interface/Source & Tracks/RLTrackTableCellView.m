@@ -27,7 +27,7 @@
     if(!durationFormatter)
     {
         durationFormatter = [[NSDateComponentsFormatter alloc] init];
-        durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
+        durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorDropLeading;
         durationFormatter.allowedUnits = (NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond);
     }
     

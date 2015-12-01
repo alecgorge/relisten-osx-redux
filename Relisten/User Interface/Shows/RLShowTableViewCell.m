@@ -34,9 +34,12 @@
     starRating.horizontalMargin = 12;
     starRating.editable = NO;
     starRating.displayMode = EDStarRatingDisplayAccurate;
-    starRating.rating= show.averageRating;
+    starRating.rating = show.averageRating;
     
     self.reviewCountTextField.stringValue = [NSString stringWithFormat:@"%ld", (long)show.reviewsCount];
+    
+    self.reviewCountTextField.hidden =
+    self.starRating.hidden = show.reviewsCount == 0;
     
     self.venueNameTextField.stringValue = show.venueName ? show.venueName : (show.venue ? show.venue.name : @"Unknown");
     self.venueCityTextField.stringValue = show.venueCity ? show.venueCity : (show.venue ? show.venue.city : @"Unknown");
@@ -44,7 +47,7 @@
     if(!durationFormatter)
     {
         durationFormatter = [[NSDateComponentsFormatter alloc] init];
-        durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
+        durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorDropLeading;
         durationFormatter.allowedUnits = (NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond);
     }
     
@@ -57,6 +60,7 @@
         recordings = [NSString stringWithFormat:@"%ld recordings", show.recordingCount];
     
     self.recordingCountTextField.stringValue = recordings;
+    self.showDateTextField.stringValue = show.displayDate;
 }
 
 @end

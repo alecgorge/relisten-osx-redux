@@ -8,6 +8,8 @@
 
 #import "RLAudioPlaybackViewController.h"
 
+NSString *RLAudioPlaybackTrackChanged = @"rl_audio_track_changed_notification";
+
 @interface RLAudioPlaybackViewController ()
 
 @property (weak) IBOutlet NSTextField *trackTitleTextField;
@@ -49,7 +51,7 @@
     self.trackSubtitleTextField.stringValue = @"";
     self.trackBeginningTimeTextField.stringValue = @"00:00:00";
     self.trackEndingTImeTextField.stringValue = @"00:00:00";
-    self.bufferingTextField.stringValue = @"";
+    self.bufferingTextField.stringValue = @"Buffering…";
     self.volumeSlider.minValue = 0.0;
     self.volumeSlider.maxValue = 1.0;
     self.volumeSlider.doubleValue = 1.0;
@@ -79,12 +81,15 @@
     IguanaMediaItem *item = [[IguanaMediaItem alloc] initWithTrack:track inShow:show];
     [self.queue appendItem:item];
     [self.queue moveItem:item toIndex:self.audioPlayer.currentIndex + 1]; // POSSIBLY WRONG
+    
+    self.bufferingTextField.hidden = !self.audioPlayer.isBuffering;
 }
 
 -(void)addToEndOfQueueTrack:(IGTrack *)track FromShow:(IGShow *)show
 {
     IguanaMediaItem *item = [[IguanaMediaItem alloc] initWithTrack:track inShow:show];
     [self.queue appendItem:item];
+    self.bufferingTextField.hidden = !self.audioPlayer.isBuffering;
 }
 
 -(void)addToEndOfQueueTracks:(NSArray *)tracks FromShow:(IGShow *)show
@@ -94,6 +99,7 @@
     }];
     
     [self.queue appendItems:queue];
+    self.bufferingTextField.hidden = !self.audioPlayer.isBuffering;
 }
 
 -(void)updateCurrentTrackInfo:(IguanaMediaItem *)mediaItem
@@ -104,11 +110,12 @@
     self.trackEndingTImeTextField.stringValue = [self.durationFormatter stringFromTimeInterval:mediaItem.iguanaTrack.length];
     self.trackSlider.maxValue = mediaItem.iguanaTrack.length;
     self.trackSlider.minValue = 0.0;
+    
+    self.bufferingTextField.hidden = self.audioPlayer.isBuffering;
 }
 
 -(void)clearTrackInfo
 {
-    [self.audioPlayer stop];
     self.trackTitleTextField.stringValue = @"";
     self.trackSubtitleTextField.stringValue = @"";
     self.trackBeginningTimeTextField.stringValue = @"00:00:00";
@@ -116,6 +123,7 @@
     self.trackSlider.doubleValue = 0.0;
     self.trackSlider.maxValue = 0.0;
     self.trackSlider.minValue = 0.0;
+    self.bufferingTextField.hidden = YES;
 }
 
 #pragma mark - UI Button Interaction Methods
@@ -180,12 +188,10 @@
 
 #pragma mark - AGAudioPlayerDelegate Methods
 
-- (void)audioPlayer:(AGAudioPlayer *)audioPlayer uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason extraInfo:(NSDictionary *)dict
-{
-    if(reason == AGAudioPlayerTrackBuffering)
-        self.bufferingTextField.stringValue = @"Buffering...";
-    else
-        self.bufferingTextField.stringValue = @"";
+- (void)audioPlayer:(AGAudioPlayer *)audioPlayer
+uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason
+          extraInfo:(NSDictionary *)dict {
+    self.bufferingTextField.hidden = !self.audioPlayer.isBuffering;
     
     if(reason == AGAudioPlayerTrackProgressUpdated)
     {
@@ -203,10 +209,17 @@
     {
         [self clearTrackInfo];
     }
-    else if(reason == AGAudioPlayerTrackPaused)
-    {
-         IguanaMediaItem *currentMediaItem = (IguanaMediaItem *)self.audioPlayer.currentItem;
-        [self.delegate trackPausedAtIndex:self.audioPlayer.currentIndex forTrack:currentMediaItem.iguanaTrack andShow:currentMediaItem.iguanaShow];
+    else if(reason == AGAudioPlayerTrackPaused) {
+        IguanaMediaItem *currentMediaItem = (IguanaMediaItem *)self.audioPlayer.currentItem;
+        
+        if(currentMediaItem) {
+            [self.delegate trackPausedAtIndex:self.audioPlayer.currentIndex
+                                     forTrack:currentMediaItem.iguanaTrack
+                                      andShow:currentMediaItem.iguanaShow];
+        }
+        else {
+            [self clearTrackInfo];
+        }
         [self.queueViewController reloadData];
     }
     else if(reason == AGAudioPlayerError)
@@ -215,6 +228,10 @@
     }
     
     [self updatePlayPauseButton];
+    
+    [NSNotificationCenter.defaultCenter postNotificationName:RLAudioPlaybackTrackChanged
+                                                      object:self
+                                                    userInfo:nil];
 }
 
 @end

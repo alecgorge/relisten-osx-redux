@@ -113,25 +113,30 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e4Y-a2-FYd">
-                                                                            <rect key="frame" x="94" y="45" width="32" height="18"/>
+                                                                            <rect key="frame" x="94" y="45" width="33" height="16"/>
                                                                             <animations/>
-                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="SBD" drawsBackground="YES" id="NJd-on-bE5">
-                                                                                <font key="font" metaFont="system" size="14"/>
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="SBD" drawsBackground="YES" id="NJd-on-bE5">
+                                                                                <font key="font" metaFont="system" size="12"/>
                                                                                 <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" red="0.32862143310000003" green="0.81786070479999995" blue="0.047882575310000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                             </textFieldCell>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                    <integer key="value" value="3"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bnn-p6-20g">
-                                                                            <rect key="frame" x="241" y="45" width="29" height="18"/>
+                                                                            <rect key="frame" x="245" y="47" width="25" height="14"/>
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(10)" drawsBackground="YES" id="cWG-CH-swL">
-                                                                                <font key="font" metaFont="system" size="14"/>
+                                                                                <font key="font" metaFont="system" size="11"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="7dA-Wf-Et1" customClass="CMEqualizerIndicatorView">
-                                                                            <rect key="frame" x="134" y="46" width="16" height="16"/>
+                                                                            <rect key="frame" x="135" y="45" width="16" height="16"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="16" id="4wM-6B-t0Y"/>
                                                                                 <constraint firstAttribute="height" constant="16" id="lQi-bG-zWQ"/>
@@ -146,11 +151,11 @@
                                                                     </subviews>
                                                                     <constraints>
                                                                         <constraint firstItem="7dA-Wf-Et1" firstAttribute="leading" secondItem="e4Y-a2-FYd" secondAttribute="trailing" constant="8" id="1cs-5a-f72"/>
+                                                                        <constraint firstItem="e4Y-a2-FYd" firstAttribute="baseline" secondItem="j0t-27-oFL" secondAttribute="baseline" id="Dgb-Nc-dik"/>
                                                                         <constraint firstAttribute="trailing" secondItem="Gvx-7F-pSd" secondAttribute="trailing" constant="10" id="DsH-Aw-Xh0"/>
                                                                         <constraint firstItem="Gvx-7F-pSd" firstAttribute="height" secondItem="j0t-27-oFL" secondAttribute="height" id="EhT-MG-3bR"/>
                                                                         <constraint firstItem="KF9-Km-vj4" firstAttribute="trailing" secondItem="IBe-Oh-xgU" secondAttribute="trailing" id="Hpo-hR-nsI"/>
                                                                         <constraint firstItem="7dA-Wf-Et1" firstAttribute="centerY" secondItem="e4Y-a2-FYd" secondAttribute="centerY" id="Iqw-EY-Bf9"/>
-                                                                        <constraint firstItem="e4Y-a2-FYd" firstAttribute="centerY" secondItem="j0t-27-oFL" secondAttribute="centerY" id="KEt-yt-tZp"/>
                                                                         <constraint firstItem="j0t-27-oFL" firstAttribute="leading" secondItem="A5k-XA-Zj8" secondAttribute="leading" constant="10" id="N8d-e6-vzn"/>
                                                                         <constraint firstItem="7SM-sv-MAw" firstAttribute="top" secondItem="j0t-27-oFL" secondAttribute="bottom" constant="3" id="TLh-MA-DRs"/>
                                                                         <constraint firstItem="Bnn-p6-20g" firstAttribute="centerY" secondItem="Gvx-7F-pSd" secondAttribute="centerY" id="Uwb-oG-tYD"/>
@@ -301,25 +306,25 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZIF-sX-ddp">
-                                                                            <rect key="frame" x="94" y="45" width="32" height="18"/>
+                                                                            <rect key="frame" x="94" y="45" width="33" height="16"/>
                                                                             <animations/>
-                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="SBD" drawsBackground="YES" id="z1Z-NM-zSu">
-                                                                                <font key="font" metaFont="system" size="14"/>
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="SBD" drawsBackground="YES" id="z1Z-NM-zSu">
+                                                                                <font key="font" metaFont="system" size="12"/>
                                                                                 <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" red="0.32862143310000003" green="0.81786070479999995" blue="0.047882575310000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4ep-Pf-cxk">
-                                                                            <rect key="frame" x="244" y="46" width="26" height="16"/>
+                                                                            <rect key="frame" x="245" y="47" width="25" height="14"/>
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(10)" drawsBackground="YES" id="cas-JX-XJ8">
-                                                                                <font key="font" metaFont="cellTitle"/>
+                                                                                <font key="font" metaFont="system" size="11"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="yYZ-0w-cmZ" customClass="CMEqualizerIndicatorView">
-                                                                            <rect key="frame" x="134" y="46" width="16" height="16"/>
+                                                                            <rect key="frame" x="135" y="45" width="16" height="16"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="16" id="IW2-QX-xZW"/>
                                                                                 <constraint firstAttribute="width" constant="16" id="vyF-aM-ZSm"/>
@@ -341,13 +346,13 @@
                                                                         <constraint firstItem="c3F-Xt-Fsz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kaZ-pT-miR" secondAttribute="trailing" constant="10" id="JSy-ck-7i9"/>
                                                                         <constraint firstItem="TWC-fQ-CNl" firstAttribute="height" secondItem="8sM-cn-ux3" secondAttribute="height" id="MA8-am-UzT"/>
                                                                         <constraint firstItem="kRF-zp-r2Y" firstAttribute="centerY" secondItem="e3s-cZ-cTP" secondAttribute="centerY" id="MQo-74-vaO"/>
-                                                                        <constraint firstItem="ZIF-sX-ddp" firstAttribute="centerY" secondItem="8sM-cn-ux3" secondAttribute="centerY" id="Msp-CR-7B8"/>
-                                                                        <constraint firstItem="4ep-Pf-cxk" firstAttribute="centerY" secondItem="TWC-fQ-CNl" secondAttribute="centerY" id="Pqv-iP-YQK"/>
+                                                                        <constraint firstItem="4ep-Pf-cxk" firstAttribute="centerY" secondItem="TWC-fQ-CNl" secondAttribute="centerY" id="OnF-gr-oBE"/>
                                                                         <constraint firstItem="kRF-zp-r2Y" firstAttribute="trailing" secondItem="c3F-Xt-Fsz" secondAttribute="trailing" id="QMl-rw-oM5"/>
                                                                         <constraint firstItem="ZIF-sX-ddp" firstAttribute="leading" secondItem="8sM-cn-ux3" secondAttribute="trailing" constant="5" id="UTf-fa-5Mb"/>
                                                                         <constraint firstItem="kRF-zp-r2Y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="e3s-cZ-cTP" secondAttribute="trailing" constant="10" id="Uu3-Ne-biX"/>
                                                                         <constraint firstItem="yYZ-0w-cmZ" firstAttribute="leading" secondItem="ZIF-sX-ddp" secondAttribute="trailing" constant="8" id="YEf-aW-7yk"/>
                                                                         <constraint firstItem="kaZ-pT-miR" firstAttribute="top" secondItem="8sM-cn-ux3" secondAttribute="bottom" constant="3" id="acc-5e-e1G"/>
+                                                                        <constraint firstItem="ZIF-sX-ddp" firstAttribute="baseline" secondItem="8sM-cn-ux3" secondAttribute="baseline" id="d8V-dN-Dat"/>
                                                                         <constraint firstItem="e3s-cZ-cTP" firstAttribute="leading" secondItem="kaZ-pT-miR" secondAttribute="leading" id="fxq-un-9JL"/>
                                                                         <constraint firstItem="yYZ-0w-cmZ" firstAttribute="centerY" secondItem="ZIF-sX-ddp" secondAttribute="centerY" id="gsg-0W-Ajz"/>
                                                                         <constraint firstItem="kaZ-pT-miR" firstAttribute="leading" secondItem="8sM-cn-ux3" secondAttribute="leading" id="jvd-80-cua"/>
