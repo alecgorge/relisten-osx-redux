@@ -372,6 +372,7 @@
 				TargetAttributes = {
 					C116DFAA1BB09EEE006A9F6C = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = HT7ELV3Q35;
 					};
 				};
 			};
@@ -601,6 +602,7 @@
 			baseConfigurationReference = 478CD6AE1D5F87783189B5F0 /* Pods-Relisten.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -615,6 +617,7 @@
 			baseConfigurationReference = 2770E3F2B9EA9D6FAC108AED /* Pods-Relisten.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
