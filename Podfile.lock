@@ -21,7 +21,7 @@ PODS:
     - HysteriaPlayer
   - CMEqualizerIndicatorView (1.1)
   - EDStarRating (1.1)
-  - HysteriaPlayer (2.1.4)
+  - HysteriaPlayer (HEAD based on 2.1.4)
   - JSONModel (1.1.2)
   - Masonry (0.6.3)
   - ObjectiveSugar (1.1.0)
@@ -29,9 +29,10 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - AGAudioPlayer (from `https://github.com/alecgorge/AGAudioPlayer.git`)
+  - AGAudioPlayer (from `../AGAudioPlayer`)
   - CMEqualizerIndicatorView (~> 1.0)
   - EDStarRating
+  - HysteriaPlayer (HEAD)
   - JSONModel
   - Masonry
   - ObjectiveSugar
@@ -39,14 +40,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   AGAudioPlayer:
-    :git: https://github.com/alecgorge/AGAudioPlayer.git
+    :path: ../AGAudioPlayer
   SPMediaKeyTap:
     :git: https://github.com/Coppertino/SPMediaKeyTap.git
 
 CHECKOUT OPTIONS:
-  AGAudioPlayer:
-    :commit: 06fbfc56eca3dd2fc87d3fa0ad4ce355546ae389
-    :git: https://github.com/alecgorge/AGAudioPlayer.git
   SPMediaKeyTap:
     :commit: 04608dd46d8f63b1e251b30a96753e7c22705e23
     :git: https://github.com/Coppertino/SPMediaKeyTap.git
