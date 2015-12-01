@@ -168,7 +168,7 @@ NSString *RLAudioPlaybackTrackChanged = @"rl_audio_track_changed_notification";
 {
     NSSlider *slider = sender;
     double value = [slider doubleValue];
-    AVQueuePlayer *queuePlayer; // TODO 
+    AVQueuePlayer *queuePlayer = self.audioPlayer.player;
     
     queuePlayer.volume = value;
 }
