@@ -17,6 +17,8 @@
 #import "IGAPIClient.h"
 
 extern NSString *RLAudioPlaybackTrackChanged;
+extern IGShow *RLAudioPlaybackCurrentShow;
+extern IGTrack *RLAudioPlaybackCurrentTrack;
 
 @protocol RLAudioPlaybackDelegate <NSObject>
 
@@ -26,6 +28,11 @@ extern NSString *RLAudioPlaybackTrackChanged;
 @end
 
 @interface RLAudioPlaybackViewController : NSViewController <AGAudioPlayerDelegate, AGAudioPlayerUpNextQueueDelegate>
+
++ (instancetype)sharedInstance;
+
+@property (nonatomic, strong) AGAudioPlayer *audioPlayer;
+@property (nonatomic, strong) AGAudioPlayerUpNextQueue *queue;
 
 @property (nonatomic, weak) id<RLAudioPlaybackDelegate> delegate;
 

@@ -8,6 +8,10 @@
 
 #import "RLShowsViewController.h"
 
+#import "RLAudioPlaybackViewController.h"
+
+#import <FXNotifications/FXNotifications.h>
+
 #define ALL_SHOWS       0
 #define SOUNDBOARD      1
 
@@ -21,8 +25,6 @@
 @property (nonatomic, strong) NSArray *allShows;
 @property (nonatomic, strong) NSMutableArray *soundboardShows;
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
-@property (nonatomic, strong) IGShow *currentlyPlayingShow;
-@property (nonatomic) BOOL playing;
 
 @end
 
@@ -48,6 +50,15 @@
     
     //self.view.wantsLayer = YES;
     //self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                              forName:RLAudioPlaybackTrackChanged
+                                               object:nil
+                                                queue:NSOperationQueue.mainQueue
+                                           usingBlock:^(NSNotification *note, id observer) {
+                                               [self.allShowsTableView reloadData];
+                                               [self.soundboardShowsTableView reloadData];
+                                           }];
 }
 
 - (void)fetchShowsForYear:(IGYear *)year withProgressIndicator:(NSProgressIndicator *)indicator
@@ -132,22 +143,6 @@
     [self.soundboardShowsTableView reloadData];
 }
 
--(void)setCurrentlyPLayingShow:(IGShow *)show
-{
-    self.playing = YES;
-    self.currentlyPlayingShow = show;
-    [self.allShowsTableView reloadData];
-    [self.soundboardShowsTableView reloadData];
-}
-
--(void)pauseCurrentlyPLayingShow:(IGShow *)show
-{
-    self.playing = NO;
-    self.currentlyPlayingShow = show;
-    [self.allShowsTableView reloadData];
-    [self.soundboardShowsTableView reloadData];
-}
-
 #pragma mark - NSTableViewdataSource Methods
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
@@ -178,21 +173,19 @@
     
     [cellView populateWithShow:show];
     
-    if(show.ArtistId == self.currentlyPlayingShow.ArtistId && [show.displayDate isEqualToString:self.currentlyPlayingShow.displayDate])
-    {
-        if(self.playing)
-        {
+    if(show.ArtistId == RLAudioPlaybackCurrentShow.ArtistId
+    && [show.displayDate isEqualToString:RLAudioPlaybackCurrentShow.displayDate]) {
+        if(RLAudioPlaybackViewController.sharedInstance.audioPlayer.isPlaying) {
             cellView.equilizerView.hidden = NO;
             [cellView.equilizerView startAnimated:YES];
         }
-        else // Paused
-        {
+        else {
             cellView.equilizerView.hidden = NO;
             [cellView.equilizerView pauseAnimated:YES];
         }
     }
-    else // Don't show equalizer
-    {
+    // Don't show equalizer
+    else  {
         cellView.equilizerView.hidden = YES;
         [cellView.equilizerView stopAnimated:NO];
     }

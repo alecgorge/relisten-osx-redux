@@ -27,7 +27,5 @@
 - (void)fetchTopShowsWithProgressIndicator:(NSProgressIndicator *)indicator;
 - (void)fetchRandomShowWithProgressIndicator:(NSProgressIndicator *)indicator andShow:(void (^)(IGShow *))success;
 - (void)clearAllShows;
-- (void)setCurrentlyPLayingShow:(IGShow *)show;
-- (void)pauseCurrentlyPLayingShow:(IGShow *)show;
 
 @end

@@ -21,7 +21,7 @@
     if (self.selectionHighlightStyle != NSTableViewSelectionHighlightStyleNone)
     {
 //        NSColor *themeColor = [NSColor colorWithRed:0.149 green:0.608 blue:0.737 alpha:1];
-        NSColor *themeColor = [NSColor lightGrayColor];
+        NSColor *themeColor = [NSColor colorWithCalibratedWhite:0.883 alpha:1.000];
         NSRect selectionRect = NSInsetRect(self.bounds, 0, 0);
         [themeColor setStroke];
         [themeColor setFill];

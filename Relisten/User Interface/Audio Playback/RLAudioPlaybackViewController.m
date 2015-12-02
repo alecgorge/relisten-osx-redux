@@ -10,6 +10,10 @@
 
 NSString *RLAudioPlaybackTrackChanged = @"rl_audio_track_changed_notification";
 
+IGShow *RLAudioPlaybackCurrentShow = nil;
+IGTrack *RLAudioPlaybackCurrentTrack = nil;
+
+
 @interface RLAudioPlaybackViewController ()
 
 @property (weak) IBOutlet NSTextField *trackTitleTextField;
@@ -23,14 +27,22 @@ NSString *RLAudioPlaybackTrackChanged = @"rl_audio_track_changed_notification";
 
 @property (weak) IBOutlet NSButton *playButton;
 
-@property (nonatomic, strong) AGAudioPlayer *audioPlayer;
-@property (nonatomic, strong) AGAudioPlayerUpNextQueue *queue;
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
 @property (nonatomic, strong) RLPlaybackQueueViewController *queueViewController;
 
 @end
 
 @implementation RLAudioPlaybackViewController
+
++ (instancetype)sharedInstance {
+    static dispatch_once_t once;
+    static id sharedInstance;
+    dispatch_once(&once, ^{
+        sharedInstance = [self.alloc initWithNibName:NSStringFromClass(self.class)
+                                              bundle:nil];
+    });
+    return sharedInstance;
+}
 
 - (void)viewDidLoad
 {
@@ -49,8 +61,8 @@ NSString *RLAudioPlaybackTrackChanged = @"rl_audio_track_changed_notification";
     
     self.trackTitleTextField.stringValue = @"";
     self.trackSubtitleTextField.stringValue = @"";
-    self.trackBeginningTimeTextField.stringValue = @"00:00:00";
-    self.trackEndingTImeTextField.stringValue = @"00:00:00";
+    self.trackBeginningTimeTextField.stringValue = @"00:00";
+    self.trackEndingTImeTextField.stringValue = @"00:00";
     self.bufferingTextField.stringValue = @"Buffering…";
     self.volumeSlider.minValue = 0.0;
     self.volumeSlider.maxValue = 1.0;
@@ -58,7 +70,7 @@ NSString *RLAudioPlaybackTrackChanged = @"rl_audio_track_changed_notification";
     
     self.durationFormatter = [[NSDateComponentsFormatter alloc] init];
     self.durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
-    self.durationFormatter.allowedUnits = (NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond);
+    self.durationFormatter.allowedUnits = (NSCalendarUnitMinute | NSCalendarUnitSecond);
 }
 
 #pragma mark - Track Manipulation
@@ -118,8 +130,8 @@ NSString *RLAudioPlaybackTrackChanged = @"rl_audio_track_changed_notification";
 {
     self.trackTitleTextField.stringValue = @"";
     self.trackSubtitleTextField.stringValue = @"";
-    self.trackBeginningTimeTextField.stringValue = @"00:00:00";
-    self.trackEndingTImeTextField.stringValue = @"00:00:00";
+    self.trackBeginningTimeTextField.stringValue = @"00:00";
+    self.trackEndingTImeTextField.stringValue = @"00:00";
     self.trackSlider.doubleValue = 0.0;
     self.trackSlider.maxValue = 0.0;
     self.trackSlider.minValue = 0.0;
@@ -192,6 +204,10 @@ NSString *RLAudioPlaybackTrackChanged = @"rl_audio_track_changed_notification";
 uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason
           extraInfo:(NSDictionary *)dict {
     self.bufferingTextField.hidden = !self.audioPlayer.isBuffering;
+    
+    IguanaMediaItem *item = (IguanaMediaItem *)self.audioPlayer.currentItem;
+    RLAudioPlaybackCurrentShow = item.iguanaShow;
+    RLAudioPlaybackCurrentTrack = item.iguanaTrack;
     
     if(reason == AGAudioPlayerTrackProgressUpdated)
     {

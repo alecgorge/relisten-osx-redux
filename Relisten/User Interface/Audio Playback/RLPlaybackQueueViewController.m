@@ -65,7 +65,6 @@
 - (IBAction)clearQueue:(id)sender
 {
     [self.audioPlayer.queue clear];
-    [self.audioPlayer stop];
     [self.tableView reloadData];
 }
 

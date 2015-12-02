@@ -116,7 +116,7 @@
                                                                             <rect key="frame" x="94" y="45" width="33" height="16"/>
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="SBD" drawsBackground="YES" id="NJd-on-bE5">
-                                                                                <font key="font" metaFont="system" size="12"/>
+                                                                                <font key="font" metaFont="cellTitle"/>
                                                                                 <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" red="0.32862143310000003" green="0.81786070479999995" blue="0.047882575310000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                             </textFieldCell>
@@ -130,7 +130,7 @@
                                                                             <rect key="frame" x="245" y="47" width="25" height="14"/>
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(10)" drawsBackground="YES" id="cWG-CH-swL">
-                                                                                <font key="font" metaFont="system" size="11"/>
+                                                                                <font key="font" metaFont="smallSystem"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                                                             </textFieldCell>
@@ -309,7 +309,7 @@
                                                                             <rect key="frame" x="94" y="45" width="33" height="16"/>
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="SBD" drawsBackground="YES" id="z1Z-NM-zSu">
-                                                                                <font key="font" metaFont="system" size="12"/>
+                                                                                <font key="font" metaFont="cellTitle"/>
                                                                                 <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" red="0.32862143310000003" green="0.81786070479999995" blue="0.047882575310000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                             </textFieldCell>
@@ -318,7 +318,7 @@
                                                                             <rect key="frame" x="245" y="47" width="25" height="14"/>
                                                                             <animations/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(10)" drawsBackground="YES" id="cas-JX-XJ8">
-                                                                                <font key="font" metaFont="system" size="11"/>
+                                                                                <font key="font" metaFont="smallSystem"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                                                             </textFieldCell>

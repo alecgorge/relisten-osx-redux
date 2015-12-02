@@ -65,7 +65,7 @@
     self.artistPopover.contentViewController = self.artistViewController;
     
     // Set up playback controls
-    self.audioPlayBackController = [[RLAudioPlaybackViewController alloc] initWithNibName:@"RLAudioPlaybackViewController" bundle:nil];
+    self.audioPlayBackController = RLAudioPlaybackViewController.sharedInstance;
     self.audioPlayBackController.view.frame = self.audioPlayBackView.bounds;
     self.audioPlayBackController.view.autoresizingMask = NSViewWidthSizable;
     self.audioPlayBackController.delegate = self;
@@ -178,22 +178,19 @@
 
 #pragma mark - RLAudioPlaybackDelegate Handling
 
--(void)trackPlayedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show
-{
+-(void)trackPlayedAtIndex:(NSInteger)index
+                 forTrack:(IGTrack *)track
+                  andShow:(IGShow *)show {
     [(AppDelegate *)[[NSApplication sharedApplication] delegate] setDockPauseButton];
     
     self.nowPlayingButton.enabled = YES;
     self.currentlyPlayingShow = show;
-    
-    [self.sourceAndTracksViewController showTrackVisualizationForTrackIndex:index andTrack:track];
-    [self.showsViewController setCurrentlyPLayingShow:show];
 }
--(void)trackPausedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show
-{
+
+-(void)trackPausedAtIndex:(NSInteger)index
+                 forTrack:(IGTrack *)track
+                  andShow:(IGShow *)show {
     [(AppDelegate *)[[NSApplication sharedApplication] delegate] setDockButtonPlayButton];
-    
-    [self.sourceAndTracksViewController pauseTrackVisualizationForTrackIndex:index andTrack:track];
-    [self.showsViewController pauseCurrentlyPLayingShow:show];
 }
 
 #pragma mark - Handle global media keys 

@@ -46,14 +46,14 @@
     self.showAverageRating.displayMode = EDStarRatingDisplayAccurate;
     self.showAverageRating.rating = self.currentShow.averageRating;
     
-    self.reviewCountTextField.stringValue = [NSString stringWithFormat:@"%ld Reviews", (long)self.currentShow.reviewsCount];
+    self.reviewCountTextField.stringValue = [NSString stringWithFormat:@"%ld reviews", (long)self.currentShow.reviewsCount];
 }
 
 #pragma mark - NSTableViewDataSource Methods 
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
-    return self.currentShow.reviewsCount;
+    return self.currentShow.reviews.count;
 }
 
 #pragma mark - NSTableViewDelegate Methods
@@ -67,7 +67,7 @@
     CGFloat titleHeight = [((NSTextFieldCell *)[titleText cell]) cellSizeForBounds:NSMakeRect(0, 0, 360, FLT_MAX)].height;
     
     NSTextField *reviewerText = [[NSTextField alloc] init];
-    reviewerText.stringValue = [NSString stringWithFormat:@"%@ | %@", review.reviewer, review.reviewdate];
+    reviewerText.stringValue = [NSString stringWithFormat:@"%@ at %@", review.reviewer, review.reviewdate];
     CGFloat reviewertextHeight = [((NSTextFieldCell *)[reviewerText cell]) cellSizeForBounds:NSMakeRect(0, 0, 360, FLT_MAX)].height;
     
     NSTextField *bodyText = [[NSTextField alloc] init];
@@ -86,7 +86,7 @@
     IGShowReview *review = self.currentShow.reviews[row];
     
     cellView.reviewTitleTextField.stringValue = review.reviewtitle;
-    cellView.reviewerTextField.stringValue = [NSString stringWithFormat:@"%@ | %@", review.reviewer, review.reviewdate];
+    cellView.reviewerTextField.stringValue = [NSString stringWithFormat:@"%@ at %@", review.reviewer, review.reviewdate];
     cellView.reviewBodytextField.stringValue = review.reviewbody;
     
     cellView.starRating.starImage = [NSImage imageNamed:@"star3.png"];

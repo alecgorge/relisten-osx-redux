@@ -199,7 +199,7 @@
               }
               
               return y;
-          }];
+          }].reverse;
           
           success(r);
       }
@@ -244,6 +244,8 @@
           NSError *err;
           IGYear *y = [[IGYear alloc] initWithDictionary:responseObject[@"data"]
                                                    error:&err];
+          
+          y.shows = (NSArray<Optional, IGShow> *)y.shows.reverse;
           
           if(err) {
               [self failure: err];

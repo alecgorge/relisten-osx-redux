@@ -8,6 +8,10 @@
 
 #import "RLSourceAndTracksViewController.h"
 
+#import "RLAudioPlaybackViewController.h"
+
+#import <FXNotifications/FXNotifications.h>
+
 @interface RLSourceAndTracksViewController ()
 
 @property (weak) IBOutlet NSPopUpButton *sourcePopupButton;
@@ -20,8 +24,6 @@
 
 @property (nonatomic, strong) NSArray *allShows;
 @property (nonatomic, strong) IGShow *selectedShow;
-@property (nonatomic, strong) IGTrack *currentlyPlayingTrack;
-@property (nonatomic) BOOL playing;
 
 @end
 
@@ -39,6 +41,14 @@
     
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                              forName:RLAudioPlaybackTrackChanged
+                                               object:nil
+                                                queue:NSOperationQueue.mainQueue
+                                           usingBlock:^(NSNotification *note, id observer) {
+                                               [self.tableView reloadData];
+                                           }];
 }
 
 -(void)disableSourceSelection
@@ -147,22 +157,6 @@
     [self.delegate addTracksToQueue:self.selectedShow.tracks FromShow:self.selectedShow];
 }
 
-#pragma mark - Track Playing Visuals 
-
--(void)showTrackVisualizationForTrackIndex:(NSInteger)index andTrack:(IGTrack *)track
-{
-    self.currentlyPlayingTrack = track;
-    self.playing = YES;
-    [self.tableView reloadData];
-}
-
--(void)pauseTrackVisualizationForTrackIndex:(NSInteger)index andTrack:(IGTrack *)track
-{
-    self.currentlyPlayingTrack = track;
-    self.playing = NO;
-    [self.tableView reloadData];
-}
-
 #pragma mark - NSTableViewDelegate Methods
 
 - (NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row
@@ -183,10 +177,9 @@
     
     [cellView populateWithTrack:track forIndex:row];
     
-    if(track.id == self.currentlyPlayingTrack.id) // Show equalizer
-    {
-        if(self.playing)
-        {
+    // Show equalizer
+    if(track.id == RLAudioPlaybackCurrentTrack.id) {
+        if(RLAudioPlaybackViewController.sharedInstance.audioPlayer.isPlaying) {
             cellView.trackNumberTextField.hidden = YES;
             cellView.equilizerView.hidden = NO;
             [cellView.equilizerView startAnimated:YES];

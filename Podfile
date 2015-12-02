@@ -3,6 +3,7 @@ platform :osx, "10.10"
 inhibit_all_warnings!
 
 target "Relisten" do
+	pod 'FXNotifications'
 	pod 'HysteriaPlayer', :head
 	pod 'AFNetworking'
 	pod 'JSONModel'
