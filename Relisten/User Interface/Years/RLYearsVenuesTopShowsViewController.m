@@ -103,38 +103,12 @@
     if(tableView == self.yearsTableView)
     {
         IGYear *year = self.years[row];
-        
-        cellView.yearTextField.stringValue = [NSString stringWithFormat:@"%ld", (long)year.year];
-        
-        NSString *shows;
-        if(year.showCount == 1)
-            shows = [NSString stringWithFormat:@"%ld show", year.showCount];
-        else
-            shows = [NSString stringWithFormat:@"%ld shows", year.showCount];
-        
-        NSString *sources;
-        if(year.recordingCount == 1)
-            sources = [NSString stringWithFormat:@"%ld source", year.recordingCount];
-        else
-            sources = [NSString stringWithFormat:@"%ld sources", year.recordingCount];
-        
-        cellView.showsAndRecordingsTextField.stringValue = [NSString stringWithFormat:@"%@, %@", shows, sources];
-        cellView.durationTextField.stringValue = [self.durationFormatter stringFromTimeInterval:year.duration];
+        [cellView populateWithYear:year];
     }
     else if(tableView == self.venuesTableView)
     {
         IGVenue *venue = self.venues[row];
-        
-        cellView.yearTextField.stringValue = venue.name;
-        cellView.showsAndRecordingsTextField.stringValue = venue.city;
-        
-        NSString *shows;
-        if([venue.showCount intValue] == 1)
-            shows = [NSString stringWithFormat:@"%@ show", venue.showCount];
-        else
-            shows = [NSString stringWithFormat:@"%@ shows", venue.showCount];
-        
-        cellView.durationTextField.stringValue = shows;
+        [cellView populateWithVenue:venue];
     }
     
     return cellView;
