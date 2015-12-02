@@ -221,23 +221,35 @@ uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason
         [self updateCurrentTrackInfo:currentMediaItem];
         [self.delegate trackPlayedAtIndex:self.audioPlayer.currentIndex forTrack:currentMediaItem.iguanaTrack andShow:currentMediaItem.iguanaShow];
         [self.queueViewController reloadData];
+        
+        [NSNotificationCenter.defaultCenter postNotificationName:RLAudioPlaybackTrackChanged
+                                                          object:self
+                                                        userInfo:nil];
     }
     else if(reason == AGAudioPlayerTrackStopped)
     {
         [self clearTrackInfo];
     }
-    else if(reason == AGAudioPlayerTrackPaused) {
+    else if(reason == AGAudioPlayerTrackPaused)
+    {
         IguanaMediaItem *currentMediaItem = (IguanaMediaItem *)self.audioPlayer.currentItem;
         
-        if(currentMediaItem) {
+        if(currentMediaItem)
+        {
             [self.delegate trackPausedAtIndex:self.audioPlayer.currentIndex
                                      forTrack:currentMediaItem.iguanaTrack
                                       andShow:currentMediaItem.iguanaShow];
         }
-        else {
+        else
+        {
             [self clearTrackInfo];
         }
+        
         [self.queueViewController reloadData];
+        
+        [NSNotificationCenter.defaultCenter postNotificationName:RLAudioPlaybackTrackChanged
+                                                          object:self
+                                                        userInfo:nil];
     }
     else if(reason == AGAudioPlayerError)
     {
@@ -245,10 +257,6 @@ uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason
     }
     
     [self updatePlayPauseButton];
-    
-    [NSNotificationCenter.defaultCenter postNotificationName:RLAudioPlaybackTrackChanged
-                                                      object:self
-                                                    userInfo:nil];
 }
 
 @end
