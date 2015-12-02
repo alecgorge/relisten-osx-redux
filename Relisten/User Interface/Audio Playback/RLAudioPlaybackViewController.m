@@ -64,6 +64,7 @@ IGTrack *RLAudioPlaybackCurrentTrack = nil;
     self.trackBeginningTimeTextField.stringValue = @"00:00";
     self.trackEndingTImeTextField.stringValue = @"00:00";
     self.bufferingTextField.stringValue = @"Buffering…";
+    self.bufferingTextField.hidden = YES;
     self.volumeSlider.minValue = 0.0;
     self.volumeSlider.maxValue = 1.0;
     self.volumeSlider.doubleValue = 1.0;
