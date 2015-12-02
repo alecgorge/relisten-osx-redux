@@ -34,14 +34,22 @@
     NSUInteger hours = year.duration/3600;
     self.durationTextField.stringValue = [NSString stringWithFormat:@"%lu hours", (unsigned long)hours];
     
-    EDStarRating *starRating = self.yearStarRating;
-    starRating.starImage = [NSImage imageNamed:@"star3.png"];
-    starRating.starHighlightedImage = [NSImage imageNamed:@"star2.png"];
-    starRating.maxRating = 5.0;
-    starRating.horizontalMargin = 12;
-    starRating.editable = NO;
-    starRating.displayMode = EDStarRatingDisplayAccurate;
-    starRating.rating = year.avgRating;
+    if(year.avgRating == 0)
+    {
+        self.yearStarRating.hidden = YES;
+    }
+    else
+    {
+        self.yearStarRating.hidden = NO;
+        EDStarRating *starRating = self.yearStarRating;
+        starRating.starImage = [NSImage imageNamed:@"star3.png"];
+        starRating.starHighlightedImage = [NSImage imageNamed:@"star2.png"];
+        starRating.maxRating = 5.0;
+        starRating.horizontalMargin = 12;
+        starRating.editable = NO;
+        starRating.displayMode = EDStarRatingDisplayAccurate;
+        starRating.rating = year.avgRating;
+    }
 }
 
 -(void)populateWithVenue:(IGVenue *)venue

@@ -8,7 +8,7 @@
             <connections>
                 <outlet property="segmentedControl" destination="kmE-Vv-gDC" id="Op2-yi-NKL"/>
                 <outlet property="tabView" destination="8jc-Kg-Lcl" id="Xdm-LN-g7y"/>
-                <outlet property="topShowsTextField" destination="2jZ-oJ-TiH" id="tBO-ob-C6N"/>
+                <outlet property="topShowsTextField" destination="b05-1G-Opw" id="Xnw-Pu-KIF"/>
                 <outlet property="venuesTableView" destination="vgR-Qy-U3V" id="s18-Ev-QPZ"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
                 <outlet property="yearsTableView" destination="0dr-VK-3zD" id="9GP-QV-tKP"/>
@@ -280,19 +280,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="364" height="467"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2jZ-oJ-TiH">
-                                        <rect key="frame" x="114" y="224" width="137" height="19"/>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="b05-1G-Opw">
+                                        <rect key="frame" x="127" y="225" width="111" height="17"/>
                                         <animations/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Showing top shows" id="0pH-H4-3z7">
-                                            <font key="font" metaFont="system" size="15"/>
+                                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Artist, top shows" id="ksm-lq-Zho">
+                                            <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="2jZ-oJ-TiH" firstAttribute="centerX" secondItem="vfW-sD-k4D" secondAttribute="centerX" id="7el-WX-cIe"/>
-                                    <constraint firstItem="2jZ-oJ-TiH" firstAttribute="centerY" secondItem="vfW-sD-k4D" secondAttribute="centerY" id="r4B-k9-aS1"/>
+                                    <constraint firstItem="b05-1G-Opw" firstAttribute="centerY" secondItem="vfW-sD-k4D" secondAttribute="centerY" id="25n-Ql-Utv"/>
+                                    <constraint firstItem="b05-1G-Opw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vfW-sD-k4D" secondAttribute="leading" constant="10" id="M8X-Vz-Ydp"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="b05-1G-Opw" secondAttribute="trailing" constant="10" id="ZZm-IW-Dn5"/>
+                                    <constraint firstItem="b05-1G-Opw" firstAttribute="centerX" secondItem="vfW-sD-k4D" secondAttribute="centerX" id="aHu-St-g8b"/>
                                 </constraints>
                                 <animations/>
                             </view>
