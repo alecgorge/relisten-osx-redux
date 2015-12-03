@@ -28,9 +28,9 @@
                     </textFieldCell>
                 </textField>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="R3I-zs-mIr" customClass="EDStarRating">
-                    <rect key="frame" x="101" y="250" width="90" height="35"/>
+                    <rect key="frame" x="98" y="250" width="100" height="35"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="90" id="4Kq-fX-oMP"/>
+                        <constraint firstAttribute="width" constant="100" id="4Kq-fX-oMP"/>
                         <constraint firstAttribute="height" constant="35" id="sjg-lj-oGE"/>
                     </constraints>
                     <animations/>
@@ -42,7 +42,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="79" rowSizeStyle="automatic" viewBased="YES" id="wTu-Rf-fq6" customClass="RLTableView">
-                                <rect key="frame" x="0.0" y="0.0" width="478" height="242"/>
+                                <rect key="frame" x="0.0" y="0.0" width="477" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -156,7 +156,7 @@
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
                     <animations/>
-                    <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="Z0r-4I-SzW">
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="Z0r-4I-SzW">
                         <rect key="frame" x="0.0" y="227" width="477" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -178,7 +178,7 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="R3I-zs-mIr" firstAttribute="leading" secondItem="cek-pe-Pob" secondAttribute="trailing" constant="13" id="2FO-cd-czI"/>
+                <constraint firstItem="R3I-zs-mIr" firstAttribute="leading" secondItem="cek-pe-Pob" secondAttribute="trailing" constant="10" id="2FO-cd-czI"/>
                 <constraint firstAttribute="bottom" secondItem="EbO-1f-dZb" secondAttribute="bottom" id="8AK-VR-L7D"/>
                 <constraint firstItem="EbO-1f-dZb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Cbw-1a-Kwu"/>
                 <constraint firstAttribute="trailing" secondItem="EbO-1f-dZb" secondAttribute="trailing" id="Hg3-5k-OuZ"/>

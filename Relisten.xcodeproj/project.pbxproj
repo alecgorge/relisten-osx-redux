@@ -281,7 +281,7 @@
 				C171E8FE1BF5BF6E003B12EB /* RLTableRowView.h */,
 				C171E8FF1BF5BF6E003B12EB /* RLTableRowView.m */,
 				C171E8F51BF59A4D003B12EB /* Artists */,
-				C1AA2D791BBF3861000D75FC /* Years */,
+				C1AA2D791BBF3861000D75FC /* Years/Venues/Top Shows */,
 				C1AA2D7A1BBF3867000D75FC /* Shows */,
 				C1AA2D7B1BBF387C000D75FC /* Source & Tracks */,
 				C11FA5141BD2191000C4FDEE /* Audio Playback */,
@@ -289,7 +289,7 @@
 			path = "User Interface";
 			sourceTree = "<group>";
 		};
-		C1AA2D791BBF3861000D75FC /* Years */ = {
+		C1AA2D791BBF3861000D75FC /* Years/Venues/Top Shows */ = {
 			isa = PBXGroup;
 			children = (
 				C187C67D1BB4FA7600F1778C /* RLYearTableCellView.h */,
@@ -298,6 +298,7 @@
 				C18AEADE1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m */,
 				C18AEADF1BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.xib */,
 			);
+			name = "Years/Venues/Top Shows";
 			path = Years;
 			sourceTree = "<group>";
 		};
