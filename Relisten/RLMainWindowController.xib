@@ -20,16 +20,16 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="852" height="455"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
             <view key="contentView" id="se5-gp-TjO" customClass="NSVisualEffectView">
                 <rect key="frame" x="0.0" y="0.0" width="852" height="455"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <splitView dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gff-DE-xYh" customClass="RLSplitView">
-                        <rect key="frame" x="0.0" y="65" width="852" height="352"/>
+                        <rect key="frame" x="0.0" y="80" width="852" height="337"/>
                         <subviews>
                             <customView id="gGD-H8-7dV" userLabel="firstView">
-                                <rect key="frame" x="0.0" y="0.0" width="267" height="352"/>
+                                <rect key="frame" x="0.0" y="0.0" width="267" height="337"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="b8r-E7-fjv"/>
@@ -37,7 +37,7 @@
                                 <animations/>
                             </customView>
                             <customView id="xkP-w6-TDg" userLabel="secondView">
-                                <rect key="frame" x="268" y="0.0" width="112" height="352"/>
+                                <rect key="frame" x="268" y="0.0" width="112" height="337"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="kOG-ys-iHf"/>
@@ -45,7 +45,7 @@
                                 <animations/>
                             </customView>
                             <customView id="Gh9-B3-0Fo" userLabel="thirdView">
-                                <rect key="frame" x="381" y="0.0" width="471" height="352"/>
+                                <rect key="frame" x="381" y="0.0" width="471" height="337"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="uNO-H9-WY2"/>
@@ -66,9 +66,9 @@
                         </connections>
                     </splitView>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="FTW-Ye-BXq" customClass="NSVisualEffectView">
-                        <rect key="frame" x="0.0" y="0.0" width="852" height="65"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="80"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="65" id="93W-st-HNs"/>
+                            <constraint firstAttribute="height" constant="80" id="93W-st-HNs"/>
                         </constraints>
                         <animations/>
                     </customView>
