@@ -10,8 +10,6 @@
 
 #import "RLAudioPlaybackViewController.h"
 
-#import <FXNotifications/FXNotifications.h>
-
 @interface RLSourceAndTracksViewController ()
 
 @property (weak) IBOutlet NSPopUpButton *sourcePopupButton;
@@ -43,12 +41,14 @@
     self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
 
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                              forName:RLAudioPlaybackTrackChanged
-                                               object:nil
-                                                queue:NSOperationQueue.mainQueue
-                                           usingBlock:^(NSNotification *note, id observer) {
-                                               [self.tableView reloadData];
-                                           }];
+                                             selector:@selector(reloadTableView)
+                                                 name:RLAudioPlaybackTrackChanged
+                                               object:nil];
+}
+
+-(void)reloadTableView
+{
+    [self.tableView reloadData];
 }
 
 -(void)disableSourceSelection

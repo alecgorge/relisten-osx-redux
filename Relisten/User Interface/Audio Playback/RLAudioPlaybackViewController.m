@@ -222,7 +222,7 @@ uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason
         [self.delegate trackPlayedAtIndex:self.audioPlayer.currentIndex forTrack:currentMediaItem.iguanaTrack andShow:currentMediaItem.iguanaShow];
         [self.queueViewController reloadData];
         
-        [NSNotificationCenter.defaultCenter postNotificationName:RLAudioPlaybackTrackChanged
+        [[NSNotificationCenter defaultCenter] postNotificationName:RLAudioPlaybackTrackChanged
                                                           object:self
                                                         userInfo:nil];
     }
@@ -247,7 +247,7 @@ uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason
         
         [self.queueViewController reloadData];
         
-        [NSNotificationCenter.defaultCenter postNotificationName:RLAudioPlaybackTrackChanged
+        [[NSNotificationCenter defaultCenter] postNotificationName:RLAudioPlaybackTrackChanged
                                                           object:self
                                                         userInfo:nil];
     }

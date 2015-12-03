@@ -10,8 +10,6 @@
 
 #import "RLAudioPlaybackViewController.h"
 
-#import <FXNotifications/FXNotifications.h>
-
 #define ALL_SHOWS       0
 #define SOUNDBOARD      1
 
@@ -52,13 +50,9 @@
     //self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
 
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                              forName:RLAudioPlaybackTrackChanged
-                                               object:nil
-                                                queue:NSOperationQueue.mainQueue
-                                           usingBlock:^(NSNotification *note, id observer) {
-                                               [self.allShowsTableView reloadData];
-                                               [self.soundboardShowsTableView reloadData];
-                                           }];
+                                             selector:@selector(reloadShows)
+                                                 name:RLAudioPlaybackTrackChanged
+                                               object:nil];
 }
 
 - (void)fetchShowsForYear:(IGYear *)year withProgressIndicator:(NSProgressIndicator *)indicator

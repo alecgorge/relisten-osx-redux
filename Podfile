@@ -3,11 +3,9 @@ platform :osx, "10.10"
 inhibit_all_warnings!
 
 target "Relisten" do
-	pod 'FXNotifications'
 	pod 'HysteriaPlayer', :head
 	pod 'AFNetworking'
 	pod 'JSONModel'
-    pod 'Masonry'
     pod 'ObjectiveSugar'
     pod 'EDStarRating'
     pod 'AGAudioPlayer', :path => '../AGAudioPlayer'
