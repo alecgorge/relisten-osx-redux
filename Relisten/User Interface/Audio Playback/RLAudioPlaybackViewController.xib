@@ -72,10 +72,10 @@
                             </connections>
                         </button>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gyN-Db-F3A">
-                            <rect key="frame" x="44" y="3" width="63" height="14"/>
+                            <rect key="frame" x="39" y="6" width="72" height="17"/>
                             <animations/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Buffering..." id="H3s-VV-aNM">
-                                <font key="font" metaFont="smallSystem"/>
+                                <font key="font" metaFont="system"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
@@ -90,7 +90,7 @@
                         <constraint firstItem="gyN-Db-F3A" firstAttribute="centerX" secondItem="fGp-46-efm" secondAttribute="centerX" id="cDc-Tt-jp7"/>
                         <constraint firstItem="fGp-46-efm" firstAttribute="centerY" secondItem="jbx-Ct-8KK" secondAttribute="centerY" id="cXt-HF-Hlk"/>
                         <constraint firstItem="6ff-hU-PUc" firstAttribute="centerY" secondItem="fGp-46-efm" secondAttribute="centerY" id="hPr-1G-WLk"/>
-                        <constraint firstAttribute="bottom" secondItem="gyN-Db-F3A" secondAttribute="bottom" constant="3" id="wla-cE-VAX"/>
+                        <constraint firstItem="gyN-Db-F3A" firstAttribute="top" secondItem="fGp-46-efm" secondAttribute="bottom" constant="-8" id="wJ6-RZ-KgB"/>
                         <constraint firstItem="fGp-46-efm" firstAttribute="leading" secondItem="B3D-iZ-v3E" secondAttribute="trailing" constant="-3" id="yJb-Fj-vfy"/>
                     </constraints>
                     <animations/>
