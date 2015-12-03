@@ -50,9 +50,15 @@
     //self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
 
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(reloadShows)
+                                             selector:@selector(refreshTableViews)
                                                  name:RLAudioPlaybackTrackChanged
                                                object:nil];
+}
+
+-(void)refreshTableViews
+{
+    [self.allShowsTableView reloadData];
+    [self.soundboardShowsTableView reloadData];
 }
 
 - (void)fetchShowsForYear:(IGYear *)year withProgressIndicator:(NSProgressIndicator *)indicator
