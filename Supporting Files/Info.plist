@@ -28,7 +28,10 @@
 		<true/>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2015 Relisten. All rights reserved.</string>
+    <string>Built by Manik Kalra
+
+            Relisten is powered by Archive.org and Alec Gorge's Iguana. The Phish collection is hosted and provided by Phish.in.
+    </string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
