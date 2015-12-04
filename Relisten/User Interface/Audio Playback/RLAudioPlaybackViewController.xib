@@ -242,10 +242,10 @@
         </customView>
     </objects>
     <resources>
-        <image name="Forward" width="24" height="24"/>
-        <image name="Play" width="24" height="24"/>
-        <image name="Queue" width="24" height="24"/>
-        <image name="Rewind" width="24" height="24"/>
+        <image name="Forward" width="60" height="60"/>
+        <image name="Play" width="60" height="60"/>
+        <image name="Queue" width="60" height="60"/>
+        <image name="Rewind" width="60" height="60"/>
         <image name="Volume Down" width="24" height="24"/>
         <image name="Volume Up" width="24" height="24"/>
     </resources>

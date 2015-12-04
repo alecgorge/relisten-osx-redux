@@ -46,6 +46,13 @@
                                                object:nil];
 }
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:RLAudioPlaybackTrackChanged
+                                                  object:nil];
+}
+
 -(void)reloadTableView
 {
     [self.tableView reloadData];

@@ -2,16 +2,16 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "glyphicons-175-pause-w60.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "Pause@2x.png"
+      "filename" : "glyphicons-175-pause-w60@2x.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Pause@3x.png",
       "scale" : "3x"
     }
   ],
