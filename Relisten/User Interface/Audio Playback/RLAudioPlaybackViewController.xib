@@ -34,7 +34,7 @@
                                 <constraint firstAttribute="width" constant="50" id="Bdj-ee-apA"/>
                             </constraints>
                             <animations/>
-                            <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="Play" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="HEY-82-JRy">
+                            <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="Play" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" inset="2" id="HEY-82-JRy">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
@@ -43,7 +43,7 @@
                             </connections>
                         </button>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6ff-hU-PUc">
-                            <rect key="frame" x="97" y="18" width="45" height="45"/>
+                            <rect key="frame" x="100" y="18" width="45" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="6ff-hU-PUc" secondAttribute="height" multiplier="1:1" id="Eef-aH-xVA"/>
                                 <constraint firstAttribute="width" constant="45" id="fAQ-vQ-oCK"/>
@@ -58,7 +58,7 @@
                             </connections>
                         </button>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B3D-iZ-v3E">
-                            <rect key="frame" x="8" y="18" width="45" height="45"/>
+                            <rect key="frame" x="5" y="18" width="45" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="B3D-iZ-v3E" secondAttribute="height" multiplier="1:1" id="Nvq-SR-9bg"/>
                             </constraints>
@@ -82,7 +82,7 @@
                         </textField>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="6ff-hU-PUc" firstAttribute="leading" secondItem="fGp-46-efm" secondAttribute="trailing" constant="-3" id="Cbc-t9-AWM"/>
+                        <constraint firstItem="6ff-hU-PUc" firstAttribute="leading" secondItem="fGp-46-efm" secondAttribute="trailing" id="Cbc-t9-AWM"/>
                         <constraint firstItem="fGp-46-efm" firstAttribute="centerX" secondItem="jbx-Ct-8KK" secondAttribute="centerX" id="Dyl-Sy-mZp"/>
                         <constraint firstItem="B3D-iZ-v3E" firstAttribute="width" secondItem="6ff-hU-PUc" secondAttribute="width" id="J0M-BL-aF8"/>
                         <constraint firstAttribute="width" constant="150" id="J65-zC-yli"/>
@@ -91,7 +91,7 @@
                         <constraint firstItem="fGp-46-efm" firstAttribute="centerY" secondItem="jbx-Ct-8KK" secondAttribute="centerY" id="cXt-HF-Hlk"/>
                         <constraint firstItem="6ff-hU-PUc" firstAttribute="centerY" secondItem="fGp-46-efm" secondAttribute="centerY" id="hPr-1G-WLk"/>
                         <constraint firstItem="gyN-Db-F3A" firstAttribute="top" secondItem="fGp-46-efm" secondAttribute="bottom" constant="-8" id="wJ6-RZ-KgB"/>
-                        <constraint firstItem="fGp-46-efm" firstAttribute="leading" secondItem="B3D-iZ-v3E" secondAttribute="trailing" constant="-3" id="yJb-Fj-vfy"/>
+                        <constraint firstItem="fGp-46-efm" firstAttribute="leading" secondItem="B3D-iZ-v3E" secondAttribute="trailing" id="yJb-Fj-vfy"/>
                     </constraints>
                     <animations/>
                 </customView>
