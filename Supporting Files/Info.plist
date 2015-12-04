@@ -28,9 +28,9 @@
 		<true/>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-    <string>Built by Manik Kalra
+    <string>Built by Manik Kalra.
 
-            Relisten is powered by Archive.org and Alec Gorge's Iguana. The Phish collection is hosted and provided by Phish.in.
+Relisten is powered by Archive.org and Alec Gorge's Iguana. The Phish collection is hosted and provided by Phish.in.
     </string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
