@@ -42,6 +42,19 @@
     return YES;
 }
 
+#pragma mark - Menu Button Handling
+
+- (IBAction)sendFeedback:(id)sender
+{
+    NSString *toAddress = @"alecgorge@gmail.com";
+    NSString *subject = @"Relisten Feedback";
+    NSString *bodyText = @"";
+
+    NSString *mailtoAddress = [[NSString stringWithFormat:@"mailto:%@?Subject=%@&body=%@", toAddress, subject, bodyText] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:mailtoAddress]];
+}
+
 #pragma maek - Dock Button Handling
 
 -(void)enableDockButtons
