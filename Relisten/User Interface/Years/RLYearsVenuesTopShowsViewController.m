@@ -27,7 +27,9 @@
 
 @end
 
-@implementation RLYearsVenuesTopShowsViewController
+@implementation RLYearsVenuesTopShowsViewController {
+    NSInteger lastSelectedRowIndex;
+}
 
 - (void)viewDidLoad
 {
@@ -56,9 +58,11 @@
     if (matchedYears.count > 0) {
         IGShow *matchedYear = matchedYears[0];
         NSInteger index = [self.years indexOfObject:matchedYear];
+        [[self.yearsTableView rowViewAtRow:lastSelectedRowIndex makeIfNecessary:YES] setSelected:NO];
         [[self.yearsTableView rowViewAtRow:index makeIfNecessary:YES] setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleRegular];
         [[self.yearsTableView rowViewAtRow:index makeIfNecessary:YES] setSelected:YES];
         [self.yearsTableView scrollRowToVisible:index];
+        lastSelectedRowIndex = index;
     }
 }
 

@@ -106,10 +106,13 @@
 
 - (IBAction)randomShow:(id)sender
 {
-    [self.showsViewController fetchRandomShowWithProgressIndicator:self.progressIndicator andShow:^(IGShow *show)
-     {
-         [self.yearsViewController selectAndScrollToRowWithYear:show.year];
-         [self.sourceAndTracksViewController fetchTracksForShow:show withProgressIndicator:self.progressIndicator];
+    [IGAPIClient.sharedInstance randomShow:^(NSArray *randomShow) {
+        IGShow *show = randomShow[0];
+        [self.sourceAndTracksViewController fetchTracksForShow:show withProgressIndicator:self.progressIndicator];
+        IGYear *year = [[IGYear alloc] init];
+        year.year = show.year;
+        [self.showsViewController fetchShowsForYear:year withProgressIndicator:self.progressIndicator andHighlightShowWithDate:show.date];
+        [self.yearsViewController fetchYearsWithProgressIndicator:self.progressIndicator andSelectYear:show.year];
     }];
 }
 
