@@ -81,7 +81,12 @@
     self.listenOnArchiveButton.enabled = YES;
     
     NSArray *sourceList = [sources valueForKey:@"source"];
-    [self.sourcePopupButton addItemsWithTitles:sourceList];
+    for (int i = 0; i < sourceList.count; i++) {
+        [self.sourcePopupButton addItemWithTitle:[NSString stringWithFormat:@"%i", i]];
+    }
+    for (int i = 0; i < sourceList.count; i++) {
+        [[self.sourcePopupButton itemAtIndex:i] setTitle:sourceList[i]];
+    }
 }
 
 -(void)setLineageAndTaperInfo
@@ -92,27 +97,34 @@
 
 -(void)fetchTracksForShow:(IGShow *)show withProgressIndicator:(NSProgressIndicator *)indicator
 {
-    [self fetchTracksForShow:show withProgressIndicator:indicator andSelectSource:nil];
+    [self fetchTracksForShow:show withProgressIndicator:indicator andSelectShowWithId: -1];
 }
 
--(void)fetchTracksForShow:(IGShow *)show withProgressIndicator:(NSProgressIndicator *)indicator andSelectSource: (NSString *)source {
+-(void)fetchTracksForShow:(IGShow *)show withProgressIndicator:(NSProgressIndicator *)indicator andSelectShowWithId: (NSInteger)id {
     [indicator startAnimation:nil];
     [IGAPIClient.sharedInstance showsOn:show.displayDate
                                 success:^(NSArray *shows) {
                                     NSInteger index = 0;
-                                    if (source != nil) {
-                                        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"source == %@", source];
-                                        NSArray *matchedSources = [shows filteredArrayUsingPredicate:predicate];
-                                        index = [shows indexOfObject:matchedSources[0]];
+                                    if (id != -1) {
+                                        for (int i = 0; i < shows.count; i++) {
+                                            if (((IGShow*)shows[i]).id == id) {
+                                                index = i;
+                                                break;
+                                            }
+                                        }
                                     }
                                     
                                     self.allShows = shows;
                                     self.selectedShow = shows[index];
-                                    [self populatePopupButtonWithSources:self.allShows];
-                                    [self.sourcePopupButton selectItemAtIndex:index];
+                                    [self populatePopupButtonWithSources:shows];
+                                    
+                                    if (id != -1) {
+                                        [self.sourcePopupButton selectItemAtIndex:index];
+                                    }
+                                    
                                     [self setLineageAndTaperInfo];
                                     [self.tableView reloadData];
-                                    if (source != nil) {
+                                    if (id != -1) {
                                         for (int i = 0; i < self.selectedShow.tracks.count; i++) {
                                             IGTrack *track = self.selectedShow.tracks[i];
                                             if (track.id == RLAudioPlaybackCurrentTrack.id) {
