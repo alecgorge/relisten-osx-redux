@@ -92,7 +92,7 @@
 
 -(void)fetchTracksForShow:(IGShow *)show withProgressIndicator:(NSProgressIndicator *)indicator
 {
-    [self fetchTracksForShow:show withProgressIndicator:indicator];
+    [self fetchTracksForShow:show withProgressIndicator:indicator andSelectSource:nil];
 }
 
 -(void)fetchTracksForShow:(IGShow *)show withProgressIndicator:(NSProgressIndicator *)indicator andSelectSource: (NSString *)source {
@@ -100,7 +100,7 @@
     [IGAPIClient.sharedInstance showsOn:show.displayDate
                                 success:^(NSArray *shows) {
                                     NSInteger index = 0;
-                                    if (source == nil) {
+                                    if (source != nil) {
                                         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"source == %@", source];
                                         NSArray *matchedSources = [shows filteredArrayUsingPredicate:predicate];
                                         index = [matchedSources indexOfObject:matchedSources[0]];

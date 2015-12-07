@@ -107,8 +107,8 @@
 - (IBAction)randomShow:(id)sender
 {
     [self.showsViewController fetchRandomShowWithProgressIndicator:self.progressIndicator andShow:^(IGShow *show)
-    {
-        [self.sourceAndTracksViewController fetchTracksForShow:show withProgressIndicator:self.progressIndicator];
+     {
+         [self.sourceAndTracksViewController fetchTracksForShow:show withProgressIndicator:self.progressIndicator];
     }];
 }
 
