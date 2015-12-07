@@ -103,14 +103,25 @@
                                     if (source != nil) {
                                         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"source == %@", source];
                                         NSArray *matchedSources = [shows filteredArrayUsingPredicate:predicate];
-                                        index = [matchedSources indexOfObject:matchedSources[0]];
+                                        index = [shows indexOfObject:matchedSources[0]];
                                     }
                                     
                                     self.allShows = shows;
                                     self.selectedShow = shows[index];
                                     [self populatePopupButtonWithSources:self.allShows];
+                                    [self.sourcePopupButton selectItemAtIndex:index];
                                     [self setLineageAndTaperInfo];
                                     [self.tableView reloadData];
+                                    if (source != nil) {
+                                        for (int i = 0; i < self.selectedShow.tracks.count; i++) {
+                                            IGTrack *track = self.selectedShow.tracks[i];
+                                            if (track.id == RLAudioPlaybackCurrentTrack.id) {
+                                                [[self.tableView rowViewAtRow:i makeIfNecessary:YES] setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleRegular];
+                                                [[self.tableView rowViewAtRow:i makeIfNecessary:YES] setSelected:YES];
+                                                [self.tableView scrollRowToVisible:i];
+                                            }
+                                        }
+                                    }
                                     [indicator stopAnimation:nil];
                                 }];
 }
