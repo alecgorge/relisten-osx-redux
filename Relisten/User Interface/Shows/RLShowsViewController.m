@@ -94,6 +94,7 @@
             IGShow *matchedShow = matchedShows[0];
             NSInteger index = [self.allShows indexOfObject:matchedShow];
             [self.tabView selectTabViewItemAtIndex:ALL_SHOWS];
+            [self.segmentedControl setSelectedSegment:ALL_SHOWS];
             [[self.allShowsTableView rowViewAtRow:index makeIfNecessary:YES] setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleRegular];
             [[self.allShowsTableView rowViewAtRow:index makeIfNecessary:YES] setSelected:YES];
             [self.allShowsTableView scrollRowToVisible:index];
