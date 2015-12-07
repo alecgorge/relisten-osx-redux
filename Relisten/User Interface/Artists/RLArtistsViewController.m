@@ -18,7 +18,9 @@
 
 @end
 
-@implementation RLArtistsViewController
+@implementation RLArtistsViewController {
+    int selectedArtistRow;
+}
 
 -(instancetype)initWithProgressIndictor:(NSProgressIndicator *)indicator
 {
@@ -45,6 +47,8 @@
     self.searchField.stringValue = @"";
     self.artists = self.unfilteredArtists;
     [self.tableView reloadData];
+    
+    selectedArtistRow = -1;
 }
 
 -(void)fetchArtistsWithProgressIndictor:(NSProgressIndicator *)indicator
@@ -79,6 +83,11 @@
 
 - (IBAction)searchFieldUpdated:(NSSearchField *)sender
 {
+    if (selectedArtistRow != -1) {
+        [[self.tableView rowViewAtRow:selectedArtistRow makeIfNecessary:NO] setSelected:NO];
+        selectedArtistRow = -1;
+    }
+    
     NSString *substring = [sender stringValue];
     
     if([substring isEqualToString:@""])
@@ -94,20 +103,42 @@
     }
 }
 
-//- (BOOL)control:(NSControl *)control textView:(NSTextView *)textView doCommandBySelector:(SEL)commandSelector
-//{
-//    if([control isKindOfClass:[NSSearchField class]])
-//    {
-//        if( commandSelector == @selector(moveDown:))
-//        {
-//            NSTableRowView *rowView = [self.tableView rowViewAtRow:0 makeIfNecessary:NO];
-//            [rowView setSelected:YES];
-//            return YES;
-//        }
-//    }
-//
-//    return NO;
-//}
+- (BOOL)control:(NSControl *)control textView:(NSTextView *)textView doCommandBySelector:(SEL)commandSelector
+{
+    if([control isKindOfClass:[NSSearchField class]])
+    {
+        if(commandSelector == @selector(moveDown:))
+        {
+            if (selectedArtistRow != -1) {
+                [[self.tableView rowViewAtRow:selectedArtistRow makeIfNecessary:NO] setSelected:NO];
+            }
+            if ((selectedArtistRow + 1) != self.artists.count) {
+                selectedArtistRow++;
+            }
+            [[self.tableView rowViewAtRow:selectedArtistRow makeIfNecessary:NO] setSelected:YES];
+            [self.tableView scrollRowToVisible:selectedArtistRow];
+            return YES;
+        }
+        else if(commandSelector == @selector(moveUp:))
+        {
+            if (selectedArtistRow != -1) {
+                [[self.tableView rowViewAtRow:selectedArtistRow makeIfNecessary:NO] setSelected:NO];
+            }
+            if ((selectedArtistRow - 1) != -1) {
+                selectedArtistRow--;
+            }
+            [[self.tableView rowViewAtRow:selectedArtistRow makeIfNecessary:NO] setSelected:YES];
+            [self.tableView scrollRowToVisible:selectedArtistRow];
+            return YES;
+        }
+        else if(commandSelector == @selector(insertNewline:))
+        {
+            [self.delegate artistSelected:self.artists[selectedArtistRow]];
+        }
+    }
+
+    return NO;
+}
 
 #pragma mark - NSTableViewdataSource Methods
 
