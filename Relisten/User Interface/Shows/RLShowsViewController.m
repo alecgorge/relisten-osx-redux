@@ -88,9 +88,12 @@
         
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date == %@", date];
         NSArray *matchedShows = [self.allShows filteredArrayUsingPredicate:predicate];
-        if (matchedShows.count > 0) {
+        
+        if (matchedShows.count > 0)
+        {
             IGShow *matchedShow = matchedShows[0];
             NSInteger index = [self.allShows indexOfObject:matchedShow];
+            [self.tabView selectTabViewItemAtIndex:ALL_SHOWS];
             [[self.allShowsTableView rowViewAtRow:index makeIfNecessary:YES] setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleRegular];
             [[self.allShowsTableView rowViewAtRow:index makeIfNecessary:YES] setSelected:YES];
             [self.allShowsTableView scrollRowToVisible:index];
