@@ -92,7 +92,7 @@
     [self.artistButton setTitle:self.currentlyPlayingShow.artist.name];
     [self.artistViewController setSelectedArtist:self.currentlyPlayingShow.artist];
     IGAPIClient.sharedInstance.artist = self.currentlyPlayingShow.artist;
-    [self.sourceAndTracksViewController fetchTracksForShow:self.currentlyPlayingShow withProgressIndicator:self.progressIndicator];
+    [self.sourceAndTracksViewController fetchTracksForShow:self.currentlyPlayingShow withProgressIndicator:self.progressIndicator andSelectSource: self.currentlyPlayingShow.source];
     [self.yearsViewController fetchYearsWithProgressIndicator:self.progressIndicator andSelectYear:self.currentlyPlayingShow.year];
     IGYear *year = [[IGYear alloc] init];
     year.year = self.currentlyPlayingShow.year;

@@ -28,6 +28,7 @@
 @property (nonatomic, weak) id<RLTrackSelectedDelegate> delegate;
 
 -(void)fetchTracksForShow:(IGShow *)show withProgressIndicator:(NSProgressIndicator *)indicator;
+-(void)fetchTracksForShow:(IGShow *)show withProgressIndicator:(NSProgressIndicator *)indicator andSelectSource: (NSString *)source;
 -(void)disableSourceSelection;
 
 @end

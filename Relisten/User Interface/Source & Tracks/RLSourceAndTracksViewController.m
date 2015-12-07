@@ -92,18 +92,22 @@
 
 -(void)fetchTracksForShow:(IGShow *)show withProgressIndicator:(NSProgressIndicator *)indicator
 {
+    [self fetchTracksForShow:show withProgressIndicator:indicator];
+}
+
+-(void)fetchTracksForShow:(IGShow *)show withProgressIndicator:(NSProgressIndicator *)indicator andSelectSource: (NSString *)source {
     [indicator startAnimation:nil];
     [IGAPIClient.sharedInstance showsOn:show.displayDate
                                 success:^(NSArray *shows) {
-                                    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"source == %@", show.source];
-                                    NSArray *matchedCurrentSources = [shows filteredArrayUsingPredicate:predicate];
-                                    if (matchedCurrentSources.count > 0) {
-                                        self.selectedShow = matchedCurrentSources[0];
-                                    } else {
-                                        self.selectedShow = shows[0];
+                                    NSInteger index = 0;
+                                    if (source == nil) {
+                                        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"source == %@", source];
+                                        NSArray *matchedSources = [shows filteredArrayUsingPredicate:predicate];
+                                        index = [matchedSources indexOfObject:matchedSources[0]];
                                     }
                                     
                                     self.allShows = shows;
+                                    self.selectedShow = shows[index];
                                     [self populatePopupButtonWithSources:self.allShows];
                                     [self setLineageAndTaperInfo];
                                     [self.tableView reloadData];
