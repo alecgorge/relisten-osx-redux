@@ -108,6 +108,7 @@
 {
     [self.showsViewController fetchRandomShowWithProgressIndicator:self.progressIndicator andShow:^(IGShow *show)
      {
+         [self.yearsViewController selectAndScrollToRowWithYear:show.year];
          [self.sourceAndTracksViewController fetchTracksForShow:show withProgressIndicator:self.progressIndicator];
     }];
 }

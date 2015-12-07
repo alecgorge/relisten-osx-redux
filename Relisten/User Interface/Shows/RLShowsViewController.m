@@ -132,6 +132,9 @@
     [IGAPIClient.sharedInstance randomShow:^(NSArray *randomShow) {
         self.allShows = [NSArray arrayWithObject:randomShow[0]];
         [self reloadShows];
+        [[self.allShowsTableView rowViewAtRow:0 makeIfNecessary:YES] setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleRegular];
+        [[self.allShowsTableView rowViewAtRow:0 makeIfNecessary:YES] setSelected:YES];
+        [self.allShowsTableView scrollRowToVisible:0];
         [self.tabView selectTabViewItemAtIndex:ALL_SHOWS];
         
         success(randomShow[0]);

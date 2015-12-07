@@ -50,6 +50,18 @@
     //self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
 }
 
+- (void)selectAndScrollToRowWithYear: (NSInteger)year {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"year == %i", year];
+    NSArray *matchedYears = [self.years filteredArrayUsingPredicate:predicate];
+    if (matchedYears.count > 0) {
+        IGShow *matchedYear = matchedYears[0];
+        NSInteger index = [self.years indexOfObject:matchedYear];
+        [[self.yearsTableView rowViewAtRow:index makeIfNecessary:YES] setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleRegular];
+        [[self.yearsTableView rowViewAtRow:index makeIfNecessary:YES] setSelected:YES];
+        [self.yearsTableView scrollRowToVisible:index];
+    }
+}
+
 - (void)fetchYearsWithProgressIndicator:(NSProgressIndicator *)indicator
 {
     [self fetchYearsWithProgressIndicator:indicator andSelectYear:-1];
@@ -65,15 +77,7 @@
         [self.yearsTableView reloadData];
         
         if (year != -1) {
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"year == %i", year];
-            NSArray *matchedYears = [self.years filteredArrayUsingPredicate:predicate];
-            if (matchedYears.count > 0) {
-                IGShow *matchedYear = matchedYears[0];
-                NSInteger index = [self.years indexOfObject:matchedYear];
-                [[self.yearsTableView rowViewAtRow:index makeIfNecessary:YES] setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleRegular];
-                [[self.yearsTableView rowViewAtRow:index makeIfNecessary:YES] setSelected:YES];
-                [self.yearsTableView scrollRowToVisible:index];
-            }
+            [self selectAndScrollToRowWithYear:year];
         }
     }];
     
