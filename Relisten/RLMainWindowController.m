@@ -93,10 +93,10 @@
     [self.artistViewController setSelectedArtist:self.currentlyPlayingShow.artist];
     IGAPIClient.sharedInstance.artist = self.currentlyPlayingShow.artist;
     [self.sourceAndTracksViewController fetchTracksForShow:self.currentlyPlayingShow withProgressIndicator:self.progressIndicator];
-    [self.yearsViewController fetchYearsWithProgressIndicator:self.progressIndicator];
+    [self.yearsViewController fetchYearsWithProgressIndicator:self.progressIndicator andSelectYear:self.currentlyPlayingShow.year];
     IGYear *year = [[IGYear alloc] init];
     year.year = self.currentlyPlayingShow.year;
-    [self.showsViewController fetchShowsForYear:year withProgressIndicator:self.progressIndicator];
+    [self.showsViewController fetchShowsForYear:year withProgressIndicator:self.progressIndicator andHighlightShowWithDate: self.currentlyPlayingShow.date];
 }
 
 - (IBAction)refreshArtists:(id)sender

@@ -23,6 +23,7 @@
 @property (nonatomic, weak) id<RLShowSelectedDelegate> delegate;
 
 - (void)fetchShowsForYear:(IGYear *)year withProgressIndicator:(NSProgressIndicator *)indicator;
+- (void)fetchShowsForYear:(IGYear *)year withProgressIndicator:(NSProgressIndicator *)indicator andHighlightShowWithDate: (NSDate *)date;
 - (void)fetchShowsForVenue:(IGVenue *)venue withProgressIndicator:(NSProgressIndicator *)indicator;
 - (void)fetchTopShowsWithProgressIndicator:(NSProgressIndicator *)indicator;
 - (void)fetchRandomShowWithProgressIndicator:(NSProgressIndicator *)indicator andShow:(void (^)(IGShow *))success;

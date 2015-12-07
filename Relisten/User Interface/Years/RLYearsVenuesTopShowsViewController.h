@@ -25,5 +25,6 @@
 @property (nonatomic, weak) id<RLYearsVenuesTopShowsSelectionDelegate> delegate;
 
 - (void)fetchYearsWithProgressIndicator:(NSProgressIndicator *)indicator;
+- (void)fetchYearsWithProgressIndicator:(NSProgressIndicator *)indicator andSelectYear: (NSInteger)year;
 
 @end

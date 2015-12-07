@@ -95,9 +95,15 @@
     [indicator startAnimation:nil];
     [IGAPIClient.sharedInstance showsOn:show.displayDate
                                 success:^(NSArray *shows) {
+                                    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"source == %@", show.source];
+                                    NSArray *matchedCurrentSources = [shows filteredArrayUsingPredicate:predicate];
+                                    if (matchedCurrentSources.count > 0) {
+                                        self.selectedShow = matchedCurrentSources[0];
+                                    } else {
+                                        self.selectedShow = shows[0];
+                                    }
                                     
                                     self.allShows = shows;
-                                    self.selectedShow = shows[0];
                                     [self populatePopupButtonWithSources:self.allShows];
                                     [self setLineageAndTaperInfo];
                                     [self.tableView reloadData];

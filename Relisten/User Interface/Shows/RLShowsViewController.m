@@ -70,6 +70,11 @@
 
 - (void)fetchShowsForYear:(IGYear *)year withProgressIndicator:(NSProgressIndicator *)indicator
 {
+    [self fetchShowsForYear:year withProgressIndicator:indicator andHighlightShowWithDate:nil];
+}
+
+- (void)fetchShowsForYear:(IGYear *)year withProgressIndicator:(NSProgressIndicator *)indicator andHighlightShowWithDate: (NSDate *)date
+{
     [self clearAllShows];
     [indicator startAnimation:nil];
     [IGAPIClient.sharedInstance year:year.year success:^(IGYear *yr) {
@@ -80,8 +85,20 @@
         self.allShows = [shows sortedArrayUsingDescriptors:descriptors];
         [self reloadShows];
         [indicator stopAnimation:nil];
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date == %@", date];
+        NSArray *matchedShows = [self.allShows filteredArrayUsingPredicate:predicate];
+        if (matchedShows.count > 0) {
+            IGShow *matchedShow = matchedShows[0];
+            NSInteger index = [self.allShows indexOfObject:matchedShow];
+            [[self.allShowsTableView rowViewAtRow:index makeIfNecessary:YES] setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleRegular];
+            [[self.allShowsTableView rowViewAtRow:index makeIfNecessary:YES] setSelected:YES];
+            [self.allShowsTableView scrollRowToVisible:index];
+        }
     }];
 }
+
+
 
 - (void)fetchShowsForVenue:(IGVenue *)venue withProgressIndicator:(NSProgressIndicator *)indicator
 {

@@ -52,12 +52,29 @@
 
 - (void)fetchYearsWithProgressIndicator:(NSProgressIndicator *)indicator
 {
+    [self fetchYearsWithProgressIndicator:indicator andSelectYear:-1];
+}
+
+- (void)fetchYearsWithProgressIndicator:(NSProgressIndicator *)indicator andSelectYear: (NSInteger)year
+{
     [indicator startAnimation:nil];
     self.years = @[];
     [self.yearsTableView reloadData];
     [IGAPIClient.sharedInstance years:^(NSArray *years) {
         self.years = years;
         [self.yearsTableView reloadData];
+        
+        if (year != -1) {
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"year == %i", year];
+            NSArray *matchedYears = [self.years filteredArrayUsingPredicate:predicate];
+            if (matchedYears.count > 0) {
+                IGShow *matchedYear = matchedYears[0];
+                NSInteger index = [self.years indexOfObject:matchedYear];
+                [[self.yearsTableView rowViewAtRow:index makeIfNecessary:YES] setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleRegular];
+                [[self.yearsTableView rowViewAtRow:index makeIfNecessary:YES] setSelected:YES];
+                [self.yearsTableView scrollRowToVisible:index];
+            }
+        }
     }];
     
     [self fetchVenuesWithProgressIndicator:indicator];
