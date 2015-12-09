@@ -70,10 +70,11 @@
 
 -(void)deleteKeyPressedAtIndex:(NSInteger)index
 {
-    if(index == self.audioPlayer.currentIndex)
-    {
-        [self.audioPlayer forward];
-    }
+    // To be handled in AGAudioPlayer
+//    if(index == self.audioPlayer.currentIndex)
+//    {
+//        [self.audioPlayer forward];
+//    }
     
     [self.audioPlayer.queue removeItemAtIndex:index];
     [self.tableView reloadData];
