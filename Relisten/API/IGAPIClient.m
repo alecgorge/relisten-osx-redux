@@ -385,8 +385,12 @@
 
 - (void)playTrack:(IGTrack *)track
            inShow:(IGShow *)show {
-    [self POST:@"play"
-    parameters:@{@"title": track.title,
+    AFHTTPSessionManager *ssss = [[AFHTTPSessionManager alloc] initWithBaseURL:self.baseURL];
+    ssss.requestSerializer = [AFJSONRequestSerializer serializer];
+    ssss.responseSerializer = [AFJSONResponseSerializer serializer];
+ 
+    [ssss POST:@"play"
+    parameters:@{@"song":@{@"title": track.title,
                  @"slug": track.slug,
                  @"band": show.artist.slug,
                  @"year": [NSString stringWithFormat:@"%ld", (long)show.year],
@@ -395,7 +399,7 @@
                  @"showVersion": @"0",
                  @"id": [NSString stringWithFormat:@"%ld", (long)track.id],
                  @"bandName": show.artist.name
-                 }
+                           }}
        success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
            
        }
