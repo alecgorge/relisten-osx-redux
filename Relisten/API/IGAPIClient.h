@@ -43,6 +43,9 @@
 
 - (void)topShows:(void (^)(NSArray *))success;
 
+- (void)playTrack:(IGTrack *)track
+           inShow:(IGShow *)show;
+
 @end
 
 //@interface IGDownloader : PHODDownloader

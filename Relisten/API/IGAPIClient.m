@@ -383,4 +383,25 @@
       }];
 }
 
+- (void)playTrack:(IGTrack *)track
+           inShow:(IGShow *)show {
+    [self POST:@"play"
+    parameters:@{@"title": track.title,
+                 @"slug": track.slug,
+                 @"band": show.artist.slug,
+                 @"year": [NSString stringWithFormat:@"%ld", (long)show.year],
+                 @"month": [show.displayDate substringWithRange:NSMakeRange(5, 2)],
+                 @"day": [show.displayDate substringWithRange:NSMakeRange(8, 2)],
+                 @"showVersion": @"0",
+                 @"id": [NSString stringWithFormat:@"%ld", (long)track.id],
+                 @"bandName": show.artist.name
+                 }
+       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+           
+       }
+       failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+           
+       }];
+}
+
 @end

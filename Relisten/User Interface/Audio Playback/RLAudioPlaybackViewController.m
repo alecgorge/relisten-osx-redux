@@ -218,6 +218,10 @@ uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason
     else if(reason == AGAudioPlayerTrackPlaying)
     {
         IguanaMediaItem *currentMediaItem = (IguanaMediaItem *)self.audioPlayer.currentItem;
+        
+        [IGAPIClient.sharedInstance playTrack:currentMediaItem.iguanaTrack
+                                       inShow:currentMediaItem.iguanaShow];
+        
         [self updateCurrentTrackInfo:currentMediaItem];
         [self.delegate trackPlayedAtIndex:self.audioPlayer.currentIndex forTrack:currentMediaItem.iguanaTrack andShow:currentMediaItem.iguanaShow];
         [self.queueViewController reloadData];
