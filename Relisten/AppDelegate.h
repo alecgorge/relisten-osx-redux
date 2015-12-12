@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "RLMainWindowController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
 
 -(void)enableDockButtons;
 -(void)disableDockButtons;

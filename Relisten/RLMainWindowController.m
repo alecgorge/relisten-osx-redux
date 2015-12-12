@@ -182,18 +182,24 @@
 
 #pragma mark - RLAudioPlaybackDelegate Handling
 
--(void)trackPlayedAtIndex:(NSInteger)index
-                 forTrack:(IGTrack *)track
-                  andShow:(IGShow *)show {
+-(void)trackPlayedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show
+{
     [(AppDelegate *)[[NSApplication sharedApplication] delegate] setDockPauseButton];
     
     self.nowPlayingButton.enabled = YES;
     self.currentlyPlayingShow = show;
+    
+    NSUserNotification *notification = [[NSUserNotification alloc] init];
+    notification.title = track.title;
+    notification.subtitle = show.artist.name;
+    notification.informativeText = [NSString stringWithFormat:@"%@ - %@ - %@", show.displayDate, show.venue.name, show.venue.city];
+    notification.soundName = nil;
+        
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
 }
 
--(void)trackPausedAtIndex:(NSInteger)index
-                 forTrack:(IGTrack *)track
-                  andShow:(IGShow *)show {
+-(void)trackPausedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show
+{
     [(AppDelegate *)[[NSApplication sharedApplication] delegate] setDockButtonPlayButton];
 }
 

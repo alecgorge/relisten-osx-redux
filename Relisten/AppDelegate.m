@@ -26,6 +26,8 @@
     [self.mainWindowController showWindow:nil];
     
     [self disableDockButtons];
+    
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)visibleWindows
@@ -40,6 +42,16 @@
     }
     
     return YES;
+}
+
+#pragma mark - Local Notifications
+
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification
+{
+    if(![self.mainWindowController.window isKeyWindow])
+        return YES;
+    
+    return NO;
 }
 
 #pragma mark - Menu Button Handling
