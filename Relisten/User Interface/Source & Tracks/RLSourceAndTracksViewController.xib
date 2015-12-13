@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="RLSourceAndTracksViewController">
@@ -24,7 +24,6 @@
             <subviews>
                 <popUpButton horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="ux0-Fp-HHr">
                     <rect key="frame" x="76" y="619" width="354" height="19"/>
-                    <animations/>
                     <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="center" controlSize="small" lineBreakMode="truncatingTail" continuous="YES" borderStyle="border" inset="2" id="mA3-ui-5dL">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -36,7 +35,6 @@
                 </popUpButton>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b6q-oE-4KE">
                     <rect key="frame" x="18" y="620" width="50" height="17"/>
-                    <animations/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Source" id="AsF-AO-sTh">
                         <font key="font" metaFont="systemBold"/>
                         <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
@@ -45,7 +43,6 @@
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="38Y-oK-qMx">
                     <rect key="frame" x="440" y="619" width="55" height="19"/>
-                    <animations/>
                     <buttonCell key="cell" type="roundTextured" title="Reviews" bezelStyle="texturedRounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="E3b-8H-saw">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -56,7 +53,6 @@
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="By4-g8-Sqz">
                     <rect key="frame" x="18" y="595" width="55" height="17"/>
-                    <animations/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Lineage" id="qWS-hK-rua">
                         <font key="font" metaFont="systemBold"/>
                         <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
@@ -65,7 +61,6 @@
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iPo-pR-2mI">
                     <rect key="frame" x="18" y="572" width="41" height="17"/>
-                    <animations/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Taper" id="IG9-Xo-dz7">
                         <font key="font" metaFont="systemBold"/>
                         <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
@@ -74,7 +69,6 @@
                 </textField>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="fbU-cp-auV">
                     <rect key="frame" x="74" y="595" width="423" height="14"/>
-                    <animations/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="L3Y-FI-8j1">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
@@ -90,7 +84,6 @@
                             <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="28" rowSizeStyle="automatic" viewBased="YES" id="Xl2-1C-pTr" customClass="RLTableView">
                                 <rect key="frame" x="0.0" y="0.0" width="515" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <animations/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -117,7 +110,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="22" id="BDg-4O-zbz"/>
                                                         </constraints>
-                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="132." drawsBackground="YES" id="fSO-Va-DZu">
                                                             <font key="font" size="12" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -126,7 +118,6 @@
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QPx-Ts-DZV">
                                                         <rect key="frame" x="430" y="6" width="38" height="16"/>
-                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="50:02" drawsBackground="YES" id="wg1-S0-2rC">
                                                             <font key="font" metaFont="cellTitle"/>
                                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -138,7 +129,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="16" id="zKg-eV-IVm"/>
                                                         </constraints>
-                                                        <animations/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                                                 <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -147,7 +137,6 @@
                                                     </customView>
                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PtU-ya-gxz">
                                                         <rect key="frame" x="476" y="4" width="26" height="19"/>
-                                                        <animations/>
                                                         <popUpButtonCell key="cell" type="recessed" bezelStyle="recessed" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" pullsDown="YES" altersStateOfSelectedItem="NO" selectedItem="uEV-QE-A1f" id="9EB-bZ-r0k">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -179,7 +168,6 @@
                                                     </popUpButton>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-fi-4ZX">
                                                         <rect key="frame" x="29" y="5" width="188" height="18"/>
-                                                        <animations/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" title="Big nice track name of song " drawsBackground="YES" id="1bu-D7-9HH">
                                                             <font key="font" metaFont="system" size="14"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -204,7 +192,6 @@
                                                     <constraint firstItem="kjF-pV-s1W" firstAttribute="leading" secondItem="DFr-KK-MuZ" secondAttribute="leading" id="v0f-w3-foS"/>
                                                     <constraint firstItem="QPx-Ts-DZV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ua8-fi-4ZX" secondAttribute="trailing" constant="10" id="xHC-Pg-RqR"/>
                                                 </constraints>
-                                                <animations/>
                                                 <connections>
                                                     <outlet property="addRemainingConcertToQueueMenuItem" destination="5t5-hD-orP" id="MDD-ek-j1f"/>
                                                     <outlet property="addToEndOfQueueMenuItem" destination="uEV-QE-A1f" id="FWy-UL-OB6"/>
@@ -223,31 +210,25 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <animations/>
                         <nil key="backgroundColor"/>
                     </clipView>
-                    <animations/>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="m4V-LM-tJU">
                         <rect key="frame" x="0.0" y="535" width="515" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="IHB-I6-HHa">
                         <rect key="frame" x="224" y="17" width="15" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </scroller>
                 </scrollView>
                 <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Tpq-gc-bo6">
                     <rect key="frame" x="20" y="533" width="475" height="5"/>
-                    <animations/>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <font key="titleFont" metaFont="system"/>
                 </box>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="2x4-nT-sZ0">
                     <rect key="frame" x="74" y="572" width="423" height="14"/>
-                    <animations/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="OJS-Xr-rIt">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
@@ -256,7 +237,6 @@
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gLK-SG-tlR">
                     <rect key="frame" x="373" y="545" width="122" height="19"/>
-                    <animations/>
                     <buttonCell key="cell" type="roundTextured" title="Listen on archive.org" bezelStyle="texturedRounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="g1m-My-jeC">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -267,7 +247,6 @@
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qrC-9N-KaI">
                     <rect key="frame" x="282" y="545" width="83" height="19"/>
-                    <animations/>
                     <buttonCell key="cell" type="roundTextured" title="Add to queue" bezelStyle="texturedRounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3BX-7w-QgM">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -307,7 +286,6 @@
                 <constraint firstItem="qrC-9N-KaI" firstAttribute="top" secondItem="2x4-nT-sZ0" secondAttribute="bottom" constant="8" id="wCg-Sr-ZYo"/>
                 <constraint firstAttribute="trailing" secondItem="4Cx-M8-hH5" secondAttribute="trailing" id="zOe-31-bKv"/>
             </constraints>
-            <animations/>
             <point key="canvasLocation" x="894.5" y="550.5"/>
         </customView>
     </objects>
