@@ -10,5 +10,6 @@ target "Relisten" do
     pod 'EDStarRating'
     pod 'AGAudioPlayer', :path => '../AGAudioPlayer'
     pod 'CMEqualizerIndicatorView', '~> 1.0'
-    pod 'SPMediaKeyTap', :git => 'https://github.com/Coppertino/SPMediaKeyTap.git'
+    pod 'Fabric'
+    pod 'Crashlytics'
 end

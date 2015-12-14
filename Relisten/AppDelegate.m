@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 @interface AppDelegate ()
 
 @property (strong, nonatomic) RLMainWindowController *mainWindowController;
@@ -21,6 +24,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    [Fabric with:@[[Crashlytics class]]];
+
     self.mainWindowController = [[RLMainWindowController alloc] initWithWindowNibName:@"RLMainWindowController"];
     [self.mainWindowController.window center];
     [self.mainWindowController showWindow:nil];
