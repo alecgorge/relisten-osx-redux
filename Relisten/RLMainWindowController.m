@@ -23,7 +23,10 @@
 @property (nonatomic, strong) RLAudioPlaybackViewController *audioPlayBackController;
 @property (nonatomic, strong) IGShow *currentlyPlayingShow;
 @property (nonatomic, strong) NSPopover *artistPopover;
+
+#if !FOR_APPSTORE
 @property (nonatomic, strong) SPMediaKeyTap *keyTap;
+#endif
 
 @end
 
