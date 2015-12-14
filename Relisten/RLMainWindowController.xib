@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="RLMainWindowController">
@@ -20,7 +20,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="852" height="455"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="se5-gp-TjO" customClass="NSVisualEffectView">
                 <rect key="frame" x="0.0" y="0.0" width="852" height="455"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -33,8 +33,8 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="b8r-E7-fjv"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="gqk-On-YJ2"/>
                                 </constraints>
-                                <animations/>
                             </customView>
                             <customView id="xkP-w6-TDg" userLabel="secondView">
                                 <rect key="frame" x="268" y="0.0" width="112" height="337"/>
@@ -42,7 +42,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="kOG-ys-iHf"/>
                                 </constraints>
-                                <animations/>
                             </customView>
                             <customView id="Gh9-B3-0Fo" userLabel="thirdView">
                                 <rect key="frame" x="381" y="0.0" width="471" height="337"/>
@@ -50,10 +49,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="uNO-H9-WY2"/>
                                 </constraints>
-                                <animations/>
                             </customView>
                         </subviews>
-                        <animations/>
                         <holdingPriorities>
                             <real value="250"/>
                             <real value="250"/>
@@ -70,7 +67,6 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="93W-st-HNs"/>
                         </constraints>
-                        <animations/>
                     </customView>
                 </subviews>
                 <constraints>
@@ -82,7 +78,6 @@
                     <constraint firstAttribute="trailing" secondItem="gff-DE-xYh" secondAttribute="trailing" id="xm1-zo-DHB"/>
                     <constraint firstItem="gff-DE-xYh" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="38" id="yTj-vJ-nQI"/>
                 </constraints>
-                <animations/>
             </view>
             <toolbar key="toolbar" implicitIdentifier="F6FB432C-C7DA-4A85-9844-4DB80E93D835" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="small" id="Ipc-e9-QTO">
                 <allowedToolbarItems>
@@ -94,7 +89,6 @@
                         <button key="view" verticalHuggingPriority="750" id="9Bn-Bp-hJx">
                             <rect key="frame" x="0.0" y="14" width="99" height="26"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <animations/>
                             <buttonCell key="cell" type="roundTextured" title="Now Playing" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="z5B-24-A6q">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -111,7 +105,6 @@
                         <button key="view" verticalHuggingPriority="750" id="vub-WG-CZJ">
                             <rect key="frame" x="0.0" y="14" width="200" height="26"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <animations/>
                             <buttonCell key="cell" type="roundTextured" title="Select Artist" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="Qo8-v3-PZJ">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -128,7 +121,6 @@
                         <button key="view" verticalHuggingPriority="750" id="goa-My-HFl">
                             <rect key="frame" x="0.0" y="14" width="99" height="26"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <animations/>
                             <buttonCell key="cell" type="roundTextured" title="Random Show" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="BV1-77-3ci">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -145,7 +137,6 @@
                         <textField key="view" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="7HS-eM-Hrx">
                             <rect key="frame" x="6" y="14" width="64" height="17"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <animations/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Relisten" id="Mo9-uv-6Ih">
                                 <font key="font" metaFont="systemBold" size="15"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -160,7 +151,6 @@
                         <button key="view" verticalHuggingPriority="750" id="BfT-zj-uCu">
                             <rect key="frame" x="26" y="14" width="25" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <animations/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRefreshTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3pT-DC-mKU">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -177,7 +167,6 @@
                         <progressIndicator key="view" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="EEA-iA-hDj">
                             <rect key="frame" x="30" y="14" width="16" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <animations/>
                         </progressIndicator>
                     </toolbarItem>
                 </allowedToolbarItems>
