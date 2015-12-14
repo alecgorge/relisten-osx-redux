@@ -72,12 +72,14 @@
     [self.audioPlayBackView addSubview:self.audioPlayBackController.view];
     
     // Handle global media keys
+#if !FOR_APPSTORE
     self.keyTap = [[SPMediaKeyTap alloc] init];
     [self.keyTap setDelegate:self];
     if([SPMediaKeyTap usesGlobalMediaKeyTap])
     {
         [self.keyTap startWatchingMediaKeys];
     }
+#endif
 }
 
 - (IBAction)showArtistPopover:(id)sender
@@ -205,6 +207,7 @@
 
 #pragma mark - Handle global media keys 
 
+#if !FOR_APPSTORE
 -(void)mediaKeyTap:(SPMediaKeyTap*)keyTap receivedMediaKeyEvent:(NSEvent*)event;
 {
     NSAssert([event type] == NSSystemDefined && [event subtype] == SPSystemDefinedEventMediaKeys, @"Unexpected NSEvent in mediaKeyTap:receivedMediaKeyEvent:");
@@ -234,6 +237,7 @@
         }
     }
 }
+#endif
 
 #pragma mark Handle Dock Menu Button
 

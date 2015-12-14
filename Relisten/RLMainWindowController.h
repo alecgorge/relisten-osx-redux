@@ -6,8 +6,11 @@
 //  Copyright © 2015 Relisten. All rights reserved.
 //
 
+#ifndef FOR_APPSTORE
+#define FOR_APPSTORE 1
+#endif
+
 #import <Cocoa/Cocoa.h>
-#import <SPMediaKeyTap/SPMediaKeyTap.h>
 #import "RLArtistsViewController.h"
 #import "RLYearsVenuesTopShowsViewController.h"
 #import "RLShowsViewController.h"
@@ -15,6 +18,10 @@
 #import "RLAudioPlaybackViewController.h"
 #import "RLSplitView.h"
 #import "AppDelegate.h"
+
+#if !FOR_APPSTORE
+#import <SPMediaKeyTap/SPMediaKeyTap.h>
+#endif
 
 @interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLArtistSelectionDelegate, RLYearsVenuesTopShowsSelectionDelegate, RLShowSelectedDelegate, RLTrackSelectedDelegate, RLAudioPlaybackDelegate>
 
