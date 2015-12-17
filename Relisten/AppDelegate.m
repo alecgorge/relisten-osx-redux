@@ -33,6 +33,18 @@
     [self disableDockButtons];
     
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+    
+    // Handle global play pause by pressing Spacebar
+    [NSEvent addLocalMonitorForEventsMatchingMask:NSKeyDownMask handler:^NSEvent * _Nullable(NSEvent * _Nonnull theEvent) {
+        
+        if (theEvent.keyCode == 49)
+        {
+            [self playOrPauseDockButtonPressed:nil];
+            theEvent = nil; // nil the event so the default behavior is overriden 
+        }
+        
+        return theEvent;
+    }];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)visibleWindows
