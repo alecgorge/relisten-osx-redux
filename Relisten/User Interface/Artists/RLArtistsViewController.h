@@ -24,5 +24,6 @@
 
 -(instancetype)initWithProgressIndictor:(NSProgressIndicator *)indicator;
 -(void)fetchArtistsWithProgressIndictor:(NSProgressIndicator *)indicator; // This is automatically called on init
+-(IGArtist *)randomArtist;
 
 @end

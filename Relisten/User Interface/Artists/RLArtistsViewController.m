@@ -13,8 +13,8 @@
 @property (weak) IBOutlet NSSearchField *searchField;
 @property (weak) IBOutlet NSTableView *tableView;
 
-@property (nonatomic, strong) NSArray *artists;
 @property (nonatomic, strong) NSArray *unfilteredArtists;
+@property (nonatomic, strong) NSArray *artists;
 
 @end
 
@@ -54,6 +54,7 @@
 -(void)fetchArtistsWithProgressIndictor:(NSProgressIndicator *)indicator
 {
     [indicator startAnimation:nil];
+    
     [IGAPIClient.sharedInstance artists:^(NSArray *artists)
      {
          self.unfilteredArtists = [artists sortedArrayUsingComparator:^NSComparisonResult(IGArtist *obj1, IGArtist *obj2) {
@@ -77,6 +78,17 @@
          
          [indicator stopAnimation:nil];
      }];
+}
+
+-(IGArtist *)randomArtist
+{
+    if([self.unfilteredArtists count] > 0)
+    {
+        NSUInteger randomIndex = arc4random() % [self.unfilteredArtists count];
+        return self.unfilteredArtists[randomIndex];
+    }
+    
+    return nil;
 }
 
 #pragma mark - Filtering Methods

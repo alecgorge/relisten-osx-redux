@@ -36,6 +36,10 @@
 {
     [super windowDidLoad];
     
+#warning remove this 
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+    
     self.window.titleVisibility = NSWindowTitleHidden;
     self.window.titlebarAppearsTransparent = YES;
     self.window.collectionBehavior = NSWindowCollectionBehaviorFullScreenPrimary;  
@@ -111,7 +115,20 @@
 
 - (IBAction)randomShow:(id)sender
 {
+    if(![IGAPIClient.sharedInstance artist])
+    {
+        IGArtist *randomArtist = [self.artistViewController randomArtist];
+        
+        if(!randomArtist)
+            return;
+        
+        IGAPIClient.sharedInstance.artist = randomArtist;
+        [self.artistViewController setSelectedArtist:randomArtist];
+        [self.artistButton setTitle:randomArtist.name];
+    }
+    
     [IGAPIClient.sharedInstance randomShow:^(NSArray *randomShow) {
+        
         IGShow *show = randomShow[0];
         [self.sourceAndTracksViewController fetchTracksForShow:show withProgressIndicator:self.progressIndicator];
         IGYear *year = [[IGYear alloc] init];
