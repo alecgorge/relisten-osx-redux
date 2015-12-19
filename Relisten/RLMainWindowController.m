@@ -36,10 +36,6 @@
 {
     [super windowDidLoad];
     
-#warning remove this 
-    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
-    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
-    
     self.window.titleVisibility = NSWindowTitleHidden;
     self.window.titlebarAppearsTransparent = YES;
     self.window.collectionBehavior = NSWindowCollectionBehaviorFullScreenPrimary;  
