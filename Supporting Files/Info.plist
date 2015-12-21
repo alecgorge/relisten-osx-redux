@@ -51,6 +51,6 @@ Relisten is powered by Archive.org and Alec Gorge's Iguana. The Phish collection
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
+	<string>RelistenApplication</string>
 </dict>
 </plist>

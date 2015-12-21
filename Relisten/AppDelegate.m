@@ -92,7 +92,9 @@
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:mailtoAddress]];
 }
 
-#pragma maek - Dock Button Handling
+#pragma mark 
+
+#pragma mark - Dock Button Handling
 
 -(void)enableDockButtons
 {

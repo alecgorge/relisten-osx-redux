@@ -16,5 +16,10 @@
 -(void)setDockButtonPlayButton;
 -(void)setDockPauseButton;
 
+// Added these methods for easy access in NSApplication subclass
+- (IBAction)playOrPauseDockButtonPressed:(id)sender;
+- (IBAction)nextDockButtonpressed:(id)sender;
+- (IBAction)previousDockButtonPressed:(id)sender;
+
 @end
 
