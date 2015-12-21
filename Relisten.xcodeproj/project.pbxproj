@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		411A37424D50DD681B23D334 /* libPods-Relisten.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99023D004ACB7302E2D053DB /* libPods-Relisten.a */; };
-		7C8B309E1C1F6AB1009B08E8 /* NSObject+SPInvocationGrabbing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8B309A1C1F6AB1009B08E8 /* NSObject+SPInvocationGrabbing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C8B309F1C1F6AB1009B08E8 /* SPMediaKeyTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8B309C1C1F6AB1009B08E8 /* SPMediaKeyTap.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C8B30A01C1F6AB1009B08E8 /* SPMediaKeyTapDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8B309D1C1F6AB1009B08E8 /* SPMediaKeyTapDelegate.m */; };
 		C108359F1BD092D500A22755 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = C108359E1BD092D500A22755 /* star2.png */; };
 		C10835A11BD094D400A22755 /* star3.png in Resources */ = {isa = PBXBuildFile; fileRef = C10835A01BD094D400A22755 /* star3.png */; };
 		C116DFB01BB09EEE006A9F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C116DFAF1BB09EEE006A9F6C /* AppDelegate.m */; };
@@ -61,11 +58,6 @@
 		2770E3F2B9EA9D6FAC108AED /* Pods-Relisten.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relisten.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relisten/Pods-Relisten.release.xcconfig"; sourceTree = "<group>"; };
 		478CD6AE1D5F87783189B5F0 /* Pods-Relisten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relisten.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Relisten/Pods-Relisten.debug.xcconfig"; sourceTree = "<group>"; };
 		7C8B30961C1F6673009B08E8 /* Relisten.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Relisten.entitlements; sourceTree = "<group>"; };
-		7C8B30991C1F6AB1009B08E8 /* NSObject+SPInvocationGrabbing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SPInvocationGrabbing.h"; sourceTree = "<group>"; };
-		7C8B309A1C1F6AB1009B08E8 /* NSObject+SPInvocationGrabbing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SPInvocationGrabbing.m"; sourceTree = "<group>"; };
-		7C8B309B1C1F6AB1009B08E8 /* SPMediaKeyTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPMediaKeyTap.h; sourceTree = "<group>"; };
-		7C8B309C1C1F6AB1009B08E8 /* SPMediaKeyTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPMediaKeyTap.m; sourceTree = "<group>"; };
-		7C8B309D1C1F6AB1009B08E8 /* SPMediaKeyTapDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPMediaKeyTapDelegate.m; sourceTree = "<group>"; };
 		99023D004ACB7302E2D053DB /* libPods-Relisten.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Relisten.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C108359E1BD092D500A22755 /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
 		C10835A01BD094D400A22755 /* star3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star3.png; sourceTree = "<group>"; };
@@ -165,26 +157,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7C8B30971C1F6AA9009B08E8 /* SPMediaKey */ = {
-			isa = PBXGroup;
-			children = (
-				7C8B30981C1F6AB1009B08E8 /* SPInvocationGrabbing */,
-				7C8B309B1C1F6AB1009B08E8 /* SPMediaKeyTap.h */,
-				7C8B309C1C1F6AB1009B08E8 /* SPMediaKeyTap.m */,
-				7C8B309D1C1F6AB1009B08E8 /* SPMediaKeyTapDelegate.m */,
-			);
-			name = SPMediaKey;
-			sourceTree = "<group>";
-		};
-		7C8B30981C1F6AB1009B08E8 /* SPInvocationGrabbing */ = {
-			isa = PBXGroup;
-			children = (
-				7C8B30991C1F6AB1009B08E8 /* NSObject+SPInvocationGrabbing.h */,
-				7C8B309A1C1F6AB1009B08E8 /* NSObject+SPInvocationGrabbing.m */,
-			);
-			path = SPInvocationGrabbing;
-			sourceTree = "<group>";
-		};
 		C116DFA21BB09EEE006A9F6C = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +197,6 @@
 		C116DFB11BB09EEE006A9F6C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7C8B30971C1F6AA9009B08E8 /* SPMediaKey */,
 				C187C6921BB759CF00F1778C /* Images */,
 				C116DFB41BB09EEE006A9F6C /* Assets.xcassets */,
 				C116DFB91BB09EEE006A9F6C /* Info.plist */,
@@ -539,7 +510,6 @@
 				C18AEAC21BB4A7F600A6D182 /* IGShowReview.m in Sources */,
 				C116DFB31BB09EEE006A9F6C /* main.m in Sources */,
 				C187C6911BB739BF00F1778C /* RLShowTableViewCell.m in Sources */,
-				7C8B309E1C1F6AB1009B08E8 /* NSObject+SPInvocationGrabbing.m in Sources */,
 				C171E8FD1BF59E35003B12EB /* RLArtistTableCellView.m in Sources */,
 				C171E8F91BF59A83003B12EB /* RLArtistsViewController.m in Sources */,
 				C187C68D1BB735C100F1778C /* RLShowsViewController.m in Sources */,
@@ -550,7 +520,6 @@
 				C187C6821BB5050400F1778C /* RLTableView.m in Sources */,
 				C15B8A201BBC5B3B00CB2F92 /* RLTrackTableCellView.m in Sources */,
 				C116DFB01BB09EEE006A9F6C /* AppDelegate.m in Sources */,
-				7C8B309F1C1F6AB1009B08E8 /* SPMediaKeyTap.m in Sources */,
 				C18AEAC01BB4A7F600A6D182 /* IGPlaylist.m in Sources */,
 				C11DC3331BF14066007152D6 /* RLPlaybackQueueCellView.m in Sources */,
 				C11B1C8D1BDF6FFD001851DE /* IguanaMediaItem.m in Sources */,
@@ -558,7 +527,6 @@
 				C18AEAD61BB4E6BB00A6D182 /* RLSplitView.m in Sources */,
 				C18AEACD1BB4AFEC00A6D182 /* JSONValueTransformer+NSDateFromNSStringMilliseconds.m in Sources */,
 				C11FA5181BD2194000C4FDEE /* RLAudioPlaybackViewController.m in Sources */,
-				7C8B30A01C1F6AB1009B08E8 /* SPMediaKeyTapDelegate.m in Sources */,
 				C18AEA951BB4945F00A6D182 /* RLMainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

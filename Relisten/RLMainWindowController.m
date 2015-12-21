@@ -24,10 +24,6 @@
 @property (nonatomic, strong) IGShow *currentlyPlayingShow;
 @property (nonatomic, strong) NSPopover *artistPopover;
 
-#if !FOR_APPSTORE
-@property (nonatomic, strong) SPMediaKeyTap *keyTap;
-#endif
-
 @end
 
 @implementation RLMainWindowController
@@ -73,16 +69,6 @@
     self.audioPlayBackController.view.autoresizingMask = NSViewWidthSizable;
     self.audioPlayBackController.delegate = self;
     [self.audioPlayBackView addSubview:self.audioPlayBackController.view];
-    
-    // Handle global media keys
-#if !FOR_APPSTORE
-    self.keyTap = [[SPMediaKeyTap alloc] init];
-    [self.keyTap setDelegate:self];
-    if([SPMediaKeyTap usesGlobalMediaKeyTap])
-    {
-        [self.keyTap startWatchingMediaKeys];
-    }
-#endif
 }
 
 - (IBAction)showArtistPopover:(id)sender
@@ -220,40 +206,6 @@
 {
     [(AppDelegate *)[[NSApplication sharedApplication] delegate] setDockButtonPlayButton];
 }
-
-#pragma mark - Handle global media keys 
-
-#if !FOR_APPSTORE
--(void)mediaKeyTap:(SPMediaKeyTap*)keyTap receivedMediaKeyEvent:(NSEvent*)event;
-{
-    NSAssert([event type] == NSSystemDefined && [event subtype] == SPSystemDefinedEventMediaKeys, @"Unexpected NSEvent in mediaKeyTap:receivedMediaKeyEvent:");
-    
-    // Weird hex stuff needed, too lazy to figure it out...
-    int keyCode = (([event data1] & 0xFFFF0000) >> 16);
-    int keyFlags = ([event data1] & 0x0000FFFF);
-    BOOL keyIsPressed = (((keyFlags & 0xFF00) >> 8)) == 0xA;
-    
-    if (keyIsPressed)
-    {
-        switch (keyCode)
-        {
-            case NX_KEYTYPE_PLAY:
-                [self.audioPlayBackController playPauseButtonPressed:nil];
-                break;
-                
-            case NX_KEYTYPE_FAST:
-                [self.audioPlayBackController nextButtonPressed:nil];
-                break;
-                
-            case NX_KEYTYPE_REWIND:
-                [self.audioPlayBackController previousButtonPressed:nil];
-                break;
-            default:
-                break;
-        }
-    }
-}
-#endif
 
 #pragma mark Handle Dock Menu Button
 

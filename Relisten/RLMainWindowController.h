@@ -15,10 +15,6 @@
 #import "RLSplitView.h"
 #import "AppDelegate.h"
 
-#if !FOR_APPSTORE
-#import "SPMediaKeyTap.h"
-#endif
-
 @interface RLMainWindowController : NSWindowController <NSSplitViewDelegate, RLArtistSelectionDelegate, RLYearsVenuesTopShowsSelectionDelegate, RLShowSelectedDelegate, RLTrackSelectedDelegate, RLAudioPlaybackDelegate>
 
 -(void)playPauseDockButtonPressed;
