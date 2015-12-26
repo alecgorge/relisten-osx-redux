@@ -206,6 +206,7 @@
 				C116DFB41BB09EEE006A9F6C /* Assets.xcassets */,
 				C116DFB91BB09EEE006A9F6C /* Info.plist */,
 				C116DFB61BB09EEE006A9F6C /* MainMenu.xib */,
+				7C8B30A21C1F6DB3009B08E8 /* Relisten iOS App.icns */,
 				C116DFB21BB09EEE006A9F6C /* main.m */,
 			);
 			path = "Supporting Files";
@@ -438,6 +439,7 @@
 				C1F0404B1C337CD300027F43 /* RLLastFMPreferencesViewController.xib in Resources */,
 				C116DFB81BB09EEE006A9F6C /* MainMenu.xib in Resources */,
 				C171E8FA1BF59A83003B12EB /* RLArtistsViewController.xib in Resources */,
+				7C8B30A31C1F6DB3009B08E8 /* Relisten iOS App.icns in Resources */,
 				C11FA5191BD2194000C4FDEE /* RLAudioPlaybackViewController.xib in Resources */,
 				C1E4518F1BBA803B003A0721 /* RLSourceAndTracksViewController.xib in Resources */,
 				C10835A11BD094D400A22755 /* star3.png in Resources */,
