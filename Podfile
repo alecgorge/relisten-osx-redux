@@ -12,4 +12,6 @@ target "Relisten" do
     pod 'CMEqualizerIndicatorView', '~> 1.0'
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'CCNPreferencesWindowController'
+    pod 'LastFm'
 end

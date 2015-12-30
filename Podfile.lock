@@ -1,19 +1,20 @@
 PODS:
-  - AFNetworking (3.0.1):
-    - AFNetworking/NSURLSession (= 3.0.1)
-    - AFNetworking/Reachability (= 3.0.1)
-    - AFNetworking/Security (= 3.0.1)
-    - AFNetworking/Serialization (= 3.0.1)
-    - AFNetworking/UIKit (= 3.0.1)
-  - AFNetworking/NSURLSession (3.0.1):
+  - AFNetworking (3.0.4):
+    - AFNetworking/NSURLSession (= 3.0.4)
+    - AFNetworking/Reachability (= 3.0.4)
+    - AFNetworking/Security (= 3.0.4)
+    - AFNetworking/Serialization (= 3.0.4)
+    - AFNetworking/UIKit (= 3.0.4)
+  - AFNetworking/NSURLSession (3.0.4):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.0.1)
-  - AFNetworking/Security (3.0.1)
-  - AFNetworking/Serialization (3.0.1)
+  - AFNetworking/Reachability (3.0.4)
+  - AFNetworking/Security (3.0.4)
+  - AFNetworking/Serialization (3.0.4)
   - AGAudioPlayer (0.8.0):
     - HysteriaPlayer
+  - CCNPreferencesWindowController (1.2.2)
   - CMEqualizerIndicatorView (1.1)
   - Crashlytics (3.4.1):
     - Fabric (~> 1.6.0)
@@ -21,17 +22,22 @@ PODS:
   - Fabric (1.6.1)
   - HysteriaPlayer (HEAD based on 2.1.4)
   - JSONModel (1.1.2)
+  - KissXML (5.0)
+  - LastFm (1.15.0):
+    - KissXML (~> 5.0)
   - ObjectiveSugar (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking
   - AGAudioPlayer (from `../AGAudioPlayer`)
+  - CCNPreferencesWindowController
   - CMEqualizerIndicatorView (~> 1.0)
   - Crashlytics
   - EDStarRating
   - Fabric
   - HysteriaPlayer (HEAD)
   - JSONModel
+  - LastFm
   - ObjectiveSugar
 
 EXTERNAL SOURCES:
@@ -39,14 +45,17 @@ EXTERNAL SOURCES:
     :path: ../AGAudioPlayer
 
 SPEC CHECKSUMS:
-  AFNetworking: 20d8749e03e45f1e5c046ad0b647e0b07bcdd91f
+  AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   AGAudioPlayer: 356be857859b28e293f3cb4ecf493f42aa2cfba5
+  CCNPreferencesWindowController: 2162438b1328d1d15ce5ee50289a57c7b3857c7a
   CMEqualizerIndicatorView: 725da53db32e4014cdbe740f1c4f49241a7edcef
   Crashlytics: 41574a245bc6ae10c55d57f385ebd2004e5bee05
   EDStarRating: a41a6440a945020745d0e9ff8ada7d1afa952114
   Fabric: bf0ceb04e7c924090efc5f8c55e4fbcca189e0a0
   HysteriaPlayer: 81433239fa79ca7c446ccb994d91d34eaa533ab3
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
+  KissXML: ce643413d618ad69886d0d43c3792b7dedfe476e
+  LastFm: 28c752f8e8646531524a123ce7f6722bbfc9d3c5
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
 
 COCOAPODS: 0.39.0

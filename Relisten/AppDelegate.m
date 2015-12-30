@@ -14,6 +14,8 @@
 @interface AppDelegate ()
 
 @property (strong, nonatomic) RLMainWindowController *mainWindowController;
+@property (strong, nonatomic) CCNPreferencesWindowController *preferencesWindowController;
+
 @property (weak) IBOutlet NSMenuItem *playDockButtonMenuItem;
 @property (weak) IBOutlet NSMenuItem *nextDockButtonMenuItem;
 @property (weak) IBOutlet NSMenuItem *previousDockButtonMenuItem;
@@ -40,7 +42,7 @@
     // Handle global play pause by pressing Spacebar
     localMonitorID = [NSEvent addLocalMonitorForEventsMatchingMask:NSKeyDownMask handler:^NSEvent * _Nullable(NSEvent * _Nonnull theEvent) {
         
-        if (theEvent.keyCode == 49)
+        if (theEvent.keyCode == 49) // Spacebar 
         {
             [self playOrPauseDockButtonPressed:nil];
             theEvent = nil; // nil the event so the default behavior is overriden 
@@ -48,6 +50,21 @@
         
         return theEvent;
     }];
+    
+    // Set up preferences
+    self.preferencesWindowController = [CCNPreferencesWindowController new];
+    self.preferencesWindowController.centerToolbarItems = YES;
+    self.preferencesWindowController.allowsVibrancy = YES;
+    self.preferencesWindowController.showToolbarItemsAsSegmentedControl = YES;
+    
+    RLLastFMPreferencesViewController *lastfm = [[RLLastFMPreferencesViewController alloc] init];
+    [self.preferencesWindowController setPreferencesViewControllers:@[lastfm]];
+    
+    // Set up Lastfm
+    LastFm.sharedInstance.apiKey = @"f2b89dbc431a938a385203bb218e5310";
+    LastFm.sharedInstance.apiSecret = @"5c1ace2f9e7cdbb4c0b2fbbcc9ddb426";
+    LastFm.sharedInstance.session = [[NSUserDefaults standardUserDefaults] stringForKey:@"lastfm_session_key"];
+    LastFm.sharedInstance.username = [[NSUserDefaults standardUserDefaults] stringForKey:@"lastfm_username_key"];
 }
 
 -(void)dealloc
@@ -92,7 +109,10 @@
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:mailtoAddress]];
 }
 
-#pragma mark 
+- (IBAction)showPreferences:(id)sender
+{
+    [self.preferencesWindowController showPreferencesWindow];
+}
 
 #pragma mark - Dock Button Handling
 

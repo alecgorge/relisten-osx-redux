@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="RLLastFMPreferencesViewController">
+            <connections>
+                <outlet property="passwordTextField" destination="mrd-nf-ovd" id="xGG-nl-kfJ"/>
+                <outlet property="progressIndicator" destination="9vu-3T-Owt" id="FRn-eF-HLg"/>
+                <outlet property="scrobbleTextField" destination="NhG-Fl-Wcp" id="8Ys-Wz-TOA"/>
+                <outlet property="signinbutton" destination="agf-Hc-HI8" id="B1V-5D-5ck"/>
+                <outlet property="usernameTextField" destination="dlz-QM-gWI" id="UzO-3O-rLr"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="278"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="NhG-Fl-Wcp">
+                    <rect key="frame" x="18" y="240" width="145" height="18"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Scrobble with Last.fm" id="aZg-58-BSg">
+                        <font key="font" metaFont="system" size="14"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dlz-QM-gWI">
+                    <rect key="frame" x="20" y="208" width="140" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="SWM-vX-i3r"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Username" drawsBackground="YES" id="XHG-R8-nal">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <outlet property="nextKeyView" destination="mrd-nf-ovd" id="UMS-LR-sK0"/>
+                    </connections>
+                </textField>
+                <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mrd-nf-ovd">
+                    <rect key="frame" x="20" y="176" width="140" height="22"/>
+                    <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="yr9-0S-YZE">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <allowedInputSourceLocales>
+                            <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                        </allowedInputSourceLocales>
+                    </secureTextFieldCell>
+                    <connections>
+                        <outlet property="nextKeyView" destination="agf-Hc-HI8" id="F6Z-Mk-ayM"/>
+                    </connections>
+                </secureTextField>
+                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="9vu-3T-Owt">
+                    <rect key="frame" x="86" y="147" width="16" height="16"/>
+                </progressIndicator>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="agf-Hc-HI8">
+                    <rect key="frame" x="20" y="142" width="56" height="25"/>
+                    <buttonCell key="cell" type="roundTextured" title="Sign In" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wdr-FO-UvJ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="signinbuttonpressed:" target="-2" id="Nf1-xG-D2Z"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="dlz-QM-gWI" firstAttribute="leading" secondItem="NhG-Fl-Wcp" secondAttribute="leading" id="8qC-Gm-PHo"/>
+                <constraint firstItem="agf-Hc-HI8" firstAttribute="top" secondItem="mrd-nf-ovd" secondAttribute="bottom" constant="10" id="Ll9-aB-6eK"/>
+                <constraint firstItem="agf-Hc-HI8" firstAttribute="leading" secondItem="mrd-nf-ovd" secondAttribute="leading" id="LnQ-xg-Umv"/>
+                <constraint firstItem="9vu-3T-Owt" firstAttribute="centerY" secondItem="agf-Hc-HI8" secondAttribute="centerY" id="NSA-kD-M0F"/>
+                <constraint firstItem="mrd-nf-ovd" firstAttribute="top" secondItem="dlz-QM-gWI" secondAttribute="bottom" constant="10" id="Pl1-ok-7RJ"/>
+                <constraint firstItem="mrd-nf-ovd" firstAttribute="leading" secondItem="dlz-QM-gWI" secondAttribute="leading" id="Y8C-g4-2aM"/>
+                <constraint firstItem="NhG-Fl-Wcp" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="c7U-uv-pOl"/>
+                <constraint firstItem="mrd-nf-ovd" firstAttribute="width" secondItem="dlz-QM-gWI" secondAttribute="width" id="ckl-o0-DGz"/>
+                <constraint firstItem="dlz-QM-gWI" firstAttribute="top" secondItem="NhG-Fl-Wcp" secondAttribute="bottom" constant="10" id="jZJ-b8-AsI"/>
+                <constraint firstItem="9vu-3T-Owt" firstAttribute="leading" secondItem="agf-Hc-HI8" secondAttribute="trailing" constant="10" id="omM-S5-scn"/>
+                <constraint firstItem="NhG-Fl-Wcp" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="x2E-8o-ZfC"/>
+            </constraints>
+            <point key="canvasLocation" x="351.5" y="303"/>
+        </customView>
+    </objects>
+</document>

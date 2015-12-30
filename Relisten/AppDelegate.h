@@ -7,6 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <CCNPreferencesWindowController/CCNPreferencesWindowController.h>
+#import <LastFm/LastFm.h>
+#import "RLLastFMPreferencesViewController.h"
 #import "RLMainWindowController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>

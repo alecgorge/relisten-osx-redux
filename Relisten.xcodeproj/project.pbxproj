@@ -52,6 +52,8 @@
 		C1C6F95C1BE6A22600EDF168 /* RLShowReviewCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C6F95B1BE6A22600EDF168 /* RLShowReviewCellView.m */; };
 		C1E4518E1BBA803B003A0721 /* RLSourceAndTracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E4518C1BBA803B003A0721 /* RLSourceAndTracksViewController.m */; };
 		C1E4518F1BBA803B003A0721 /* RLSourceAndTracksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E4518D1BBA803B003A0721 /* RLSourceAndTracksViewController.xib */; };
+		C1F0404A1C337CD300027F43 /* RLLastFMPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F040481C337CD300027F43 /* RLLastFMPreferencesViewController.m */; };
+		C1F0404B1C337CD300027F43 /* RLLastFMPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1F040491C337CD300027F43 /* RLLastFMPreferencesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +136,9 @@
 		C1E4518B1BBA803B003A0721 /* RLSourceAndTracksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLSourceAndTracksViewController.h; sourceTree = "<group>"; };
 		C1E4518C1BBA803B003A0721 /* RLSourceAndTracksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLSourceAndTracksViewController.m; sourceTree = "<group>"; };
 		C1E4518D1BBA803B003A0721 /* RLSourceAndTracksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLSourceAndTracksViewController.xib; sourceTree = "<group>"; };
+		C1F040471C337CD300027F43 /* RLLastFMPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLLastFMPreferencesViewController.h; sourceTree = "<group>"; };
+		C1F040481C337CD300027F43 /* RLLastFMPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLLastFMPreferencesViewController.m; sourceTree = "<group>"; };
+		C1F040491C337CD300027F43 /* RLLastFMPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLLastFMPreferencesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +297,7 @@
 				C1AA2D7A1BBF3867000D75FC /* Shows */,
 				C1AA2D7B1BBF387C000D75FC /* Source & Tracks */,
 				C11FA5141BD2191000C4FDEE /* Audio Playback */,
+				C1F040461C337CA700027F43 /* Preferences */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -336,6 +342,16 @@
 				C15B8A1F1BBC5B3B00CB2F92 /* RLTrackTableCellView.m */,
 			);
 			path = "Source & Tracks";
+			sourceTree = "<group>";
+		};
+		C1F040461C337CA700027F43 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				C1F040471C337CD300027F43 /* RLLastFMPreferencesViewController.h */,
+				C1F040481C337CD300027F43 /* RLLastFMPreferencesViewController.m */,
+				C1F040491C337CD300027F43 /* RLLastFMPreferencesViewController.xib */,
+			);
+			name = Preferences;
 			sourceTree = "<group>";
 		};
 		D35B084755A2E6F9141E9514 /* Frameworks */ = {
@@ -419,6 +435,7 @@
 				C11B1CA91BE68C35001851DE /* RLShowReviewsViewController.xib in Resources */,
 				C18AEA961BB4945F00A6D182 /* RLMainWindowController.xib in Resources */,
 				C116DFB51BB09EEE006A9F6C /* Assets.xcassets in Resources */,
+				C1F0404B1C337CD300027F43 /* RLLastFMPreferencesViewController.xib in Resources */,
 				C116DFB81BB09EEE006A9F6C /* MainMenu.xib in Resources */,
 				C171E8FA1BF59A83003B12EB /* RLArtistsViewController.xib in Resources */,
 				C11FA5191BD2194000C4FDEE /* RLAudioPlaybackViewController.xib in Resources */,
@@ -499,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C18AEAC71BB4A7F600A6D182 /* IGYear.m in Sources */,
+				C1F0404A1C337CD300027F43 /* RLLastFMPreferencesViewController.m in Sources */,
 				C18AEAE01BB4EB2100A6D182 /* RLYearsVenuesTopShowsViewController.m in Sources */,
 				C187C67F1BB4FA7600F1778C /* RLYearTableCellView.m in Sources */,
 				C11DC32F1BF1331E007152D6 /* RLPlaybackQueueViewController.m in Sources */,
