@@ -13,7 +13,6 @@ NSString *RLAudioPlaybackTrackChanged = @"rl_audio_track_changed_notification";
 IGShow *RLAudioPlaybackCurrentShow = nil;
 IGTrack *RLAudioPlaybackCurrentTrack = nil;
 
-
 @interface RLAudioPlaybackViewController ()
 
 @property (weak) IBOutlet NSTextField *trackTitleTextField;
@@ -29,6 +28,10 @@ IGTrack *RLAudioPlaybackCurrentTrack = nil;
 
 @property (nonatomic, strong) NSDateComponentsFormatter *durationFormatter;
 @property (nonatomic, strong) RLPlaybackQueueViewController *queueViewController;
+
+//properties for scrobbing
+@property (nonatomic, weak) IguanaMediaItem *currentMediaItem;
+@property (nonatomic) BOOL currentTrackHasBeenScrobbed;
 
 @end
 
@@ -72,6 +75,8 @@ IGTrack *RLAudioPlaybackCurrentTrack = nil;
     self.durationFormatter = [[NSDateComponentsFormatter alloc] init];
     self.durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
     self.durationFormatter.allowedUnits = (NSCalendarUnitMinute | NSCalendarUnitSecond);
+    
+    self.currentTrackHasBeenScrobbed = NO;
 }
 
 #pragma mark - Track Manipulation
@@ -201,9 +206,8 @@ IGTrack *RLAudioPlaybackCurrentTrack = nil;
 
 #pragma mark - AGAudioPlayerDelegate Methods
 
-- (void)audioPlayer:(AGAudioPlayer *)audioPlayer
-uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason
-          extraInfo:(NSDictionary *)dict {
+- (void)audioPlayer:(AGAudioPlayer *)audioPlayer uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason extraInfo:(NSDictionary *)dict
+{
     self.bufferingTextField.hidden = !self.audioPlayer.isBuffering;
     
     IguanaMediaItem *item = (IguanaMediaItem *)self.audioPlayer.currentItem;
@@ -214,16 +218,36 @@ uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason
     {
         self.trackSlider.doubleValue = self.audioPlayer.elapsed;
         self.trackBeginningTimeTextField.stringValue = [self.durationFormatter stringFromTimeInterval:self.audioPlayer.elapsed];
+        
+        [self updateLastFMScrobbleWithItem:item];
     }
     else if(reason == AGAudioPlayerTrackPlaying)
     {
         IguanaMediaItem *currentMediaItem = (IguanaMediaItem *)self.audioPlayer.currentItem;
         
+        if(![self.currentMediaItem isEqual:currentMediaItem])
+        {
+            self.currentTrackHasBeenScrobbed = NO;
+            self.currentMediaItem = (IguanaMediaItem *)self.audioPlayer.currentItem;
+            
+            NSString *album = [NSString stringWithFormat:@"%@ - %@ - %@", item.iguanaTrack.show.displayDate, item.iguanaShow.venue.name, item.iguanaShow.venue.city];
+            
+            [[LastFm sharedInstance] sendNowPlayingTrack:item.iguanaTrack.title
+                                                 byArtist:item.iguanaShow.artist.name
+                                                  onAlbum:album
+                                             withDuration:item.iguanaTrack.length
+                                           successHandler:nil
+                                           failureHandler:nil];
+        }
+        
         [IGAPIClient.sharedInstance playTrack:currentMediaItem.iguanaTrack
                                        inShow:currentMediaItem.iguanaShow];
         
         [self updateCurrentTrackInfo:currentMediaItem];
-        [self.delegate trackPlayedAtIndex:self.audioPlayer.currentIndex forTrack:currentMediaItem.iguanaTrack andShow:currentMediaItem.iguanaShow];
+        [self.delegate trackPlayedAtIndex:self.audioPlayer.currentIndex
+                                 forTrack:currentMediaItem.iguanaTrack
+                                  andShow:currentMediaItem.iguanaShow];
+        
         [self.queueViewController reloadData];
         
         [[NSNotificationCenter defaultCenter] postNotificationName:RLAudioPlaybackTrackChanged
@@ -261,6 +285,29 @@ uiNeedsRedrawForReason:(AGAudioPlayerRedrawReason)reason
     }
     
     [self updatePlayPauseButton];
+}
+
+-(void)updateLastFMScrobbleWithItem:(IguanaMediaItem *)item
+{
+    if([LastFm sharedInstance].username && self.currentTrackHasBeenScrobbed == NO)
+    {
+        CGFloat progress = self.audioPlayer.elapsed/item.iguanaTrack.length;
+        
+        if(progress > 0.5)
+        {
+             NSString *album = [NSString stringWithFormat:@"%@ - %@ - %@", item.iguanaTrack.show.displayDate, item.iguanaShow.venue.name, item.iguanaShow.venue.city];
+            
+            [[LastFm sharedInstance] sendScrobbledTrack:item.iguanaTrack.title
+                                               byArtist:item.iguanaShow.artist.name
+                                                onAlbum:album
+                                           withDuration:item.iguanaTrack.length
+                                            atTimestamp:(int)[[NSDate date] timeIntervalSince1970]
+                                         successHandler:nil
+                                         failureHandler:nil];
+            
+            self.currentTrackHasBeenScrobbed = YES;
+        }
+    }
 }
 
 @end

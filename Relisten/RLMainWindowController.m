@@ -200,6 +200,18 @@
     notification.soundName = nil;
         
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    
+//    [[LastFm sharedInstance] sendNowPlayingTrack:track.title
+//                                      byArtist:show.artist.name
+//                                       onAlbum:notification.informativeText
+//                                  withDuration:track.length
+//                                    successHandler:^(NSDictionary *result) {
+//                                        
+//                                        NSLog(@"Sent now playing to LastFm successfuly!");
+//                                    } failureHandler:^(NSError *error) {
+//                                        
+//                                        NSLog(@"Now playing to LastFm failed!");
+//                                    }];
 }
 
 -(void)trackPausedAtIndex:(NSInteger)index forTrack:(IGTrack *)track andShow:(IGShow *)show

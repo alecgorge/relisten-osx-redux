@@ -45,14 +45,15 @@
 -(void)setUserSignedInState
 {
     NSString *username = [LastFm sharedInstance].username;
-    self.scrobbleTextField.stringValue = [NSString stringWithFormat:@"Signed in as %@", username];
+    self.scrobbleTextField.stringValue = [NSString stringWithFormat:@"Signed in as '%@'", username];
     
     self.usernameTextField.stringValue = username;
     self.usernameTextField.enabled = NO;
     
     self.passwordTextField.enabled = NO;
+    self.passwordTextField.stringValue = @"12345678910";
     
-    self.signinbutton.stringValue = @"Sign Out";
+    self.signinbutton.title = @"Sign Out";
 }
 
 -(void)setUserSignedOutState
@@ -82,6 +83,9 @@
     {
         [[LastFm sharedInstance] logout];
         [self setUserSignedOutState];
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"lastfm_session_key"];
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"lastfm_username_key"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
     else // Sign In
     {
@@ -100,6 +104,7 @@
                                        [LastFm sharedInstance].username = result[@"name"];
                                        
                                        dispatch_async(dispatch_get_main_queue(), ^{
+                                           
                                            [self setUserSignedInState];
                                        });
                                    }
@@ -108,7 +113,12 @@
                                        [self.progressIndicator stopAnimation:nil];
                                        
                                        // TODO handle error
-                                       NSLog(@"%@", error.description);
+                                       NSAlert *alert = [[NSAlert alloc] init];
+                                       [alert addButtonWithTitle:@"OK"];
+                                       [alert setMessageText:@"Could not sign into Last.fm"];
+                                       [alert setInformativeText:error.localizedDescription];
+                                       [alert setAlertStyle:NSInformationalAlertStyle];
+                                       [alert runModal];
                                    }];
     }
 }

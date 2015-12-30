@@ -12,6 +12,7 @@
 #import <AGAudioPlayer/AGAudioPlayer.h>
 #import <CoreAudio/CoreAudio.h>
 #import <AVFoundation/AVFoundation.h>
+#import <LastFm/LastFm.h>
 #import "RLPlaybackQueueViewController.h"
 #import "IguanaMediaItem.h"
 #import "IGAPIClient.h"
