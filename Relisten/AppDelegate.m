@@ -114,8 +114,11 @@
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:mailtoAddress]];
 }
 
-- (IBAction)showPreferences:(id)sender
-{
+- (IBAction)showPreferences:(id)sender {
+    [self showPreferencesWindow];
+}
+
+- (void)showPreferencesWindow {
     [self.preferencesWindowController showPreferencesWindow];
 }
 

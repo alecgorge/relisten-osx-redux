@@ -8,6 +8,8 @@
 
 #import "RLMainWindowController.h"
 
+#import <LastFm/LastFm.h>
+
 @interface RLMainWindowController ()
 
 @property (weak) IBOutlet RLSplitView *splitView;
@@ -23,6 +25,8 @@
 @property (nonatomic, strong) RLAudioPlaybackViewController *audioPlayBackController;
 @property (nonatomic, strong) IGShow *currentlyPlayingShow;
 @property (nonatomic, strong) NSPopover *artistPopover;
+
+@property (weak) IBOutlet NSButton *uiButtonLastFMToolbar;
 
 @end
 
@@ -69,11 +73,34 @@
     self.audioPlayBackController.view.autoresizingMask = NSViewWidthSizable;
     self.audioPlayBackController.delegate = self;
     [self.audioPlayBackView addSubview:self.audioPlayBackController.view];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateButton)
+                                                 name:@"relisten_lastfm_state_changed"
+                                               object:nil];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self updateButton];
+    });
 }
 
 - (IBAction)showArtistPopover:(id)sender
 {
     [self.artistPopover showRelativeToRect:NSZeroRect ofView:sender preferredEdge:NSMaxYEdge];
+}
+
+- (IBAction)uiLastFMTapped:(id)sender {
+    [(AppDelegate *)[[NSApplication sharedApplication] delegate] showPreferencesWindow];
+}
+
+- (void)updateButton {
+    NSImage *img = [NSImage imageNamed:@"lastfm"];
+    
+    if([LastFm sharedInstance].username) {
+        img = [NSImage imageNamed:@"lastfm-active"];
+    }
+    
+    [self.uiButtonLastFMToolbar setImage:img];
 }
 
 #pragma mark - 'Now Playing' Button Handling

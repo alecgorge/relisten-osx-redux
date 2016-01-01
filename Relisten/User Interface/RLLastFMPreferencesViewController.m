@@ -54,6 +54,9 @@
     self.passwordTextField.stringValue = @"12345678910";
     
     self.signinbutton.title = @"Sign Out";
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"relisten_lastfm_state_changed"
+                                                        object:self];
 }
 
 -(void)setUserSignedOutState
@@ -73,6 +76,9 @@
     [[[NSApplication sharedApplication] mainWindow] performSelector: @selector(makeFirstResponder:)
                                                          withObject:self.usernameTextField
                                                          afterDelay:0.0];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"relisten_lastfm_state_changed"
+                                                        object:self];
 }
 
 #pragma mark - Lastfm Sign In/Sign Out handling

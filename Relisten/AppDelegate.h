@@ -24,5 +24,7 @@
 - (IBAction)nextDockButtonpressed:(id)sender;
 - (IBAction)previousDockButtonPressed:(id)sender;
 
+- (void)showPreferencesWindow;
+
 @end
 

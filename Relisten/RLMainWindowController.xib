@@ -11,6 +11,7 @@
                 <outlet property="nowPlayingButton" destination="9Bn-Bp-hJx" id="Bhs-9h-dT1"/>
                 <outlet property="progressIndicator" destination="EEA-iA-hDj" id="mQ2-tT-lx8"/>
                 <outlet property="splitView" destination="gff-DE-xYh" id="08t-ED-ZGl"/>
+                <outlet property="uiButtonLastFMToolbar" destination="0W8-AA-488" id="dQN-Q0-OhO"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -20,7 +21,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="852" height="455"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="se5-gp-TjO" customClass="NSVisualEffectView">
                 <rect key="frame" x="0.0" y="0.0" width="852" height="455"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -169,6 +170,22 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         </progressIndicator>
                     </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="74775315-14CD-4E6D-8292-F75F93737EAF" label="Last.FM" paletteLabel="Last.FM" image="lastfm" id="U5T-ez-NmV">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="16" height="16"/>
+                        <size key="maxSize" width="48" height="48"/>
+                        <button key="view" id="0W8-AA-488">
+                            <rect key="frame" x="17" y="14" width="16" height="16"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="lastfm" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Jgz-N9-yk7">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="uiLastFMTapped:" target="-2" id="CtE-yJ-RZL"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="mLN-iU-Cpu"/>
@@ -177,6 +194,7 @@
                     <toolbarItem reference="LbV-E5-LG9"/>
                     <toolbarItem reference="uvg-BD-TKb"/>
                     <toolbarItem reference="LbV-E5-LG9"/>
+                    <toolbarItem reference="U5T-ez-NmV"/>
                     <toolbarItem reference="siJ-x3-WDu"/>
                     <toolbarItem reference="fkb-aA-siQ"/>
                 </defaultToolbarItems>
@@ -189,5 +207,6 @@
     </objects>
     <resources>
         <image name="NSRefreshTemplate" width="11" height="15"/>
+        <image name="lastfm" width="24" height="24"/>
     </resources>
 </document>
