@@ -10,6 +10,7 @@
 
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -29,6 +30,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    [Parse setApplicationId:@"rURhGR7F6bUme9KzatDPPVUyQYtMFooooIwbdb6Q"
+                  clientKey:@"6WDQvQeq9za3LklgmHJxTECtL4k0iKWIwvDc3yPX"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:nil];
     [Fabric with:@[[Crashlytics class]]];
 
     self.mainWindowController = [[RLMainWindowController alloc] initWithWindowNibName:@"RLMainWindowController"];
