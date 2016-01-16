@@ -186,9 +186,8 @@ IGTrack *RLAudioPlaybackCurrentTrack = nil;
 {
     NSSlider *slider = sender;
     double value = [slider doubleValue];
-    AVQueuePlayer *queuePlayer = self.audioPlayer.player;
     
-    queuePlayer.volume = value;
+    self.audioPlayer.volume = value;
 }
 
 #pragma mark - Queue Manipulation Methods

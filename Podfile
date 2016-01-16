@@ -3,7 +3,7 @@ platform :osx, "10.10"
 inhibit_all_warnings!
 
 target "Relisten" do
-	pod 'HysteriaPlayer', :head
+	pod 'FreeStreamer', :git => "https://github.com/alecgorge/FreeStreamer.git"
 	pod 'AFNetworking'
 	pod 'JSONModel'
     pod 'ObjectiveSugar'
@@ -13,6 +13,6 @@ target "Relisten" do
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'Parse'
-    pod 'CCNPreferencesWindowController'
+    pod 'CCNPreferencesWindowController', '1.3.0'
     pod 'LastFm'
 end
